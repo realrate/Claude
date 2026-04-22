@@ -18,7 +18,7 @@ Every ranking publication follows a **5-phase protocol** spanning approximately 
 | 2 — Launch | Day 0 (Wednesday preferred) | Maximum reach |
 | 3 — First Insight | Day +1 or +2 | Add depth |
 | 4 — Deep Dive | Day +3 to +5 | Build credibility |
-| 5 — Conversion | Week 2+ (optional) | Drive action |
+| 5 — Conversion | Week 2+ | Drive action |
 
 ---
 
@@ -35,6 +35,7 @@ Before beginning the teaser phase, confirm all of the following:
 - [ ] Visual assets designed and brand-compliant
 - [ ] Wednesday publication slot blocked in content calendar
 - [ ] Holger briefed on ranking findings (if personal page post planned)
+- [ ] Ranking confirmed live on website — request via designer channel if not yet published
 
 ---
 
@@ -90,6 +91,27 @@ Before beginning the teaser phase, confirm all of the following:
 > [archive link]
 > [company tags]
 
+### Social Media Assets — Phase 2
+- [ ] Ranking Announcements Carousel
+  - Cover: "202X Financial Health Ranking — [Industry]"
+  - Slide: Why this ranking matters
+  - Slide: What stood out this year
+  - Slide: One surprising insight
+  - CTA: View full ranking →
+- [ ] General Industry Top-Rated Companies Post
+- [ ] General Industry Top-Rated Companies (LinkedIn Ad)
+
+### Outreach — Launch Day
+- [ ] Provide Krisha sequences for automatic upload
+- [ ] Set up Instantly campaign — Top Rated companies
+- [ ] Set up Instantly campaign — Non Top Rated companies
+- [ ] Add Top Rated leads
+- [ ] Add Non Top Rated leads
+- [ ] Optimize and launch campaigns
+
+### Distribution — Launch Day
+- [ ] Send Pingen snail mails
+
 ---
 
 ## Phase 3 — First Insight
@@ -112,6 +134,14 @@ Before beginning the teaser phase, confirm all of the following:
 
 ### Example Angle
 > *"Clearwater Analytics jumped 23 places. One metric explains it. [Insight post]"*
+
+### Social Media Assets — Phase 3
+- [ ] "What We Found" Insight Post
+- [ ] Year-over-Year Comparison Post
+
+### PR / Articles — Phase 3
+- [ ] Ranking Interpretation article
+- [ ] Performance Drivers article — Why Companies Ranked Well or Didn't
 
 ---
 
@@ -138,9 +168,18 @@ Before beginning the teaser phase, confirm all of the following:
 - "The difference between the top-rated and the bottom third in [industry] — one driver"
 - "Why [industry] ECR data is flashing a warning signal in [year]"
 
+### Social Media Assets — Phase 4
+- [ ] "Why the Top Companies Ranked Well" Carousel
+- [ ] Causal Thought Leadership Post
+- [ ] Risk & Warning Signal Post
+
+### PR / Articles — Phase 4
+- [ ] Trends & Patterns article
+- [ ] Risk & Weaknesses article
+
 ---
 
-## Phase 5 — Conversion (Optional)
+## Phase 5 — Conversion
 
 **Timing:** Week 2+
 **Goal:** Drive action from engaged prospects
@@ -154,6 +193,10 @@ Before beginning the teaser phase, confirm all of the following:
 - Post a reaction to interesting DMs received (anonymised)
 - Share a specific finding requested by a commenter
 - Publish a methodology or trust post (P5) to close the cycle
+
+### Outreach — Week 2
+- [ ] Generate LinkedIn leads of those who did not reply to Instantly campaigns
+- [ ] Contact LinkedIn leads
 
 ### Outreach Integration
 - For anyone who commented substantively on Phase 2 or 3 → flag for LinkedIn outreach (see outreach-sop.md)
