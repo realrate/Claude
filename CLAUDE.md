@@ -19,7 +19,10 @@ RealRate/
 │   ├── competitive-landscape.md  ← quick reference competitor summary
 │   └── sources.md                ← trusted URLs to browse for research and content creation
 └── SOP/
-    └── marketing-research-strategy.md  ← full market research SOP, competitor profiles, research steps
+    ├── marketing-research-strategy.md     ← market landscape, competitor analysis, research steps
+    ├── social-media-sop.md                ← content creation, calendar, LinkedIn page, design, ads, analytics
+    ├── outreach-sop.md                    ← LinkedIn outreach, email outreach (Instantly), analytics
+    └── ranking-publication-protocol.md    ← 5-phase ranking launch process, checklists
 ```
 
 ---
