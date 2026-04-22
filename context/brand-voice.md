@@ -3,6 +3,23 @@
 ## Tone Hierarchy
 Analytical & data-first → Authoritative & institutional → Approachable & educational → Bold & challenger brand
 
+## Content Approach — Storytelling With Data
+
+Every piece of content follows this principle: **the story opens, the data proves, the visual shows.**
+
+| Layer | Role | Rule |
+|---|---|---|
+| **Story** | The hook — creates curiosity, opens a journey or reveals a tension | Always leads. Never starts with a data point alone — starts with what the data means for a company or an industry |
+| **Data** | The proof — ECR numbers, driver contributions, rank movements | Always present. Never dropped for the sake of narrative. Specific and verified |
+| **Visual** | The evidence — carousel or graphic makes data scannable and shareable | Caption tells the story; visual shows the numbers |
+
+**The formula:** Story hook → data that proves it → structural explanation → implication for the reader → tagline
+
+**What storytelling is NOT:**
+- It is not fiction or embellishment — every story element must be grounded in verified data
+- It is not emotion for its own sake — the narrative serves the insight, not the other way around
+- It is not long — a strong story hook is one or two sentences, not a paragraph
+
 ## Brand Voice
 
 | | RealRate IS | RealRate is NOT |

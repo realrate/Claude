@@ -8,6 +8,28 @@ To ensure every new industry ranking published by RealRate is launched in a stru
 
 ---
 
+## Content Approach — Storytelling With Data
+
+Every post in this protocol follows the same principle: **the story opens, the data proves, the visual shows.**
+
+- **Story** — the hook. Opens with a human, narrative tension: a company that rose or fell, a pattern that contradicts assumptions, a signal hiding in the numbers. Makes the reader want to know what happened and why.
+- **Data** — the proof. ECR numbers, driver contributions, rank movements, industry averages. Never dropped — always present. This is what makes RealRate credible and distinct from opinion-based content.
+- **Visual** — the evidence. The carousel or graphic carries the data in a scannable, shareable format. The caption tells the story; the visual shows the numbers.
+
+These three elements always appear together. Storytelling is the delivery mechanism — data and visuals are the substance.
+
+**The formula for every insight post:**
+> *Story hook → data that proves it → what it means → tagline*
+
+**Example of the approach in practice:**
+
+*Caption:*
+> "A year ago Clearwater Analytics was ranked #24 in US Software. Today they're #1. Their ECR jumped to 647% — 295 points above the industry average. One thing changed on their balance sheet. Stockholders' Equity contributed +292 points to that move. That's not luck. That's a structural decision playing out in the numbers."
+
+*Visual:* Carousel showing rank movement, ECR score, driver breakdown — data made scannable.
+
+---
+
 ## Overview
 
 Every ranking publication follows a **4-phase protocol** spanning approximately 2 weeks. The teaser phase has been removed — publication dates are confirmed only when the ranking goes live on the website, so the cycle begins at launch.
@@ -57,11 +79,16 @@ Prepare all assets in advance so launch-day posting happens within hours of the 
 - Tag companies in first pinned comment only (max 3–5)
 
 ### Post Structure
-- Hook: bold opening with a named company or a striking number
-- Top 10 list with ECR values
-- One-line observation on the most notable finding
-- Tagline: `"Powered by RealRate: Using Explainable Financial AI"`
-- Hashtags: 3–5 (1 broad + 2 niche + industry-specific + #RealRate)
+| Element | What it does | How to write it |
+|---|---|---|
+| **Story hook** | Opens with a fact that creates immediate curiosity | Name a company or a number that surprises — make the reader ask "why?" |
+| **Data** | The top 10 with ECR numbers + industry average | Present as a clean list — let the numbers speak |
+| **One insight** | The most notable finding from the ranking | One sentence — name the company or pattern, state the implication |
+| **Tagline** | Brand anchor | `"Powered by RealRate: Using Explainable Financial AI"` |
+| **Hashtags** | 3–5 — 1 broad + 2 niche + industry-specific + #RealRate | Always last |
+
+**Example opening (story hook):**
+> *"140 US Software companies. One ranked #1 with an ECR of 647%. The industry average is 352%. Here's who made it — and what the data reveals about the ones who didn't."*
 
 ### Design
 - Ranking carousel: top 10 companies with ECR numbers clearly visible
@@ -103,18 +130,20 @@ Prepare all assets in advance so launch-day posting happens within hours of the 
 Find the company with the largest rank change (up or down). Identify which ECR driver caused it. Explain what it means structurally.
 
 ### Post Structure
-**Hook:** Name the company and the movement in the first line
-**Context:** Where they ranked before vs. now
-**Driver:** Which ECR driver moved and by how much
-**Implication:** What this reveals about the company or the industry
-**Tagline included**
+| Element | What it does | How to write it |
+|---|---|---|
+| **Story hook** | Opens the journey — where the company was, where they are now | One or two sentences. Name the company, state the movement. Create the "how?" question in the reader's mind |
+| **Data** | Proves the story — rank, ECR before and after, driver contribution in points | Specific numbers only — no vague claims |
+| **Driver explanation** | Answers the "how?" | Name the driver, quantify it, explain what it means structurally |
+| **Implication** | Why the reader should care | Connect to the reader's role — investor, risk officer, CFO |
+| **Tagline** | Brand anchor | Always last before hashtags |
 
 ### Formula
-> *"[Company] jumped/dropped [X] places. One driver explains it."*
-> → Name the driver → quantify the contribution → explain what it means
+> *"[Company] was ranked [X] a year ago. Today they're [Y]. One thing changed — and the data shows exactly what."*
+> → Name the driver → quantify the contribution in points → explain the structural meaning
 
 ### Example
-> *"Clearwater Analytics jumped from #24 to #1. Stockholders' Equity contributed +292 points to their ECR — nearly the entire move. Here's what that means for how they're managing their balance sheet."*
+> *"A year ago Clearwater Analytics was #24 in US Software. Today they're #1. Their ECR: 647% — 295 points above the industry average of 352%. Stockholders' Equity contributed +292 points to that move. That's not revenue growth. That's balance sheet strength — and it's the clearest signal of long-term financial stability in this industry."*
 
 ### Rules
 - Name the company — don't generalise
@@ -144,11 +173,19 @@ Find the company with the largest rank change (up or down). Identify which ECR d
 | **The Gap** | Large spread between #1 ECR and industry average | What separates top-rated companies from the rest — the one driver that makes the difference |
 
 ### Post Structure
-**Hook:** State the pattern or signal in the first line
-**Data:** 2–3 specific examples from the ranking with ECR numbers
-**Interpretation:** What the pattern means structurally
-**Implication:** Why it matters to the reader's role (risk officer, investor, CFO)
-**Tagline included**
+| Element | What it does | How to write it |
+|---|---|---|
+| **Story hook** | Opens with a tension or contradiction — what the data reveals that most people don't see | Frame it as a discovery: "We looked at X companies. Something stood out." |
+| **Data** | 2–3 named companies with ECR numbers that illustrate the pattern | Always named, always quantified — no anonymous examples |
+| **Interpretation** | What the pattern means structurally | One clear explanation — why this is happening, not just that it is |
+| **Implication** | Why the reader should act on this | Speak directly to their role and what this means for their decisions |
+| **Tagline** | Brand anchor | Always included |
+
+**Example opening by angle:**
+- *The Surprise:* "Their revenue is widely covered. Their ECR isn't. The data tells a different story."
+- *The Warning Signal:* "Three companies in the bottom third share the same weakness. It's not revenue. It's not growth. It's what's hiding on the liability side."
+- *Year-over-Year:* "The [industry] industry average ECR dropped [X] points in one year. That doesn't happen randomly. Here's the structural shift behind it."
+- *The Gap:* "The #1 ranked company has an ECR of [X]%. The industry average is [Y]%. That [Z]-point gap comes down to one driver."
 
 ### Rules
 - Pick the angle the data supports — don't force an angle onto thin material
@@ -172,11 +209,16 @@ Find the company with the largest rank change (up or down). Identify which ECR d
 Identify the dominant ECR driver across the top tier of the ranking. This is the driver that appears as the greatest strength for multiple top-ranked companies. Explain why that driver dominates in this specific industry and what it means for companies outside the top tier.
 
 ### Post Structure
-**Hook:** State the dominant driver and that it explains the top tier
-**Pattern:** Show that it appears across multiple top-ranked companies (with names and ECR numbers)
-**Why this industry:** Explain why this driver matters specifically here — structural reason
-**Implication:** What companies outside the top tier are missing and what they can do
-**Tagline included**
+| Element | What it does | How to write it |
+|---|---|---|
+| **Story hook** | Opens with the pattern as a discovery — something hiding in plain sight across the top tier | Frame it as a finding: "We ranked X companies. The top ones share something." |
+| **Pattern + data** | Names multiple top companies and shows the same driver appearing across all of them with ECR contribution in points | At least 3 named companies, driver contribution quantified for each |
+| **Why this industry** | The structural explanation — why this driver dominates specifically here | This is the most important part — it's what makes RealRate's analysis causal, not just descriptive |
+| **Implication** | What it means for companies outside the top tier | Speaks to CFOs, risk officers, investors — what action this insight suggests |
+| **Tagline** | Brand anchor | Always included |
+
+### Example
+> *"We ranked 140 US Software companies. The top 5 don't share the same revenue model, the same size, or the same market. But they share one thing: Stockholders' Equity as their greatest financial strength — contributing an average of +281 points to their ECR. In software, where revenue can scale faster than costs, equity strength is the floor that separates sustainable companies from fragile ones. Companies outside the top tier share a common pattern too — but in the opposite direction."*
 
 ### Formula
 > *"[X] of the top 10 [industry] companies share the same greatest strength: [Driver]. It contributed an average of [Y] points to their ECR. Here's why this driver dominates [industry] specifically."*
