@@ -98,13 +98,11 @@ Prepare all assets in advance so posting happens within hours of the website goi
 > [tag top-rated companies — max 5 per comment, add multiple comments if needed]
 
 ### Outreach — Day 0
-- [ ] Provide Krisha sequences for automatic upload
-- [ ] Set up Instantly campaign — Top Rated companies
-- [ ] Set up Instantly campaign — Non Top Rated companies
-- [ ] Add Top Rated leads
-- [ ] Add Non Top Rated leads
-- [ ] Optimize and launch campaigns
-- [ ] Send Pingen snail mails
+- [ ] Create ICP 1 campaign — Top Rated companies (Instantly)
+- [ ] Create ICP 2 campaign — Non Top Rated companies (Instantly)
+- [ ] Add leads to each campaign
+- [ ] Optimize and launch both campaigns
+- [ ] Send Pingen snail mails *(German market only)*
 
 ---
 
@@ -421,12 +419,66 @@ Most frequent greatest strength driver across top tier → that's the Industry D
 
 ---
 
+## PR & Articles
+
+**Default: 1 article per ranking cycle.**
+Publish a second only if the industry is high-stakes (insurance, pharma, finance) or the data reveals something exceptional.
+
+Articles are published on the RealRate website or news.realrate.ai. Not reports — articles are shorter, more timely, and easier to produce consistently across multiple industries.
+
+### Rotating Article Angles
+
+Pick 1 (or 2 for high-stakes industries) per cycle based on what the data supports most strongly.
+
+| Angle | When to use | What it covers |
+|---|---|---|
+| **Ranking Interpretation** | Every industry — good default first article | Overview of the full ranking, most surprising finding, what the data reveals about the industry |
+| **Performance Drivers** | When the dominant driver is clear and compelling | Why the top companies ranked well — causal analysis of ECR drivers |
+| **Risk & Warning Signals** | High-stakes industries or when bottom-tier pattern is striking | What the lower-ranked companies reveal — fragility signals, common weaknesses |
+| **Year-over-Year Analysis** | When industry average ECR shifted significantly | What changed from the prior ranking and the structural reason behind it |
+| **Industry Financial Health Snapshot** | First time publishing for an industry, or after a major market event | Big-picture health of the industry — how it compares to others RealRate covers |
+| **The Independence Angle** | Industries dominated by issuer-paid ratings (insurance, finance) | What RealRate's independent methodology reveals that traditional ratings miss |
+
+### Selection Logic
+
+| Industry type | Articles per cycle | Recommended angle |
+|---|---|---|
+| High-stakes (insurance, pharma, finance) | 2 | Ranking Interpretation + Risk & Warning Signals |
+| Standard (software, consulting, advertising) | 1 | Ranking Interpretation (default) or whichever angle the data supports most |
+| First publication for this industry | 1 | Industry Financial Health Snapshot |
+| Major YoY movement | 1 | Year-over-Year Analysis |
+
+### Article checklist
+- [ ] Select angle (1 or 2 based on industry)
+- [ ] Draft article grounded in verified archive data
+- [ ] Include ECR numbers, named companies, driver data
+- [ ] Publish on realrate.ai or news.realrate.ai
+- [ ] Link to realrate.ai/rankings/[industry]/[year] within the article
+
+---
+
 ## Post-Publication Checklist
 
-- [ ] Record ranking in content calendar as published
-- [ ] Note top-performing post in the cycle (by impressions and engagement)
-- [ ] Log all engagers in warm lead tracker (name, company, title, post they engaged with)
-- [ ] Log any inbound DMs or leads generated
-- [ ] Note companies that engaged — flag for outreach
-- [ ] Unpin Day 0 post once cycle is complete (or keep pinned if still performing)
+**Monitor (ongoing through end of cycle):**
+- [ ] Monitor LinkedIn inboxes daily — log all DMs received
+- [ ] Monitor Instantly inboxes daily — log all replies to ICP 1 and ICP 2 campaigns
+- [ ] Monitor LinkedIn engagement on each post — comments, shares, reactions
+- [ ] Monitor LinkedIn analytics — impressions and reach per post
+
+**Leads:**
+- [ ] Make a list of potential leads from this cycle:
+  - Anyone who commented substantively on any post
+  - Anyone who shared a post
+  - Anyone who replied to an Instantly campaign (interested or not)
+  - Anyone who sent a DM
+  - Any top-rated company that hasn't been contacted yet
+  - Any non-top-rated company that engaged with content
+- [ ] Flag warm leads for LinkedIn outreach by Holger
+- [ ] Flag Instantly replies for follow-up
+
+**Record:**
+- [ ] Record top-performing post (highest impressions + highest engagement rate)
+- [ ] Note which post type performed best (carousel, single image, document)
+- [ ] Note which angle resonated most (mover, driver pattern, non-top-rated, etc.)
+- [ ] Unpin Day 0 post once cycle ends (or keep pinned if still performing)
 - [ ] Feed findings into monthly analytics review
