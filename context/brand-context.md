@@ -59,23 +59,58 @@ See `competitive-landscape.md` for full competitor profiles and comparison.
 
 ## Design Specifications
 
+> Source: [Corporate Design Specification](https://github.com/realrate/Corporate-Design/wiki/Corporate-Design-Specification)
+
+### Design Principles
+- **Flat, minimal, data-focused** — no gradients, shadows, or decorative textures
+- **White backgrounds** as the default base
+- **Contrast enforcement** — light colors on dark backgrounds, dark on light. Never grey text on white.
+- *"Clarity > Decoration. Insight > Density. Structure > Noise."*
+
 ### Colors
+
+**Brand Colors**
 | Role | Name | Hex |
 |---|---|---|
 | Primary | Light Blue | `#3DBACD` |
 | Primary | Dark Blue | `#00679B` |
 | Base | Black | `#000000` |
 | Secondary | Grey | `#AFAFAF` |
-| Semantic | Positive | `#419453` |
-| Semantic | Negative | `#C04A3A` |
-| Semantic | Neutral | `#E8E8E8` |
+
+> Each primary color has an approved 7-step palette of tints (10%, 25%, 40%) and shades (15%, 30%, 45%) for use across materials.
+
+**Text Colors**
+| Role | Hex |
+|---|---|
+| Primary text | `#000000` |
+| Secondary text | `#4A4A4A` |
+| Tertiary text | `#6A6A6A` |
+| Text on dark backgrounds | `#FFFFFF` |
+
+**Semantic / Data Visualization Colors**
+| Meaning | Hex |
+|---|---|
+| Strong Positive | `#419453` |
+| Light Positive | `#86CC82` |
+| Strong Negative | `#C04A3A` |
+| Light Negative | `#F08F82` |
+| Neutral | `#E8E8E8` |
 
 ### Typography
-- **Primary font:** Manrope (all mediums)
-- **Fallback:** Open Sans (only when Manrope unavailable)
+- **Primary font:** Manrope — used across websites, dashboards, reports, presentations, and product interfaces
+- **Fallback:** Open Sans (only when Manrope cannot load technically)
+
+**Font Sizing — Web / Dashboard**
+| Element | Size |
+|---|---|
+| H1 | 40–48px |
+| H2 | 32–36px |
+| H3 | 24–28px |
+| Body | 16–18px |
+| Small | 14–15px |
 
 ### LinkedIn Post Design Guidelines
-- **Dimensions:** 1080×1350px (default) — use other sizes only when explicitly specified
+- **Dimensions:** 1080×1350px (portrait, default) or 1080×1080px (square) — use other sizes only when explicitly specified
 - **Font:** Manrope (all text elements)
 - **Typography scale:**
   - Main heading / title: 60–75px max
@@ -83,14 +118,17 @@ See `competitive-landscape.md` for full competitor profiles and comparison.
   - Body text on light slides: 35px
   - Body text on dark cover slide: 42px
   - Footer (brand name, tagline, URL): 20–25px
+- **Approved backgrounds:**
+  - Light grey: `#f5f5f5`
+  - Medium grey: `#e8e8e8`
+  - Dark blue: `#00679B`
 - **Layout rules:**
   - No eyebrow labels or mini titles above headlines — go straight into the heading
   - On dark slides: all text must be full white (`#ffffff`)
-  - On light slides: body text must be strong dark (`#12293a`) — never grey
+  - On light slides: body text must be strong dark (`#000000` or `#4A4A4A`) — never grey
   - Cover content anchors at the top, directly below the logo — do not center
-  - Use `justify-content: space-between` so sections fill the full 1350px height
-- **Backgrounds:** Light or dark — both allowed. Can use gradients and/or textures (must be on-brand/relevant). Minimal geometric shapes permitted.
-- **Style:** Tech/corporate/financial — spacious, consistent alignment, modern fintech aesthetic. Clean and uncluttered.
+  - Use `justify-content: space-between` so sections fill the full height
+- **Style:** Flat, minimal, data-focused — no gradients, shadows, or decorative textures
 - **Logo position:** Top-left preferred
 - **Emojis:** Max 2 in captions, none on images
 - **Mandatory tagline on analytical posts:** `"Powered by RealRate: Using Explainable Financial AI"`
