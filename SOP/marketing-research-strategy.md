@@ -77,57 +77,257 @@ Maintain a clear, current understanding of what competitors offer, how they posi
 
 5. **Apply to content** — Use competitor weaknesses as content angles (contrarian takes, transparency posts, methodology posts)
 
+### Competitor Profile Template
+
+Each competitor is profiled across 10 dimensions. Update quarterly.
+
+| Dimension | What to Document |
+|---|---|
+| **What they do** | Core product and problem they solve |
+| **Who they serve** | ICP — industry, role, company size |
+| **Product offering** | Full product lineup, features, packaging |
+| **Methodology** | How they produce ratings/scores — data sources, model type |
+| **Pricing model** | Issuer-paid, buyer-paid, subscription, freemium |
+| **Growth strategy** | How they grew — sales-led, PLG, content, partnerships, funding |
+| **Brand strategy** | Narrative, tone, visual identity, key claims |
+| **Social presence** | Platforms, posting frequency, follower count, content style |
+| **Customer acquisition** | How they get clients — inbound, outbound, events, referrals, integrations |
+| **Known customers** | Named logos, count, industries |
+
+---
+
 ### Competitor Profiles
 
 ---
 
-**RapidRatings** *(Primary Competitor)*
-- **What they do:** Financial health rating platform focused on supply chain and credit risk management
-- **Who they serve:** Procurement teams, investors, financial institutions
-- **Pricing model:** Buyer-paid subscription — companies don't pay to be rated
-- **Strengths:** Established brand, strong supply chain market presence, large data set
-- **Weaknesses:** Correlation-based (not causal), no driver explainability, paywalled data, no certification product, no public archive
-- **Positioning:** Risk management tool for procurement and finance teams
-- **Content gap:** Does not educate on *why* companies fail — only flags risk scores
-- **Website:** https://www.rapidratings.com
+#### RapidRatings *(Primary Direct Competitor)*
+
+**Website:** https://www.rapidratings.com
+**Last updated:** April 2026
+
+**What they do**
+Financial health intelligence platform. Scores companies 0–100 using their proprietary Financial Health Rating (FHR®) — focused on supply chain risk, third-party risk, and credit risk management. Claims 500K ratings across 150 countries and an average 24-month warning window before vendor bankruptcy.
+
+**Who they serve**
+Enterprise and mid-market procurement, finance, and risk teams. Primary buyers are Chief Procurement Officers, supply chain risk managers, and credit teams. Named clients include Verizon, McDonald's, Unilever, Duke Energy, Becton Dickinson, Under Armour, and Coinbase — skewing toward Fortune 500.
+
+**Product offering**
+- **FHR®** — Core 0–100 financial health score (proprietary)
+- **RiskPulse** (powered by Creditsafe) — real-time risk monitoring *(new)*
+- **ActionPath** — risk management workflow tool *(new)*
+- **RapidRatings Badge Program** — supplier certification product *(new — direct parallel to RealRate Top-Rated Seal)*
+- **Custom Reports** — tailored risk analysis
+- **Professional Services & Workshops** — consulting
+- **Risk Calculator** — free self-serve tool (lead generation mechanism)
+- **FHR Exchange** — supplier onboarding platform
+
+**Methodology**
+Predictive analytics using financial statement data. Correlation-based model — identifies statistical relationships between financial metrics and business distress. Not causal. No public explanation of which drivers move a score or why. Data is paywalled — companies and the public cannot access ratings without a subscription. Emphasizes early warning (24-month lead time on bankruptcies).
+
+**Pricing model**
+Buyer-paid subscription — procurement teams and financial institutions pay to access ratings. Companies are not required to pay to be rated. No public pricing.
+
+**Growth strategy**
+- Built initial traction in supply chain risk — a high-stakes, buyer-motivated market with clear ROI
+- Grew through enterprise sales into procurement and finance teams (top-down, relationship-driven)
+- Content marketing via Knowledge Center (blog, whitepapers, webinars) to attract risk professionals
+- Free Risk Calculator as a lead generation tool — low-friction entry point
+- Recognized by The Hackett Group "2026 50 Vendors to Know" — third-party validation used for credibility
+- Partnership with Creditsafe (RiskPulse) expands data coverage and reach
+- Annual risk surveys (published data) generate press coverage and inbound interest
+- Recently launched Badge Program — signals move toward certification market (RealRate's territory)
+
+**Brand strategy**
+- Tagline: *"We see what others don't"*
+- Tone: professional, authoritative, B2B enterprise — data-driven but accessible
+- Positioning: proactive risk management partner — not just a score, but actionable intelligence
+- Emphasis on early warning and resilience — appeals to procurement and risk teams who fear disruption
+- Does not lead with AI or explainability — positions around outcomes (avoid bankruptcy, manage risk)
+
+**Social presence**
+- Active on LinkedIn, X (Twitter), and YouTube
+- Content cadence: monthly to bi-weekly (blog), regular LinkedIn posts
+- Topics: supply chain risk, tariff impacts, bankruptcy trends, regulatory changes
+- Tone on social: thought leadership, industry insight, data-driven commentary
+- *[Follower count: TBD — verify on LinkedIn]*
+
+**Customer acquisition**
+- Enterprise sales team (outbound, relationship-driven)
+- Content marketing (Knowledge Center, annual survey reports)
+- Free Risk Calculator (self-serve entry point → sales follow-up)
+- FHR Exchange supplier onboarding (network effect — buyers pull in suppliers)
+- Third-party recognition and press coverage
+- Creditsafe partnership (cross-sell to existing Creditsafe customers)
+
+**Known customers**
+Verizon, McDonald's, Unilever, Duke Energy, Becton Dickinson, Under Armour, Coinbase. Enterprise-weighted — primarily Fortune 500 procurement and finance teams.
+
+**Weaknesses / RealRate opportunities**
+- Correlation-based, not causal — cannot explain *why* a score changed
+- No driver transparency — black box for the companies being rated
+- Paywalled — no public archive, no open access
+- Issuer has no voice — companies can't see their own score without paying
+- Badge Program is new and unproven — RealRate's seal has a head start in differentiation
+- No free public ranking data — RealRate's archive is a structural advantage for SEO and credibility
+
+**Content angles for RealRate**
+- Explainability vs. black-box scoring (P3 / P5)
+- Causal drivers vs. correlation (P3 / methodology posts)
+- Public archive vs. paywalled data (P1 / trust posts)
+- Why knowing your score isn't enough — you need to know *why* (P2 / P3)
 
 ---
 
-**Moody's / S&P** *(Traditional Incumbent)*
-- **What they do:** Nationally Recognized Statistical Rating Organizations (NRSROs) — credit ratings for bonds, companies, and structured products
-- **Who they serve:** Capital markets, institutional investors, large corporates
-- **Pricing model:** Issuer-paid — companies pay Moody's/S&P to receive a rating (core conflict of interest)
-- **Strengths:** Brand authority, regulatory recognition, global scale, deeply embedded in capital markets
-- **Weaknesses:** Issuer-paid = conflict of interest, not explainable, slow and expensive, inaccessible to mid-size companies, failed to flag major collapses (2008)
-- **Positioning:** Authoritative, institutional, regulatory-grade
-- **Content gap:** Cannot honestly claim independence or transparency — RealRate owns this positioning
-- **Note:** RealRate was founded specifically in response to this model — Holger witnessed a CEO pressure a rating agency for an AAA rating
+#### Moody's / S&P *(Traditional Incumbent)*
+
+**Website:** https://www.moodys.com / https://www.spglobal.com/ratings
+**Last updated:** April 2026
+
+**What they do**
+Nationally Recognized Statistical Rating Organizations (NRSROs). Issue credit ratings for bonds, structured products, sovereigns, and large corporations. Embedded in capital markets — ratings are required for bond issuances and institutional investment mandates.
+
+**Who they serve**
+Capital markets participants: institutional investors (pension funds, asset managers), investment banks, large corporates issuing debt, and regulators. Primarily serve companies with public debt — not accessible to SMEs or private mid-market companies.
+
+**Product offering**
+- **Credit ratings** — letter-grade ratings (AAA to D) for bonds and issuers
+- **Research & analytics** — market intelligence, economic research, risk data
+- **ESG scores** — environmental, social, and governance assessments
+- **Data feeds & APIs** — enterprise data licensing for financial institutions
+- **Risk management tools** — Moody's Analytics, RMS (catastrophe risk)
+- **Due diligence platforms** — KYC, compliance, third-party risk (Moody's acquired Bureau van Dijk and others)
+
+**Methodology**
+Analyst-driven, qualitative + quantitative hybrid. Ratings are issued by rating committees — not fully algorithmic. Methodology documents are published but complex and opaque in practice. Core conflict: companies pay for their own ratings (issuer-paid model). This was the direct motivation for founding RealRate — Holger witnessed a CEO pressure a rating agency for an AAA rating. Post-2008, regulatory pressure increased but the model has not fundamentally changed.
+
+**Pricing model**
+Issuer-paid — companies pay Moody's/S&P to receive a rating. Required for accessing capital markets. Pricing is negotiated and non-public. Secondary revenue from data subscriptions and analytics products sold to investors.
+
+**Growth strategy**
+- Built through regulatory embedding — ratings became legally required for institutional investors and bond issuances
+- Global scale through acquisitions (Bureau van Dijk, RMS, many others)
+- Expanded from ratings into data, analytics, and ESG as adjacent revenue streams
+- Brand moat built over decades — switching cost for capital markets is extremely high
+- Not a growth-stage company — incumbency and regulatory lock-in are their moat
+
+**Brand strategy**
+- Tone: institutional, authoritative, conservative — written for regulators and capital markets
+- Positioning: the global standard for credit risk assessment
+- Brand built on perceived authority and regulatory legitimacy — not transparency or independence
+- ESG expansion is their attempt to stay relevant in a changing market
+- Do not engage in thought leadership or social media in a meaningful way — brand relies on institutional weight
+
+**Social presence**
+- LinkedIn presence exists but minimal engagement — posts are press releases and formal updates
+- Not a social-media-first brand — brand is built through institutional relationships, not content
+- *[Follower count: TBD — verify on LinkedIn]*
+
+**Customer acquisition**
+- Regulatory mandate — capital markets participants have no choice but to use rated instruments
+- Issuer-paid — companies come to Moody's/S&P because bond issuance requires a rating
+- No meaningful inbound content or lead generation strategy — demand is structurally embedded
+- Acquisitions expand into adjacent markets (data, ESG, third-party risk)
+
+**Known customers**
+Every major corporation with publicly traded debt. Too broad to list — the model is market infrastructure.
+
+**Weaknesses / RealRate opportunities**
+- Issuer-paid = structural conflict of interest — cannot credibly claim independence
+- Analyst-driven, not AI-driven — slow, expensive, inaccessible to mid-market
+- Failed to flag major collapses (Enron, Lehman, 2008 mortgage crisis) — credibility damage
+- No explainability — ratings come with qualitative reports, not driver-level data
+- Inaccessible to companies without public debt — large untapped market
+- ESG ratings are contested — methodologies differ wildly across providers, creating confusion
+- No certification product for companies to display independently
+
+**Content angles for RealRate**
+- Independence vs. issuer-paid conflict (P5 / trust posts)
+- Why the 2008 crisis still matters for financial ratings (P4 / contrarian takes)
+- Why mid-market companies can't access the ratings system — and what RealRate does instead (P1 / P3)
+- Holger's origin story — witnessed direct pressure on a rating agency (personal page, P5)
 
 ---
 
-**CausalLens** *(Methodological Competitor)*
-- **What they do:** Causal AI / machine learning platform — not specific to financial ratings
-- **Who they serve:** Data science teams, enterprise AI buyers across industries
-- **Pricing model:** *[TBD — enterprise SaaS]*
-- **Strengths:** Strong causal AI methodology, technical credibility, broader AI market positioning
-- **Weaknesses:** Not a financial intelligence product — no ratings, no seal, no archive, no financial domain focus
-- **Positioning:** Technical AI platform for causal reasoning
-- **Content gap:** Does not serve financial buyers directly — RealRate owns the causal AI + financial health intersection
-- **Website:** *[TBD]*
+#### CausalLens / DecisionOS *(Methodological Competitor)*
+
+**Website:** https://www.decisionos.com *(rebranded from CausalLens)*
+**Last updated:** April 2026
+
+**What they do**
+Originally CausalLens — a causal AI platform for enterprise decision-making. Rebranded to DecisionOS. Focuses on applying causal AI/ML across industries — not specific to financial ratings. Positioned as a general-purpose causal AI platform for data science and analytics teams.
+
+**Who they serve**
+Enterprise data science teams, AI/ML buyers, analytics-heavy industries. Not financial buyers specifically — customers are technical teams building causal models across sectors.
+
+**Product offering**
+- **Causal AI platform** — tools for building causal models, running counterfactual analysis, causal inference
+- *[Full product lineup TBD — verify at decisionos.com]*
+
+**Methodology**
+Causal AI / causal inference — builds directed acyclic graphs (DAGs) to identify cause-and-effect relationships rather than correlations. This is methodologically similar to RealRate's approach but applied to a different domain and buyer. No financial ratings product.
+
+**Pricing model**
+*[TBD — enterprise SaaS, likely custom pricing]*
+
+**Growth strategy**
+- Raised significant funding as a causal AI specialist during the AI investment boom
+- Grew through technical credibility and research — positioned in the causal AI academic/practitioner community
+- Rebranded from CausalLens to DecisionOS — signals a broadening of scope beyond causal AI specifically
+- *[Growth details TBD — monitor DecisionOS announcements]*
+
+**Brand strategy**
+- Technical, AI-forward positioning — appeals to data scientists and ML engineers
+- Not a financial brand — no financial credibility, no domain-specific expertise
+- Rebranding suggests a pivot away from narrow causal AI identity toward broader decision intelligence
+
+**Social presence**
+- *[TBD — verify on LinkedIn and X]*
+
+**Customer acquisition**
+- Technical content marketing (research papers, developer content)
+- Enterprise sales to data science and analytics teams
+- Conference presence in AI/ML space
+- *[TBD — verify current strategy post-rebrand]*
+
+**Known customers**
+*[TBD — not publicly confirmed]*
+
+**Weaknesses / RealRate opportunities**
+- No financial domain expertise — cannot speak credibly to CFOs, risk officers, or actuaries
+- No ratings, no seal, no archive, no financial health product
+- Technical audience only — not decision-makers in finance
+- Rebrand suggests instability or repositioning — may be moving away from the space
+- RealRate owns the intersection of causal AI + financial intelligence — CausalLens/DecisionOS does not compete here directly
+
+**Content angles for RealRate**
+- Why causal AI matters specifically in finance (P3 / methodology posts)
+- The difference between causal AI for general analytics vs. causal AI for financial health (P3)
+- Position RealRate as the only causal AI platform built specifically for financial intelligence
 
 ---
 
 ### Competitive Comparison Table
 
-| | RealRate | RapidRatings | Moody's/S&P | CausalLens |
+| | RealRate | RapidRatings | Moody's / S&P | CausalLens/DecisionOS |
 |---|---|---|---|---|
 | Causal AI | ✓ | ✗ | ✗ | ✓ |
-| Fully explainable | ✓ | ✗ | ✗ | ✓ |
+| Fully explainable drivers | ✓ | ✗ | ✗ | ✓ |
 | Independent (not issuer-paid) | ✓ | ✓ | ✗ | N/A |
 | Free public archive | ✓ | ✗ | ✗ | ✗ |
-| Certification / seal product | ✓ | ✗ | ✗ | ✗ |
+| Certification / seal product | ✓ | ✗ (Badge is new) | ✗ | ✗ |
 | Financial ratings focus | ✓ | ✓ | ✓ | ✗ |
-| Accessible to mid-size companies | ✓ | ✓ | ✗ | ✗ |
+| Accessible to mid-size companies | ✓ | ✓ | ✗ | N/A |
+| Serves CFOs / risk officers directly | ✓ | ✓ | ✗ | ✗ |
+| Public thought leadership content | ✓ | ✓ | ✗ | Partial |
+| No conflict of interest | ✓ | ✓ | ✗ | N/A |
+
+### Monitoring Cadence
+
+| Competitor | What to Track | Where | Frequency |
+|---|---|---|---|
+| RapidRatings | New products, partnerships, content themes, Badge Program traction | Website, LinkedIn, press releases | Monthly |
+| Moody's / S&P | ESG rating changes, regulatory news, new analytics products | News alerts, LinkedIn | Quarterly |
+| CausalLens / DecisionOS | Rebrand progress, new customers, product direction | Website, LinkedIn, TechCrunch | Quarterly |
 
 ### Output
 - Updated competitor profiles (review quarterly)
@@ -135,7 +335,7 @@ Maintain a clear, current understanding of what competitors offer, how they posi
 - Messaging recommendations per competitor weakness
 - Monitoring log (alerts, updates, news)
 
-**Current Status:** *Profiles drafted — pricing and website links TBD for CausalLens*
+**Current Status:** *Full profiles drafted April 2026. CausalLens/DecisionOS product details and social presence TBD — website not accessible at time of research. RapidRatings social follower count TBD.*
 
 ---
 
