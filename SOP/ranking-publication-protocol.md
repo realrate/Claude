@@ -29,11 +29,9 @@ Every post in this protocol follows the same principle: **the story opens, the d
 | Day +1 | Seal post | Single image | Top-rated companies | Organic amplification — company recognition |
 | Day +2 | Insight 1 — Biggest Mover | Single image | All | Company-level story — who moved and why |
 | Day +3 | Non-Top-Rated 1 | Single image | CFOs of non-top-rated companies | Education — what's holding them back |
-| Day +4 | Insight 2 — The Newcomer | Single image | All | First-time or returning Top-Rated company |
-| Day +5 | Insight 3 — Rotating Angle | Single image | All | Company-specific or industry-level pattern |
+| Day +5 | Insight 2 — Rotating Angle | Single image | All | Company-specific or industry-level pattern |
 | Day +6 | Non-Top-Rated 2 | Single image | Investors / risk officers / procurement | Risk intelligence — what buyers should know |
-| Day +7 | Insight 4 — The Why | Single image or short carousel | All | Causal chain — why a company ranked where it did |
-| Day +8 | Insight 5 — Industry Driver Pattern | Short carousel (3–4 slides) | All | Structural credibility — dominant driver across top tier |
+| Day +8 | Insight 3 — Industry Driver Pattern | Short carousel (3–4 slides) | All | Structural credibility — dominant driver across top tier |
 | Day +10 or +11 | Deep Dive | LinkedIn document (PDF, 8–10 slides) | All | Full ranking story in one piece |
 
 > **Spacing rule:** Never post two ranking posts on consecutive days. Each post needs 48 hours minimum to gather engagement before the next goes out.
@@ -49,8 +47,8 @@ Prepare all assets in advance so posting happens within hours of the website goi
 - [ ] Industry average ECR confirmed
 - [ ] Year-over-year rank movements calculated and verified
 - [ ] Biggest mover identified (up and down) with driver data
-- [ ] Dominant driver across top tier identified (for Insight 3)
-- [ ] Rotating angle selected for Insight 2 (see selection guide)
+- [ ] Dominant driver across top tier identified (for Insight 3 — Industry Driver Pattern)
+- [ ] Rotating angle selected for Insight 2 (see selection guide — must differ from NTR1 and NTR2 angles)
 - [ ] Non-Top-Rated Post 1 angle selected — CFO audience (see selection guide)
 - [ ] Non-Top-Rated Post 2 angle selected — investor/risk audience (see selection guide)
 - [ ] Copy drafted for all posts and reviewed
@@ -217,45 +215,6 @@ Find the company with the largest rank change up or down. Identify which ECR dri
 
 ---
 
-## Day +4 — Insight 2: The Newcomer
-
-**Goal:** Spotlight a company appearing in the Top-Rated list for the first time, or re-entering after a gap — named, with full data
-**Format:** Single image
-**Fixed for every industry where a new entrant exists — skip this post if no meaningful newcomer is present**
-
-Find the company that reached Top-Rated status this year for the first time, or that returned after previously dropping out. Identify which ECR driver got them there.
-
-### Visual
-| Element | What to show |
-|---|---|
-| Company name | Prominent |
-| "New to Top-Rated" or "Returned to Top-Rated" label | Clear badge or callout |
-| ECR score | Current year |
-| Prior status | "Not ranked" / "Ranked [X] last year" |
-| Key driver | Name + point contribution |
-| Industry average | For context |
-| RealRate logo | Corner with most space |
-| Tagline | Bottom |
-
-### Caption Structure
-| Element | How to write it |
-|---|---|
-| **Story hook** | Name the company, note the newcomer status — create curiosity about what changed |
-| **Data** | ECR score, prior status, driver contribution in points |
-| **Driver explanation** | What changed on the balance sheet — the structural shift that earned them Top-Rated |
-| **Implication** | What this company's rise signals for others in the industry |
-| **Ranking URL** | Always last — realrate.ai/rankings/[industry]/[year] |
-
-**Formula:**
-> *"[Company] wasn't in the Top-Rated tier last year. In [year], they are. ECR: [X]%. The driver that got them there: [Driver] at +[Y] points."*
-
-### Rules
-- If multiple newcomers exist: pick the most data-rich story
-- If no clear newcomer exists: skip this post and move Day +5 forward
-- Never frame it as luck — always find the structural explanation
-
----
-
 ## Day +6 — Non-Top-Rated Post 2
 
 **Goal:** Risk intelligence for the buyer side — investors, risk officers, and procurement teams assessing non-top-rated companies
@@ -294,7 +253,7 @@ Find the company that reached Top-Rated status this year for the first time, or 
 
 ---
 
-## Day +5 — Insight 3: Rotating Angle
+## Day +5 — Insight 2: Rotating Angle
 
 **Goal:** Industry-level perspective — zoom out from one company to a broader pattern
 **Format:** Single image
@@ -342,51 +301,7 @@ Find the company that reached Top-Rated status this year for the first time, or 
 
 ---
 
-## Day +7 — Insight 4: The Why
-
-**Goal:** Causal storytelling — explain *why* a company ranked where it did, not just *that* it did
-**Format:** Single image or short carousel (3 slides)
-**Pick one company per cycle — either the biggest mover, the biggest surprise, or the newcomer**
-
-This is the deepest analytical post in the cycle. It goes beyond stating the rank and ECR — it walks through the causal chain: which drivers moved, by how much, why those drivers moved structurally, and what that means for anyone assessing this company.
-
-### Single Image Version
-| Element | What to show |
-|---|---|
-| Company name | Prominent |
-| ECR score | Large |
-| 3–4 driver contributions | Waterfall or ranked bar — strength and weakness drivers, each with pp contribution |
-| Causal explanation | One-line structural note per key driver |
-| RealRate logo | Corner with most space |
-| Tagline | Bottom |
-
-### Short Carousel Version (3 slides)
-| Slide | Content |
-|---|---|
-| **Cover** | "[Company]: Why they ranked [X] in [Industry] [Year]" |
-| **Slide 2** | Full driver breakdown — each driver, its direction, its pp contribution. Colour-coded. |
-| **Slide 3** | The causal chain explained — which driver was the root cause, what structural decision or condition created it, what it means going forward |
-
-### Caption Structure
-| Element | How to write it |
-|---|---|
-| **Story hook** | State the rank and ECR — then immediately pivot to "but the number alone doesn't tell you why" |
-| **Causal explanation** | Walk through the key driver — what it measures, what changed, what caused that change structurally |
-| **Secondary drivers** | Note supporting or offsetting drivers briefly |
-| **Implication** | What the causal picture means for a CFO, investor, or risk officer looking at this company |
-| **Ranking URL** | Always last — realrate.ai/rankings/[industry]/[year] |
-
-**Formula:**
-> *"[Company] ranked [X] in [Industry] with an ECR of [Y]%. The number is one thing. The cause is more interesting. [Driver] contributed +[Z] points — and here's the structural reason why."*
-
-### Rules
-- Always name the causal mechanism, not just the outcome — "their equity grew because [X]" not just "equity was strong"
-- If the driver is obvious (revenue went up, equity went up), go one level deeper: *why* did revenue translate to equity at that rate?
-- Never speculate — ground every causal claim in what the balance sheet shows
-
----
-
-## Day +8 — Insight 5: Industry Driver Pattern
+## Day +8 — Insight 3: Industry Driver Pattern
 
 **Goal:** Structural credibility — the dominant driver across the whole industry's top tier
 **Format:** Short carousel — 3 to 4 slides
@@ -502,10 +417,7 @@ Largest rank change up or down → that company is Insight 1
 | Companies close to top-rated threshold | Road to Top-Rated |
 | Low % of top-rated vs total companies | Industry Health Overview |
 
-**Step 4 — Identify Day +4 post (Insight 2: The Newcomer):**
-Look for a company appearing in Top-Rated for the first time, or returning after a gap. If one exists with clear driver data → use it. If not → skip Day +4, shift Day +5 forward one day.
-
-**Step 5 — Select Day +5 angle (Insight 3: Rotating — must be company-specific or industry trend, not an aggregate risk signal):**
+**Step 4 — Select Day +5 angle (Insight 2: Rotating — must be company-specific or industry trend, not an aggregate risk signal):**
 | If the data shows... | Use this angle |
 |---|---|
 | Well-known company ranked unexpectedly high or low | The Surprise |
@@ -516,7 +428,7 @@ Look for a company appearing in Top-Rated for the first time, or returning after
 | A company has held a top position across multiple cycles | The Consistent Performer |
 | A smaller company outranks a well-known industry giant | Small vs. Big |
 
-**Step 6 — Select Day +6 angle (Non-Top-Rated Post 2 — buyer audience):**
+**Step 5 — Select Day +6 angle (Non-Top-Rated Post 2 — buyer audience):**
 | If the data shows... | Use this angle |
 |---|---|
 | High-stakes industry (insurance, pharma, finance) | What Buyers Should Know (default) |
@@ -527,10 +439,7 @@ Look for a company appearing in Top-Rated for the first time, or returning after
 | Companies look stable by conventional metrics but not ECR | The Due Diligence Gap |
 | Top-rated tier is thin relative to total companies | The Concentration Risk |
 
-**Step 7 — Select Day +7 company (fixed — Insight 4: The Why):**
-Pick one company: the biggest mover (Insight 1), the newcomer (Insight 2), or the most surprising finding in the data. Whichever has the richest causal story — the clearest chain from structural condition → driver movement → ECR outcome.
-
-**Step 8 — Identify Day +8 post (fixed — Insight 5: Industry Driver Pattern):**
+**Step 6 — Identify Day +8 post (fixed — Insight 3: Industry Driver Pattern):**
 Most frequent greatest strength driver across top tier → that's the Industry Driver Pattern
 
 ---
