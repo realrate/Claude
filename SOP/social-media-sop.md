@@ -132,15 +132,14 @@ Produce on-brand, visually consistent LinkedIn graphics that reinforce RealRate'
 - Less is more — flat, minimal, data-focused aesthetic
 - Check every design against the brand compliance checklist before publishing
 
-### Canva Workflow
-1. Open RealRate brand kit in Canva
-2. Select correct template or start from approved dimensions
-3. Apply brand colors — core palette first, extended palette only when contrast is maintained
-4. Set all text in Manrope
-5. Place logo top-left
-6. Add tagline on analytical posts: `"Powered by RealRate: Using Explainable Financial AI"`
-7. Review against compliance checklist
-8. Export and attach to scheduled post
+### Design Workflow
+1. Claude creates the design directly (HTML/CSS or Python image libraries)
+2. Apply brand colors — core palette first, extended palette only when contrast is maintained
+3. Set all text in Manrope
+4. Place logo top-left
+5. Add tagline on analytical posts: `"Powered by RealRate: Using Explainable Financial AI"`
+6. Review against compliance checklist
+7. Export as PNG/PDF and attach to scheduled post
 
 ### Design Specs
 

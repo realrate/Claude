@@ -133,6 +133,6 @@ See `competitive-landscape.md` for full competitor profiles and comparison.
 - **Emojis:** Max 2 in captions, none on images
 - **Mandatory tagline on analytical posts:** `"Powered by RealRate: Using Explainable Financial AI"`
 
-### Brand Fonts (Canva)
+### Brand Fonts
 - RealRate: Manrope
 - Do NOT use ITC Benguiat Condensed — that is OceoLuxe only

@@ -153,7 +153,7 @@ Use 3–5 per post. Formula: **1 broad + 2 niche + 1 industry-specific** (when r
 > *Would a CFO, risk officer, or institutional investor find this useful, credible, and distinctly RealRate? If not — it doesn't get posted.*
 
 ## Content Operations
-- Canva brand kit is set up
+- Designs are created directly by Claude (HTML/CSS or Python image libraries) — no Canva
 - KPIs not yet defined — review after 60 days of consistent posting
 - Amneh writes all copy; Holger approves personal page posts
 - Content must balance **awareness + credibility + conversion simultaneously** (pre-revenue stage)
