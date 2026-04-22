@@ -34,13 +34,14 @@ These three elements always appear together. Storytelling is the delivery mechan
 
 Every ranking publication follows a **4-phase protocol** spanning approximately 2 weeks. The teaser phase has been removed — publication dates are confirmed only when the ranking goes live on the website, so the cycle begins at launch.
 
-| Phase | Timing | Goal |
-|---|---|---|
-| 1 — Launch | Day 0 (as soon as live on website) | Maximum reach |
-| 2 — Insight 1: The Biggest Mover | Day +2 | Add depth — company-level story |
-| 3 — Insight 2: Rotating Angle | Day +4 | Industry-level perspective |
-| 4 — Insight 3: Industry Driver Pattern | Day +6 or +7 | Structural credibility |
-| 5 — Conversion | Week 2+ | Drive action |
+| Phase | Timing | Format | Goal |
+|---|---|---|---|
+| 1 — Launch | Day 0 | Image carousel | Maximum reach |
+| 2 — Insight 1: The Biggest Mover | Day +2 | Single image | Company-level story |
+| 3 — Insight 2: Rotating Angle | Day +4 | Single image | Industry-level pattern or signal |
+| 4 — Insight 3: Industry Driver Pattern | Day +6 or +7 | Short carousel (3–4 slides) | Structural credibility |
+| 5 — Deep Dive | Day +7 to +10 | LinkedIn document (PDF, 8–10 slides) | Full ranking story in one piece |
+| 6 — Conversion | Week 2+ | Text / comment responses | Drive action |
 
 > **Note on timing:** Post 3–4× per week maximum. Space posts to allow each one to gather engagement before the next goes out. Never post two ranking posts on consecutive days.
 
@@ -129,6 +130,19 @@ Prepare all assets in advance so launch-day posting happens within hours of the 
 
 Find the company with the largest rank change (up or down). Identify which ECR driver caused it. Explain what it means structurally.
 
+### Format
+**Single image post** — one strong visual with the company name, rank movement (e.g. #24 → #1), ECR score, and the key driver contribution. Clean, minimal, data-focused. Not a carousel — this post lives or dies on one punchy visual and a strong caption.
+
+| Visual element | What to show |
+|---|---|
+| Company name | Prominent |
+| Rank movement | Before → After (e.g. #24 → #1) |
+| ECR score | Current year ECR % |
+| Key driver | Name + point contribution (e.g. Stockholders' Equity +292pts) |
+| Industry average | For context |
+| RealRate logo | Top-left |
+| Tagline | Bottom of image |
+
 ### Post Structure
 | Element | What it does | How to write it |
 |---|---|---|
@@ -152,7 +166,7 @@ Find the company with the largest rank change (up or down). Identify which ECR d
 - One company, one driver, one clear implication — don't dilute
 
 ### Assets — Phase 2
-- [ ] "What We Found" Insight Post
+- [ ] Insight 1 single image post + caption
 - [ ] Ranking Interpretation article (PR)
 - [ ] Performance Drivers article — Why Companies Ranked Well or Didn't (PR)
 
@@ -162,6 +176,18 @@ Find the company with the largest rank change (up or down). Identify which ECR d
 
 **Timing:** Day +4
 **Goal:** Industry-level perspective — zoom out from one company to a broader pattern or signal
+
+### Format
+**Single image post** — one data visualization showing the pattern or signal. Could be a comparison chart, a fragility heatmap, or a before/after industry average. The visual makes the pattern visible at a glance; the caption explains what it means.
+
+| Visual element | What to show |
+|---|---|
+| Pattern title | Short, specific (e.g. "The Warning Signal in US Pharma 2025") |
+| 2–3 named companies | With ECR numbers and relevant driver |
+| Industry average | As a reference point |
+| The pattern highlighted | Visually distinct — use semantic colors (red for risk, green for strength) |
+| RealRate logo | Top-left |
+| Tagline | Bottom of image |
 
 ### Choose one angle based on what the data actually supports
 
@@ -193,8 +219,7 @@ Find the company with the largest rank change (up or down). Identify which ECR d
 - Link back to Phase 1 post in first pinned comment
 
 ### Assets — Phase 3
-- [ ] Rotating insight post (angle selected from menu above)
-- [ ] Year-over-Year Comparison post (if year-over-year angle selected)
+- [ ] Insight 2 single image post + caption (angle selected from menu above)
 - [ ] Trends & Patterns article (PR)
 
 ---
@@ -207,6 +232,20 @@ Find the company with the largest rank change (up or down). Identify which ECR d
 ### Fixed for every industry — always answerable from the data
 
 Identify the dominant ECR driver across the top tier of the ranking. This is the driver that appears as the greatest strength for multiple top-ranked companies. Explain why that driver dominates in this specific industry and what it means for companies outside the top tier.
+
+### Format
+**Short carousel — 3 to 4 slides** — this insight has more to show than a single image allows. The carousel walks through the pattern company by company, then lands on the structural explanation.
+
+| Slide | Content |
+|---|---|
+| Cover | "[Driver] is the defining factor in [Industry] 2025" |
+| Slide 2 | 3 named top companies, each with ECR % and driver contribution in points |
+| Slide 3 | The structural explanation — why this driver dominates in this industry specifically |
+| Slide 4 (optional) | What companies outside the top tier are missing — the implication |
+
+- RealRate logo top-left on every slide
+- Tagline on final slide
+- Semantic colors: green for strength driver, context color for industry average
 
 ### Post Structure
 | Element | What it does | How to write it |
@@ -233,13 +272,67 @@ Identify the dominant ECR driver across the top tier of the ranking. This is the
 - Target P4 audience: risk officers, investors, procurement leaders
 
 ### Assets — Phase 4
-- [ ] Industry Driver Pattern post
-- [ ] "Why the Top Companies Ranked Well" carousel
+- [ ] Insight 3 short carousel (3–4 slides) + caption
 - [ ] Risk & Weaknesses article (PR)
 
 ---
 
-## Phase 5 — Conversion
+## Phase 5 — Deep Dive
+
+**Timing:** Day +7 to +10
+**Goal:** Pull the full ranking story together in one comprehensive piece — the most educational, most shareable asset in the cycle
+
+### Format: LinkedIn Document Carousel (PDF — 8 to 10 slides)
+
+Not a standard image carousel. A PDF document post uploaded directly to LinkedIn. Document posts receive higher organic reach than image carousels on LinkedIn and allow deeper educational content without overwhelming a single caption.
+
+This is the one piece per ranking cycle that covers everything — launch, movers, patterns, drivers, risk signals — in one place. It serves the audience that wants to go deeper after seeing the individual posts.
+
+| Slide | Content |
+|---|---|
+| **Cover** | "[Industry] Financial Health Report 2025 — What the Data Reveals" |
+| **Slide 2** | Industry snapshot: total companies ranked, industry average ECR, number of Top-Rated companies |
+| **Slide 3** | The top tier — top 5 companies with ECR numbers and shared dominant driver |
+| **Slide 4** | The biggest mover — rank change, ECR before/after, driver that caused it |
+| **Slide 5** | The surprise — a well-known company whose ECR contradicts assumptions |
+| **Slide 6** | The warning signal — bottom tier fragility pattern with named companies |
+| **Slide 7** | What separates top-rated from the rest — the structural insight |
+| **Slide 8** | What this means for [target reader] — CFO, risk officer, investor |
+| **Slide 9** | Methodology note — how ECR works, what makes it explainable and independent |
+| **Slide 10** | CTA — "View the full [year] [industry] ranking at realrate.ai" |
+
+### Design rules for document carousel
+- Every slide: RealRate logo top-left, consistent header bar with industry name and year
+- Data slides: use semantic colors — green for strength drivers, red/warning for risk signals
+- Text slides: Manrope, strong contrast, no grey text on white
+- Cover: dark blue background (#00679B), white text — bold and clean
+- CTA slide: light background, website URL prominent, tagline included
+- No emojis on any slide
+
+### Caption for document post
+Shorter than individual insight posts — the document does the heavy lifting.
+
+> *"We ranked [X] [industry] companies using 2025 financial data. Here's what the full picture looks like — who ranked well, who didn't, what drove the difference, and what it signals for the industry."*
+> + tagline + hashtags
+
+### First pinned comment
+> *"Full [year] [industry] ranking here 👇"*
+> https://realrate.ai/rankings/[industry]/[year]
+> [company tags]
+
+### Why document format over image carousel
+- LinkedIn algorithm currently favours document posts — higher organic reach
+- Readers engage longer — swipe-through format rewards educational depth
+- Downloadable — audiences save and reshare document posts more than image carousels
+- Positions RealRate as the go-to intelligence source for the industry, not just a ranking publisher
+
+### Assets — Phase 5
+- [ ] LinkedIn document carousel (PDF, 8–10 slides)
+- [ ] Caption + first pinned comment
+
+---
+
+## Phase 6 — Conversion
 
 **Timing:** Week 2+
 **Goal:** Drive action from engaged prospects
