@@ -62,7 +62,7 @@ See `competitive-landscape.md` for full competitor profiles and comparison.
 > Source: [Corporate Design Specification](https://github.com/realrate/Corporate-Design/wiki/Corporate-Design-Specification)
 
 ### Design Principles
-- **Flat, minimal, data-focused** — no gradients, shadows, or decorative textures
+- **Flat, minimal, data-focused** — minimal gradients and subtle textures are permitted; avoid heavy decoration or shadows
 - **White backgrounds** as the default base
 - **Contrast enforcement** — light colors on dark backgrounds, dark on light. Never grey text on white.
 - *"Clarity > Decoration. Insight > Density. Structure > Noise."*
@@ -128,7 +128,7 @@ See `competitive-landscape.md` for full competitor profiles and comparison.
   - On light slides: body text must be strong dark (`#000000` or `#4A4A4A`) — never grey
   - Cover content anchors at the top, directly below the logo — do not center
   - Use `justify-content: space-between` so sections fill the full height
-- **Style:** Flat, minimal, data-focused — no gradients, shadows, or decorative textures
+- **Style:** Flat, minimal, data-focused — minimal gradients and subtle textures permitted; no heavy decoration or shadows
 - **Logo position:** Top-left preferred
 - **Emojis:** Max 2 in captions, none on images
 - **Mandatory tagline on analytical posts:** `"Powered by RealRate: Using Explainable Financial AI"`
