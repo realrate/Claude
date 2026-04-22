@@ -129,9 +129,14 @@ See `competitive-landscape.md` for full competitor profiles and comparison.
   - Cover content anchors at the top, directly below the logo — do not center
   - Use `justify-content: space-between` so sections fill the full height
 - **Style:** Flat, minimal, data-focused — minimal gradients and subtle textures permitted; no heavy decoration or shadows
-- **Logo position:** Top-left preferred
+- **Logo placement:** Any corner — choose based on content weight and white space. Place in the corner that has the most available space and least visual conflict with content. No fixed default.
+- **Logo version — by background:**
+  1. **Dark background** → use RealRate logo with white text (priority)
+  2. **Dark background, logo colors not clearly visible** → add a white background block behind the logo to restore visibility
+  3. **Light background** → use regular logo with black text
 - **Emojis:** Max 2 in captions, none on images
-- **Mandatory tagline on analytical posts:** `"Powered by RealRate: Using Explainable Financial AI"`
+- **Tagline on image:** `"Powered by RealRate: Using Explainable Financial AI"` — appears on analytical post images only, never in the caption
+- **Backgrounds:** Mix primary (`#00679B` dark blue) and secondary (`#f5f5f5` light grey, `#e8e8e8` medium grey) — choose whichever looks best for the content. No single default. Alternate across posts in a cycle to create visual variety.
 
 ### Brand Fonts
 - RealRate: Manrope

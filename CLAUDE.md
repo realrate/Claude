@@ -49,10 +49,12 @@ RealRate/
 - **Never link** to sales pages, pricing, or the archive in public posts — always link to realrate.ai/rankings/[industry]/[year] or realrate.ai/methodology
 - **Archive is internal only** — used for data verification only, never shared publicly
 - **Never tag companies** in captions — always in first pinned comment
-- **Max 5 hashtags** per post, always include `#RealRate`
+- **No hashtags** in captions
+- **Ranking link in caption** — always end the caption with the realrate.ai/rankings/[industry]/[year] URL
+- **Never use "we"** in copy — always use "RealRate" instead
 - **Company page is primary** — only produce Holger personal page content when explicitly requested
 - **No emojis on images** — max 2 in captions
-- **Every analytical post** must include: `"Powered by RealRate: Using Explainable Financial AI"`
+- **Tagline on image only** — `"Powered by RealRate: Using Explainable Financial AI"` appears on the image, not in the caption
 - Brand pillars are under review — do not treat as final
 
 ---

@@ -64,10 +64,11 @@
 
 ### Format Rules
 - Max 2 emojis in caption, none on image
-- 3–5 hashtags only (niche over broad)
-- Always link to realrate.ai/rankings/[industry]/[year] or realrate.ai/methodology — never sales pages, pricing, or the archive
-- Tag companies in first pinned comment, not in caption (max 3–5 in caption if essential)
-- Every analytical post must include tagline: `"Powered by RealRate: Using Explainable Financial AI"`
+- No hashtags in captions
+- Always end the caption with the ranking URL: realrate.ai/rankings/[industry]/[year] or realrate.ai/methodology
+- Tag companies in first pinned comment, not in caption
+- Tagline `"Powered by RealRate: Using Explainable Financial AI"` on the image only — never in the caption
+- Never use "we" in copy — always "RealRate"
 
 ## Content Pillars — Company Page
 
@@ -112,30 +113,21 @@
 | Phase | Timing | Post Type | Goal |
 |---|---|---|---|
 | 1 | 5–3 days before | Teaser only. No data. Name the industry. | Build anticipation |
-| 2 | Day 0 (Wednesday preferred) | Full ranking, top 10, ECR numbers, realrate.ai link in pinned comment | Maximum reach. Pin this post. |
+| 2 | Day 0 (Wednesday preferred) | Full ranking, top 10, ECR numbers, realrate.ai link in caption | Maximum reach. Pin this post. |
 | 3 | Day +1 or +2 | First insight post. Most surprising finding. Named company. | Depth layer |
 | 4 | Day +3 to +5 | Structural or risk perspective. Fragility patterns or driver deep-dive. | Credibility layer |
 | 5 | Week 2+ (optional) | Respond to comments, post reactions, share data from DMs | Conversion layer |
 
-## Hashtag Strategy
+## Caption Keywords
 
-Use 3–5 per post. Formula: **1 broad + 2 niche + 1 industry-specific** (when relevant) + `#RealRate` always.
+No hashtags. Use these keywords naturally in caption copy to maximise LinkedIn reach:
 
-| Type | Hashtag | When to Use |
-|---|---|---|
-| Broad | `#FinancialHealth` | Every post |
-| Broad | `#FinTech` | Every post |
-| Niche | `#ExplainableAI` | AI/methodology posts |
-| Niche | `#FinancialIntelligence` | Analysis/insight posts |
-| Niche | `#CorporateFinance` | CFO-targeted content |
-| Niche | `#RiskManagement` | Risk/warning signal posts |
-| Niche | `#FinancialStability` | ECR/driver posts |
-| Industry | `#InsurTech` | Life insurance posts |
-| Industry | `#SupplyChain` | Vendor vetting content |
-| Industry | `#InvestorIntelligence` | Investor-targeted posts |
-| Brand | `#RealRate` | Every post |
-
-> Keywords in caption text outperform hashtags for LinkedIn reach. Always include "financial health," "explainable AI," "ECR," and "capital stability" naturally in copy.
+- "financial health"
+- "explainable AI"
+- "ECR"
+- "capital stability"
+- "balance sheet strength"
+- "financial stability"
 
 ## Copywriting Frameworks
 

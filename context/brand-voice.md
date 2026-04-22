@@ -56,11 +56,14 @@ Every piece of content follows this principle: **the story opens, the data prove
 
 - Never link to sales pages, pricing, or contact forms in posts
 - Never post without anchoring to real ECR data, real company names, or real archive findings
-- Never use more than 5 hashtags
+- Never use hashtags in captions
+- Never use "we" in copy — always "RealRate"
 - Never put emojis on images
 - Never issue forecasts or speculative claims about companies
 - Never promote RealRate directly in the body of any post
 - Never tag companies in the caption — always in the first pinned comment
+- Never include the tagline in the caption — it belongs on the image only
+- Always end the caption with the ranking URL: realrate.ai/rankings/[industry]/[year]
 
 ## Holger's Personal Voice (secondary — use only when explicitly requested)
 
