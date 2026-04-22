@@ -65,7 +65,7 @@
 ### Format Rules
 - Max 2 emojis in caption, none on image
 - 3–5 hashtags only (niche over broad)
-- Always link to archive or methodology — never sales pages or pricing
+- Always link to realrate.ai/rankings/[industry]/[year] or realrate.ai/methodology — never sales pages, pricing, or the archive
 - Tag companies in first pinned comment, not in caption (max 3–5 in caption if essential)
 - Every analytical post must include tagline: `"Powered by RealRate: Using Explainable Financial AI"`
 
@@ -112,7 +112,7 @@
 | Phase | Timing | Post Type | Goal |
 |---|---|---|---|
 | 1 | 5–3 days before | Teaser only. No data. Name the industry. | Build anticipation |
-| 2 | Day 0 (Wednesday preferred) | Full ranking, top 10, ECR numbers, archive link in pinned comment | Maximum reach. Pin this post. |
+| 2 | Day 0 (Wednesday preferred) | Full ranking, top 10, ECR numbers, realrate.ai link in pinned comment | Maximum reach. Pin this post. |
 | 3 | Day +1 or +2 | First insight post. Most surprising finding. Named company. | Depth layer |
 | 4 | Day +3 to +5 | Structural or risk perspective. Fragility patterns or driver deep-dive. | Credibility layer |
 | 5 | Week 2+ (optional) | Respond to comments, post reactions, share data from DMs | Conversion layer |
@@ -158,10 +158,12 @@ Use 3–5 per post. Formula: **1 broad + 2 niche + 1 industry-specific** (when r
 - Amneh writes all copy; Holger approves personal page posts
 - Content must balance **awareness + credibility + conversion simultaneously** (pre-revenue stage)
 
-## RealRate Archive
+## RealRate Archive *(Internal — data verification only)*
 **URL:** https://www.realrate-archive.com/
 
 **ALWAYS** fetch data from this site before creating any content. Also use it for QA — verify all ECR numbers, rankings, company names, and findings against live archive data before finalizing any post.
+
+> **Never share this URL publicly.** Public CTAs always point to realrate.ai/rankings/[industry]/[year] — not the archive.
 
 Available industries: `us_life`, `us_finance_services`, `us_software`, `us_semiconductors`, `us_pharma`, `us_health_services`, `us_consulting`, `us_advertising`, `us_brokers`, `de_life_insurance`, `de_health_insurance`, `at_insurance` + more
 
@@ -178,4 +180,5 @@ Available industries: `us_life`, `us_finance_services`, `us_software`, `us_semic
 - URL format: `https://realrate.ai/rankings/[industry]/[year]`
 - For methodology posts: `https://realrate.ai/methodology`
 - Only add a first comment when the post references a specific ranking or methodology
+- Never link to the archive — always realrate.ai
 - Format: `Check the full [year] [industry] ranking here 👇` + link

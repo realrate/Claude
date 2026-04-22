@@ -75,7 +75,7 @@ Prepare all assets in advance so launch-day posting happens within hours of the 
 - Include industry average ECR for context
 - Note biggest movers (up and down)
 - Pin this post immediately after publishing
-- Add archive link in first pinned comment — never in caption
+- Add website link in first pinned comment — never in caption, never the archive URL
 - Tag companies in first pinned comment only (max 3–5)
 
 ### Post Structure
@@ -99,7 +99,7 @@ Prepare all assets in advance so launch-day posting happens within hours of the 
 
 ### First Pinned Comment Format
 > *"Full [year] [industry] ranking available here 👇"*
-> [archive link]
+> https://realrate.ai/rankings/[industry]/[year]
 > [company tags]
 
 ### Assets — Phase 1
@@ -261,7 +261,7 @@ Identify the dominant ECR driver across the top tier of the ranking. This is the
 
 ### Outreach Integration
 - Anyone who commented substantively on Phases 1–4 → flag for LinkedIn outreach (see outreach-sop.md)
-- Anyone who clicked through to archive → flag for email follow-up if contact info available
+- Anyone who clicked through to realrate.ai → flag for email follow-up if contact info available
 
 ---
 

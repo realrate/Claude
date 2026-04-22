@@ -42,7 +42,7 @@ Produce content that is analytical, credible, and relevant to RealRate's target 
 - Max 2 emojis in caption, none on images
 - 3–5 hashtags: 1 broad + 2 niche + 1 industry-specific + #RealRate always
 - Every analytical post must include: `"Powered by RealRate: Using Explainable Financial AI"`
-- Never link to sales pages or pricing — always link to archive or methodology
+- Never link to sales pages, pricing, or the archive — always link to realrate.ai/rankings/[industry]/[year] or realrate.ai/methodology
 - Tag companies in first pinned comment only — never in caption
 
 ### Accuracy Rules
@@ -108,7 +108,7 @@ Grow RealRate's LinkedIn presence among precision targets — CFOs, risk officer
 1. Draft caption using framework + content filter
 2. Design visual (if required) per design specs
 3. Verify all data points
-4. Write first pinned comment (company tags + archive/methodology link)
+4. Write first pinned comment (company tags + realrate.ai/rankings link or methodology link)
 5. Schedule or post
 6. Monitor engagement for 24–48 hours
 7. Respond to all comments

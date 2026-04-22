@@ -22,7 +22,7 @@ RealRate/
     ├── marketing-research-strategy.md     ← market landscape, competitor analysis, research steps
     ├── social-media-sop.md                ← content creation, calendar, LinkedIn page, design, ads, analytics
     ├── outreach-sop.md                    ← LinkedIn outreach, email outreach (Instantly), analytics
-    └── ranking-publication-protocol.md    ← 5-phase ranking launch process, checklists
+    └── ranking-publication-protocol.md    ← 4-phase ranking launch process, checklists
 ```
 
 ---
@@ -46,7 +46,8 @@ RealRate/
 
 - **Always verify ECR data** against https://www.realrate-archive.com before finalising any content
 - **Never use:** "excited to share," "game-changing," "revolutionary," "best-in-class" without data
-- **Never link** to sales pages or pricing in posts — always link to archive or methodology
+- **Never link** to sales pages, pricing, or the archive in public posts — always link to realrate.ai/rankings/[industry]/[year] or realrate.ai/methodology
+- **Archive is internal only** — used for data verification only, never shared publicly
 - **Never tag companies** in captions — always in first pinned comment
 - **Max 5 hashtags** per post, always include `#RealRate`
 - **Company page is primary** — only produce Holger personal page content when explicitly requested
