@@ -12,211 +12,141 @@ To ensure every new industry ranking published by RealRate is launched in a stru
 
 Every post in this protocol follows the same principle: **the story opens, the data proves, the visual shows.**
 
-- **Story** — the hook. Opens with a human, narrative tension: a company that rose or fell, a pattern that contradicts assumptions, a signal hiding in the numbers. Makes the reader want to know what happened and why.
+- **Story** — the hook. Opens with a narrative tension: a company that rose or fell, a pattern that contradicts assumptions, a signal hiding in the numbers. Makes the reader want to know what happened and why.
 - **Data** — the proof. ECR numbers, driver contributions, rank movements, industry averages. Never dropped — always present. This is what makes RealRate credible and distinct from opinion-based content.
 - **Visual** — the evidence. The carousel or graphic carries the data in a scannable, shareable format. The caption tells the story; the visual shows the numbers.
 
-These three elements always appear together. Storytelling is the delivery mechanism — data and visuals are the substance.
-
-**The formula for every insight post:**
-> *Story hook → data that proves it → what it means → tagline*
-
-**Example of the approach in practice:**
-
-*Caption:*
-> "A year ago Clearwater Analytics was ranked #24 in US Software. Today they're #1. Their ECR jumped to 647% — 295 points above the industry average. One thing changed on their balance sheet. Stockholders' Equity contributed +292 points to that move. That's not luck. That's a structural decision playing out in the numbers."
-
-*Visual:* Carousel showing rank movement, ECR score, driver breakdown — data made scannable.
+**The formula for every post:**
+> *Story hook → data that proves it → structural explanation → implication for the reader → tagline*
 
 ---
 
-## Overview
+## Publication Cycle Overview
 
-Every ranking publication follows a **4-phase protocol** spanning approximately 2 weeks. The teaser phase has been removed — publication dates are confirmed only when the ranking goes live on the website, so the cycle begins at launch.
-
-| Phase | Timing | Format | Goal |
+| Day | Post | Format | Goal |
 |---|---|---|---|
-| 1 — Launch | Day 0 | Announcement post + ranking carousel + top-rated post | Maximum reach + recognition |
-| 1b — Seal Post | Day +1 | Single image (logos + seal) | Engagement + organic amplification |
-| 2 — Insight 1: The Biggest Mover | Day +2 | Single image | Company-level story |
-| 3 — Insight 2: Rotating Angle | Day +4 | Single image | Industry-level pattern or signal |
-| 4 — Insight 3: Industry Driver Pattern | Day +6 or +7 | Short carousel (3–4 slides) | Structural credibility |
-| 5 — Deep Dive | Day +7 to +10 | LinkedIn document (PDF, 8–10 slides) | Full ranking story in one piece |
-| 6 — Conversion | Week 2+ | Text / comment responses | Drive action |
+| Day 0 | Ranking carousel | Image carousel | Maximum reach — full top 10, all top-rated |
+| Day +1 | Seal post | Single image | Organic amplification — company recognition |
+| Day +2 | Insight 1 — Biggest Mover | Single image | Company-level story |
+| Day +3 | Non-Top-Rated post | Single image | Education + outreach support |
+| Day +5 | Insight 2 — Rotating Angle | Single image | Industry-level pattern or signal |
+| Day +7 | Insight 3 — Industry Driver Pattern | Short carousel (3–4 slides) | Structural credibility |
+| Day +9 or +10 | Deep Dive | LinkedIn document (PDF, 8–10 slides) | Full ranking story in one piece |
 
-> **Note on timing:** Post 3–4× per week maximum. Space posts to allow each one to gather engagement before the next goes out. Never post two ranking posts on consecutive days.
+> **Spacing rule:** Never post two ranking posts on consecutive days. Each post needs 48 hours minimum to gather engagement before the next goes out.
 
 ---
 
 ## Pre-Publication Checklist
 
-Prepare all assets in advance so launch-day posting happens within hours of the website going live.
+Prepare all assets in advance so posting happens within hours of the website going live.
 
-- [ ] Ranking data verified against realrate-archive.com
-- [ ] Top 10 companies confirmed with accurate ECR numbers
+- [ ] Ranking data verified against realrate-archive.com (internal only)
+- [ ] All top-rated companies confirmed with accurate ECR numbers
 - [ ] Industry average ECR confirmed
 - [ ] Year-over-year rank movements calculated and verified
 - [ ] Biggest mover identified (up and down) with driver data
 - [ ] Dominant driver across top tier identified (for Insight 3)
-- [ ] Rotating angle selected for Insight 2 (see options below)
-- [ ] Archive link ready for first pinned comment
-- [ ] Copy drafted for all 4 phases and reviewed
+- [ ] Rotating angle selected for Insight 2 (see selection guide)
+- [ ] Non-top-rated angle selected (see selection guide)
+- [ ] Copy drafted for all posts and reviewed
 - [ ] Visual assets designed and brand-compliant
+- [ ] Company logos collected for seal post
 - [ ] Holger briefed on ranking findings (if personal page post planned)
-- [ ] Ranking confirmed live on website before posting
+- [ ] Ranking confirmed live on realrate.ai before posting
 
 ---
 
-## Phase 1 — Launch
+## Day 0 — Ranking Carousel
 
-**Timing:** Day 0 — post within hours of website publication
-**Goal:** Maximum reach — highest-priority post in the cycle
+**Goal:** Maximum reach — the highest-priority post in the cycle
+**Format:** Image carousel
 
 ### Rules
-- Publish full top 10 with ECR numbers
+- Show full top 10 with ECR numbers
 - Include industry average ECR for context
 - Note biggest movers (up and down)
+- Highlight all top-rated companies
 - Pin this post immediately after publishing
-- Add website link in first pinned comment — never in caption, never the archive URL
-- Tag companies in first pinned comment only (max 3–5)
+- Website link in first pinned comment — never in caption
 
-### Post Structure
+### Carousel Structure
+| Slide | Content |
+|---|---|
+| Cover | "202X [Industry] Financial Health Ranking" — industry name and year prominent |
+| Slides 2–4 | Top 10 companies with ECR numbers and rank vs. prior year |
+| Slide 5 | Industry average ECR + number of top-rated companies |
+| Final slide | Tagline + RealRate logo |
+
+### Caption Structure
 | Element | What it does | How to write it |
 |---|---|---|
 | **Story hook** | Opens with a fact that creates immediate curiosity | Name a company or a number that surprises — make the reader ask "why?" |
-| **Data** | The top 10 with ECR numbers + industry average | Present as a clean list — let the numbers speak |
-| **One insight** | The most notable finding from the ranking | One sentence — name the company or pattern, state the implication |
+| **Data** | Top 10 with ECR numbers + industry average | Clean list — let the numbers speak |
+| **One insight** | The most notable finding | One sentence — name the company or pattern, state the implication |
 | **Tagline** | Brand anchor | `"Powered by RealRate: Using Explainable Financial AI"` |
-| **Hashtags** | 3–5 — 1 broad + 2 niche + industry-specific + #RealRate | Always last |
+| **Hashtags** | 3–5 | 1 broad + 2 niche + industry-specific + #RealRate |
 
-**Example opening (story hook):**
+**Example hook:**
 > *"140 US Software companies. One ranked #1 with an ECR of 647%. The industry average is 352%. Here's who made it — and what the data reveals about the ones who didn't."*
 
-### Design
-- Ranking carousel: top 10 companies with ECR numbers clearly visible
-- Cover slide: "202X Financial Health Ranking — [Industry]"
-- Include industry average ECR as benchmark
-- RealRate logo top-left on every slide
-- Industry name and year prominent
-
-### First Pinned Comment Format
+### First Pinned Comment
 > *"Full [year] [industry] ranking available here 👇"*
 > https://realrate.ai/rankings/[industry]/[year]
-> [company tags]
+> [tag top-rated companies — max 5 per comment, add multiple comments if needed]
 
-### Assets — Phase 1
-- [ ] Ranking announcement post (same day, before or alongside carousel)
-- [ ] Ranking announcements carousel (main launch post)
-- [ ] Top-Rated Companies post (format depends on count — see below)
-- [ ] Seal post (Day +1 — see below)
-- [ ] General Industry Top-Rated Companies (LinkedIn Ad)
-
----
-
-### Ranking Announcement Post
-
-**Timing:** Same day as launch — post first, before the carousel
-**Format:** Single image or text-forward post
-**Goal:** Simple, clean announcement that the ranking is live. Drives traffic to realrate.ai. Lower effort than the carousel — acts as a signal boost.
-
-**Caption structure:**
-> *"The [year] [Industry] Financial Health Ranking is now live. [X] companies ranked. [Y] Top-Rated. The data reveals [one-line surprising finding]."*
-> Link in first comment → realrate.ai/rankings/[industry]/[year]
-
-**Visual:** Cover image only — industry name, year, "Now Live", RealRate logo. No data on this slide — the carousel carries the data.
-
-**Note:** This post primes the algorithm before the carousel lands. Post it 1–2 hours before the full ranking carousel.
-
----
-
-### Top-Rated Companies Post
-
-**Timing:** Launch day or Day +1
-**Goal:** Recognition post for all top-rated companies — celebratory, shareable, drives company engagement
-
-**Format depends on number of Top-Rated companies:**
-
-| Top-Rated Count | Format | Structure |
-|---|---|---|
-| **1–8 companies** | Single image | All logos on one clean grid with the RealRate Top-Rated seal prominent |
-| **9–20 companies** | Short carousel (3–4 slides) | Group logos by industry sub-segment or alphabetical — 5–7 per slide |
-| **21–40 companies** | Document carousel (PDF) | Logo wall across multiple slides — cover names each company, slides group them |
-| **40+ companies** | Document carousel (PDF) | Same as above — cover states the count ("35 companies earned Top-Rated status") |
-
-**Every format includes:**
-- "Congratulations to the [year] Top-Rated [Industry] companies" as the headline
-- RealRate Top-Rated seal — prominent, not small
-- All company logos (where available) or company names if logo not available
-- RealRate logo top-left
-- Tagline on final slide or bottom of single image
-
-**Caption structure:**
-> *"[X] [industry] companies earned Top-Rated status in [year]. These companies rank in the top tier of financial health — assessed independently, explained by data."*
-> Companies tagged in first pinned comment (max 5 per comment — add multiple comments if needed)
-
-**Why this post works:** Tagged companies share it with their own audiences — this is organic amplification with zero ad spend. Always tag every top-rated company in comments.
-
----
-
-### Seal Post
-
-**Timing:** Day +1 (day after launch)
-**Goal:** High-engagement visual recognition post — the most shareable asset in the cycle
-
-**Format:** Single image — the RealRate Top-Rated seal at centre, surrounded by company logos arranged around it. Clean, prestigious, celebratory.
-
-**Design:**
-- White or light grey background (#f5f5f5)
-- RealRate Top-Rated seal: large, centred or anchored
-- Company logos: arranged around the seal in a balanced grid or arc
-- If too many logos to fit cleanly: feature top 10–12 only, caption references the full list
-- No ECR numbers on this image — this is recognition, not analysis
-- RealRate logo top-left, small
-- No tagline on this image — this post is not analytical
-
-**Caption structure:**
-> *"Congratulations to the [year] Top-Rated [Industry] companies — ranked by independent, explainable financial AI."*
-> Short. Celebratory. No analytical copy on this post — let the visual do the work.
-
-**First pinned comment:**
-> *"Full list of Top-Rated [Industry] companies 👇"*
-> https://realrate.ai/rankings/[industry]/[year]
-> [tag every top-rated company — multiple comments if needed]
-
-**Why this post gets engagement:**
-- Companies see their logo and tag their own followers
-- Feels like an award, not a product post — psychological distinction matters
-- Clean, shareable design that companies want to repost
-- Tagging in comments creates notification chains across companies
-
----
-
-### Outreach — Launch Day
+### Outreach — Day 0
 - [ ] Provide Krisha sequences for automatic upload
 - [ ] Set up Instantly campaign — Top Rated companies
 - [ ] Set up Instantly campaign — Non Top Rated companies
 - [ ] Add Top Rated leads
 - [ ] Add Non Top Rated leads
 - [ ] Optimize and launch campaigns
-
-### Distribution — Launch Day
 - [ ] Send Pingen snail mails
 
 ---
 
-## Phase 2 — Insight 1: The Biggest Mover
+## Day +1 — Seal Post
 
-**Timing:** Day +2
-**Goal:** Company-level story — the most data-rich, most shareable insight post
+**Goal:** High-engagement recognition post — the most shareable asset in the cycle
+**Format:** Single image
 
-### Fixed for every industry — always answerable from the data
+### Design
+- White or light grey background (#f5f5f5)
+- RealRate Top-Rated seal: large, centred or prominently anchored
+- All top-rated company logos arranged around the seal in a balanced grid or arc
+- If too many logos to fit cleanly: feature top 12–15, caption references the full list
+- No ECR numbers on this image — this is recognition, not analysis
+- RealRate logo top-left, small
+- No tagline — this post is not analytical
 
-Find the company with the largest rank change (up or down). Identify which ECR driver caused it. Explain what it means structurally.
+### Caption
+> *"Congratulations to the [year] Top-Rated [Industry] companies — ranked by independent, explainable financial AI."*
 
-### Format
-**Single image post** — one strong visual with the company name, rank movement (e.g. #24 → #1), ECR score, and the key driver contribution. Clean, minimal, data-focused. Not a carousel — this post lives or dies on one punchy visual and a strong caption.
+Short. Celebratory. No analytical copy — let the visual do the work.
 
-| Visual element | What to show |
+### First Pinned Comment
+> *"Full list of [year] Top-Rated [Industry] companies 👇"*
+> https://realrate.ai/rankings/[industry]/[year]
+> [tag every top-rated company — multiple comments if needed]
+
+### Why this post works
+- Companies see their logo and share it with their own audience — organic amplification at zero cost
+- Tagging in comments creates notification chains across multiple companies
+- Feels like an award, not a product post — companies engage, not scroll past
+
+---
+
+## Day +2 — Insight 1: The Biggest Mover
+
+**Goal:** Company-level story — the most data-rich, most specific insight post
+**Format:** Single image
+**Fixed for every industry — always answerable from the data**
+
+Find the company with the largest rank change up or down. Identify which ECR driver caused it. Explain what that means structurally.
+
+### Visual
+| Element | What to show |
 |---|---|
 | Company name | Prominent |
 | Rank movement | Before → After (e.g. #24 → #1) |
@@ -224,157 +154,164 @@ Find the company with the largest rank change (up or down). Identify which ECR d
 | Key driver | Name + point contribution (e.g. Stockholders' Equity +292pts) |
 | Industry average | For context |
 | RealRate logo | Top-left |
-| Tagline | Bottom of image |
+| Tagline | Bottom |
 
-### Post Structure
-| Element | What it does | How to write it |
-|---|---|---|
-| **Story hook** | Opens the journey — where the company was, where they are now | One or two sentences. Name the company, state the movement. Create the "how?" question in the reader's mind |
-| **Data** | Proves the story — rank, ECR before and after, driver contribution in points | Specific numbers only — no vague claims |
-| **Driver explanation** | Answers the "how?" | Name the driver, quantify it, explain what it means structurally |
-| **Implication** | Why the reader should care | Connect to the reader's role — investor, risk officer, CFO |
-| **Tagline** | Brand anchor | Always last before hashtags |
+### Caption Structure
+| Element | How to write it |
+|---|---|
+| **Story hook** | Name the company, state the movement. Create the "how?" in the reader's mind |
+| **Data** | Rank before → after, ECR score, driver contribution in points |
+| **Driver explanation** | Name the driver, quantify it, explain what it means structurally |
+| **Implication** | Connect to the reader's role — investor, risk officer, CFO |
+| **Tagline** | Always last before hashtags |
 
-### Formula
+**Formula:**
 > *"[Company] was ranked [X] a year ago. Today they're [Y]. One thing changed — and the data shows exactly what."*
-> → Name the driver → quantify the contribution in points → explain the structural meaning
 
-### Example
-> *"A year ago Clearwater Analytics was #24 in US Software. Today they're #1. Their ECR: 647% — 295 points above the industry average of 352%. Stockholders' Equity contributed +292 points to that move. That's not revenue growth. That's balance sheet strength — and it's the clearest signal of long-term financial stability in this industry."*
+**Example:**
+> *"A year ago Clearwater Analytics was #24 in US Software. Today they're #1. ECR: 647% — 295 points above the industry average of 352%. Stockholders' Equity contributed +292 points to that move. That's not revenue growth. That's balance sheet strength — the clearest signal of long-term financial stability in this industry."*
 
 ### Rules
-- Name the company — don't generalise
-- Quantify the driver contribution (e.g. "+292 points")
-- Link back to Phase 1 post in first pinned comment
-- One company, one driver, one clear implication — don't dilute
-
-### Assets — Phase 2
-- [ ] Insight 1 single image post + caption
-- [ ] Ranking Interpretation article (PR)
-- [ ] Performance Drivers article — Why Companies Ranked Well or Didn't (PR)
+- One company, one driver, one implication — never dilute
+- Always quantify the driver contribution in points
+- Link back to Day 0 post in first pinned comment
 
 ---
 
-## Phase 3 — Insight 2: Rotating Angle
+## Day +3 — Non-Top-Rated Post
 
-**Timing:** Day +4
-**Goal:** Industry-level perspective — zoom out from one company to a broader pattern or signal
+**Goal:** Education and outreach support — speaks to companies that didn't earn Top-Rated status without calling them out by name
+**Format:** Single image
+**Rule:** Never name specific companies negatively. Always industry-aggregate or anonymised.
 
-### Format
-**Single image post** — one data visualization showing the pattern or signal. Could be a comparison chart, a fragility heatmap, or a before/after industry average. The visual makes the pattern visible at a glance; the caption explains what it means.
+### Angle Selection — Pick Based on the Data
 
-| Visual element | What to show |
+| Angle | Use when | Story hook |
+|---|---|---|
+| **The Gap** | ECR spread between top-rated threshold and industry average is large | *"The gap between Top-Rated and average in [industry] is [X] ECR points. One driver accounts for most of it."* |
+| **What's Missing** | A single weakness driver dominates non-top-rated companies | *"[X] of [industry] companies share the same greatest weakness. It shows up on one line of the balance sheet."* |
+| **Progress Recognition** | Notable YoY ECR improvement in lower-ranked companies | *"[X] companies improved their ECR in [industry] this year. They didn't reach Top-Rated — but the trajectory tells a story."* |
+| **Warning Signal** | Clear fragility pattern in bottom third — risk-focused | *"The bottom third of [industry] share a pattern. Here's what the data shows before distress becomes visible."* |
+| **Road to Top-Rated** | Several companies are close to the Top-Rated threshold | *"Top-Rated isn't awarded. It's earned through the balance sheet. Here's what the data says it takes in [industry]."* |
+| **Industry Health Overview** | Low percentage of companies reached Top-Rated | *"Only [X]% of [industry] companies earned Top-Rated status in 2025. Here's what the other [Y]% look like."* |
+| **What Buyers Should Know** | High-stakes industry — insurance, pharma, finance | *"If you're investing in or procuring from [industry] companies — here's what the financial data reveals about the ones that didn't make Top-Rated."* |
+
+### Caption Structure (all angles)
+| Element | How to write it |
 |---|---|
-| Pattern title | Short, specific (e.g. "The Warning Signal in US Pharma 2025") |
-| 2–3 named companies | With ECR numbers and relevant driver |
-| Industry average | As a reference point |
-| The pattern highlighted | Visually distinct — use semantic colors (red for risk, green for strength) |
-| RealRate logo | Top-left |
-| Tagline | Bottom of image |
+| **Story hook** | State the pattern or gap — no names, industry-aggregate |
+| **Data** | Industry average ECR, top-rated threshold, percentage of companies, driver data |
+| **Interpretation** | What this pattern means structurally — why it's happening |
+| **Implication** | What it means for the reader's role (CFO: what to fix / investor: what to watch) |
+| **Tagline** | Always included |
 
-### Choose one angle based on what the data actually supports
+### Visual
+- Single image showing the gap, pattern, or signal — use semantic colors (red/warning for risk, green for top-rated strength)
+- No company names — use "industry average" or "bottom third" labels
+- RealRate logo top-left, tagline bottom
 
+### First Pinned Comment
+> https://realrate.ai/rankings/[industry]/[year]
+
+---
+
+## Day +5 — Insight 2: Rotating Angle
+
+**Goal:** Industry-level perspective — zoom out from one company to a broader pattern
+**Format:** Single image
+**Choose one angle based on what the data supports — not the same angle as the non-top-rated post**
+
+### Angle Options
 | Angle | Use when | What it covers |
 |---|---|---|
-| **The Surprise** | A well-known company ranked unexpectedly high or low | Named company, ECR vs. market reputation gap — why the data contradicts assumptions |
-| **The Warning Signal** | Bottom third shows a shared fragility pattern | Common weakness driver across low-ranked companies — what it signals for the industry |
-| **Year-over-Year Shift** | Industry average ECR moved significantly vs. prior year | What changed structurally across the industry and why |
-| **The Gap** | Large spread between #1 ECR and industry average | What separates top-rated companies from the rest — the one driver that makes the difference |
+| **The Surprise** | A well-known company ranked unexpectedly high or low | Named company, ECR vs. market reputation — why data contradicts assumptions |
+| **The Warning Signal** | Bottom third shows a shared fragility pattern | Common weakness driver across low-ranked companies |
+| **Year-over-Year Shift** | Industry average ECR moved significantly vs. prior year | What changed structurally and why |
+| **The Gap** | Large spread between #1 ECR and industry average | What separates top-rated from the rest — one driver |
 
-### Post Structure
-| Element | What it does | How to write it |
-|---|---|---|
-| **Story hook** | Opens with a tension or contradiction — what the data reveals that most people don't see | Frame it as a discovery: "We looked at X companies. Something stood out." |
-| **Data** | 2–3 named companies with ECR numbers that illustrate the pattern | Always named, always quantified — no anonymous examples |
-| **Interpretation** | What the pattern means structurally | One clear explanation — why this is happening, not just that it is |
-| **Implication** | Why the reader should act on this | Speak directly to their role and what this means for their decisions |
-| **Tagline** | Brand anchor | Always included |
+### Visual
+- Single image data visualization — comparison, fragility signal, or before/after industry average
+- 2–3 data points visible — no crowding
+- Semantic colors where relevant
+- RealRate logo top-left, tagline bottom
 
-**Example opening by angle:**
+### Caption Structure
+| Element | How to write it |
+|---|---|
+| **Story hook** | Frame it as a discovery — "We looked at X companies. Something stood out." |
+| **Data** | 2–3 named companies with ECR numbers illustrating the pattern |
+| **Interpretation** | Why this is happening — one clear structural explanation |
+| **Implication** | What it means for the reader's role |
+| **Tagline** | Always included |
+
+**Example hooks by angle:**
 - *The Surprise:* "Their revenue is widely covered. Their ECR isn't. The data tells a different story."
-- *The Warning Signal:* "Three companies in the bottom third share the same weakness. It's not revenue. It's not growth. It's what's hiding on the liability side."
-- *Year-over-Year:* "The [industry] industry average ECR dropped [X] points in one year. That doesn't happen randomly. Here's the structural shift behind it."
+- *Warning Signal:* "Three companies in the bottom third share the same weakness. It's hiding on the liability side."
+- *Year-over-Year:* "The [industry] industry average ECR dropped [X] points in one year. Here's the structural shift behind it."
 - *The Gap:* "The #1 ranked company has an ECR of [X]%. The industry average is [Y]%. That [Z]-point gap comes down to one driver."
 
 ### Rules
-- Pick the angle the data supports — don't force an angle onto thin material
+- Never use the same angle as the Day +3 non-top-rated post
 - Always include at least 2 named companies with ECR numbers
-- Link back to Phase 1 post in first pinned comment
-
-### Assets — Phase 3
-- [ ] Insight 2 single image post + caption (angle selected from menu above)
-- [ ] Trends & Patterns article (PR)
+- Link back to Day 0 post in first pinned comment
 
 ---
 
-## Phase 4 — Insight 3: Industry Driver Pattern
+## Day +7 — Insight 3: Industry Driver Pattern
 
-**Timing:** Day +6 or +7
-**Goal:** Structural credibility — what drives financial health across the whole industry
+**Goal:** Structural credibility — the dominant driver across the whole industry's top tier
+**Format:** Short carousel — 3 to 4 slides
+**Fixed for every industry — always answerable from the data**
 
-### Fixed for every industry — always answerable from the data
+Identify the driver that appears most frequently as the greatest strength across the top-ranked companies. Explain why it dominates in this specific industry.
 
-Identify the dominant ECR driver across the top tier of the ranking. This is the driver that appears as the greatest strength for multiple top-ranked companies. Explain why that driver dominates in this specific industry and what it means for companies outside the top tier.
-
-### Format
-**Short carousel — 3 to 4 slides** — this insight has more to show than a single image allows. The carousel walks through the pattern company by company, then lands on the structural explanation.
-
+### Carousel Structure
 | Slide | Content |
 |---|---|
 | Cover | "[Driver] is the defining factor in [Industry] 2025" |
-| Slide 2 | 3 named top companies, each with ECR % and driver contribution in points |
+| Slide 2 | 3 named top companies — each with ECR % and driver contribution in points |
 | Slide 3 | The structural explanation — why this driver dominates in this industry specifically |
 | Slide 4 (optional) | What companies outside the top tier are missing — the implication |
 
 - RealRate logo top-left on every slide
 - Tagline on final slide
-- Semantic colors: green for strength driver, context color for industry average
+- Semantic colors: green for strength driver
 
-### Post Structure
-| Element | What it does | How to write it |
-|---|---|---|
-| **Story hook** | Opens with the pattern as a discovery — something hiding in plain sight across the top tier | Frame it as a finding: "We ranked X companies. The top ones share something." |
-| **Pattern + data** | Names multiple top companies and shows the same driver appearing across all of them with ECR contribution in points | At least 3 named companies, driver contribution quantified for each |
-| **Why this industry** | The structural explanation — why this driver dominates specifically here | This is the most important part — it's what makes RealRate's analysis causal, not just descriptive |
-| **Implication** | What it means for companies outside the top tier | Speaks to CFOs, risk officers, investors — what action this insight suggests |
-| **Tagline** | Brand anchor | Always included |
+### Caption Structure
+| Element | How to write it |
+|---|---|
+| **Story hook** | "We ranked X companies. The top ones share something." |
+| **Pattern + data** | 3+ named companies, same driver appearing across all, contribution in points |
+| **Why this industry** | Structural reason this driver dominates here — this is the causal explanation |
+| **Implication** | What it means for companies outside the top tier |
+| **Tagline** | Always included |
 
-### Example
-> *"We ranked 140 US Software companies. The top 5 don't share the same revenue model, the same size, or the same market. But they share one thing: Stockholders' Equity as their greatest financial strength — contributing an average of +281 points to their ECR. In software, where revenue can scale faster than costs, equity strength is the floor that separates sustainable companies from fragile ones. Companies outside the top tier share a common pattern too — but in the opposite direction."*
-
-### Formula
+**Formula:**
 > *"[X] of the top 10 [industry] companies share the same greatest strength: [Driver]. It contributed an average of [Y] points to their ECR. Here's why this driver dominates [industry] specifically."*
 
-### Example
-> *"4 of the top 5 US Software companies in 2024 share the same greatest strength: Stockholders' Equity. It contributed an average of +281 points to their ECR — nearly their entire advantage over the industry average. In software, where revenue can scale faster than liabilities, equity strength is the clearest signal of long-term financial health."*
+**Example:**
+> *"We ranked 140 US Software companies. The top 5 don't share the same revenue model, size, or market. But they share one thing: Stockholders' Equity — contributing an average of +281 points to their ECR. In software, where revenue can scale faster than costs, equity strength is the floor that separates sustainable companies from fragile ones."*
 
 ### Rules
-- Use actual driver names from the archive (e.g. "Stockholders' Equity", "Low Liabilities")
+- Use actual driver names from the archive data
 - Name at least 3 companies from the top tier
 - Always explain *why* this driver matters in this industry — not just that it does
-- Target P4 audience: risk officers, investors, procurement leaders
-
-### Assets — Phase 4
-- [ ] Insight 3 short carousel (3–4 slides) + caption
-- [ ] Risk & Weaknesses article (PR)
+- Link back to Day 0 post in first pinned comment
 
 ---
 
-## Phase 5 — Deep Dive
+## Day +9 or +10 — Deep Dive
 
-**Timing:** Day +7 to +10
-**Goal:** Pull the full ranking story together in one comprehensive piece — the most educational, most shareable asset in the cycle
+**Goal:** Pull the full ranking story together in one comprehensive piece
+**Format:** LinkedIn Document Carousel (PDF — 8 to 10 slides)
 
-### Format: LinkedIn Document Carousel (PDF — 8 to 10 slides)
+Document posts receive higher organic reach than image carousels on LinkedIn, allow deeper educational content, and are saved and reshared more. This is the most educational asset in the cycle — it serves the audience that wants the full picture.
 
-Not a standard image carousel. A PDF document post uploaded directly to LinkedIn. Document posts receive higher organic reach than image carousels on LinkedIn and allow deeper educational content without overwhelming a single caption.
-
-This is the one piece per ranking cycle that covers everything — launch, movers, patterns, drivers, risk signals — in one place. It serves the audience that wants to go deeper after seeing the individual posts.
-
+### Slide Structure
 | Slide | Content |
 |---|---|
 | **Cover** | "[Industry] Financial Health Report 2025 — What the Data Reveals" |
-| **Slide 2** | Industry snapshot: total companies ranked, industry average ECR, number of Top-Rated companies |
+| **Slide 2** | Industry snapshot: total companies ranked, industry average ECR, number of top-rated |
 | **Slide 3** | The top tier — top 5 companies with ECR numbers and shared dominant driver |
 | **Slide 4** | The biggest mover — rank change, ECR before/after, driver that caused it |
 | **Slide 5** | The surprise — a well-known company whose ECR contradicts assumptions |
@@ -384,97 +321,69 @@ This is the one piece per ranking cycle that covers everything — launch, mover
 | **Slide 9** | Methodology note — how ECR works, what makes it explainable and independent |
 | **Slide 10** | CTA — "View the full [year] [industry] ranking at realrate.ai" |
 
-### Design rules for document carousel
+### Design Rules
 - Every slide: RealRate logo top-left, consistent header bar with industry name and year
-- Data slides: use semantic colors — green for strength drivers, red/warning for risk signals
+- Data slides: semantic colors — green for strength, red/warning for risk
 - Text slides: Manrope, strong contrast, no grey text on white
-- Cover: dark blue background (#00679B), white text — bold and clean
-- CTA slide: light background, website URL prominent, tagline included
+- Cover: dark blue background (#00679B), white text
+- CTA slide: light background, realrate.ai URL prominent, tagline included
 - No emojis on any slide
 
-### Caption for document post
-Shorter than individual insight posts — the document does the heavy lifting.
-
+### Caption
 > *"We ranked [X] [industry] companies using 2025 financial data. Here's what the full picture looks like — who ranked well, who didn't, what drove the difference, and what it signals for the industry."*
 > + tagline + hashtags
 
-### First pinned comment
+### First Pinned Comment
 > *"Full [year] [industry] ranking here 👇"*
 > https://realrate.ai/rankings/[industry]/[year]
 > [company tags]
 
-### Why document format over image carousel
-- LinkedIn algorithm currently favours document posts — higher organic reach
-- Readers engage longer — swipe-through format rewards educational depth
-- Downloadable — audiences save and reshare document posts more than image carousels
-- Positions RealRate as the go-to intelligence source for the industry, not just a ranking publisher
-
-### Assets — Phase 5
-- [ ] LinkedIn document carousel (PDF, 8–10 slides)
-- [ ] Caption + first pinned comment
-
 ---
 
-## Phase 6 — Conversion
+## Insight & Angle Selection Guide
 
-**Timing:** Week 2+
-**Goal:** Drive action from engaged prospects
+Run this at the start of every ranking cycle before drafting any copy.
 
-### When to Use
-- Only when Phases 1–4 generated meaningful engagement (comments, DMs, shares)
-- Use DMs and comments as signals of interest — move warm leads to outreach
-
-### Content Options
-- Respond to comments with deeper data or insights
-- Post a reaction to interesting DMs received (anonymised)
-- Share a specific finding requested by a commenter
-- Publish a methodology or trust post (P5) to close the cycle
-
-### Outreach — Week 2
-- [ ] Generate LinkedIn leads of those who did not reply to Instantly campaigns
-- [ ] Contact LinkedIn leads
-- [ ] Log all commenters and engagers from Phases 1–4 in warm lead tracker
-
-### Outreach Integration
-- Anyone who commented substantively on Phases 1–4 → flag for LinkedIn outreach (see outreach-sop.md)
-- Anyone who clicked through to realrate.ai → flag for email follow-up if contact info available
-
----
-
-## Insight Selection Guide
-
-Use this at the start of each ranking cycle to plan Phases 2–4.
-
-**Step 1 — Pull from archive:**
-- Top 10 companies with ECR numbers
-- Rank vs. prior year for each company
-- Greatest strength driver and contribution (points) for each top company
-- Greatest weakness driver for each top company
+**Step 1 — Pull from the archive:**
+- All top-rated companies with ECR numbers
+- Full top 10 with rank vs. prior year
+- Greatest strength driver + contribution (points) for each top company
+- Greatest weakness driver for each company in bottom third
 - Industry average ECR vs. prior year
 
-**Step 2 — Identify Phase 2 (fixed):**
-- Largest rank change up or down → that company is your Insight 1
+**Step 2 — Identify Day +2 post (fixed):**
+Largest rank change up or down → that company is Insight 1
 
-**Step 3 — Select Phase 3 angle (rotating):**
-- Is there a well-known company with a surprising rank? → The Surprise
-- Does the bottom third share a common weakness driver? → The Warning Signal
-- Did industry average ECR shift significantly year-over-year? → Year-over-Year Shift
-- Is there a large gap between #1 ECR and the industry average? → The Gap
-- If multiple apply → pick the one with the strongest data to support it
+**Step 3 — Select Day +3 angle (non-top-rated):**
+| If the data shows... | Use this angle |
+|---|---|
+| Large ECR spread between top-rated and average | The Gap |
+| Clear shared weakness driver across non-top-rated | What's Missing |
+| Notable YoY improvement in lower-ranked companies | Progress Recognition |
+| Fragility patterns in bottom third | Warning Signal |
+| Companies close to top-rated threshold | Road to Top-Rated |
+| Low % of top-rated vs total companies | Industry Health Overview |
+| High-stakes industry (insurance, pharma, finance) | What Buyers Should Know |
 
-**Step 4 — Identify Phase 4 (fixed):**
-- Which driver appears most frequently as the greatest strength across the top tier? → That's your Industry Driver Pattern
+**Step 4 — Select Day +5 angle (rotating — must differ from Day +3):**
+| If the data shows... | Use this angle |
+|---|---|
+| Well-known company with surprising ECR | The Surprise |
+| Bottom third fragility pattern (if not used Day +3) | Warning Signal |
+| Significant industry average ECR shift YoY | Year-over-Year Shift |
+| Large spread between #1 and industry average (if not used Day +3) | The Gap |
+
+**Step 5 — Identify Day +7 post (fixed):**
+Most frequent greatest strength driver across top tier → that's the Industry Driver Pattern
 
 ---
 
-## Post-Publication Review
-
-After the full cycle is complete:
+## Post-Publication Checklist
 
 - [ ] Record ranking in content calendar as published
-- [ ] Note top-performing post in the cycle (by impressions/engagement)
+- [ ] Note top-performing post in the cycle (by impressions and engagement)
 - [ ] Log all engagers in warm lead tracker (name, company, title, post they engaged with)
 - [ ] Log any inbound DMs or leads generated
 - [ ] Note companies that engaged — flag for outreach
-- [ ] Unpin Phase 1 post once cycle is complete (or keep pinned if still performing)
+- [ ] Unpin Day 0 post once cycle is complete (or keep pinned if still performing)
 - [ ] Feed findings into monthly analytics review
