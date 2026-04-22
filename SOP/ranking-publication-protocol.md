@@ -450,10 +450,12 @@ Pick 1 (or 2 for high-stakes industries) per cycle based on what the data suppor
 
 ### Article checklist
 - [ ] Select angle (1 or 2 based on industry)
-- [ ] Draft article grounded in verified archive data
-- [ ] Include ECR numbers, named companies, driver data
+- [ ] Draft article grounded in verified archive data — ECR numbers, named companies, driver data
 - [ ] Publish on realrate.ai or news.realrate.ai
 - [ ] Link to realrate.ai/rankings/[industry]/[year] within the article
+- [ ] Share article on LinkedIn company page (separate post — content post, not a ranking data post)
+- [ ] Submit to relevant industry journals or trade publications for that industry
+- [ ] Tag relevant journalists or editors in the LinkedIn share post if applicable
 
 ---
 
@@ -473,12 +475,10 @@ Pick 1 (or 2 for high-stakes industries) per cycle based on what the data suppor
   - Anyone who sent a DM
   - Any top-rated company that hasn't been contacted yet
   - Any non-top-rated company that engaged with content
-- [ ] Flag warm leads for LinkedIn outreach by Holger
+- [ ] Flag warm leads for outreach
 - [ ] Flag Instantly replies for follow-up
 
 **Record:**
 - [ ] Record top-performing post (highest impressions + highest engagement rate)
 - [ ] Note which post type performed best (carousel, single image, document)
 - [ ] Note which angle resonated most (mover, driver pattern, non-top-rated, etc.)
-- [ ] Unpin Day 0 post once cycle ends (or keep pinned if still performing)
-- [ ] Feed findings into monthly analytics review
