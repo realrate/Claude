@@ -55,14 +55,7 @@ Become the universally recognized standard for financial health evaluation — t
 
 ## Competitive Landscape
 
-Main competitors/alternatives: Moody's / S&P, RapidRatings, generic causal AI tools.
-
-RealRate differentiators:
-- Full explainability (causal drivers, not just score)
-- Fully independent (not issuer-paid)
-- Causal AI (not correlation)
-- Free public archive (all data public)
-- Top-Rated Seal (certification product)
+See `competitive-landscape.md` for full competitor profiles and comparison.
 
 ## Design Specifications
 

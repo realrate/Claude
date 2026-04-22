@@ -10,12 +10,15 @@ Social media and marketing is managed by Amneh Qaljawi.
 
 ```
 RealRate/
-└── context/
-    ├── brand-context.md      ← company overview, tagline, pillars, design specs, colors, links
-    ├── brand-voice.md        ← tone rules, what never to say, accuracy rules, Holger's voice
-    ├── growth-marketing.md   ← LinkedIn strategy, content pillars, channels, what's working/not
-    ├── product-offering.md   ← products, value proposition, pricing, social proof
-    └── audience.md           ← primary/secondary/potential audiences, ICPs, differentiators
+├── context/
+│   ├── brand-context.md          ← company overview, tagline, pillars, design specs, colors, links
+│   ├── brand-voice.md            ← tone rules, what never to say, accuracy rules, Holger's voice
+│   ├── growth-marketing.md       ← LinkedIn strategy, content pillars, channels, what's working/not
+│   ├── product-offering.md       ← products, value proposition, pricing, social proof
+│   ├── audience.md               ← primary/secondary/potential audiences, ICPs, differentiators
+│   └── competitive-landscape.md  ← quick reference competitor summary
+└── SOP/
+    └── marketing-research-strategy.md  ← full market research SOP, competitor profiles, research steps
 ```
 
 ---
