@@ -4,66 +4,49 @@
 
 ## Purpose
 
-To ensure every new industry ranking published by RealRate is launched in a structured, high-impact way — building anticipation before release, maximising reach on publication day, and sustaining engagement through insight and analysis in the days that follow.
+To ensure every new industry ranking published by RealRate is launched in a structured, high-impact way — maximising reach on publication day and sustaining engagement through insight and analysis in the days that follow.
 
 ---
 
 ## Overview
 
-Every ranking publication follows a **5-phase protocol** spanning approximately 2 weeks. Each phase has a specific goal, content type, and timing.
+Every ranking publication follows a **4-phase protocol** spanning approximately 2 weeks. The teaser phase has been removed — publication dates are confirmed only when the ranking goes live on the website, so the cycle begins at launch.
 
 | Phase | Timing | Goal |
 |---|---|---|
-| 1 — Teaser | 5–3 days before | Build anticipation |
-| 2 — Launch | Day 0 (Wednesday preferred) | Maximum reach |
-| 3 — First Insight | Day +1 or +2 | Add depth |
-| 4 — Deep Dive | Day +3 to +5 | Build credibility |
+| 1 — Launch | Day 0 (as soon as live on website) | Maximum reach |
+| 2 — Insight 1: The Biggest Mover | Day +2 | Add depth — company-level story |
+| 3 — Insight 2: Rotating Angle | Day +4 | Industry-level perspective |
+| 4 — Insight 3: Industry Driver Pattern | Day +6 or +7 | Structural credibility |
 | 5 — Conversion | Week 2+ | Drive action |
+
+> **Note on timing:** Post 3–4× per week maximum. Space posts to allow each one to gather engagement before the next goes out. Never post two ranking posts on consecutive days.
 
 ---
 
 ## Pre-Publication Checklist
 
-Before beginning the teaser phase, confirm all of the following:
+Prepare all assets in advance so launch-day posting happens within hours of the website going live.
 
 - [ ] Ranking data verified against realrate-archive.com
 - [ ] Top 10 companies confirmed with accurate ECR numbers
-- [ ] Year-over-year movements calculated and verified
-- [ ] Key insight identified (most surprising finding, biggest mover, notable drop)
+- [ ] Industry average ECR confirmed
+- [ ] Year-over-year rank movements calculated and verified
+- [ ] Biggest mover identified (up and down) with driver data
+- [ ] Dominant driver across top tier identified (for Insight 3)
+- [ ] Rotating angle selected for Insight 2 (see options below)
 - [ ] Archive link ready for first pinned comment
-- [ ] LinkedIn post drafts for all 5 phases written and reviewed
+- [ ] Copy drafted for all 4 phases and reviewed
 - [ ] Visual assets designed and brand-compliant
-- [ ] Wednesday publication slot blocked in content calendar
 - [ ] Holger briefed on ranking findings (if personal page post planned)
-- [ ] Ranking confirmed live on website — request via designer channel if not yet published
+- [ ] Ranking confirmed live on website before posting
 
 ---
 
-## Phase 1 — Teaser
+## Phase 1 — Launch
 
-**Timing:** 5–3 days before publication day
-**Goal:** Build anticipation without revealing data
-
-### Rules
-- Name the industry — do not reveal any rankings or ECR numbers
-- No data, no company names, no hints about who's top-ranked
-- Create curiosity through the significance of the industry or timing
-- One post only in this phase
-
-### Post Structure
-- Hook: why this industry matters right now
-- Tease: ranking is coming, and the data reveals something unexpected
-- No CTA — let the curiosity do the work
-
-### Example Angle
-> *"We've just finished analysing [X] companies in [industry]. The results challenge some assumptions. Publishing Wednesday."*
-
----
-
-## Phase 2 — Launch
-
-**Timing:** Day 0 — Wednesday preferred
-**Goal:** Maximum reach — this is the highest-priority post in the cycle
+**Timing:** Day 0 — post within hours of website publication
+**Goal:** Maximum reach — highest-priority post in the cycle
 
 ### Rules
 - Publish full top 10 with ECR numbers
@@ -78,27 +61,23 @@ Before beginning the teaser phase, confirm all of the following:
 - Top 10 list with ECR values
 - One-line observation on the most notable finding
 - Tagline: `"Powered by RealRate: Using Explainable Financial AI"`
-- Hashtags: 3–5 (1 broad + 2 niche + industry + #RealRate)
+- Hashtags: 3–5 (1 broad + 2 niche + industry-specific + #RealRate)
 
 ### Design
-- Use ranking visual template
-- Show top 10 companies with ECR numbers clearly
-- Include RealRate logo top-left
-- Include industry name and year prominently
+- Ranking carousel: top 10 companies with ECR numbers clearly visible
+- Cover slide: "202X Financial Health Ranking — [Industry]"
+- Include industry average ECR as benchmark
+- RealRate logo top-left on every slide
+- Industry name and year prominent
 
 ### First Pinned Comment Format
 > *"Full [year] [industry] ranking available here 👇"*
 > [archive link]
 > [company tags]
 
-### Social Media Assets — Phase 2
-- [ ] Ranking Announcements Carousel
-  - Cover: "202X Financial Health Ranking — [Industry]"
-  - Slide: Why this ranking matters
-  - Slide: What stood out this year
-  - Slide: One surprising insight
-  - CTA: View full ranking →
-- [ ] General Industry Top-Rated Companies Post
+### Assets — Phase 1
+- [ ] Ranking announcements carousel
+- [ ] General Industry Top-Rated Companies post
 - [ ] General Industry Top-Rated Companies (LinkedIn Ad)
 
 ### Outreach — Launch Day
@@ -114,68 +93,107 @@ Before beginning the teaser phase, confirm all of the following:
 
 ---
 
-## Phase 3 — First Insight
+## Phase 2 — Insight 1: The Biggest Mover
 
-**Timing:** Day +1 or +2
-**Goal:** Go deeper on the most surprising finding from the ranking
+**Timing:** Day +2
+**Goal:** Company-level story — the most data-rich, most shareable insight post
 
-### Rules
-- Focus on one specific finding — the most surprising or counter-intuitive result
-- Name the company responsible for the insight
-- Explain the causal driver behind the movement
-- Link back to the Phase 2 ranking post in the first comment
+### Fixed for every industry — always answerable from the data
+
+Find the company with the largest rank change (up or down). Identify which ECR driver caused it. Explain what it means structurally.
 
 ### Post Structure
-- Hook: name the company and the finding in the first line
-- Context: what the ranking showed
-- Insight: what drove the movement (which ECR drivers)
-- Implication: what this means for the industry or buyer role
-- Tagline included
+**Hook:** Name the company and the movement in the first line
+**Context:** Where they ranked before vs. now
+**Driver:** Which ECR driver moved and by how much
+**Implication:** What this reveals about the company or the industry
+**Tagline included**
 
-### Example Angle
-> *"Clearwater Analytics jumped 23 places. One metric explains it. [Insight post]"*
+### Formula
+> *"[Company] jumped/dropped [X] places. One driver explains it."*
+> → Name the driver → quantify the contribution → explain what it means
 
-### Social Media Assets — Phase 3
+### Example
+> *"Clearwater Analytics jumped from #24 to #1. Stockholders' Equity contributed +292 points to their ECR — nearly the entire move. Here's what that means for how they're managing their balance sheet."*
+
+### Rules
+- Name the company — don't generalise
+- Quantify the driver contribution (e.g. "+292 points")
+- Link back to Phase 1 post in first pinned comment
+- One company, one driver, one clear implication — don't dilute
+
+### Assets — Phase 2
 - [ ] "What We Found" Insight Post
-- [ ] Year-over-Year Comparison Post
-
-### PR / Articles — Phase 3
-- [ ] Ranking Interpretation article
-- [ ] Performance Drivers article — Why Companies Ranked Well or Didn't
+- [ ] Ranking Interpretation article (PR)
+- [ ] Performance Drivers article — Why Companies Ranked Well or Didn't (PR)
 
 ---
 
-## Phase 4 — Deep Dive
+## Phase 3 — Insight 2: Rotating Angle
 
-**Timing:** Day +3 to +5
-**Goal:** Structural or risk perspective — reinforce credibility with a harder analytical angle
+**Timing:** Day +4
+**Goal:** Industry-level perspective — zoom out from one company to a broader pattern or signal
 
-### Rules
-- Zoom out from individual companies to industry-wide patterns
-- Focus on fragility, risk signals, or structural drivers
-- Target P4 audience: risk officers, investors, procurement leaders
-- Use data from the ranking to support the analysis
+### Choose one angle based on what the data actually supports
+
+| Angle | Use when | What it covers |
+|---|---|---|
+| **The Surprise** | A well-known company ranked unexpectedly high or low | Named company, ECR vs. market reputation gap — why the data contradicts assumptions |
+| **The Warning Signal** | Bottom third shows a shared fragility pattern | Common weakness driver across low-ranked companies — what it signals for the industry |
+| **Year-over-Year Shift** | Industry average ECR moved significantly vs. prior year | What changed structurally across the industry and why |
+| **The Gap** | Large spread between #1 ECR and industry average | What separates top-rated companies from the rest — the one driver that makes the difference |
 
 ### Post Structure
-- Hook: a pattern or signal visible across multiple companies
-- Data: 2–3 specific examples from the ranking
-- Interpretation: what the pattern means structurally
-- Implication: why it matters to the reader's role
-- Tagline included
+**Hook:** State the pattern or signal in the first line
+**Data:** 2–3 specific examples from the ranking with ECR numbers
+**Interpretation:** What the pattern means structurally
+**Implication:** Why it matters to the reader's role (risk officer, investor, CFO)
+**Tagline included**
 
-### Example Angles
-- "Three balance-sheet patterns that appear in [X]% of [industry] companies"
-- "The difference between the top-rated and the bottom third in [industry] — one driver"
-- "Why [industry] ECR data is flashing a warning signal in [year]"
+### Rules
+- Pick the angle the data supports — don't force an angle onto thin material
+- Always include at least 2 named companies with ECR numbers
+- Link back to Phase 1 post in first pinned comment
 
-### Social Media Assets — Phase 4
-- [ ] "Why the Top Companies Ranked Well" Carousel
-- [ ] Causal Thought Leadership Post
-- [ ] Risk & Warning Signal Post
+### Assets — Phase 3
+- [ ] Rotating insight post (angle selected from menu above)
+- [ ] Year-over-Year Comparison post (if year-over-year angle selected)
+- [ ] Trends & Patterns article (PR)
 
-### PR / Articles — Phase 4
-- [ ] Trends & Patterns article
-- [ ] Risk & Weaknesses article
+---
+
+## Phase 4 — Insight 3: Industry Driver Pattern
+
+**Timing:** Day +6 or +7
+**Goal:** Structural credibility — what drives financial health across the whole industry
+
+### Fixed for every industry — always answerable from the data
+
+Identify the dominant ECR driver across the top tier of the ranking. This is the driver that appears as the greatest strength for multiple top-ranked companies. Explain why that driver dominates in this specific industry and what it means for companies outside the top tier.
+
+### Post Structure
+**Hook:** State the dominant driver and that it explains the top tier
+**Pattern:** Show that it appears across multiple top-ranked companies (with names and ECR numbers)
+**Why this industry:** Explain why this driver matters specifically here — structural reason
+**Implication:** What companies outside the top tier are missing and what they can do
+**Tagline included**
+
+### Formula
+> *"[X] of the top 10 [industry] companies share the same greatest strength: [Driver]. It contributed an average of [Y] points to their ECR. Here's why this driver dominates [industry] specifically."*
+
+### Example
+> *"4 of the top 5 US Software companies in 2024 share the same greatest strength: Stockholders' Equity. It contributed an average of +281 points to their ECR — nearly their entire advantage over the industry average. In software, where revenue can scale faster than liabilities, equity strength is the clearest signal of long-term financial health."*
+
+### Rules
+- Use actual driver names from the archive (e.g. "Stockholders' Equity", "Low Liabilities")
+- Name at least 3 companies from the top tier
+- Always explain *why* this driver matters in this industry — not just that it does
+- Target P4 audience: risk officers, investors, procurement leaders
+
+### Assets — Phase 4
+- [ ] Industry Driver Pattern post
+- [ ] "Why the Top Companies Ranked Well" carousel
+- [ ] Risk & Weaknesses article (PR)
 
 ---
 
@@ -185,7 +203,7 @@ Before beginning the teaser phase, confirm all of the following:
 **Goal:** Drive action from engaged prospects
 
 ### When to Use
-- Only when Phase 2–4 generated meaningful engagement (comments, DMs, shares)
+- Only when Phases 1–4 generated meaningful engagement (comments, DMs, shares)
 - Use DMs and comments as signals of interest — move warm leads to outreach
 
 ### Content Options
@@ -197,10 +215,37 @@ Before beginning the teaser phase, confirm all of the following:
 ### Outreach — Week 2
 - [ ] Generate LinkedIn leads of those who did not reply to Instantly campaigns
 - [ ] Contact LinkedIn leads
+- [ ] Log all commenters and engagers from Phases 1–4 in warm lead tracker
 
 ### Outreach Integration
-- For anyone who commented substantively on Phase 2 or 3 → flag for LinkedIn outreach (see outreach-sop.md)
-- For anyone who clicked through to archive → flag for email follow-up if contact info available
+- Anyone who commented substantively on Phases 1–4 → flag for LinkedIn outreach (see outreach-sop.md)
+- Anyone who clicked through to archive → flag for email follow-up if contact info available
+
+---
+
+## Insight Selection Guide
+
+Use this at the start of each ranking cycle to plan Phases 2–4.
+
+**Step 1 — Pull from archive:**
+- Top 10 companies with ECR numbers
+- Rank vs. prior year for each company
+- Greatest strength driver and contribution (points) for each top company
+- Greatest weakness driver for each top company
+- Industry average ECR vs. prior year
+
+**Step 2 — Identify Phase 2 (fixed):**
+- Largest rank change up or down → that company is your Insight 1
+
+**Step 3 — Select Phase 3 angle (rotating):**
+- Is there a well-known company with a surprising rank? → The Surprise
+- Does the bottom third share a common weakness driver? → The Warning Signal
+- Did industry average ECR shift significantly year-over-year? → Year-over-Year Shift
+- Is there a large gap between #1 ECR and the industry average? → The Gap
+- If multiple apply → pick the one with the strongest data to support it
+
+**Step 4 — Identify Phase 4 (fixed):**
+- Which driver appears most frequently as the greatest strength across the top tier? → That's your Industry Driver Pattern
 
 ---
 
@@ -210,7 +255,8 @@ After the full cycle is complete:
 
 - [ ] Record ranking in content calendar as published
 - [ ] Note top-performing post in the cycle (by impressions/engagement)
+- [ ] Log all engagers in warm lead tracker (name, company, title, post they engaged with)
 - [ ] Log any inbound DMs or leads generated
 - [ ] Note companies that engaged — flag for outreach
-- [ ] Unpin Phase 2 post once cycle is complete (or keep pinned if still performing)
+- [ ] Unpin Phase 1 post once cycle is complete (or keep pinned if still performing)
 - [ ] Feed findings into monthly analytics review
