@@ -16,7 +16,8 @@ RealRate/
 │   ├── growth-marketing.md       ← LinkedIn strategy, content pillars, channels, what's working/not
 │   ├── product-offering.md       ← products, value proposition, pricing, social proof
 │   ├── audience.md               ← primary/secondary/potential audiences, ICPs, differentiators
-│   └── competitive-landscape.md  ← quick reference competitor summary
+│   ├── competitive-landscape.md  ← quick reference competitor summary
+│   └── sources.md                ← trusted URLs to browse for research and content creation
 └── SOP/
     └── marketing-research-strategy.md  ← full market research SOP, competitor profiles, research steps
 ```
