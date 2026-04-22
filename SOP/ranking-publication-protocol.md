@@ -23,15 +23,16 @@ Every post in this protocol follows the same principle: **the story opens, the d
 
 ## Publication Cycle Overview
 
-| Day | Post | Format | Goal |
-|---|---|---|---|
-| Day 0 | Ranking carousel | Image carousel | Maximum reach — full top 10, all top-rated |
-| Day +1 | Seal post | Single image | Organic amplification — company recognition |
-| Day +2 | Insight 1 — Biggest Mover | Single image | Company-level story |
-| Day +3 | Non-Top-Rated post | Single image | Education + outreach support |
-| Day +5 | Insight 2 — Rotating Angle | Single image | Industry-level pattern or signal |
-| Day +7 | Insight 3 — Industry Driver Pattern | Short carousel (3–4 slides) | Structural credibility |
-| Day +9 or +10 | Deep Dive | LinkedIn document (PDF, 8–10 slides) | Full ranking story in one piece |
+| Day | Post | Format | Audience | Goal |
+|---|---|---|---|---|
+| Day 0 | Ranking carousel | Image carousel | All | Maximum reach — full top 10, all top-rated |
+| Day +1 | Seal post | Single image | Top-rated companies | Organic amplification — company recognition |
+| Day +2 | Insight 1 — Biggest Mover | Single image | All | Company-level story |
+| Day +3 | Non-Top-Rated 1 | Single image | CFOs of non-top-rated companies | Education — what's holding them back |
+| Day +5 | Insight 2 — Rotating Angle | Single image | All | Industry-level pattern or signal |
+| Day +6 | Non-Top-Rated 2 | Single image | Investors / risk officers / procurement | Risk intelligence — what buyers should know |
+| Day +8 | Insight 3 — Industry Driver Pattern | Short carousel (3–4 slides) | All | Structural credibility |
+| Day +10 or +11 | Deep Dive | LinkedIn document (PDF, 8–10 slides) | All | Full ranking story in one piece |
 
 > **Spacing rule:** Never post two ranking posts on consecutive days. Each post needs 48 hours minimum to gather engagement before the next goes out.
 
@@ -48,7 +49,8 @@ Prepare all assets in advance so posting happens within hours of the website goi
 - [ ] Biggest mover identified (up and down) with driver data
 - [ ] Dominant driver across top tier identified (for Insight 3)
 - [ ] Rotating angle selected for Insight 2 (see selection guide)
-- [ ] Non-top-rated angle selected (see selection guide)
+- [ ] Non-Top-Rated Post 1 angle selected — CFO audience (see selection guide)
+- [ ] Non-Top-Rated Post 2 angle selected — investor/risk audience (see selection guide)
 - [ ] Copy drafted for all posts and reviewed
 - [ ] Visual assets designed and brand-compliant
 - [ ] Company logos collected for seal post
@@ -215,6 +217,42 @@ Find the company with the largest rank change up or down. Identify which ECR dri
 
 ---
 
+## Day +6 — Non-Top-Rated Post 2
+
+**Goal:** Risk intelligence for the buyer side — investors, risk officers, and procurement teams assessing non-top-rated companies
+**Format:** Single image
+**Audience:** Investor / risk officer / procurement — not the companies themselves
+**Rule:** Never name specific companies negatively. Always industry-aggregate or anonymised.
+
+### Angle Options (buyer-facing)
+
+| Angle | Use when | Story hook |
+|---|---|---|
+| **Warning Signal** | Clear fragility pattern in bottom third | *"The bottom third of [industry] share a pattern. Here's what the data shows before distress becomes visible."* |
+| **What Buyers Should Know** | High-stakes industry — insurance, pharma, finance | *"If you're investing in or procuring from [industry] companies — here's what the financial data reveals about the ones that didn't make Top-Rated."* |
+
+> These two angles are fixed for this post — they are the only ones that speak to the buyer audience. Pick the one the data supports most strongly. If both apply, default to What Buyers Should Know for high-stakes industries (insurance, pharma, finance) and Warning Signal for all others.
+
+### Visual
+- Single image showing fragility pattern or risk signal
+- Use semantic warning colors (red, amber) for risk indicators
+- Labels: "bottom third", "industry average" — no company names
+- RealRate logo top-left, tagline bottom
+
+### Caption Structure
+| Element | How to write it |
+|---|---|
+| **Story hook** | Open from the buyer's perspective — what they need to know before making a decision |
+| **Data** | Industry-aggregate risk signal — % of companies, common weakness driver, ECR gap from threshold |
+| **Interpretation** | What this pattern means for financial stability in this industry |
+| **Implication** | Speak directly to the buyer role — what to look for, what to ask, what to watch |
+| **Tagline** | Always included |
+
+### First Pinned Comment
+> https://realrate.ai/rankings/[industry]/[year]
+
+---
+
 ## Day +5 — Insight 2: Rotating Angle
 
 **Goal:** Industry-level perspective — zoom out from one company to a broader pattern
@@ -354,18 +392,23 @@ Run this at the start of every ranking cycle before drafting any copy.
 **Step 2 — Identify Day +2 post (fixed):**
 Largest rank change up or down → that company is Insight 1
 
-**Step 3 — Select Day +3 angle (non-top-rated):**
+**Step 3 — Select Day +3 angle (Non-Top-Rated Post 1 — CFO audience):**
 | If the data shows... | Use this angle |
 |---|---|
 | Large ECR spread between top-rated and average | The Gap |
 | Clear shared weakness driver across non-top-rated | What's Missing |
 | Notable YoY improvement in lower-ranked companies | Progress Recognition |
-| Fragility patterns in bottom third | Warning Signal |
 | Companies close to top-rated threshold | Road to Top-Rated |
 | Low % of top-rated vs total companies | Industry Health Overview |
-| High-stakes industry (insurance, pharma, finance) | What Buyers Should Know |
 
-**Step 4 — Select Day +5 angle (rotating — must differ from Day +3):**
+**Step 4 — Select Day +6 angle (Non-Top-Rated Post 2 — buyer audience):**
+| If the data shows... | Use this angle |
+|---|---|
+| Clear fragility pattern in bottom third | Warning Signal |
+| High-stakes industry (insurance, pharma, finance) | What Buyers Should Know |
+| Both apply | Default to What Buyers Should Know for high-stakes industries, Warning Signal for all others |
+
+**Step 5 — Select Day +5 angle (Insight 2 — rotating, must differ from both non-top-rated angles):**
 | If the data shows... | Use this angle |
 |---|---|
 | Well-known company with surprising ECR | The Surprise |
@@ -373,7 +416,7 @@ Largest rank change up or down → that company is Insight 1
 | Significant industry average ECR shift YoY | Year-over-Year Shift |
 | Large spread between #1 and industry average (if not used Day +3) | The Gap |
 
-**Step 5 — Identify Day +7 post (fixed):**
+**Step 6 — Identify Day +8 post (fixed):**
 Most frequent greatest strength driver across top tier → that's the Industry Driver Pattern
 
 ---
