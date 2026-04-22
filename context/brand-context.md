@@ -1,0 +1,107 @@
+# RealRate — Brand Context
+
+## Company Overview
+
+**RealRate** is a B2B fintech headquartered in Santa Clara, CA and Berlin, Germany.
+
+- **What it does:** Analyzes financial statements using award-winning, explainable financial AI to determine not only how companies perform — but *why* they do. Uses a causal AI approach to identify the underlying drivers of financial stability and risk.
+- **Core metric:** Economic Capital Ratio (ECR) = company valuation / total assets. Produces transparent, comparable insights for decision-makers.
+- **Stage:** Pre-revenue, early stage, testing product-market fit.
+- **NOT** a credit rating agency or NRSRO.
+- **Awards:** German AI startups, PyTorch Hackathon 2020, German Business Award 2020, Top 25 Insurtech CEOs.
+
+## CEO — Dr. Holger Bartel
+
+- PhD in statistics (Humboldt University + Stockholm School of Economics, 1999)
+- Former Head of Life Insurance Mathematics at Gothaer; Head of ALM/Risk at ERGO Group
+- Founded Prozentor 1997 (first fintech); founded RealRate 2016, live 2019
+- Origin story: As an appointed actuary, witnessed a CEO pressure a rating agency for an AAA rating — that moment created RealRate
+- First customer was himself
+
+## Tagline
+**Explainable Financial AI**
+
+## Core Promise
+*"We don't just rank companies. We reveal their financial truth."*
+
+## Positioning
+
+> RealRate is the **transparency-first financial intelligence platform** — the independent standard for assessing, ranking, and certifying financial health and stability using explainable AI.
+
+## Brand Vision
+
+Become the universally recognized standard for financial health evaluation — the way "Best Place to Work™" is the standard for employer reputation. When a company displays the RealRate Top-Rated seal, it means something universally.
+
+## Brand Pillars
+
+> Note: Pillars are under review and may be updated.
+
+| Pillar | Description |
+|---|---|
+| **Transparency** | Every rating is explainable. We show the drivers, the data, and the logic — not just the score. No black boxes. |
+| **Independence** | RealRate is not paid by the companies it rates. No conflicts of interest. No pressure to issue favorable ratings. |
+| **Intelligence** | Not just data — causation. Our AI identifies what actually drives financial strength, not just what correlates with it. |
+
+## Links & Channels
+
+| | URL |
+|---|---|
+| Website | https://realrate.ai |
+| LinkedIn (Company) | https://www.linkedin.com/company/realrate/ |
+| LinkedIn (Holger) | https://www.linkedin.com/in/dr-holger-bartel/ |
+| Archive *(internal only)* | https://www.realrate-archive.com |
+| News | https://news.realrate.ai |
+| Contact | holger.bartel@realrate.ai |
+
+## Competitive Landscape
+
+Main competitors/alternatives: Moody's / S&P, RapidRatings, generic causal AI tools.
+
+RealRate differentiators:
+- Full explainability (causal drivers, not just score)
+- Fully independent (not issuer-paid)
+- Causal AI (not correlation)
+- Free public archive (all data public)
+- Top-Rated Seal (certification product)
+
+## Design Specifications
+
+### Colors
+| Role | Name | Hex |
+|---|---|---|
+| Primary | Light Blue | `#3DBACD` |
+| Primary | Dark Blue | `#00679B` |
+| Base | Black | `#000000` |
+| Secondary | Grey | `#AFAFAF` |
+| Semantic | Positive | `#419453` |
+| Semantic | Negative | `#C04A3A` |
+| Semantic | Neutral | `#E8E8E8` |
+
+### Typography
+- **Primary font:** Manrope (all mediums)
+- **Fallback:** Open Sans (only when Manrope unavailable)
+
+### LinkedIn Post Design Guidelines
+- **Dimensions:** 1080×1350px (default) — use other sizes only when explicitly specified
+- **Font:** Manrope (all text elements)
+- **Typography scale:**
+  - Main heading / title: 60–75px max
+  - Subheadings / questions: 28–45px (italic where appropriate)
+  - Body text on light slides: 35px
+  - Body text on dark cover slide: 42px
+  - Footer (brand name, tagline, URL): 20–25px
+- **Layout rules:**
+  - No eyebrow labels or mini titles above headlines — go straight into the heading
+  - On dark slides: all text must be full white (`#ffffff`)
+  - On light slides: body text must be strong dark (`#12293a`) — never grey
+  - Cover content anchors at the top, directly below the logo — do not center
+  - Use `justify-content: space-between` so sections fill the full 1350px height
+- **Backgrounds:** Light or dark — both allowed. Can use gradients and/or textures (must be on-brand/relevant). Minimal geometric shapes permitted.
+- **Style:** Tech/corporate/financial — spacious, consistent alignment, modern fintech aesthetic. Clean and uncluttered.
+- **Logo position:** Top-left preferred
+- **Emojis:** Max 2 in captions, none on images
+- **Mandatory tagline on analytical posts:** `"Powered by RealRate: Using Explainable Financial AI"`
+
+### Brand Fonts (Canva)
+- RealRate: Manrope
+- Do NOT use ITC Benguiat Condensed — that is OceoLuxe only
