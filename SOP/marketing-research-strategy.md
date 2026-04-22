@@ -248,67 +248,73 @@ Every major corporation with publicly traded debt. Too broad to list — the mod
 
 ---
 
-#### CausalLens / DecisionOS *(Methodological Competitor)*
+#### causaLens *(Methodological Competitor — Distant)*
 
-**Website:** https://www.decisionos.com *(rebranded from CausalLens)*
+**Website:** https://causalens.com
 **Last updated:** April 2026
 
 **What they do**
-Originally CausalLens — a causal AI platform for enterprise decision-making. Rebranded to DecisionOS. Focuses on applying causal AI/ML across industries — not specific to financial ratings. Positioned as a general-purpose causal AI platform for data science and analytics teams.
+causaLens has pivoted significantly from its original causal AI analytics roots. They now build **Digital Knowledge Workers** — multi-agent AI systems that automate advanced enterprise knowledge work across workflows. Tagline: *"Human-only companies are obsolete."* No longer a financial ratings or financial intelligence product. The causal reasoning methodology remains part of their AI approach but is not the primary product identity.
 
 **Who they serve**
-Enterprise data science teams, AI/ML buyers, analytics-heavy industries. Not financial buyers specifically — customers are technical teams building causal models across sectors.
+Enterprise teams in Life Sciences (pharma), Retail & CPG, Financial Services, and IT/Tech. Primary buyers are operations, compliance, procurement, and finance function leaders — not financial health decision-makers. Focus is on workflow automation, not financial analysis.
 
 **Product offering**
-- **Causal AI platform** — tools for building causal models, running counterfactual analysis, causal inference
-- *[Full product lineup TBD — verify at decisionos.com]*
+- **Digital Worker Blueprints** — pre-built, production-ready automation workflows (80% ready out-of-box)
+- **Digital Worker Factory** — platform for creating, deploying, and scaling Digital Workers as Docker images
+- **System of Work** — governance layer with audit trails, compliance monitoring, and real-time performance alerts
 
 **Methodology**
-Causal AI / causal inference — builds directed acyclic graphs (DAGs) to identify cause-and-effect relationships rather than correlations. This is methodologically similar to RealRate's approach but applied to a different domain and buyer. No financial ratings product.
+Causal reasoning combined with multi-agent AI orchestration. Uses Python validation, LLM judgment, and human-in-the-loop controls. Claims 20× higher reliability than standard LLM-based automation. Self-healing systems that learn from expert exception handling. Methodology is enterprise workflow automation — not financial statement analysis or ratings.
 
 **Pricing model**
-*[TBD — enterprise SaaS, likely custom pricing]*
+*[TBD — enterprise SaaS, demo-gated, no public pricing]*
 
 **Growth strategy**
-- Raised significant funding as a causal AI specialist during the AI investment boom
-- Grew through technical credibility and research — positioned in the causal AI academic/practitioner community
-- Rebranded from CausalLens to DecisionOS — signals a broadening of scope beyond causal AI specifically
-- *[Growth details TBD — monitor DecisionOS announcements]*
+- Built early brand on causal AI research and technical credibility
+- Pivoted from analytics platform → workflow automation / agentic AI (aligned with market shift toward AI agents)
+- Enterprise sales motion — primary CTA is "Book a demo," not self-serve
+- Content marketing via blog targeting C-suite and operations leaders (bi-weekly cadence)
+- Partnerships with major cloud platforms: Google Cloud, AWS, Databricks, Azure, Snowflake — expands distribution through partner ecosystems
+- Benchmark-driven content ("20× higher reliability than OpenAI") used to differentiate against crowded LLM market
 
 **Brand strategy**
-- Technical, AI-forward positioning — appeals to data scientists and ML engineers
-- Not a financial brand — no financial credibility, no domain-specific expertise
-- Rebranding suggests a pivot away from narrow causal AI identity toward broader decision intelligence
+- Manifesto-driven: *"Human-only companies are obsolete. The shift has already begun."* — bold, provocative enterprise positioning
+- Tone: authoritative, enterprise-focused, ROI-led — emphasizes measurable outcomes ("5x ROI") over technical depth
+- Not a financial brand — no financial credibility claims, no domain specialization in finance
+- Moving away from causal AI identity toward broader "Digital Workers" / agentic AI positioning
 
 **Social presence**
-- *[TBD — verify on LinkedIn and X]*
+- Active blog with bi-weekly content — thought leadership by named authors (Tom Kennedy, Felix Mottram)
+- *[LinkedIn follower count and posting frequency: TBD — verify]*
 
 **Customer acquisition**
-- Technical content marketing (research papers, developer content)
-- Enterprise sales to data science and analytics teams
-- Conference presence in AI/ML space
-- *[TBD — verify current strategy post-rebrand]*
+- Demo-gated sales (enterprise inbound → SDR follow-up)
+- Blog and thought leadership content targeting C-suite operations buyers
+- Cloud platform partnerships for co-sell and marketplace distribution
+- Benchmark reports and competitive content (e.g., "Why LLMs Aren't Enough")
 
 **Known customers**
-*[TBD — not publicly confirmed]*
+Johnson & Johnson, McCann Worldgroup, Syneos Health, Cisco, DANA Indonesia, Croud.
 
 **Weaknesses / RealRate opportunities**
-- No financial domain expertise — cannot speak credibly to CFOs, risk officers, or actuaries
-- No ratings, no seal, no archive, no financial health product
-- Technical audience only — not decision-makers in finance
-- Rebrand suggests instability or repositioning — may be moving away from the space
-- RealRate owns the intersection of causal AI + financial intelligence — CausalLens/DecisionOS does not compete here directly
+- No financial health ratings, no ECR equivalent, no certification/seal product
+- Pivoted away from financial intelligence — not a direct competitor to RealRate's core product
+- "Digital Workers" framing competes in a crowded agentic AI market — not differentiated from a finance perspective
+- No public archive, no transparency in financial analysis, no independence claim
+- RealRate is the only causal AI platform purpose-built for financial health evaluation — causaLens no longer operates in this space
+
+**Verdict:** causaLens is no longer a meaningful direct or methodological competitor. Their pivot to workflow automation AI moves them away from RealRate's space entirely. Monitor annually rather than quarterly.
 
 **Content angles for RealRate**
-- Why causal AI matters specifically in finance (P3 / methodology posts)
-- The difference between causal AI for general analytics vs. causal AI for financial health (P3)
-- Position RealRate as the only causal AI platform built specifically for financial intelligence
+- Position RealRate as the only causal AI platform built specifically for financial intelligence (P3 / P5)
+- Why general-purpose AI tools cannot evaluate financial health — domain expertise matters (P3)
 
 ---
 
 ### Competitive Comparison Table
 
-| | RealRate | RapidRatings | Moody's / S&P | CausalLens/DecisionOS |
+| | RealRate | RapidRatings | Moody's / S&P | causaLens |
 |---|---|---|---|---|
 | Causal AI | ✓ | ✗ | ✗ | ✓ |
 | Fully explainable drivers | ✓ | ✗ | ✗ | ✓ |
@@ -327,7 +333,7 @@ Causal AI / causal inference — builds directed acyclic graphs (DAGs) to identi
 |---|---|---|---|
 | RapidRatings | New products, partnerships, content themes, Badge Program traction | Website, LinkedIn, press releases | Monthly |
 | Moody's / S&P | ESG rating changes, regulatory news, new analytics products | News alerts, LinkedIn | Quarterly |
-| CausalLens / DecisionOS | Rebrand progress, new customers, product direction | Website, LinkedIn, TechCrunch | Quarterly |
+| causaLens | Product direction post-pivot, any re-entry into financial intelligence | Website, LinkedIn | Annually |
 
 ### Output
 - Updated competitor profiles (review quarterly)
