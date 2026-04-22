@@ -97,6 +97,10 @@ Prepare all assets in advance so posting happens within hours of the website goi
 > https://realrate.ai/rankings/[industry]/[year]
 > [tag top-rated companies — max 5 per comment, add multiple comments if needed]
 
+### Amplification Tasks — Day 0
+- [ ] Tag top-rated companies in first pinned comment (multiple comments if needed — max 5 tags per comment)
+- [ ] Comment tagging employees of top-rated companies to increase visibility and encourage shares
+
 ### Outreach — Day 0
 - [ ] Create ICP 1 campaign — Top Rated companies (Instantly)
 - [ ] Create ICP 2 campaign — Non Top Rated companies (Instantly)
@@ -129,6 +133,10 @@ Short. Celebratory. No analytical copy — let the visual do the work.
 > *"Full list of [year] Top-Rated [Industry] companies 👇"*
 > https://realrate.ai/rankings/[industry]/[year]
 > [tag every top-rated company — multiple comments if needed]
+
+### Amplification Tasks — Day +1
+- [ ] Tag all top-rated companies in pinned comments (multiple comments if needed — max 5 tags per comment)
+- [ ] Comment tagging employees of top-rated companies to encourage sharing
 
 ### Why this post works
 - Companies see their logo and share it with their own audience — organic amplification at zero cost
@@ -454,8 +462,6 @@ Pick 1 (or 2 for high-stakes industries) per cycle based on what the data suppor
 - [ ] Publish on realrate.ai or news.realrate.ai
 - [ ] Link to realrate.ai/rankings/[industry]/[year] within the article
 - [ ] Share article on LinkedIn company page (separate post — content post, not a ranking data post)
-- [ ] Submit to relevant industry journals or trade publications for that industry
-- [ ] Tag relevant journalists or editors in the LinkedIn share post if applicable
 
 ---
 
