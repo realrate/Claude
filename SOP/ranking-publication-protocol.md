@@ -36,7 +36,8 @@ Every ranking publication follows a **4-phase protocol** spanning approximately 
 
 | Phase | Timing | Format | Goal |
 |---|---|---|---|
-| 1 — Launch | Day 0 | Image carousel | Maximum reach |
+| 1 — Launch | Day 0 | Announcement post + ranking carousel + top-rated post | Maximum reach + recognition |
+| 1b — Seal Post | Day +1 | Single image (logos + seal) | Engagement + organic amplification |
 | 2 — Insight 1: The Biggest Mover | Day +2 | Single image | Company-level story |
 | 3 — Insight 2: Rotating Angle | Day +4 | Single image | Industry-level pattern or signal |
 | 4 — Insight 3: Industry Driver Pattern | Day +6 or +7 | Short carousel (3–4 slides) | Structural credibility |
@@ -104,9 +105,91 @@ Prepare all assets in advance so launch-day posting happens within hours of the 
 > [company tags]
 
 ### Assets — Phase 1
-- [ ] Ranking announcements carousel
-- [ ] General Industry Top-Rated Companies post
+- [ ] Ranking announcement post (same day, before or alongside carousel)
+- [ ] Ranking announcements carousel (main launch post)
+- [ ] Top-Rated Companies post (format depends on count — see below)
+- [ ] Seal post (Day +1 — see below)
 - [ ] General Industry Top-Rated Companies (LinkedIn Ad)
+
+---
+
+### Ranking Announcement Post
+
+**Timing:** Same day as launch — post first, before the carousel
+**Format:** Single image or text-forward post
+**Goal:** Simple, clean announcement that the ranking is live. Drives traffic to realrate.ai. Lower effort than the carousel — acts as a signal boost.
+
+**Caption structure:**
+> *"The [year] [Industry] Financial Health Ranking is now live. [X] companies ranked. [Y] Top-Rated. The data reveals [one-line surprising finding]."*
+> Link in first comment → realrate.ai/rankings/[industry]/[year]
+
+**Visual:** Cover image only — industry name, year, "Now Live", RealRate logo. No data on this slide — the carousel carries the data.
+
+**Note:** This post primes the algorithm before the carousel lands. Post it 1–2 hours before the full ranking carousel.
+
+---
+
+### Top-Rated Companies Post
+
+**Timing:** Launch day or Day +1
+**Goal:** Recognition post for all top-rated companies — celebratory, shareable, drives company engagement
+
+**Format depends on number of Top-Rated companies:**
+
+| Top-Rated Count | Format | Structure |
+|---|---|---|
+| **1–8 companies** | Single image | All logos on one clean grid with the RealRate Top-Rated seal prominent |
+| **9–20 companies** | Short carousel (3–4 slides) | Group logos by industry sub-segment or alphabetical — 5–7 per slide |
+| **21–40 companies** | Document carousel (PDF) | Logo wall across multiple slides — cover names each company, slides group them |
+| **40+ companies** | Document carousel (PDF) | Same as above — cover states the count ("35 companies earned Top-Rated status") |
+
+**Every format includes:**
+- "Congratulations to the [year] Top-Rated [Industry] companies" as the headline
+- RealRate Top-Rated seal — prominent, not small
+- All company logos (where available) or company names if logo not available
+- RealRate logo top-left
+- Tagline on final slide or bottom of single image
+
+**Caption structure:**
+> *"[X] [industry] companies earned Top-Rated status in [year]. These companies rank in the top tier of financial health — assessed independently, explained by data."*
+> Companies tagged in first pinned comment (max 5 per comment — add multiple comments if needed)
+
+**Why this post works:** Tagged companies share it with their own audiences — this is organic amplification with zero ad spend. Always tag every top-rated company in comments.
+
+---
+
+### Seal Post
+
+**Timing:** Day +1 (day after launch)
+**Goal:** High-engagement visual recognition post — the most shareable asset in the cycle
+
+**Format:** Single image — the RealRate Top-Rated seal at centre, surrounded by company logos arranged around it. Clean, prestigious, celebratory.
+
+**Design:**
+- White or light grey background (#f5f5f5)
+- RealRate Top-Rated seal: large, centred or anchored
+- Company logos: arranged around the seal in a balanced grid or arc
+- If too many logos to fit cleanly: feature top 10–12 only, caption references the full list
+- No ECR numbers on this image — this is recognition, not analysis
+- RealRate logo top-left, small
+- No tagline on this image — this post is not analytical
+
+**Caption structure:**
+> *"Congratulations to the [year] Top-Rated [Industry] companies — ranked by independent, explainable financial AI."*
+> Short. Celebratory. No analytical copy on this post — let the visual do the work.
+
+**First pinned comment:**
+> *"Full list of Top-Rated [Industry] companies 👇"*
+> https://realrate.ai/rankings/[industry]/[year]
+> [tag every top-rated company — multiple comments if needed]
+
+**Why this post gets engagement:**
+- Companies see their logo and tag their own followers
+- Feels like an award, not a product post — psychological distinction matters
+- Clean, shareable design that companies want to repost
+- Tagging in comments creates notification chains across companies
+
+---
 
 ### Outreach — Launch Day
 - [ ] Provide Krisha sequences for automatic upload
