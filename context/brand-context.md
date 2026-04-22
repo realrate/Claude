@@ -119,9 +119,9 @@ See `competitive-landscape.md` for full competitor profiles and comparison.
   - Body text on dark cover slide: 42px
   - Footer (brand name, tagline, URL): 20–25px
 - **Approved backgrounds:**
-  - Light grey: `#f5f5f5`
-  - Medium grey: `#e8e8e8`
-  - Dark blue: `#00679B`
+  - Core: Light grey `#f5f5f5`, Medium grey `#e8e8e8`, Dark blue `#00679B`
+  - Additional colors from the corporate palette are permitted — not too dark, not too light
+  - Must maintain clear, strong contrast between background, text, and logo at all times
 - **Layout rules:**
   - No eyebrow labels or mini titles above headlines — go straight into the heading
   - On dark slides: all text must be full white (`#ffffff`)
