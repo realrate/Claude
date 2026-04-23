@@ -17,12 +17,14 @@ RealRate/
 │   ├── product-offering.md       ← products, value proposition, pricing, social proof
 │   ├── audience.md               ← primary/secondary/potential audiences, ICPs, differentiators
 │   ├── competitive-landscape.md  ← quick reference competitor summary
-│   └── sources.md                ← trusted URLs to browse for research and content creation
+│   ├── sources.md                ← trusted URLs to browse for research and content creation
+│   └── post-templates.md         ← approved post template specs (typography, layout, data fields)
 └── SOP/
     ├── marketing-research-strategy.md     ← market landscape, competitor analysis, research steps
     ├── social-media-sop.md                ← content creation, calendar, LinkedIn page, design, ads, analytics
     ├── outreach-sop.md                    ← LinkedIn outreach, email outreach (Instantly), analytics
-    └── ranking-publication-protocol.md    ← 4-phase ranking launch process, checklists
+    ├── ranking-publication-protocol.md    ← 4-phase ranking launch process, checklists
+    └── post-design-sop.md                 ← HTML post production SOP, QA checklists, export instructions
 ```
 
 ---
@@ -37,7 +39,7 @@ RealRate/
 | Content strategy / calendar | + `growth-marketing.md` + `audience.md` |
 | Outreach / email / DM | + `product-offering.md` + `audience.md` |
 | Product or sales content | + `product-offering.md` + `audience.md` |
-| Design / visual content | + `brand-context.md` (design specs section) |
+| Design / visual content | + `brand-context.md` (design specs section) + `post-templates.md` + `post-design-sop.md` |
 | Analytics / performance review | + `growth-marketing.md` (performance section) |
 
 ---

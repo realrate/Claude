@@ -238,6 +238,28 @@ These examples are from RapidRatings, Moody's, and S&P Global. Use them as creat
 
 ---
 
+### 7. Moody's — Geometric Accent Blocks on Dark Background ⭐ USE FOR: General Insight Posts, Announcements
+**Source:** Moody's keynote session post ("Cyber and fraud protection strategies")
+**Approved use:** General insight posts, carousel openers, announcement cards — any post where clean bold typography is the hero
+
+**What it does:**
+- Deep dark navy background, solid — no gradients, no photos
+- Bright blue (their accent color) solid squares of varying sizes scattered at corners: top-right cluster, bottom row, bottom-left corner — creates geometric rhythm
+- Content type label ("KEYNOTE SESSION") in the same bright blue as squares — unifies label + decoration visually
+- Very large, bold white headline dominates the upper two-thirds of the image
+- Logo top-left (white), white chevron icon on the right edge
+- Zero clutter — the squares ARE the decoration
+
+**How to apply for RealRate:**
+- Background: flat `#00679B` (or `#0a1628` for darker posts)
+- Decorative squares: solid `#3DBACD` (light blue) at `opacity: 0.25–0.35`, placed at top-right corner and bottom edge in clusters of 2–4 squares of varying sizes (60–120px)
+- Content type label: `#3DBACD` uppercase small caps — matches the square color (ties decoration to typography)
+- Headline: white, very large (60–80px), dominant
+- Never use this decoration system alongside the arc — choose one: arcs OR geometric squares
+- Clean, flat, no gradients needed
+
+---
+
 ### 6. S&P Global — Solid Color Band + Architectural Photo
 **Source:** S&P Global LinkedIn (European Banks post)
 
@@ -251,3 +273,10 @@ These examples are from RapidRatings, Moody's, and S&P Global. Use them as creat
 - Split-band layout: `#00679B` solid top section for headline, photo bottom — with a curved or diagonal edge between them
 - Works well for industry-specific posts where a photo adds context (e.g., tech campus, data center, financial district)
 - The horizontal rule above logo is a clean, understated branding device to borrow
+
+---
+
+## Post Templates
+Full approved template specs and production procedures are in dedicated files:
+- **Context/specs:** `context/post-templates.md`
+- **SOP/procedure:** `SOP/post-design-sop.md`
