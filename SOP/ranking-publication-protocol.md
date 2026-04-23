@@ -422,9 +422,6 @@ Document posts receive higher organic reach than image carousels on LinkedIn, al
 > *"RealRate ranked [X] [industry] companies using 2025 financial data. Here's what the full picture looks like — who ranked well, who didn't, what drove the difference, and what it signals for the industry."*
 > + realrate.ai/rankings/[industry]/[year]
 
-### First Pinned Comment
-> [company tags]
-
 ---
 
 ## Insight & Angle Selection Guide
