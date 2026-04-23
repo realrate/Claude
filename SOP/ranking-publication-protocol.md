@@ -207,6 +207,18 @@ Find the company with the largest rank change up or down. Identify which ECR dri
 **Example:**
 > *"A year ago Clearwater Analytics was #24 in US Software. Today they're #1. ECR: 647% — 295 points above the industry average of 352%. Stockholders' Equity contributed +292 points to that move. That's not revenue growth. That's balance sheet strength — the clearest signal of long-term financial stability in this industry."*
 
+**Approved caption — US Computers 2026 (Apple Inc):**
+> Apple Inc was ranked #2 in US Computers last year. Today they're at #1 with an ECR of 430%.
+>
+> One driver explains the move: Net Income, contributing +245 points to their ECR score.
+>
+> This is a measure of how efficiently Apple converts its operations into balance sheet strength.
+>
+> The industry average ECR is 258% and Apple sits 172 points above it.
+>
+> Check the full 2026 US Computers ranking + company-level breakdown:
+> realrate.ai/rankings/us_computers/2026
+
 ### Rules
 - One company, one driver, one implication — never dilute
 - Always quantify the driver contribution in points
