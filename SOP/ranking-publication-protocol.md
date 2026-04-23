@@ -88,6 +88,39 @@ Prepare all assets in advance so posting happens within hours of the website goi
 | **One insight** | The most notable finding | One sentence — name the company or pattern, state the implication |
 | **Ranking URL** | End of caption | `realrate.ai/rankings/[industry]/[year]` |
 
+### Fixed Caption Template — New Industry Released
+
+Use this structure every time a new industry ranking is published. Replace bracketed fields with the correct data. The two insight sentences (marked with *) are the only fields that change significantly from industry to industry.
+
+---
+
+**[Industry] Ranking [Year]**
+
+We've just published RealRate's latest [Industry] ranking based on RealRate's independent Financial Strength methodology.
+
+*[One sentence — the single most interesting or striking insight from the full industry ranking. Lead with a number or a named company.]
+
+*[One sentence — the most notable insight about companies that didn't reach Top-Rated status. Frame it structurally, never naming companies negatively.]
+
+At the core is Economic Capital Ratio (ECR) — a forward-looking metric that measures how efficiently a company converts its economic value into balance sheet strength, enabling true comparability across size and business models.
+
+At RealRate, we go beyond correlation.
+Our explainable AI framework reveals not just where each company stands, but why. Giving you a clear view of the underlying drivers of financial resilience, risk exposure, and long-term stability.
+
+Check the complete ranking + company-level analysis:
+🔗 realrate.ai/rankings/[industry-slug]/[year]
+
+---
+
+**Field reference:**
+| Field | Example |
+|---|---|
+| [Industry] | `US Computers` |
+| [Year] | `2026` |
+| [industry-slug] | `us_computers` |
+| Industry insight sentence | `Apple Inc leads with an ECR of 430% — 172 points above the industry average.` |
+| Non-top-rated insight sentence | `Only 5 of the companies ranked reached Top-Rated status — and a single structural driver separates them from the rest.` |
+
 **Example hook:**
 > *"140 US Software companies. One ranked #1 with an ECR of 647%. The industry average is 352%. Here's who made it — and what the data reveals about the ones who didn't."*
 
