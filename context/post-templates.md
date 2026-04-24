@@ -11,6 +11,7 @@ This file is a reference for all approved post template specifications. Load it 
 | Dark Blue | `#00679B` | Alternate — carousel slides, NTR posts |
 | Light Grey | `#f5f5f5` | Light section in split-band layouts only |
 | Off-White | `#e8e8e8` | Light section variant |
+| Medium Grey | `#8e96a2` | Insight posts — lighter, positive tone |
 
 ## Accent Color Rule
 One accent per design. Rotate across posts:

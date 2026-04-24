@@ -21,6 +21,7 @@ This SOP governs the creation of HTML-based visual posts for RealRate's LinkedIn
 | White | `#ffffff` | Primary text, logos, key values |
 | Mid Grey | `rgba(255,255,255,0.5–0.6)` | Descriptions, secondary text |
 | Muted Grey | `rgba(255,255,255,0.28–0.38)` | Labels, taglines, dimmed values |
+| Mid Grey | `#8e96a2` | Approved background — insight posts, lighter positive tone |
 | Light BG | `#f5f5f5` / `#e8e8e8` | Split-band light section |
 
 ### Single-Accent Rule
