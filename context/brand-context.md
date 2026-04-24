@@ -131,9 +131,11 @@ See `competitive-landscape.md` for full competitor profiles and comparison.
 - **Style:** Flat, minimal, data-focused — minimal gradients and subtle textures permitted; no heavy decoration or shadows
 - **Logo placement:** Any corner — choose based on content weight and white space. Place in the corner that has the most available space and least visual conflict with content. No fixed default.
 - **Logo version — by background:**
-  1. **Dark background** → use RealRate logo with white text (priority)
-  2. **Dark background, logo colors not clearly visible** → add a white background block behind the logo to restore visibility
-  3. **Light background** → use regular logo with black text
+  1. **Dark blue (`#00679B`) background** → use regular/horizontal logo (black text: `RealRate_logo_horizontal.svg`) on solid white background block (`background: #ffffff; border-radius: 10px; padding: 9px 18px`)
+  2. **Dark navy (`#0a1628`) or photo background** → use white-text logo (`RealRate_logo_light.svg`); add white background block only if logo colors are not clearly visible
+  3. **Light background** → use regular logo (black text: `RealRate_logo_horizontal.svg`), no background wrap needed
+- **No background pills on text** — never apply a colored background + padding badge/pill style to text labels. Labels, post types, and content categories must be plain text (colored text only, no background fill).
+- **Industry tag** → always white (`#ffffff`), no background behind it
 - **Emojis:** Max 2 in captions, none on images
 - **Tagline on image:** `"Powered by RealRate: Using Explainable Financial AI"` — appears on analytical post images only, never in the caption
 - **Backgrounds:** Mix primary (`#00679B` dark blue) and secondary (`#f5f5f5` light grey, `#e8e8e8` medium grey) — choose whichever looks best for the content. No single default. Alternate across posts in a cycle to create visual variety.
