@@ -24,6 +24,10 @@ This SOP governs the creation of HTML-based visual posts for RealRate's LinkedIn
 | Mid Grey | `#8e96a2` | Approved background — insight posts, lighter positive tone |
 | Light BG | `#f5f5f5` / `#e8e8e8` | Split-band light section |
 
+**Approved split-band combinations** (top accent + light bottom, divided by `#3DBACD` 3px rule):
+- `#00679B` + `#f5f5f5` — default (carousel, NTR posts)
+- `#8e96a2` + `#f5f5f5` — insight posts, lighter neutral tone
+
 ### Single-Accent Rule
 Each design uses **one accent color** for text/UI elements — either `#3DBACD` or `#00679B`. Rotate between posts. Never use both as text highlights in the same design.
 

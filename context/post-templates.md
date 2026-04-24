@@ -13,6 +13,16 @@ This file is a reference for all approved post template specifications. Load it 
 | Off-White | `#e8e8e8` | Light section variant |
 | Medium Grey | `#8e96a2` | Insight posts — lighter, positive tone |
 
+## Approved Split-Band Combinations
+Split-band layout = solid color top section + light bottom section, divided by a `#3DBACD` 3px rule.
+
+| Top (accent/header) | Bottom (content) | Use for |
+|---|---|---|
+| `#00679B` dark blue | `#f5f5f5` light grey | Carousel slides, NTR posts (default) |
+| `#8e96a2` mid grey | `#f5f5f5` light grey | Insight posts — lighter, neutral tone |
+
+---
+
 ## Accent Color Rule
 One accent per design. Rotate across posts:
 - `#3DBACD` — light teal (preferred on dark navy background)
