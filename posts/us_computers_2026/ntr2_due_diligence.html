@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { width: 1080px; height: 1080px; font-family: 'Manrope', sans-serif; overflow: hidden; display: flex; flex-direction: column; }
+
+    .section-blue {
+      background: #00679B;
+      padding: 42px 52px 34px;
+      color: white;
+      display: flex; flex-direction: column; gap: 12px;
+      position: relative; overflow: hidden;
+    }
+    .sq { position: absolute; background: #3DBACD; border-radius: 5px; pointer-events: none; }
+    .section-divider { width: 100%; height: 3px; background: #3DBACD; flex-shrink: 0; }
+    .section-light {
+      flex: 1; background: #f5f5f5;
+      padding: 30px 52px 40px;
+      display: flex; flex-direction: column; justify-content: space-between;
+      color: #000;
+    }
+
+    .top-bar { display: flex; justify-content: space-between; align-items: center; }
+    .logo-wrap { display: inline-flex; align-items: center; background: #ffffff; padding: 9px 18px; border-radius: 10px; }
+    .logo { height: 40px; }
+    .industry-tag { font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #ffffff; }
+
+    .headline { font-size: 48px; font-weight: 800; line-height: 1.05; }
+    .subheadline { font-size: 17px; font-weight: 400; color: rgba(255,255,255,0.65); line-height: 1.4; max-width: 680px; }
+
+    /* Chart */
+    .chart-area { display: flex; flex-direction: column; gap: 14px; }
+
+    .company-block { background: white; border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 14px; }
+    .company-header { display: flex; justify-content: space-between; align-items: center; }
+    .company-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #AFAFAF; }
+    .company-ecr { font-size: 24px; font-weight: 800; color: #00679B; }
+
+    .bar-group { display: flex; flex-direction: column; gap: 9px; }
+    .bar-row { display: flex; align-items: center; gap: 14px; }
+    .bar-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; width: 148px; flex-shrink: 0; line-height: 1.3; }
+    .bar-label.positive { color: #3DBACD; }
+    .bar-label.negative { color: #C04A3A; }
+    .bar-track { flex: 1; height: 30px; background: #f0f0f0; border-radius: 6px; overflow: hidden; display: flex; align-items: center; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 14px; }
+    .bar-fill.positive { background: #3DBACD; }
+    .bar-fill.negative { background: #C04A3A; }
+    .bar-value { font-size: 15px; font-weight: 800; color: white; white-space: nowrap; }
+
+    /* Bottom stats */
+    .stats-row { display: flex; gap: 14px; }
+    .stat-box { flex: 1; padding: 16px 18px; background: white; border-radius: 10px; border-top: 3px solid #3DBACD; display: flex; flex-direction: column; gap: 4px; }
+    .stat-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #AFAFAF; }
+    .stat-value { font-size: 28px; font-weight: 800; color: #000; }
+    .stat-value.warning { color: #C04A3A; font-size: 19px; line-height: 1.3; margin-top: 2px; }
+
+    .tagline { font-size: 13px; font-weight: 500; color: #AFAFAF; padding-top: 14px; border-top: 1px solid #e0e0e0; }
+  </style>
+</head>
+<body>
+  <div class="section-blue">
+    <div class="sq" style="width:90px;height:90px;top:20px;right:46px;opacity:0.3;"></div>
+    <div class="sq" style="width:58px;height:58px;top:120px;right:78px;opacity:0.2;"></div>
+    <div class="sq" style="width:44px;height:44px;top:72px;right:152px;opacity:0.15;"></div>
+
+    <div class="top-bar">
+      <div class="logo-wrap">
+        <img class="logo" src="https://realrate.ai/wp-content/uploads/2025/10/RealRate_logo_horizontal.svg" alt="RealRate">
+      </div>
+      <div class="industry-tag">US Computers · 2026</div>
+    </div>
+
+    <div class="headline">Recognition isn't<br>financial strength.</div>
+    <div class="subheadline">Two of the most recognised names in US computing didn't earn Top-Rated status. The ECR data shows exactly why.</div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <div class="section-light">
+    <div class="chart-area">
+
+      <!-- Company A: HP -->
+      <div class="company-block">
+        <div class="company-header">
+          <div class="company-label">Large-cap hardware · Company A &nbsp;·&nbsp; ECR 258%</div>
+          <div class="company-ecr">Gap to Top-Rated: +75pp</div>
+        </div>
+        <div class="bar-group">
+          <!-- Gap to Top-Rated: 75pp → 75/500 = 15% -->
+          <div class="bar-row">
+            <div class="bar-label positive">Gap to<br>Top-Rated</div>
+            <div class="bar-track">
+              <div class="bar-fill positive" style="width:15%;">
+                <span class="bar-value">+75pp</span>
+              </div>
+            </div>
+          </div>
+          <!-- COGS drag: 429pp → 429/500 = 85.8% -->
+          <div class="bar-row">
+            <div class="bar-label negative">COGS drag<br>on ECR</div>
+            <div class="bar-track">
+              <div class="bar-fill negative" style="width:85.8%;">
+                <span class="bar-value">−429pp</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Company B: Dell -->
+      <div class="company-block">
+        <div class="company-header">
+          <div class="company-label">Large-cap hardware · Company B &nbsp;·&nbsp; ECR 230%</div>
+          <div class="company-ecr">Gap to Top-Rated: +103pp</div>
+        </div>
+        <div class="bar-group">
+          <!-- Gap to Top-Rated: 103pp → 103/500 = 20.6% -->
+          <div class="bar-row">
+            <div class="bar-label positive">Gap to<br>Top-Rated</div>
+            <div class="bar-track">
+              <div class="bar-fill positive" style="width:20.6%;">
+                <span class="bar-value">+103pp</span>
+              </div>
+            </div>
+          </div>
+          <!-- COGS drag: 306pp → 306/500 = 61.2% -->
+          <div class="bar-row">
+            <div class="bar-label negative">COGS drag<br>on ECR</div>
+            <div class="bar-track">
+              <div class="bar-fill negative" style="width:61.2%;">
+                <span class="bar-value">−306pp</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom stats -->
+    <div class="stats-row">
+      <div class="stat-box">
+        <div class="stat-label">Industry avg ECR</div>
+        <div class="stat-value">258%</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-label">Top-Rated minimum</div>
+        <div class="stat-value">333%</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-label">Dominant weakness driver</div>
+        <div class="stat-value warning">Costs of Goods Sold</div>
+      </div>
+    </div>
+
+    <div class="tagline">Powered by RealRate: Using Explainable Financial AI</div>
+  </div>
+</body>
+</html>
