@@ -7,6 +7,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const slides = [
   { file: 'insight1_barfresh.html',     out: 'insight1_barfresh.png' },
   { file: 'insight2_kraft_heinz.html',  out: 'insight2_kraft_heinz.png' },
+  { file: 'insight3_freshpet.html',     out: 'insight3_freshpet.png' },
 ];
 
 const browser = await puppeteer.launch({ headless: true });
