@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1080px; height: 1080px;
+      font-family: 'Manrope', sans-serif;
+      background: #0a1628;
+      color: #ffffff;
+      overflow: hidden;
+      position: relative;
+      padding: 62px 68px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Large decorative arc — accent color, bottom right */
+    .deco-arc {
+      position: absolute;
+      width: 680px; height: 680px;
+      border-radius: 50%;
+      border: 110px solid #3DBACD;
+      bottom: -210px; right: -210px;
+      pointer-events: none;
+      opacity: 0.55;
+    }
+
+    /* TOP BAR */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo { height: 38px; }
+    .industry-tag {
+      font-size: 16px; font-weight: 700;
+      letter-spacing: 2.5px; text-transform: uppercase;
+      color: #ffffff;
+    }
+
+    /* POST LABEL */
+    .post-label {
+      font-size: 17px; font-weight: 700;
+      letter-spacing: 3px; text-transform: uppercase;
+      color: #3DBACD;
+      margin-top: 80px;
+    }
+
+    /* BIG TITLE */
+    .post-title {
+      font-size: 118px; font-weight: 800;
+      line-height: 0.9;
+      text-transform: uppercase;
+      color: white;
+      letter-spacing: -3px;
+      margin-top: 14px;
+    }
+
+    /* One-liner subtitle */
+    .post-subtitle {
+      font-size: 19px; font-weight: 400;
+      color: rgba(255,255,255,0.5);
+      margin-top: 18px;
+      max-width: 520px;
+      line-height: 1.4;
+    }
+
+    /* Breathing space */
+    .spacer { flex: 1; }
+
+    /* COMPANY BLOCK */
+    .company-block { margin-bottom: 36px; }
+
+    .rank-row {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+    .rank-old {
+      font-size: 38px; font-weight: 800;
+      color: rgba(255,255,255,0.28);
+    }
+    .rank-arrow {
+      font-size: 28px; font-weight: 600;
+      color: rgba(255,255,255,0.28);
+    }
+    .rank-new {
+      font-size: 76px; font-weight: 800;
+      color: white; line-height: 1;
+    }
+
+    .company-header {
+      display: flex; align-items: center; gap: 18px;
+      margin-bottom: 18px;
+    }
+    .company-logo-wrap {
+      width: 64px; height: 64px;
+      background: #ffffff;
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .company-initials {
+      font-size: 22px; font-weight: 700;
+      color: #00679B;
+      letter-spacing: -1px;
+    }
+    .company-name {
+      font-size: 54px; font-weight: 800;
+      line-height: 1;
+      color: white;
+    }
+
+    .company-desc {
+      font-size: 23px; font-weight: 400;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.5;
+      max-width: 540px;
+    }
+
+    /* STATS BAR */
+    .stats-bar {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 28px;
+      position: relative; z-index: 1;
+    }
+    .stat {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding-right: 44px;
+      margin-right: 44px;
+      border-right: 1px solid rgba(255,255,255,0.14);
+    }
+    .stat:last-child { border-right: none; padding-right: 0; margin-right: 0; }
+
+    .stat-label {
+      font-size: 13px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 2px;
+      color: rgba(255,255,255,0.38);
+    }
+    .stat-ecr {
+      font-size: 48px; font-weight: 800;
+      color: #3DBACD; line-height: 1;
+    }
+    .stat-driver {
+      display: flex; align-items: baseline; gap: 8px;
+      flex-wrap: wrap;
+    }
+    .stat-driver-name {
+      font-size: 32px; font-weight: 700;
+      color: white; line-height: 1.1;
+    }
+    .stat-driver-gain {
+      font-size: 30px; font-weight: 600;
+      color: #3DBACD;
+    }
+    .stat-avg {
+      font-size: 44px; font-weight: 800;
+      color: #ffffff; line-height: 1;
+    }
+
+    /* TAGLINE */
+    .tagline {
+      font-size: 16px; font-weight: 400;
+      color: rgba(255,255,255,0.28);
+    }
+  </style>
+</head>
+<body>
+  <div class="deco-arc"></div>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <img class="logo" src="https://realrate.ai/wp-content/uploads/2025/10/RealRate_logo_light.svg" alt="RealRate">
+    <div class="industry-tag">US Food Ranking 2026</div>
+  </div>
+
+  <!-- LABEL + TITLE -->
+  <div class="post-label">2026 Ranking Insight</div>
+  <div class="post-title">Biggest<br>Mover</div>
+  <div class="post-subtitle">The company that gained the most ECR points year on year.</div>
+
+  <div class="spacer"></div>
+
+  <!-- COMPANY -->
+  <div class="company-block">
+    <div class="rank-row">
+      <span class="rank-old">#25</span>
+      <span class="rank-arrow">↑</span>
+      <span class="rank-new">#20</span>
+    </div>
+    <div class="company-header">
+      <div class="company-logo-wrap">
+        <span class="company-initials">BF</span>
+      </div>
+      <div class="company-name">Barfresh Food Group</div>
+    </div>
+    <div class="company-desc">ECR nearly doubled — from 39% to 77%,<br>the biggest gain in the 2026<br>US Food ranking. One driver explains the move.</div>
+  </div>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stat">
+      <div class="stat-label">ECR Score</div>
+      <div class="stat-ecr">77%</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Key Driver</div>
+      <div class="stat-driver">
+        <span class="stat-driver-name">Property &amp; Equipment</span>
+        <span class="stat-driver-gain">+12pp</span>
+      </div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Industry Avg.</div>
+      <div class="stat-avg">140%</div>
+    </div>
+  </div>
+
+  <!-- TAGLINE -->
+  <div class="tagline">Powered by RealRate: Using Explainable Financial AI</div>
+</body>
+</html>
