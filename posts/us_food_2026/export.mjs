@@ -9,6 +9,7 @@ const slides = [
   { file: 'insight2_kraft_heinz.html',  out: 'insight2_kraft_heinz.png' },
   { file: 'insight3_lifeway.html',      out: 'insight3_lifeway.png' },
   { file: 'ntr1_gap.html',             out: 'ntr1_gap.png' },
+  { file: 'ntr2_due_diligence.html',   out: 'ntr2_due_diligence.png' },
 ];
 
 const browser = await puppeteer.launch({ headless: true });

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { width: 1080px; height: 1080px; font-family: 'Manrope', sans-serif; overflow: hidden; display: flex; flex-direction: column; }
+
+    .section-blue {
+      background: #00679B;
+      padding: 42px 52px 34px;
+      color: white;
+      display: flex; flex-direction: column; gap: 12px;
+      position: relative; overflow: hidden;
+    }
+    .sq { position: absolute; background: #3DBACD; border-radius: 5px; pointer-events: none; }
+    .section-divider { width: 100%; height: 3px; background: #3DBACD; flex-shrink: 0; }
+    .section-light {
+      flex: 1; background: #f5f5f5;
+      padding: 28px 52px 38px;
+      display: flex; flex-direction: column; justify-content: space-between;
+      color: #000;
+    }
+
+    .top-bar { display: flex; justify-content: space-between; align-items: center; }
+    .logo-wrap { display: inline-flex; align-items: center; background: #ffffff; padding: 9px 18px; border-radius: 10px; }
+    .logo { height: 40px; }
+    .industry-tag { font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #ffffff; }
+
+    .headline { font-size: 48px; font-weight: 800; line-height: 1.05; }
+    .subheadline { font-size: 16px; font-weight: 400; color: rgba(255,255,255,0.65); line-height: 1.4; max-width: 680px; }
+
+    /* Company cards */
+    .chart-area { display: flex; flex-direction: column; gap: 12px; }
+    .company-block { background: white; border-radius: 12px; padding: 18px 22px; display: flex; flex-direction: column; gap: 12px; }
+    .company-header { display: flex; justify-content: space-between; align-items: center; }
+    .company-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.8px; color: #AFAFAF; }
+    .company-ecr { font-size: 22px; font-weight: 800; color: #00679B; }
+
+    .bar-group { display: flex; flex-direction: column; gap: 8px; }
+    .bar-row { display: flex; align-items: center; gap: 12px; }
+    .bar-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; width: 130px; flex-shrink: 0; line-height: 1.35; }
+    .bar-label.positive { color: #3DBACD; }
+    .bar-label.negative { color: #C04A3A; }
+    .bar-track { flex: 1; height: 28px; background: #f0f0f0; border-radius: 6px; overflow: hidden; display: flex; align-items: center; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 12px; }
+    .bar-fill.positive { background: #3DBACD; }
+    .bar-fill.negative { background: #C04A3A; }
+    .bar-value { font-size: 13px; font-weight: 800; color: white; white-space: nowrap; }
+
+    /* Bottom stats */
+    .stats-row { display: flex; gap: 14px; }
+    .stat-box { flex: 1; padding: 15px 18px; background: white; border-radius: 10px; border-top: 3px solid #3DBACD; display: flex; flex-direction: column; gap: 4px; }
+    .stat-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #AFAFAF; }
+    .stat-value { font-size: 28px; font-weight: 800; color: #000; }
+    .stat-value.warning { color: #C04A3A; font-size: 18px; line-height: 1.3; margin-top: 2px; }
+
+    .tagline { font-size: 13px; font-weight: 500; color: #AFAFAF; padding-top: 12px; border-top: 1px solid #e0e0e0; }
+  </style>
+</head>
+<body>
+
+  <!-- BLUE TOP SECTION -->
+  <div class="section-blue">
+    <div class="sq" style="width:90px;height:90px;top:20px;right:46px;opacity:0.3;"></div>
+    <div class="sq" style="width:58px;height:58px;top:120px;right:78px;opacity:0.2;"></div>
+    <div class="sq" style="width:44px;height:44px;top:72px;right:152px;opacity:0.15;"></div>
+
+    <div class="top-bar">
+      <div class="logo-wrap">
+        <img class="logo" src="https://realrate.ai/wp-content/uploads/2025/10/RealRate_logo_horizontal.svg" alt="RealRate">
+      </div>
+      <div class="industry-tag">US Food · 2026</div>
+    </div>
+
+    <div class="headline">The brand is known.<br>The balance sheet isn't.</div>
+    <div class="subheadline">Two iconic American food names didn't earn Top-Rated status in 2026. The ECR data shows exactly what's holding them back.</div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- LIGHT BOTTOM SECTION -->
+  <div class="section-light">
+    <div class="chart-area">
+
+      <!-- Company A: Hershey -->
+      <!-- Top-rated min: 172%. Hershey ECR: 132%. Gap: +40pp. Weakness: Liabilities LT: -30pp. Scale max: 60pp -->
+      <div class="company-block">
+        <div class="company-header">
+          <div class="company-label">Iconic chocolate brand &nbsp;·&nbsp; Company A &nbsp;·&nbsp; ECR 132%</div>
+          <div class="company-ecr">Gap to Top-Rated: +40pp</div>
+        </div>
+        <div class="bar-group">
+          <div class="bar-row">
+            <div class="bar-label positive">Gap to<br>Top-Rated</div>
+            <div class="bar-track">
+              <div class="bar-fill positive" style="width:66.7%;">
+                <span class="bar-value">+40pp needed</span>
+              </div>
+            </div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label negative">Liabilities<br>drag on ECR</div>
+            <div class="bar-track">
+              <div class="bar-fill negative" style="width:50%;">
+                <span class="bar-value">−30pp</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Company B: Campbell's -->
+      <!-- Campbell ECR: 117%. Gap: +55pp. Weakness: Liabilities: -43pp. Scale max: 60pp -->
+      <div class="company-block">
+        <div class="company-header">
+          <div class="company-label">Classic soup &amp; snack brand &nbsp;·&nbsp; Company B &nbsp;·&nbsp; ECR 117%</div>
+          <div class="company-ecr">Gap to Top-Rated: +55pp</div>
+        </div>
+        <div class="bar-group">
+          <div class="bar-row">
+            <div class="bar-label positive">Gap to<br>Top-Rated</div>
+            <div class="bar-track">
+              <div class="bar-fill positive" style="width:91.7%;">
+                <span class="bar-value">+55pp needed</span>
+              </div>
+            </div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label negative">Liabilities<br>drag on ECR</div>
+            <div class="bar-track">
+              <div class="bar-fill negative" style="width:71.7%;">
+                <span class="bar-value">−43pp</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom stats -->
+    <div class="stats-row">
+      <div class="stat-box">
+        <div class="stat-label">Industry avg ECR</div>
+        <div class="stat-value">140%</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-label">Top-Rated minimum</div>
+        <div class="stat-value">172%</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-label">Dominant weakness driver</div>
+        <div class="stat-value warning">Liabilities</div>
+      </div>
+    </div>
+
+    <div class="tagline">Powered by RealRate: Using Explainable Financial AI</div>
+  </div>
+
+</body>
+</html>
