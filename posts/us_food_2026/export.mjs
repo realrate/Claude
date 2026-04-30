@@ -8,6 +8,7 @@ const slides = [
   { file: 'insight1_barfresh.html',     out: 'insight1_barfresh.png' },
   { file: 'insight2_kraft_heinz.html',  out: 'insight2_kraft_heinz.png' },
   { file: 'insight3_lifeway.html',      out: 'insight3_lifeway.png' },
+  { file: 'ntr1_gap.html',             out: 'ntr1_gap.png' },
 ];
 
 const browser = await puppeteer.launch({ headless: true });
