@@ -1,2 +1,3 @@
-posts/
+posts/*
+!posts/holger_personal/
 .DS_Store
