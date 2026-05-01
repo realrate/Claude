@@ -186,30 +186,30 @@ e.g. `insight1_apple.html`, `insight1_apple.png`
 ### When to Use
 One post per ranking cycle when a Surprise scenario is clearly supported by the data. Can be published as Insight 1 (Day +2) or Insight 2 (Day +5) depending on the strength of the finding — see `ranking-publication-protocol.md → Day +2 Decision Rule`.
 
-Three variants — select the one the data supports:
+One post type. The title and story angle depend on what the data shows — pick the angle that fits:
 
-| Variant | Trigger | Story angle |
+| Angle | Trigger | Title |
 |---|---|---|
-| **A — The Confirmation** | Well-known company at/near the top — the WHY is the non-obvious part | Expected rank, unexpected structural reason |
-| **B — Reputation Doesn't Rate** | Well-known company ranked significantly lower than reputation suggests | ECR ≠ brand equity or revenue; balance sheet tells a different story |
-| **C — The Unknown Leader** | Lesser-known company ranked ahead of recognized industry names | Financial strength is independent of brand recognition |
+| **The Confirmation** | Well-known company at/near the top — the structural WHY is non-obvious | `THE CONFIRMATION` or `WHAT THE DATA REVEALS` |
+| **Reputation Doesn't Rate** | Well-known company ranked significantly lower than their profile suggests | `REPUTATION DOESN'T RATE` |
+| **The Unknown Leader** | Lesser-known company ranked ahead of recognized industry names | `THE UNKNOWN LEADER` |
 
 ### Data to Verify Before Starting (from realrate-archive.com)
 
-**All variants:**
+**All angles:**
 - [ ] Company name (exact)
 - [ ] Current rank and ECR score (%)
 - [ ] Industry average ECR (%)
 - [ ] Total companies ranked
 
-**Variant A and C — strength driver:**
+**The Confirmation and The Unknown Leader — strength driver:**
 - [ ] Greatest strength driver name + contribution (pp)
 
-**Variant B — weakness driver:**
+**Reputation Doesn't Rate — weakness driver:**
 - [ ] Greatest weakness driver name + contribution (pp)
 - [ ] Number of companies ranked ahead of the subject company
 
-**Variant C — comparison company:**
+**The Unknown Leader — comparison company:**
 - [ ] At least one well-known company the subject outranks: name, rank, ECR (%)
 
 ### Layout Options
@@ -237,7 +237,7 @@ Follows the Biggest Mover structure adapted for the angle. Post label, title, su
        [arc or geometric square decoration]
 ```
 
-**Option 2 — Two-Company Comparison (Variant C preferred, Variant B optional)**
+**Option 2 — Two-Company Comparison (The Unknown Leader preferred, Reputation Doesn't Rate optional)**
 Side-by-side or stacked layout contrasting two companies. ECR values are the visual hero.
 
 ```
@@ -259,16 +259,8 @@ Side-by-side or stacked layout contrasting two companies. ECR values are the vis
 └─────────────────────────────────────────┘
 ```
 
-**Option 3 — Causal Graph (any variant)**
-Replace or supplement the stats bar with the causal graph showing driver contributions to ECR. Particularly effective for Variant B (shows the specific driver pulling ECR down) and Variant A (shows the specific driver anchoring the top position). Use the existing causal graph design from prior posts or redesign for the specific data — either is approved. The core requirement: the graph must show the causal link from driver name to ECR contribution, not just the final score.
-
-### Title by Variant
-
-| Variant | Approved title options |
-|---|---|
-| A — The Confirmation | `THE CONFIRMATION` · `WHAT THE DATA REVEALS` |
-| B — Reputation Doesn't Rate | `REPUTATION DOESN'T RATE` |
-| C — The Unknown Leader | `THE UNKNOWN LEADER` |
+**Option 3 — Causal Graph (any angle)**
+Replace or supplement the stats bar with the causal graph showing driver contributions to ECR. Particularly effective for Reputation Doesn't Rate (shows the specific driver pulling ECR down) and The Confirmation (shows the specific driver anchoring the top position). Use the existing causal graph design from prior posts or redesign for the specific data — either is approved. The core requirement: the graph must show the causal link from driver name to ECR contribution, not just the final score.
 
 All titles: ALL CAPS, 90–118px, weight 800.
 
@@ -280,34 +272,34 @@ All titles: ALL CAPS, 90–118px, weight 800.
 - Size: 17px, 700 weight, uppercase, letter-spaced 3px
 
 **One-Liner Subtitle**
-- Variant A: `The structural driver behind their top ranking — and why it matters.`
-- Variant B: `ECR measures balance sheet strength, not market presence.`
-- Variant C: `A company you haven't heard of. A ranking that tells a different story.`
+- The Confirmation: `The structural driver behind their top ranking — and why it matters.`
+- Reputation Doesn't Rate: `ECR measures balance sheet strength, not market presence.`
+- The Unknown Leader: `A company you haven't heard of. A ranking that tells a different story.`
 - Size: 19px, 400 weight, `rgba(255,255,255,0.5)`, max-width ~520px
 
 **Company Header**
 - Logo box: 64×64px white rounded box (`border-radius: 14px`), inline SVG inside
   - No SVG: use 2-letter initials, `#00679B` text on white bg, 26px bold
 - Company name: white, 54px, 800 weight, gap 18px from logo box
-- Variant C: show both companies — use a smaller logo/name pair for the comparison company
+- The Unknown Leader (Option 2 layout): show both companies — use a smaller logo/name pair for the comparison company
 
 **Stats Bar (Option 1 layout)**
 - Three columns, separated by `1px solid rgba(255,255,255,0.14)`
 - Column 1 — ECR Score: label 13px muted · value accent color, 48px, 800 weight
 - Column 2 — Key Driver: label 13px muted · driver name white 38px bold + contribution accent 34px
-  - Variant B: label as `GREATEST WEAKNESS` in same style; value reflects the drag on ECR
+  - Reputation Doesn't Rate: label as `GREATEST WEAKNESS` in same style; value reflects the drag on ECR
 - Column 3 — Industry Avg.: label 13px muted · value white 44px, 800 weight
 
-**Caption Rule — Variant B (non-negotiable)**
+**Caption Rule — Reputation Doesn't Rate (non-negotiable)**
 Must include this line verbatim in caption: *"ECR measures balance sheet strength, not revenue performance or market reputation."* Prevents the post from being read as a brand attack.
 
 ### QA Checklist
 - [ ] ECR values verified against realrate-archive.com
 - [ ] Company name(s) exact spelling confirmed
-- [ ] Variant selected and documented (A, B, or C)
-- [ ] Title matches the selected variant
-- [ ] For Variant B: clarifying line present in caption draft
-- [ ] For Variant C: comparison company data verified
+- [ ] Angle selected (The Confirmation / Reputation Doesn't Rate / The Unknown Leader)
+- [ ] Title matches the selected angle
+- [ ] For Reputation Doesn't Rate: clarifying line present in caption draft
+- [ ] For The Unknown Leader: comparison company data verified
 - [ ] Only one accent color used for text elements
 - [ ] Industry tag is white (not accent color)
 - [ ] Industry Avg. value is white (not muted)

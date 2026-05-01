@@ -111,37 +111,39 @@ One accent per design. Rotate across posts:
   - Variant B (Reputation Doesn't Rate): `REPUTATION DOESN'T RATE`
   - Variant C (Unknown Leader): `THE UNKNOWN LEADER`
 
-### Three Variants
+### Angle Selection — Pick Based on What the Data Shows
 
-| Variant | When to use | Story |
+One post. The title and story direction depend on what the data supports.
+
+| Angle | When to use | Title |
 |---|---|---|
-| A — The Confirmation | Well-known brand ranked high as expected | The rank is expected; the specific structural WHY is the story |
-| B — Reputation Doesn't Rate | Well-known brand ranked significantly lower than their profile suggests | ECR ≠ brand equity, revenue, or reputation — balance sheet tells a different story |
-| C — The Unknown Leader | Obscure company ranked ahead of recognized industry giants | Financial strength exists independent of brand recognition |
+| **The Confirmation** | Well-known brand ranked high as expected — the structural WHY is non-obvious | `THE CONFIRMATION` or `WHAT THE DATA REVEALS` |
+| **Reputation Doesn't Rate** | Well-known brand ranked significantly lower than their public profile suggests | `REPUTATION DOESN'T RATE` |
+| **The Unknown Leader** | Obscure company ranked ahead of recognized industry giants | `THE UNKNOWN LEADER` |
 
 ### Priority Rule
-- Variants B and C: eligible for Insight 1 (Day +2)
-- Variant A: eligible for Insight 2 (Day +5)
+- Reputation Doesn't Rate and The Unknown Leader: eligible for Insight 1 (Day +2)
+- The Confirmation: eligible for Insight 2 (Day +5)
 - See `ranking-publication-protocol.md → Day +2 Decision Rule` for full logic
 
 ### Layout Options
-- **Option 1 — Single company:** follows Biggest Mover structure adapted for the angle (all variants)
-- **Option 2 — Two-company comparison:** side-by-side ECR contrast (Variant C preferred, Variant B optional)
-- **Option 3 — Causal graph:** replaces or supplements stats bar — shows driver → ECR causation. Can use existing graph design or a redesigned version. Approved for all variants.
+- **Option 1 — Single company:** follows Biggest Mover structure adapted for the angle (all angles)
+- **Option 2 — Two-company comparison:** side-by-side ECR contrast (The Unknown Leader preferred, Reputation Doesn't Rate optional)
+- **Option 3 — Causal graph:** replaces or supplements stats bar — shows driver → ECR causation. Can use existing graph design or a redesigned version. Approved for all angles.
 
 ### Data Fields Required
 
-| Field | Variants |
+| Field | Angles |
 |---|---|
 | Company name (exact) | All |
 | Current rank | All |
 | ECR score (%) | All |
 | Industry average ECR (%) | All |
-| Greatest strength driver + contribution (pp) | A, C |
-| Greatest weakness driver + contribution (pp) | B |
-| Comparison company: name, rank, ECR (%) | C |
+| Greatest strength driver + contribution (pp) | The Confirmation, The Unknown Leader |
+| Greatest weakness driver + contribution (pp) | Reputation Doesn't Rate |
+| Comparison company: name, rank, ECR (%) | The Unknown Leader |
 
-### Caption Rule — Variant B Only
+### Caption Rule — Reputation Doesn't Rate Only
 Must include: *"ECR measures balance sheet strength, not revenue performance or market reputation."*
 
 ### Reference File
