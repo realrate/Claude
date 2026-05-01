@@ -27,7 +27,7 @@ Every post in this protocol follows the same principle: **the story opens, the d
 |---|---|---|---|---|
 | Day 0 | Ranking carousel | Image carousel | All | Maximum reach — full top 10, all top-rated |
 | Day +1 | Seal post | Single image | Top-rated companies | Organic amplification — company recognition |
-| Day +2 | Insight 1 — Biggest Mover | Single image | All | Company-level story — who moved and why |
+| Day +2 | Insight 1 — The Surprise (if applicable) or Biggest Mover | Single image | All | Most compelling individual company story from the ranking — who it is and why the data says so |
 | Day +3 | Non-Top-Rated 1 | Single image | CFOs of non-top-rated companies | Education — what's holding them back |
 | Day +5 | Insight 2 — Rotating Angle | Single image | All | Company-specific or industry-level pattern |
 | Day +6 | Non-Top-Rated 2 | Single image | Investors / risk officers / procurement | Risk intelligence — what buyers should know |
@@ -170,11 +170,33 @@ Short. Celebratory. No analytical copy — let the visual do the work.
 
 ---
 
-## Day +2 — Insight 1: The Biggest Mover
+## Day +2 — Insight 1: The Surprise or Biggest Mover
 
-**Goal:** Company-level story — the most data-rich, most specific insight post
+**Goal:** The most compelling individual company story from the ranking — the finding that makes a reader stop and want to understand why
 **Format:** Single image
-**Fixed for every industry — always answerable from the data**
+
+### Decision Rule — Which Post Is Insight 1?
+
+Always identify both candidates before deciding. Use whichever is more compelling to a CFO, risk officer, or institutional investor encountering this industry's data for the first time.
+
+| Condition | Use as Insight 1 | Notes |
+|---|---|---|
+| A well-known company ranked significantly lower than reputation would suggest | The Surprise — Variant B | Strongest Insight 1 candidate — the most contrarian and credibility-building post type |
+| A lesser-known company outranks recognized industry giants by a striking margin | The Surprise — Variant C | Strong Insight 1 candidate — shows ECR is independent of brand recognition |
+| No compelling Surprise scenario — or the biggest rank movement is the most striking finding in the data | Biggest Mover | Default when no Surprise story is clearly supported |
+
+> **If both are strong:** publish The Surprise at Day +2 (Insight 1) and Biggest Mover at Day +5 (Insight 2).
+> Variant A (Confirmation) is not a strong Insight 1 candidate — use it as Insight 2 if applicable.
+
+---
+
+### Insight 1A — The Surprise
+
+When using The Surprise as Insight 1, apply the same rules as the Day +5 definition. See the full variant spec below under [Day +5 — Insight 2: Rotating Angle](#day-5--insight-2-rotating-angle). Production spec: `post-design-sop.md → Post Type: The Surprise`.
+
+---
+
+### Insight 1B — Biggest Mover
 
 Find the company with the largest rank change up or down. Identify which ECR driver caused it. Explain what that means structurally.
 
@@ -304,7 +326,7 @@ Find the company with the largest rank change up or down. Identify which ECR dri
 ### Angle Options
 | Angle | Use when | What it covers |
 |---|---|---|
-| **The Surprise** | A well-known company ranked unexpectedly high or low | Named company, ECR vs. market reputation — why data contradicts assumptions |
+| **The Surprise** | A company's ranking contradicts what the market would expect — in any direction | Three variants — see below. The most contrarian and credibility-building of the rotating angles. |
 | **Year-over-Year Shift** | Industry average ECR moved significantly vs. prior year | What changed structurally and why — industry-level, not company-level |
 | **The Fall** | A previously top-ranked or top-rated company dropped significantly | Named company, what changed in the balance sheet, what it signals |
 | **The Comeback** | A company improved dramatically from a low prior ranking | Named company, ECR before and after, driver that drove the recovery |
@@ -312,23 +334,75 @@ Find the company with the largest rank change up or down. Identify which ECR dri
 | **The Consistent Performer** | A company has held a top position across multiple ranking cycles | Named company, what drives multi-year stability — the structural insight behind sustained ranking |
 | **Small vs. Big** | A smaller, lesser-known company outranks a well-known industry giant | Named comparison — the smaller company's ECR vs. the giant's, and the structural driver behind the gap |
 
+### The Surprise — Three Variants
+
+**Variant A — The Confirmation**
+Use when: A well-known company ranked at or near the top — as broadly expected. The rank itself is not the story. The specific structural driver that explains it is. This post takes what seems obvious and makes it precise: not "they're strong," but "here is exactly why, measured through the balance sheet."
+
+Story hook: *"[Company] ranked #[X] in [Industry] 2026. What most people know about them: revenue, market share, brand. What ECR reveals: the specific structural reason. And it's not the one most people point to."*
+
+Key data required:
+- Company name, current rank, ECR score
+- Dominant strength driver + point contribution
+- Industry average ECR
+
+Design note: Causal graph showing the strength driver's contribution is particularly effective — it transforms a "confirmation" into a structural explanation.
+
+---
+
+**Variant B — Reputation Doesn't Rate**
+Use when: A widely recognized company ranks lower than their market presence and brand profile would suggest. This is the core "ECR is independent of reputation" post — the most contrarian and credibility-building of all insight types. It demonstrates directly that ECR is a different measure from revenue, credit ratings, or public perception.
+
+Rule: Never frame as a failure or a criticism. Frame as a data distinction. ECR measures balance sheet efficiency — not brand strength, revenue scale, or public recognition.
+
+Story hook: *"[Company] is one of the most recognized names in [industry]. In the 2026 ranking, ECR places them at #[X]. Their reputation is not in question. Their balance sheet is a different story."*
+
+Key data required:
+- Company name, current rank, ECR score
+- Greatest weakness driver + point contribution (what is pulling ECR down)
+- Industry average ECR + number of companies ranked ahead of them
+
+Caption rule — non-negotiable: Must include an explicit clarifying line: *"ECR measures balance sheet strength, not revenue performance or market reputation."* This is required on every Variant B post. It frames the data correctly and prevents misreading the post as a brand attack.
+
+Design note: Causal graph works strongly here — showing the specific driver pulling ECR down makes the structural argument visual, not just numerical. Comparison layout is also approved (the company's ECR vs. industry average or vs. a top-ranked peer).
+
+---
+
+**Variant C — The Unknown Leader**
+Use when: A company with low public name recognition ranks significantly ahead of well-known industry names. The contrast between obscurity and financial strength is the story — and it shows that ECR is not a popularity contest.
+
+Story hook: *"You've probably never heard of [Company]. In the 2026 US [Industry] ranking, they sit at #[X] — ahead of [Well-known Company] at #[Y]. Their ECR: [A]%. Here's what the balance sheet shows."*
+
+Key data required:
+- The lesser-known company: name, rank, ECR, dominant strength driver + contribution
+- At least one recognized company they outranked: name, rank, ECR
+- Why — the structural driver that explains the gap between the two
+
+Design note: A comparison layout showing both companies side by side with ECR values makes the contrast visceral. Label the lesser-known company first — lead with the surprise. Causal graph is optional but effective if the driver gap is the core explanation.
+
+---
+
 ### Visual
-- Single image data visualization — comparison, fragility signal, or before/after industry average
-- 2–3 data points visible — no crowding
-- Semantic colors where relevant
+- Single image — data visualization, comparison layout, or causal graph with company highlight
+- 2–3 data points maximum — no crowding
+- Comparison layout approved for Variants B and C: two companies, ECR values prominent, contrast visible
+- Causal graph approved for all variants — shows driver → ECR causation, not just the score
 - RealRate logo in the corner with most available space, tagline bottom
 
 ### Caption Structure
 | Element | How to write it |
 |---|---|
-| **Story hook** | Frame it as a discovery — "RealRate ranked X companies. Something stood out." |
-| **Data** | 2–3 named companies with ECR numbers illustrating the pattern |
-| **Interpretation** | Why this is happening — one clear structural explanation |
-| **Implication** | What it means for the reader's role |
+| **Story hook** | Lead with the contrast — the rank and the name. Create the "how?" in the reader's mind |
+| **Data** | Named company (or companies), ECR numbers, driver contribution |
+| **Interpretation** | The structural explanation — what is driving the ECR result and why it differs from reputation or expectation |
+| **Clarifying line (Variant B only)** | *"ECR measures balance sheet strength, not revenue performance or market reputation."* |
+| **Implication** | What this means for how you evaluate companies in this industry |
 | **Ranking URL** | Always last — realrate.ai/rankings/[industry]/[year] |
 
-**Example hooks by angle:**
-- *The Surprise:* "Their revenue is widely covered. Their ECR isn't. The data tells a different story."
+**Example hooks by variant:**
+- *Variant A (Confirmation):* "Their revenue is widely covered. Their ECR isn't. The data shows exactly why they rank where they do — and it goes deeper than the P&L."
+- *Variant B (Reputation Doesn't Rate):* "One of the most recognized names in [industry]. Not in the top tier of the ECR ranking. ECR and reputation are not the same measure."
+- *Variant C (Unknown Leader):* "You've probably never heard of them. They just outranked [Well-known Company] in [Industry] 2026."
 - *Year-over-Year Shift:* "The [industry] industry average ECR dropped [X] points in one year. Here's the structural shift behind it."
 - *The Fall:* "[Company] was Top-Rated last year. They're not this year. One driver accounts for most of the drop."
 - *The Comeback:* "[Company] was ranked [X] two years ago. Today they're [Y]. Here's what changed on the balance sheet."
@@ -444,8 +518,17 @@ Run this at the start of every ranking cycle before drafting any copy.
 - Greatest weakness driver for each company in bottom third
 - Industry average ECR vs. prior year
 
-**Step 2 — Identify Day +2 post (fixed — Insight 1: Biggest Mover):**
-Largest rank change up or down → that company is Insight 1
+**Step 2 — Identify Day +2 post (Insight 1: The Surprise or Biggest Mover):**
+
+First, identify the Biggest Mover: largest rank change up or down → always the default fallback.
+
+Then check for a Surprise scenario:
+- Is there a well-known company ranked significantly lower than reputation would suggest? → Variant B (strongest Insight 1 candidate)
+- Is there a lesser-known company ranking ahead of recognized industry giants by a striking margin? → Variant C (strong Insight 1 candidate)
+- Is a top-ranked well-known company's dominance explained by a non-obvious structural driver? → Variant A (weak Insight 1 candidate — better as Insight 2)
+
+**Decision:** If Variant B or C is clearly supported by the data → The Surprise is Insight 1. Biggest Mover moves to Day +5 (Insight 2 slot).
+If no compelling Surprise scenario → Biggest Mover is Insight 1 as before.
 
 **Step 3 — Select Day +3 angle (Non-Top-Rated Post 1 — CFO audience):**
 | If the data shows... | Use this angle |
@@ -459,7 +542,9 @@ Largest rank change up or down → that company is Insight 1
 **Step 4 — Select Day +5 angle (Insight 2: Rotating — must be company-specific or industry trend, not an aggregate risk signal):**
 | If the data shows... | Use this angle |
 |---|---|
-| Well-known company ranked unexpectedly high or low | The Surprise |
+| Well-known company ranked high — the specific structural reason is non-obvious | The Surprise — Variant A (Confirmation) |
+| Well-known company ranked significantly lower than reputation suggests | The Surprise — Variant B (Reputation Doesn't Rate) — use as Insight 1 if not already used |
+| Lesser-known company outranks recognized industry names by a striking margin | The Surprise — Variant C (Unknown Leader) — use as Insight 1 if not already used |
 | Significant industry average ECR shift YoY | Year-over-Year Shift |
 | A company dropped significantly from prior ranking | The Fall |
 | A company recovered dramatically from a low prior ranking | The Comeback |

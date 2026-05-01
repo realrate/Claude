@@ -101,6 +101,54 @@ One accent per design. Rotate across posts:
 
 ---
 
+## Template: The Surprise Insight Post
+*(Definition approved — visual design pending first approved production)*
+
+### Identity
+- **Post type label:** `[YEAR] RANKING INSIGHT`
+- **Title by variant:**
+  - Variant A (Confirmation): `THE CONFIRMATION` or `WHAT THE DATA REVEALS`
+  - Variant B (Reputation Doesn't Rate): `REPUTATION DOESN'T RATE`
+  - Variant C (Unknown Leader): `THE UNKNOWN LEADER`
+
+### Three Variants
+
+| Variant | When to use | Story |
+|---|---|---|
+| A — The Confirmation | Well-known brand ranked high as expected | The rank is expected; the specific structural WHY is the story |
+| B — Reputation Doesn't Rate | Well-known brand ranked significantly lower than their profile suggests | ECR ≠ brand equity, revenue, or reputation — balance sheet tells a different story |
+| C — The Unknown Leader | Obscure company ranked ahead of recognized industry giants | Financial strength exists independent of brand recognition |
+
+### Priority Rule
+- Variants B and C: eligible for Insight 1 (Day +2)
+- Variant A: eligible for Insight 2 (Day +5)
+- See `ranking-publication-protocol.md → Day +2 Decision Rule` for full logic
+
+### Layout Options
+- **Option 1 — Single company:** follows Biggest Mover structure adapted for the angle (all variants)
+- **Option 2 — Two-company comparison:** side-by-side ECR contrast (Variant C preferred, Variant B optional)
+- **Option 3 — Causal graph:** replaces or supplements stats bar — shows driver → ECR causation. Can use existing graph design or a redesigned version. Approved for all variants.
+
+### Data Fields Required
+
+| Field | Variants |
+|---|---|
+| Company name (exact) | All |
+| Current rank | All |
+| ECR score (%) | All |
+| Industry average ECR (%) | All |
+| Greatest strength driver + contribution (pp) | A, C |
+| Greatest weakness driver + contribution (pp) | B |
+| Comparison company: name, rank, ECR (%) | C |
+
+### Caption Rule — Variant B Only
+Must include: *"ECR measures balance sheet strength, not revenue performance or market reputation."*
+
+### Reference File
+*(None yet — pending first approved production)*
+
+---
+
 ## Template: Not Top-Rated (NTR) — Gap Analysis
 *(Pending approval — do not use until approved)*
 

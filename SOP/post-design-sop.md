@@ -181,6 +181,148 @@ e.g. `insight1_apple.html`, `insight1_apple.png`
 
 ---
 
+## Post Type: The Surprise
+
+### When to Use
+One post per ranking cycle when a Surprise scenario is clearly supported by the data. Can be published as Insight 1 (Day +2) or Insight 2 (Day +5) depending on the strength of the finding — see `ranking-publication-protocol.md → Day +2 Decision Rule`.
+
+Three variants — select the one the data supports:
+
+| Variant | Trigger | Story angle |
+|---|---|---|
+| **A — The Confirmation** | Well-known company at/near the top — the WHY is the non-obvious part | Expected rank, unexpected structural reason |
+| **B — Reputation Doesn't Rate** | Well-known company ranked significantly lower than reputation suggests | ECR ≠ brand equity or revenue; balance sheet tells a different story |
+| **C — The Unknown Leader** | Lesser-known company ranked ahead of recognized industry names | Financial strength is independent of brand recognition |
+
+### Data to Verify Before Starting (from realrate-archive.com)
+
+**All variants:**
+- [ ] Company name (exact)
+- [ ] Current rank and ECR score (%)
+- [ ] Industry average ECR (%)
+- [ ] Total companies ranked
+
+**Variant A and C — strength driver:**
+- [ ] Greatest strength driver name + contribution (pp)
+
+**Variant B — weakness driver:**
+- [ ] Greatest weakness driver name + contribution (pp)
+- [ ] Number of companies ranked ahead of the subject company
+
+**Variant C — comparison company:**
+- [ ] At least one well-known company the subject outranks: name, rank, ECR (%)
+
+### Layout Options
+
+**Option 1 — Single Company (all variants)**
+Follows the Biggest Mover structure adapted for the angle. Post label, title, subtitle, rank or ECR highlight, company header, description, stats bar.
+
+```
+┌─────────────────────────────────────────┐
+│ [Logo]              [Industry Tag]       │
+│                                         │
+│ [POST LABEL]                            │
+│ [TITLE — ALL CAPS, ~90–118px]           │
+│ [one-liner subtitle — 19px, muted]      │
+│                                         │
+│          [spacer — flex:1]              │
+│                                         │
+│ [Company logo box + Company Name]        │
+│ [Description — 23px, muted]             │
+│                                         │
+│ ECR SCORE | KEY DRIVER | INDUSTRY AVG.  │
+│                                         │
+│ Powered by RealRate: Using Explainable… │
+└─────────────────────────────────────────┘
+       [arc or geometric square decoration]
+```
+
+**Option 2 — Two-Company Comparison (Variant C preferred, Variant B optional)**
+Side-by-side or stacked layout contrasting two companies. ECR values are the visual hero.
+
+```
+┌─────────────────────────────────────────┐
+│ [Logo]              [Industry Tag]       │
+│                                         │
+│ [POST LABEL]                            │
+│ [TITLE — ALL CAPS]                      │
+│                                         │
+│  [Company A logo + name]   vs           │
+│  ECR: [X]%  Rank #[N]                  │
+│  ─────────────────────────              │
+│  [Company B logo + name]                │
+│  ECR: [Y]%  Rank #[M]                  │
+│                                         │
+│ [One-line structural explanation]        │
+│                                         │
+│ Powered by RealRate: Using Explainable… │
+└─────────────────────────────────────────┘
+```
+
+**Option 3 — Causal Graph (any variant)**
+Replace or supplement the stats bar with the causal graph showing driver contributions to ECR. Particularly effective for Variant B (shows the specific driver pulling ECR down) and Variant A (shows the specific driver anchoring the top position). Use the existing causal graph design from prior posts or redesign for the specific data — either is approved. The core requirement: the graph must show the causal link from driver name to ECR contribution, not just the final score.
+
+### Title by Variant
+
+| Variant | Approved title options |
+|---|---|
+| A — The Confirmation | `THE CONFIRMATION` · `WHAT THE DATA REVEALS` |
+| B — Reputation Doesn't Rate | `REPUTATION DOESN'T RATE` |
+| C — The Unknown Leader | `THE UNKNOWN LEADER` |
+
+All titles: ALL CAPS, 90–118px, weight 800.
+
+### Section-by-Section Rules
+
+**Post Label**
+- Text: `[YEAR] Ranking Insight`
+- Color: accent color (`#3DBACD`)
+- Size: 17px, 700 weight, uppercase, letter-spaced 3px
+
+**One-Liner Subtitle**
+- Variant A: `The structural driver behind their top ranking — and why it matters.`
+- Variant B: `ECR measures balance sheet strength, not market presence.`
+- Variant C: `A company you haven't heard of. A ranking that tells a different story.`
+- Size: 19px, 400 weight, `rgba(255,255,255,0.5)`, max-width ~520px
+
+**Company Header**
+- Logo box: 64×64px white rounded box (`border-radius: 14px`), inline SVG inside
+  - No SVG: use 2-letter initials, `#00679B` text on white bg, 26px bold
+- Company name: white, 54px, 800 weight, gap 18px from logo box
+- Variant C: show both companies — use a smaller logo/name pair for the comparison company
+
+**Stats Bar (Option 1 layout)**
+- Three columns, separated by `1px solid rgba(255,255,255,0.14)`
+- Column 1 — ECR Score: label 13px muted · value accent color, 48px, 800 weight
+- Column 2 — Key Driver: label 13px muted · driver name white 38px bold + contribution accent 34px
+  - Variant B: label as `GREATEST WEAKNESS` in same style; value reflects the drag on ECR
+- Column 3 — Industry Avg.: label 13px muted · value white 44px, 800 weight
+
+**Caption Rule — Variant B (non-negotiable)**
+Must include this line verbatim in caption: *"ECR measures balance sheet strength, not revenue performance or market reputation."* Prevents the post from being read as a brand attack.
+
+### QA Checklist
+- [ ] ECR values verified against realrate-archive.com
+- [ ] Company name(s) exact spelling confirmed
+- [ ] Variant selected and documented (A, B, or C)
+- [ ] Title matches the selected variant
+- [ ] For Variant B: clarifying line present in caption draft
+- [ ] For Variant C: comparison company data verified
+- [ ] Only one accent color used for text elements
+- [ ] Industry tag is white (not accent color)
+- [ ] Industry Avg. value is white (not muted)
+- [ ] No red or green unless indicating actual financial data loss or gain in a metric
+- [ ] Tagline present, correct text, 16px
+- [ ] Exported at 1080×1080px
+
+### File Naming
+`insight1_surprise_[companyslug].html` / `.png` — when used as Insight 1
+`insight2_surprise_[companyslug].html` / `.png` — when used as Insight 2
+
+e.g. `insight1_surprise_kraftheinz.html`, `insight2_surprise_freshpet.html`
+
+---
+
 ## Post Type: Not Top-Rated (NTR) — Gap Analysis
 *(Template pending full approval)*
 
