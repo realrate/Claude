@@ -64,106 +64,44 @@ Visual references in `Design References/Social Media/`.
 
 ---
 
-## Template: Biggest Mover Insight Post ✅ Approved 2026-04-23
+## Insight 1 — Company Editorial
 
-### Identity
-- **Post type label:** `[YEAR] RANKING INSIGHT`
-- **Title:** `BIGGEST MOVER`
-- **Subtitle:** `The company that gained the most ECR points year on year.`
+One post per ranking cycle. Angle and title chosen based on what the data shows — pick whichever scenario is most clearly supported.
 
-### Fixed Layout (top → bottom)
-1. Top bar: logo (white SVG, no box) · industry tag (white)
-2. Post label (accent color, 17px)
-3. Title — ALL CAPS, 118px, weight 800
-4. One-liner subtitle — 19px, muted white
-5. `flex: 1` spacer
-6. Rank row — old rank (muted) · ↑ · new rank (white, large)
-7. Company header — logo in white 64px rounded box + company name 54px white bold
-8. Description — 23px muted, max-width 540px
-9. Stats bar — ECR Score (accent) | Key Driver (white + accent gain) | Industry Avg. (white)
-10. Tagline — 16px, very muted
+### Angles
 
-### Typography
-| Element | Size | Weight | Color |
-|---|---|---|---|
-| Industry tag | 16px | 700 | `#ffffff` |
-| Post label | 17px | 700 | Accent |
-| Title | 118px | 800 | `#ffffff` |
-| Subtitle | 19px | 400 | `rgba(255,255,255,0.5)` |
-| Old rank | 38px | 800 | `rgba(255,255,255,0.28)` |
-| New rank | 76px | 800 | `#ffffff` |
-| Company name | 54px | 800 | `#ffffff` |
-| Description | 23px | 400 | `rgba(255,255,255,0.6)` |
-| Stat label | 13px | 700 | `rgba(255,255,255,0.38)` |
-| ECR score | 48px | 800 | Accent |
-| Key driver name | 38px | 700 | `#ffffff` |
-| Key driver gain | 34px | 600 | Accent |
-| Industry avg. | 44px | 800 | `#ffffff` |
-| Tagline | 16px | 400 | `rgba(255,255,255,0.28)` |
+| Angle | When to use |
+|---|---|
+| **Reputable, Not Top-Rated** | A well-known company failed to reach Top-Rated. Their ECR tells a different story than their reputation |
+| **Unknown, Top-Rated** | A lesser-known company made Top-Rated ahead of recognized names in the same industry |
+| **The Surprise** | Any non-obvious finding about a ranked company — score, driver, position, or trajectory |
 
-### Decoration Options (pick one)
-**Arc (default):**
-```css
-.deco-arc {
-  position: absolute;
-  width: 680px; height: 680px;
-  border-radius: 50%;
-  border: 110px solid #3DBACD; /* or current accent */
-  bottom: -210px; right: -210px;
-  opacity: 0.55;
-}
+### Title Rule
+Free-form. Written based on the specific company and what the data shows. Must be professional, direct, one clear hook, specific to this company and data.
+
+### Layout — Single Post
+
+```
+┌─────────────────────────────────────────┐
+│ [Logo]              [Industry Tag]       │
+│                                         │
+│ [RANKING INSIGHT · YEAR]                │
+│ [TITLE — free-form, 50–64px, bold]      │
+│ [Subtitle — 30px, muted]                │
+│                                         │
+│          [spacer — flex:1]              │
+│                                         │
+│ [Company logo box + Company Name]        │
+│ [Rank + ECR — key data point]           │
+│ [Description — 25–30px, muted]          │
+│                                         │
+│ ECR SCORE | KEY DRIVER | INDUSTRY AVG.  │
+│                                         │
+│ Powered by RealRate: Using Explainable… │
+└─────────────────────────────────────────┘
 ```
 
-**Geometric squares (alternate):**
-3–4 solid accent-color squares, sizes 40–90px, opacity 0.12–0.28, clustered at corner.
-
-### Data Fields Required
-| Field | Example |
-|---|---|
-| Industry + Year | `US Computers · 2026` |
-| Company name | `Apple Inc` |
-| Prior year rank | `#2` |
-| Current year rank | `#1` |
-| ECR prior year | `394%` |
-| ECR current year | `430%` |
-| Key driver name | `Net Income` |
-| Key driver contribution | `+245pp` |
-| Industry average ECR | `258%` |
-
-### Reference File
-`posts/us_computers_2026/insight1_apple.html` — canonical approved example
-
----
-
-## Template: The Surprise Insight Post
-*(Definition approved — visual design pending first approved production)*
-
-### Identity
-- **Post type label:** `[YEAR] RANKING INSIGHT`
-- **Title by variant:**
-  - Variant A (Confirmation): `THE CONFIRMATION` or `WHAT THE DATA REVEALS`
-  - Variant B (Reputation Doesn't Rate): `REPUTATION DOESN'T RATE`
-  - Variant C (Unknown Leader): `THE UNKNOWN LEADER`
-
-### Angle Selection — Pick Based on What the Data Shows
-
-One post. The title and story direction depend on what the data supports.
-
-| Angle | When to use | Title |
-|---|---|---|
-| **The Confirmation** | Well-known brand ranked high as expected — the structural WHY is non-obvious | `THE CONFIRMATION` or `WHAT THE DATA REVEALS` |
-| **Reputation Doesn't Rate** | Well-known brand ranked significantly lower than their public profile suggests | `REPUTATION DOESN'T RATE` |
-| **The Unknown Leader** | Obscure company ranked ahead of recognized industry giants | `THE UNKNOWN LEADER` |
-
-### Priority Rule
-- Reputation Doesn't Rate and The Unknown Leader: eligible for Insight 1 (Day +2)
-- The Confirmation: eligible for Insight 2 (Day +5)
-- See `ranking-publication-protocol.md → Day +2 Decision Rule` for full logic
-
-### Layout Options
-- **Option 1 — Single company:** follows Biggest Mover structure adapted for the angle (all angles)
-- **Option 2 — Two-company comparison:** side-by-side ECR contrast (The Unknown Leader preferred, Reputation Doesn't Rate optional)
-- **Option 3 — Causal graph:** replaces or supplements stats bar — shows driver → ECR causation. Can use existing graph design or a redesigned version. Approved for all angles.
+Two-company comparison layout available for Unknown, Top-Rated angle — ECR values as visual hero.
 
 ### Data Fields Required
 
@@ -173,22 +111,150 @@ One post. The title and story direction depend on what the data supports.
 | Current rank | All |
 | ECR score (%) | All |
 | Industry average ECR (%) | All |
-| Greatest strength driver + contribution (pp) | The Confirmation, The Unknown Leader |
-| Greatest weakness driver + contribution (pp) | Reputation Doesn't Rate |
-| Comparison company: name, rank, ECR (%) | The Unknown Leader |
+| Strength driver + contribution (pp) | Unknown Top-Rated, The Surprise |
+| Weakness driver + contribution (pp) | Reputable Not Top-Rated |
+| Comparison company: name, rank, ECR (%) | Unknown Top-Rated (optional) |
 
-### Caption Rule — Reputation Doesn't Rate Only
+### Caption Rule — Reputable, Not Top-Rated
 Must include: *"ECR measures balance sheet strength, not revenue performance or market reputation."*
 
-### Reference File
-*(None yet — pending first approved production)*
+### File Naming
+`insight1_[companyslug].html` / `.png`
 
 ---
 
-## Template: Not Top-Rated (NTR) — Gap Analysis
-*(Pending approval — do not use until approved)*
+## Insight 2 — Industry YoY Shift
+
+Up to 3 slides. Compares ECR performance vs the prior 1–2 years. Two options — use whichever is supported by the data.
+
+### Options
+
+| Option | When to use |
+|---|---|
+| **Industry-Wide** | The sector is the story — how the average ECR moved, how many companies shifted, what changed overall |
+| **Company-Level** | A well-known company's YoY shift is the headline, supported by broader industry context |
+
+### Slide Structure (max 3 slides)
+
+**Slide 1 — The Shift**
+Lead with the headline number. Industry ECR avg then vs now, or company ECR then vs now. The change in points is the visual hero.
+
+**Slide 2 — What Drove It**
+The key structural reason behind the shift. One clear finding from the data.
+
+**Slide 3 — The Context** *(use only if it adds meaningful information)*
+Where this industry sits relative to others, or what the shift signals for the next cycle.
+
+### Data Fields Required
+
+| Field | Notes |
+|---|---|
+| Industry name | Exact |
+| Current year ECR average (%) | Verified against archive |
+| Prior year ECR average (%) | 1 or 2 years back |
+| ECR change (pp) | Current minus prior |
+| # companies ranked (current vs prior) | If changed |
+| Key driver of shift | From archive |
+| Company name + ECR current + prior (%) | Company-Level option only |
+| Company rank current + prior | Company-Level option only |
+
+### File Naming
+`insight2_slide[1-3]_[industryslug].html` / `.png`
 
 ---
 
-## Template: Industry Driver Pattern Carousel (4 slides)
-*(Pending approval — do not use until approved)*
+## Insight 3 — Rotating Angle
+
+One post per ranking cycle. Angle rotates across publications — pick the one most supported by the current data and least recently used.
+
+### Angle Bank
+
+| Angle | Story |
+|---|---|
+| **The Industry Blind Spot** | One weakness driver appears across most companies in the industry — a structural drag most haven't addressed |
+| **The Market vs The Balance Sheet** | A company the market rates highly has a low ECR — or vice versa. Market perception vs structural financial health |
+| **The Industry Trend** | How industry ECR has shifted over 2–3 years. Getting stronger or weaker — and what's behind it |
+| **The Methodology Moment** | What ECR measures that other ratings don't. One clear explanation that builds trust in the ranking |
+| **The Investor Signal** | Is this industry financially healthy right now? Safe, risky, stable, fragile — the ECR answers it for investors and business partners |
+| **The Macro Lens** | An industry under pressure from a continuous trend — war, sanctions, tariffs, rate cycles. What the balance sheets show that headlines don't |
+
+### Title Rule
+Free-form. Match the angle and the specific data. Professional, direct, hook-driven.
+
+### Data Fields Required (by angle)
+
+| Angle | Key Data |
+|---|---|
+| Industry Blind Spot | Most common weakness driver + % of companies affected |
+| Market vs Balance Sheet | Company market cap/valuation + ECR + industry avg ECR |
+| Industry Trend | Industry ECR avg across 2–3 years |
+| Methodology Moment | No specific data required |
+| Investor Signal | ECR avg, % Top-Rated, highest vs lowest ECR in industry |
+| Macro Lens | ECR avg current vs prior; companies most affected; external event context |
+
+### File Naming
+`insight3_[angle-slug]_[industryslug].html` / `.png`
+e.g. `insight3_blindspot_uscomputers.html`, `insight3_macro_usfinance.html`
+
+---
+
+## Insight 4 — Non-Top-Rated (NTR) Rotating
+
+One post per ranking cycle. Angle rotates — pick the one most clearly supported by the data.
+
+### Angle Bank
+
+| Angle | Story |
+|---|---|
+| **Almost There** | A company sitting just below the Top-Rated threshold. One driver is the difference — and it's specific |
+| **The One Thing** | A single weakness driver is pulling ECR below threshold. Remove it and they'd qualify |
+| **The Fallen** | A company that held Top-Rated in a prior year and has since dropped. What changed in the balance sheet |
+| **The Sector Drag** | Multiple companies in the same sub-sector all failing to reach Top-Rated. Company problem or structural industry issue |
+| **Close But Not Rated** | Performs well by traditional metrics — revenue, market cap, brand. ECR threshold not met |
+| **The Due Diligence Gap** | Why NTR status matters for investors, counterparties, and business partners — anchored on a real company |
+
+### Title Rule
+Free-form. The title reflects the specific angle and company — not the angle name itself. Professional, direct, hook-driven.
+
+### Layout — Single Post
+
+```
+┌─────────────────────────────────────────┐
+│ [Logo]              [Industry Tag]       │
+│                                         │
+│ [RANKING INSIGHT · YEAR]                │
+│ [TITLE — free-form, 50–64px, bold]      │
+│ [Subtitle — 30px, muted]                │
+│                                         │
+│          [spacer — flex:1]              │
+│                                         │
+│ [Company logo box + Company Name]        │
+│ [Rank — e.g. #34 of 43]                │
+│ [Description — 25–30px, muted]          │
+│                                         │
+│ ECR SCORE | KEY WEAKNESS | INDUSTRY AVG.│
+│                                         │
+│ Powered by RealRate: Using Explainable… │
+└─────────────────────────────────────────┘
+```
+
+### Data Fields Required
+
+| Field | Notes |
+|---|---|
+| Company name (exact) | Verified |
+| Current rank (e.g. #34 of 43) | Verified |
+| ECR score (%) | Verified |
+| Industry average ECR (%) | Verified |
+| Top-Rated threshold ECR (%) | Almost There, The One Thing, Close But Not Rated |
+| Gap to threshold (pp) | Almost There |
+| Key weakness driver + contribution (pp) | All except The Due Diligence Gap |
+| Prior year rank + ECR | The Fallen |
+| # companies in sub-sector below threshold | The Sector Drag |
+
+### Caption Rule — All NTR Posts
+Must include: *"ECR measures balance sheet strength, not revenue performance or market reputation."*
+
+### File Naming
+`insight4_[angle-slug]_[companyslug].html` / `.png`
+e.g. `insight4_fallen_kraftheinz.html`, `insight4_almostthere_apollo.html`
