@@ -49,8 +49,8 @@ One accent per design. Never use `#3DBACD` and `#00679B` both as text/UI highlig
 
 ### Logo Rule
 
-- **Dark backgrounds** → `RealRate_logo_light.svg` (white text), no wrap needed, top-left at 50px margin
-- **Light backgrounds** → `RealRate_logo_horizontal.svg` (colored), no wrap needed, top-left at 50px margin
+- **Dark backgrounds** → `RealRate_logo_light.svg` (white text), no wrap needed, any corner at 50px margin
+- **Light backgrounds** → `RealRate_logo_horizontal.svg` (colored), no wrap needed, any corner at 50px margin
 
 ### What Never Appears
 - Red or green — except when explicitly indicating a real financial loss (red) or gain (green) in ECR/metric data only

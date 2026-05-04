@@ -113,7 +113,7 @@ See `competitive-landscape.md` for full competitor profiles and comparison.
 
 - **Dimensions:** 1200×1200px (square) — standard for all social media posts
 - **Font:** Manrope (all text elements)
-- **Margin:** 50px on all sides. The logo always sits in the top-left corner at this margin.
+- **Margin:** 50px on all sides. The logo sits in any corner at this margin — choose the corner with the most available space and least visual conflict with content.
 - **Default text color:** White (`#ffffff`) on all dark backgrounds
 
 #### Typography Scale
@@ -160,7 +160,7 @@ Accent colors are assigned by background type — never mix them:
 
 - **On any dark background** (all hex values in the Approved Dark Backgrounds table) → use white-text logo: `RealRate_logo_light.svg`. No background wrap needed.
 - **On any light background** → use standard colored logo: `RealRate_logo_horizontal.svg`. No wrap needed.
-- Logo always top-left corner, at the 50px margin.
+- Logo in any corner, at the 50px margin — choose based on content weight and white space.
 
 #### Layout Patterns
 
