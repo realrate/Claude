@@ -23,16 +23,15 @@ Every post in this protocol follows the same principle: **the story opens, the d
 
 ## Publication Cycle Overview
 
-| Day | Post | Format | Audience | Goal |
-|---|---|---|---|---|
-| Day 0 | Ranking carousel | Image carousel | All | Maximum reach — full top 10, all top-rated |
-| Day +1 | Seal post | Single image | Top-rated companies | Organic amplification — company recognition |
-| Day +2 | Insight 1 — The Surprise (if applicable) or Biggest Mover | Single image | All | Most compelling individual company story from the ranking — who it is and why the data says so |
-| Day +3 | Non-Top-Rated 1 | Single image | CFOs of non-top-rated companies | Education — what's holding them back |
-| Day +5 | Insight 2 — Rotating Angle | Single image | All | Company-specific or industry-level pattern |
-| Day +6 | Non-Top-Rated 2 | Single image | Investors / risk officers / procurement | Risk intelligence — what buyers should know |
-| Day +8 | Insight 3 — Industry Driver Pattern | Short carousel (3–4 slides) | All | Structural credibility — dominant driver across top tier |
-| Day +10 or +11 | Deep Dive | LinkedIn document (PDF, 8–10 slides) | All | Full ranking story in one piece |
+| Day | Post | Format | Goal |
+|---|---|---|---|
+| Day 0 | Ranking carousel | Image carousel | Maximum reach — full top 10, all top-rated |
+| Day +1 | Seal post | Single image | Organic amplification — company recognition |
+| Day +2 | Insight 1 — Company Editorial | Single image | Most compelling company story from the ranking |
+| Day +4 | Insight 2 — Industry YoY Shift | Carousel (up to 3 slides) | How the industry ECR moved year on year |
+| Day +6 | Insight 3 — Rotating Angle | Single image | Broader industry analysis, data-driven angle |
+| Day +8 | Insight 4 — NTR Rotating | Single image | Non-top-rated education and risk intelligence |
+| Day +10 | Deep Dive | LinkedIn document (PDF, 8–10 slides) | Full ranking story in one piece |
 
 > **Spacing rule:** Never post two ranking posts on consecutive days. Each post needs 48 hours minimum to gather engagement before the next goes out.
 
@@ -44,13 +43,12 @@ Prepare all assets in advance so posting happens within hours of the website goi
 
 - [ ] Ranking data verified against realrate-archive.com (internal only)
 - [ ] All top-rated companies confirmed with accurate ECR numbers
-- [ ] Industry average ECR confirmed
+- [ ] Industry average ECR confirmed — current and prior 1–2 years
 - [ ] Year-over-year rank movements calculated and verified
-- [ ] Biggest mover identified (up and down) with driver data
-- [ ] Dominant driver across top tier identified (for Insight 3 — Industry Driver Pattern)
-- [ ] Rotating angle selected for Insight 2 (see selection guide — must differ from NTR1 and NTR2 angles)
-- [ ] Non-Top-Rated Post 1 angle selected — CFO audience (see selection guide)
-- [ ] Non-Top-Rated Post 2 angle selected — investor/risk audience (see selection guide)
+- [ ] Insight 1 angle selected — Reputable Not Top-Rated / Unknown Top-Rated / The Surprise (see selection guide)
+- [ ] Insight 2 option selected — Industry-Wide or Company-Level YoY Shift
+- [ ] Insight 3 rotating angle selected (see angle bank — must not repeat last 2 cycles)
+- [ ] Insight 4 NTR angle selected (see angle bank — must be clearly supported by the data)
 - [ ] Copy drafted for all posts and reviewed
 - [ ] Visual assets designed and brand-compliant
 - [ ] Company logos collected for seal post
@@ -170,292 +168,162 @@ Short. Celebratory. No analytical copy — let the visual do the work.
 
 ---
 
-## Day +2 — Insight 1: The Surprise or Biggest Mover
+## Day +2 — Insight 1: Company Editorial
 
-**Goal:** The most compelling individual company story from the ranking — the finding that makes a reader stop and want to understand why
+**Goal:** The most compelling individual company story from the ranking — makes a reader stop and want to understand why
 **Format:** Single image
 
-### Decision Rule — Which Post Is Insight 1?
+### Angle Selection
 
-Always identify both candidates before deciding. Use whichever is more compelling to a CFO, risk officer, or institutional investor encountering this industry's data for the first time.
+Look at the data and pick the angle most clearly supported. Decide before drafting.
 
-| Condition | Use as Insight 1 | Notes |
-|---|---|---|
-| A well-known company ranked significantly lower than reputation would suggest | The Surprise (Reputation Doesn't Rate) | Strongest Insight 1 candidate — the most contrarian and credibility-building post type |
-| A lesser-known company outranks recognized industry giants by a striking margin | The Surprise (The Unknown Leader) | Strong Insight 1 candidate — shows ECR is independent of brand recognition |
-| No compelling Surprise scenario — or the biggest rank movement is the most striking finding in the data | Biggest Mover | Default when no Surprise story is clearly supported |
+| Angle | When the data shows this |
+|---|---|
+| **Reputable, Not Top-Rated** | A well-known company failed to reach Top-Rated — their ECR contradicts their reputation |
+| **Unknown, Top-Rated** | A lesser-known company made Top-Rated ahead of recognized names in the same industry |
+| **The Surprise** | Any non-obvious finding — a company's score, position, driver, or trajectory that defies expectation |
 
-> **If both are strong:** publish The Surprise at Day +2 (Insight 1) and Biggest Mover at Day +5 (Insight 2).
-> The Confirmation angle is not a strong Insight 1 candidate — use it as Insight 2 if applicable.
-
----
-
-### Insight 1A — The Surprise
-
-When using The Surprise as Insight 1, apply the same rules as the Day +5 definition. See the full variant spec below under [Day +5 — Insight 2: Rotating Angle](#day-5--insight-2-rotating-angle). Production spec: `post-design-sop.md → Post Type: The Surprise`.
-
----
-
-### Insight 1B — Biggest Mover
-
-Find the company with the largest rank change up or down. Identify which ECR driver caused it. Explain what that means structurally.
+### Title Rule
+Free-form. Written for this specific company and data. Professional, direct, one hook-line. Not the angle name.
 
 ### Visual
 | Element | What to show |
 |---|---|
 | Company name | Prominent |
-| Rank movement | Before → After (e.g. #24 → #1) |
-| ECR score | Current year ECR % |
-| Key driver | Name + point contribution (e.g. Stockholders' Equity +292pts) |
+| Rank and ECR | Key data point — score or position |
+| Key driver | Name + point contribution |
 | Industry average | For context |
-| RealRate logo | Corner with most available space |
+| RealRate logo | Any corner, 50px margin |
 | Tagline | Bottom |
 
 ### Caption Structure
 | Element | How to write it |
 |---|---|
-| **Story hook** | Name the company, state the movement. Create the "how?" in the reader's mind |
-| **Data** | Rank before → after, ECR score, driver contribution in points |
-| **Driver explanation** | Name the driver, quantify it, explain what it means structurally |
-| **Implication** | Connect to the reader's role — investor, risk officer, CFO |
+| **Story hook** | Lead with the company and the contrast — create the "why?" in the reader's mind |
+| **Data** | Company name, rank, ECR score, driver contribution in points, industry average |
+| **Interpretation** | What is driving the ECR result and why it matters |
+| **Clarifying line** | *"ECR measures balance sheet strength, not revenue performance or market reputation."* — mandatory for Reputable Not Top-Rated |
+| **Implication** | What this means for CFOs, investors, or risk officers reading it |
 | **Ranking URL** | Always last — realrate.ai/rankings/[industry]/[year] |
-
-**Formula:**
-> *"[Company] was ranked [X] a year ago. Today they're [Y]. One thing changed — and the data shows exactly what."*
-
-**Example:**
-> *"A year ago Clearwater Analytics was #24 in US Software. Today they're #1. ECR: 647% — 295 points above the industry average of 352%. Stockholders' Equity contributed +292 points to that move. That's not revenue growth. That's balance sheet strength — the clearest signal of long-term financial stability in this industry."*
-
-**Approved caption — US Computers 2026 (Apple Inc):**
-> Apple Inc was ranked #2 in US Computers last year. Today they're at #1 with an ECR of 430%.
->
-> One driver explains the move: Net Income, contributing +245 points to their ECR score.
->
-> This is a measure of how efficiently Apple converts its operations into balance sheet strength.
->
-> The industry average ECR is 258% and Apple sits 172 points above it.
->
-> Check the full 2026 US Computers ranking + company-level breakdown:
-> realrate.ai/rankings/us_computers/2026
 
 ### Rules
 - One company, one driver, one implication — never dilute
 - Always quantify the driver contribution in points
-- End caption with ranking URL: realrate.ai/rankings/[industry]/[year]
+- For Reputable Not Top-Rated: never frame as criticism — it's a data distinction
+- Two-company comparison layout approved for Unknown Top-Rated
+- End caption with ranking URL
 
 ---
 
-## Day +3 — Non-Top-Rated Post
+## Day +4 — Insight 2: Industry YoY Shift
 
-**Goal:** Education and outreach support — speaks to companies that didn't earn Top-Rated status without calling them out by name
-**Format:** Single image
-**Rule:** Never name specific companies negatively. Always industry-aggregate or anonymised.
+**Goal:** Show how the industry ECR moved vs the prior 1–2 years — industry-wide or anchored on a well-known company
+**Format:** Carousel — up to 3 slides
 
-### Angle Selection — Pick Based on the Data
+### Option Selection
 
-| Angle | Use when | Story hook |
-|---|---|---|
-| **The Gap** | ECR spread between top-rated threshold and industry average is large | *"The gap between Top-Rated and average in [industry] is [X] ECR points. One driver accounts for most of it."* |
-| **What's Missing** | A single weakness driver dominates non-top-rated companies | *"[X] of [industry] companies share the same greatest weakness. It shows up on one line of the balance sheet."* |
-| **Progress Recognition** | Notable YoY ECR improvement in lower-ranked companies | *"[X] companies improved their ECR in [industry] this year. They didn't reach Top-Rated — but the trajectory tells a story."* |
-| **Warning Signal** | Clear fragility pattern in bottom third — risk-focused | *"The bottom third of [industry] share a pattern. Here's what the data shows before distress becomes visible."* |
-| **Road to Top-Rated** | Several companies are close to the Top-Rated threshold | *"Top-Rated isn't awarded. It's earned through the balance sheet. Here's what the data says it takes in [industry]."* |
-| **Industry Health Overview** | Low percentage of companies reached Top-Rated | *"Only [X]% of [industry] companies earned Top-Rated status in 2025. Here's what the other [Y]% look like."* |
-| **What Buyers Should Know** | High-stakes industry — insurance, pharma, finance | *"If you're investing in or procuring from [industry] companies — here's what the financial data reveals about the ones that didn't make Top-Rated."* |
-
-### Caption Structure (all angles)
-| Element | How to write it |
+| Option | When to use |
 |---|---|
-| **Story hook** | State the pattern or gap — no names, industry-aggregate |
-| **Data** | Industry average ECR, top-rated threshold, percentage of companies, driver data |
-| **Interpretation** | What this pattern means structurally — why it's happening |
-| **Implication** | What it means for the reader's role (CFO: what to fix / investor: what to watch) |
-| **Ranking URL** | Always last — realrate.ai/rankings/[industry]/[year] |
+| **Industry-Wide** | The sector shift is the headline — average ECR moved, companies shifted, something structural changed |
+| **Company-Level** | A well-known company's YoY shift is the story, supported by broader industry context |
 
-### Visual
-- Single image showing the gap, pattern, or signal — use semantic colors (red/warning for risk, green for top-rated strength)
-- No company names — use "industry average" or "bottom third" labels
-- RealRate logo in the corner with most available space, tagline bottom
+### Slide Structure
 
----
+**Slide 1 — The Shift**
+Lead with the headline number. Industry ECR avg then vs now — or company ECR then vs now. The change in points is the visual hero.
 
-## Day +6 — Non-Top-Rated Post 2
+**Slide 2 — What Drove It**
+The key structural reason behind the shift. One finding, clearly stated.
 
-**Goal:** Risk intelligence for the buyer side — investors, risk officers, and procurement teams assessing non-top-rated companies
-**Format:** Single image
-**Audience:** Investor / risk officer / procurement — not the companies themselves
-**Rule:** Never name specific companies negatively. Always industry-aggregate or anonymised.
-
-### Angle Options (buyer-facing)
-
-| Angle | Use when | Story hook |
-|---|---|---|
-| **Warning Signal** | Clear fragility pattern in bottom third of any industry | *"The bottom third of [industry] share a pattern. Here's what the data shows before distress becomes visible."* |
-| **What Buyers Should Know** | High-stakes industry — insurance, pharma, finance — default for these verticals | *"If you're investing in or procuring from [industry] companies — here's what the financial data reveals about the ones that didn't make Top-Rated."* |
-| **The Early Warning** | 1–2 companies show a meaningful YoY ECR decline — use as a signal pattern without naming them | *"ECR doesn't disappear overnight. The data usually shows the slide a year or two before it becomes a headline."* |
-| **The Hidden Liability** | Liability-side weakness is the dominant driver pulling non-top-rated ECRs down | *"Non-top-rated [industry] companies share a balance sheet problem that's easy to miss — until you look at the liability side."* |
-| **The Sector Fragility** | Majority of the industry sits below a threshold that signals structural risk | *"Most [industry] companies in our 2025 ranking sit below [X]% ECR. In a stress scenario, that concentration matters."* |
-| **The Due Diligence Gap** | Non-top-rated companies look stable by conventional metrics but fail on ECR | *"By revenue or credit rating, these companies look fine. ECR tells a different story."* |
-| **The Concentration Risk** | Top-rated tier is thin — most industry exposure sits in non-top-rated companies | *"Only [X]% of [industry] companies earned Top-Rated status. For anyone with broad industry exposure, that concentration is the risk."* |
-
-> Pick the angle the data supports most strongly. For high-stakes industries (insurance, pharma, finance), default to **What Buyers Should Know** unless a more specific angle (Early Warning, Hidden Liability) is clearly supported by the data.
-
-### Visual
-- Single image showing fragility pattern or risk signal
-- Use semantic warning colors (red, amber) for risk indicators
-- Labels: "bottom third", "industry average" — no company names
-- RealRate logo in the corner with most available space, tagline bottom
+**Slide 3 — The Context** *(only if it adds meaningful information)*
+Where this industry sits vs others, or what the shift signals for the next cycle.
 
 ### Caption Structure
 | Element | How to write it |
 |---|---|
-| **Story hook** | Open from the buyer's perspective — what they need to know before making a decision |
-| **Data** | Industry-aggregate risk signal — % of companies, common weakness driver, ECR gap from threshold |
-| **Interpretation** | What this pattern means for financial stability in this industry |
-| **Implication** | Speak directly to the buyer role — what to look for, what to ask, what to watch |
+| **Story hook** | Lead with the number that changed — the shift in points or % |
+| **Data** | ECR avg before and after, point change, key driver, # companies (if changed) |
+| **Interpretation** | Why the shift happened — structural cause, not just the number |
+| **Implication** | What it signals for the industry going forward |
 | **Ranking URL** | Always last — realrate.ai/rankings/[industry]/[year] |
-
----
-
-## Day +5 — Insight 2: Rotating Angle
-
-**Goal:** Industry-level perspective — zoom out from one company to a broader pattern
-**Format:** Single image
-**Choose one angle based on what the data supports — not the same angle as the non-top-rated post**
-
-### Angle Options
-| Angle | Use when | What it covers |
-|---|---|---|
-| **The Surprise** | A company's ranking contradicts what the market would expect — in any direction | One post. The angle and title depend on what the data shows — see guide below. |
-| **Year-over-Year Shift** | Industry average ECR moved significantly vs. prior year | What changed structurally and why — industry-level, not company-level |
-| **The Fall** | A previously top-ranked or top-rated company dropped significantly | Named company, what changed in the balance sheet, what it signals |
-| **The Comeback** | A company improved dramatically from a low prior ranking | Named company, ECR before and after, driver that drove the recovery |
-| **The Outlier** | One company's ECR is dramatically above or below its obvious peers | Why this company defies the industry pattern — structural, not cyclical |
-| **The Consistent Performer** | A company has held a top position across multiple ranking cycles | Named company, what drives multi-year stability — the structural insight behind sustained ranking |
-| **Small vs. Big** | A smaller, lesser-known company outranks a well-known industry giant | Named comparison — the smaller company's ECR vs. the giant's, and the structural driver behind the gap |
-
-### The Surprise — Which Angle to Take
-
-The Surprise is one post. Look at the data and pick the angle that fits. The title, story hook, and data emphasis follow from the angle — the design and structure are the same.
-
-| Angle | Use when | Title |
-|---|---|---|
-| **The Confirmation** | A well-known company ranks high as expected — the specific structural driver behind it is non-obvious | `THE CONFIRMATION` or `WHAT THE DATA REVEALS` |
-| **Reputation Doesn't Rate** | A well-known company ranks significantly lower than their public profile would suggest | `REPUTATION DOESN'T RATE` |
-| **The Unknown Leader** | A lesser-known company ranks ahead of recognized industry names by a striking margin | `THE UNKNOWN LEADER` |
-
----
-
-**The Confirmation**
-The rank is expected. The structural reason isn't. This post takes what seems obvious and makes it precise — not "they're strong," but "here is exactly what the balance sheet shows."
-
-Story hook: *"[Company] ranked #[X] in [Industry] 2026. What most people know about them: revenue, market share, brand. What ECR reveals: the specific structural reason. And it's not the one most people point to."*
-
-Key data: company name, current rank, ECR score, dominant strength driver + contribution, industry average ECR.
-
-Design note: Causal graph is particularly effective here — it transforms a confirmation into a structural explanation.
-
----
-
-**Reputation Doesn't Rate**
-A widely recognized company ranks lower than their market presence would suggest. The story is not a failure — it's a data distinction. ECR measures balance sheet efficiency, not brand strength, revenue scale, or public recognition. Never frame this as criticism.
-
-Story hook: *"[Company] is one of the most recognized names in [industry]. In the 2026 ranking, ECR places them at #[X]. Their reputation is not in question. Their balance sheet is a different story."*
-
-Key data: company name, current rank, ECR score, greatest weakness driver + contribution, industry average ECR + number of companies ranked ahead of them.
-
-Caption rule — non-negotiable: Must include this line verbatim: *"ECR measures balance sheet strength, not revenue performance or market reputation."* Required every time — frames the data correctly and prevents the post from reading as a brand attack.
-
-Design note: Causal graph works strongly — showing the specific driver pulling ECR down makes the structural argument visual. Comparison layout is also approved (the company's ECR vs. industry average or a top-ranked peer).
-
----
-
-**The Unknown Leader**
-A company with low public recognition ranks significantly ahead of well-known names. The contrast between obscurity and financial strength is the story — ECR is not a popularity contest.
-
-Story hook: *"You've probably never heard of [Company]. In the 2026 US [Industry] ranking, they sit at #[X] — ahead of [Well-known Company] at #[Y]. Their ECR: [A]%. Here's what the balance sheet shows."*
-
-Key data: the lesser-known company's name, rank, ECR, dominant strength driver + contribution; at least one recognized company they outranked with name, rank, ECR.
-
-Design note: Comparison layout (two companies side by side, ECR values prominent) makes the gap visceral — lead with the lesser-known company. Causal graph optional but effective when the driver gap explains the ranking difference.
-
----
-
-### Visual
-- Single image — data visualization, comparison layout, or causal graph with company highlight
-- 2–3 data points maximum — no crowding
-- Comparison layout approved for Reputation Doesn't Rate and The Unknown Leader
-- Causal graph approved for all angles — shows driver → ECR causation, not just the score
-- RealRate logo in the corner with most available space, tagline bottom
-
-### Caption Structure
-| Element | How to write it |
-|---|---|
-| **Story hook** | Lead with the name and the contrast — create the "how?" in the reader's mind |
-| **Data** | Named company (or companies), ECR numbers, driver contribution |
-| **Interpretation** | What is driving the ECR result and why it differs from expectation or reputation |
-| **Clarifying line (Reputation Doesn't Rate only)** | *"ECR measures balance sheet strength, not revenue performance or market reputation."* |
-| **Implication** | What this means for how you evaluate companies in this industry |
-| **Ranking URL** | Always last — realrate.ai/rankings/[industry]/[year] |
-
-**Example hooks by angle:**
-- *The Confirmation:* "Their revenue is widely covered. Their ECR isn't. The data shows exactly why they rank where they do — and it goes deeper than the P&L."
-- *Reputation Doesn't Rate:* "One of the most recognized names in [industry]. Not in the top tier of the ECR ranking. ECR and reputation are not the same measure."
-- *The Unknown Leader:* "You've probably never heard of them. They just outranked [Well-known Company] in [Industry] 2026."
-- *Year-over-Year Shift:* "The [industry] industry average ECR dropped [X] points in one year. Here's the structural shift behind it."
-- *The Fall:* "[Company] was Top-Rated last year. They're not this year. One driver accounts for most of the drop."
-- *The Comeback:* "[Company] was ranked [X] two years ago. Today they're [Y]. Here's what changed on the balance sheet."
-- *The Outlier:* "Every company in the top 10 shares a common strength — except this one. And they still ranked [X]."
-- *The Consistent Performer:* "[Company] has ranked in the top 5 for [X] consecutive years. This is what that kind of stability looks like in the data."
 
 ### Rules
-- Angles for this post are company-specific (a named company's story) or industry trend (structural shift) — never aggregate risk signals, which belong to the non-top-rated posts
-- Never use the same angle as Day +3 or Day +6 non-top-rated posts
-- Always include at least one named company with ECR numbers
-- End caption with ranking URL: realrate.ai/rankings/[industry]/[year]
+- Max 3 slides — keep it tight
+- Each slide carries one message — no overloading
+- Slide numbering visible on every slide (1/3, 2/3, 3/3)
+- Consistent background and typography across slides
+- End caption with ranking URL
 
 ---
 
-## Day +8 — Insight 3: Industry Driver Pattern
+## Day +6 — Insight 3: Rotating Angle
 
-**Goal:** Structural credibility — the dominant driver across the whole industry's top tier
-**Format:** Short carousel — 3 to 4 slides
-**Fixed for every industry — always answerable from the data**
+**Goal:** Broader industry analysis — zoom out from a single company to a data-driven pattern, trend, or structural observation
+**Format:** Single image
 
-Identify the driver that appears most frequently as the greatest strength across the top-ranked companies. Explain why it dominates in this specific industry.
+### Angle Selection
 
-### Carousel Structure
-| Slide | Content |
+Rotate through the bank — pick the angle most supported by the current data and not used in the prior 2 ranking cycles.
+
+| Angle | When to use |
 |---|---|
-| Cover | "[Driver] is the defining factor in [Industry] 2025" |
-| Slide 2 | 3 named top companies — each with ECR % and driver contribution in points |
-| Slide 3 | The structural explanation — why this driver dominates in this industry specifically |
-| Slide 4 (optional) | What companies outside the top tier are missing — the implication |
-
-- RealRate logo in a consistent corner across all slides (whichever corner best avoids content collision)
-- Tagline on final slide
-- Semantic colors: green for strength driver
+| **The Industry Blind Spot** | One weakness driver appearing across most companies in the industry — a structural drag most haven't addressed |
+| **The Market vs The Balance Sheet** | A company the market rates highly has a low ECR, or vice versa — perception vs structural health |
+| **The Industry Trend** | Industry ECR has shifted over 2–3 years — getting stronger or weaker, and what's behind it |
+| **The Methodology Moment** | What ECR measures that other ratings don't — one clear explanation that builds credibility |
+| **The Investor Signal** | Is this industry financially healthy right now? Safe, risky, stable, fragile — the ECR answers it for investors and business partners |
+| **The Macro Lens** | An industry under pressure from a continuous trend — war, sanctions, tariffs, rate cycles — what the balance sheets show that headlines don't |
 
 ### Caption Structure
 | Element | How to write it |
 |---|---|
-| **Story hook** | "RealRate ranked X companies. The top ones share something." |
-| **Pattern + data** | 3+ named companies, same driver appearing across all, contribution in points |
-| **Why this industry** | Structural reason this driver dominates here — this is the causal explanation |
-| **Implication** | What it means for companies outside the top tier |
+| **Story hook** | Lead with the pattern or signal — specific to this data |
+| **Data** | The numbers that prove the angle — ECR figures, driver data, industry averages |
+| **Interpretation** | What the pattern means structurally |
+| **Implication** | What it means for investors, CFOs, or business partners reading it |
 | **Ranking URL** | Always last — realrate.ai/rankings/[industry]/[year] |
 
-**Formula:**
-> *"[X] of the top 10 [industry] companies share the same greatest strength: [Driver]. It contributed an average of [Y] points to their ECR. Here's why this driver dominates [industry] specifically."*
+### Rules
+- External claims (market data, macro events) must be sourced from trusted public sources — flag if unverifiable
+- For Investor Signal and Macro Lens: always anchor on ECR data first, external context second
+- End caption with ranking URL
 
-**Example:**
-> *"RealRate ranked 140 US Software companies. The top 5 don't share the same revenue model, size, or market. But they share one thing: Stockholders' Equity — contributing an average of +281 points to their ECR. In software, where revenue can scale faster than costs, equity strength is the floor that separates sustainable companies from fragile ones."*
+---
+
+## Day +8 — Insight 4: Non-Top-Rated Rotating
+
+**Goal:** Education and risk intelligence — speaks to companies that didn't earn Top-Rated status, and to investors and partners evaluating them
+**Format:** Single image
+
+### Angle Selection
+
+Rotate through the bank — pick the angle most clearly supported by the data.
+
+| Angle | When to use |
+|---|---|
+| **Almost There** | A company sitting just below the Top-Rated threshold. One driver is the specific difference |
+| **The One Thing** | A single weakness driver is pulling ECR below threshold — remove it and they'd qualify |
+| **The Fallen** | A company that held Top-Rated in a prior year and has since dropped — what changed |
+| **The Sector Drag** | Multiple companies in the same sub-sector all failing to reach Top-Rated — company problem or structural industry issue |
+| **Close But Not Rated** | Performs well by traditional metrics — revenue, market cap, brand — but ECR threshold not met |
+| **The Due Diligence Gap** | Why NTR status matters for investors, counterparties, and partners — anchored on a real company |
+
+### Caption Structure
+| Element | How to write it |
+|---|---|
+| **Story hook** | State the specific situation — company name or pattern — without framing it as criticism |
+| **Data** | ECR score, rank, gap to threshold, key weakness driver + contribution, industry average |
+| **Interpretation** | What the balance sheet shows and why it matters |
+| **Implication** | Speak to the CFO (what to address) or the investor/partner (what to watch) |
+| **Clarifying line** | *"ECR measures balance sheet strength, not revenue performance or market reputation."* — mandatory on all NTR posts |
+| **Ranking URL** | Always last — realrate.ai/rankings/[industry]/[year] |
 
 ### Rules
-- Use actual driver names from the archive data
-- Name at least 3 companies from the top tier
-- Always explain *why* this driver matters in this industry — not just that it does
-- End caption with ranking URL: realrate.ai/rankings/[industry]/[year]
+- Always quantify — give the ECR score, the gap, the driver contribution in points
+- For Almost There and The One Thing: name the company. The data is specific and constructive
+- For The Sector Drag: industry-aggregate — no individual company names
+- Caption clarifying line is non-negotiable on every NTR post
+- End caption with ranking URL
 
 ---
 
@@ -513,57 +381,51 @@ Run this at the start of every ranking cycle before drafting any copy.
 **Step 1 — Pull from the archive:**
 - All top-rated companies with ECR numbers
 - Full top 10 with rank vs. prior year
-- Greatest strength driver + contribution (points) for each top company
-- Greatest weakness driver for each company in bottom third
-- Industry average ECR vs. prior year
+- Industry average ECR — current year and prior 1–2 years
+- Greatest strength driver + contribution (pp) for each top company
+- Greatest weakness driver for each company in the bottom third
+- Top-Rated threshold ECR
 
-**Step 2 — Identify Day +2 post (Insight 1: The Surprise or Biggest Mover):**
+**Step 2 — Select Insight 1 angle (Day +2 — Company Editorial):**
 
-First, identify the Biggest Mover: largest rank change up or down → always the default fallback.
+Check all three options and pick the strongest.
 
-Then check for a Surprise scenario:
-- Is there a well-known company ranked significantly lower than reputation would suggest? → Reputation Doesn't Rate (strongest Insight 1 candidate)
-- Is there a lesser-known company ranking ahead of recognized industry giants by a striking margin? → The Unknown Leader (strong Insight 1 candidate)
-- Is a top-ranked well-known company's dominance explained by a non-obvious structural driver? → The Confirmation (weak Insight 1 candidate — better as Insight 2)
-
-**Decision:** If Reputation Doesn't Rate or The Unknown Leader is clearly supported by the data → The Surprise is Insight 1. Biggest Mover moves to Day +5 (Insight 2 slot).
-If no compelling Surprise scenario → Biggest Mover is Insight 1 as before.
-
-**Step 3 — Select Day +3 angle (Non-Top-Rated Post 1 — CFO audience):**
 | If the data shows... | Use this angle |
 |---|---|
-| Large ECR spread between top-rated and average | The Gap |
-| Clear shared weakness driver across non-top-rated | What's Missing |
-| Notable YoY improvement in lower-ranked companies | Progress Recognition |
-| Companies close to top-rated threshold | Road to Top-Rated |
-| Low % of top-rated vs total companies | Industry Health Overview |
+| A well-known company failed to reach Top-Rated and their ECR clearly contradicts their market reputation | Reputable, Not Top-Rated |
+| A lesser-known company made Top-Rated ahead of recognized industry names by a striking margin | Unknown, Top-Rated |
+| Any other non-obvious finding — a rank, score, driver, or trajectory that defies expectation | The Surprise |
 
-**Step 4 — Select Day +5 angle (Insight 2: Rotating — must be company-specific or industry trend, not an aggregate risk signal):**
+**Step 3 — Select Insight 2 option (Day +4 — YoY Shift):**
+
+| If the data shows... | Use this option |
+|---|---|
+| Significant ECR average shift at the industry level | Industry-Wide |
+| A well-known company's year-over-year ECR shift is the more compelling story | Company-Level |
+
+**Step 4 — Select Insight 3 angle (Day +6 — Rotating):**
+
+Pick from the bank. Must not have been used in the prior 2 ranking cycles.
+
 | If the data shows... | Use this angle |
 |---|---|
-| Well-known company ranked high — the specific structural reason is non-obvious | The Surprise (The Confirmation angle) |
-| Well-known company ranked significantly lower than reputation suggests | The Surprise (Reputation Doesn't Rate angle) — use as Insight 1 if not already used |
-| Lesser-known company outranks recognized industry names by a striking margin | The Surprise (The Unknown Leader angle) — use as Insight 1 if not already used |
-| Significant industry average ECR shift YoY | Year-over-Year Shift |
-| A company dropped significantly from prior ranking | The Fall |
-| A company recovered dramatically from a low prior ranking | The Comeback |
-| One company's ECR is dramatically above or below its obvious peers | The Outlier |
-| A company has held a top position across multiple cycles | The Consistent Performer |
-| A smaller company outranks a well-known industry giant | Small vs. Big |
+| One weakness driver appearing across most companies | The Industry Blind Spot |
+| A company the market rates highly has a low ECR, or vice versa | The Market vs The Balance Sheet |
+| Industry ECR has shifted meaningfully over 2–3 years | The Industry Trend |
+| No single data angle — need to build credibility around the methodology | The Methodology Moment |
+| Industry health is a question for investors or business partners | The Investor Signal |
+| Industry affected by a macro trend — geopolitical, economic, regulatory | The Macro Lens |
 
-**Step 5 — Select Day +6 angle (Non-Top-Rated Post 2 — buyer audience):**
+**Step 5 — Select Insight 4 angle (Day +8 — NTR Rotating):**
+
 | If the data shows... | Use this angle |
 |---|---|
-| High-stakes industry (insurance, pharma, finance) | What Buyers Should Know (default) |
-| Clear fragility pattern in bottom third | Warning Signal |
-| 1–2 companies with visible YoY ECR decline | The Early Warning |
-| Liability-side weakness dominates non-top-rated | The Hidden Liability |
-| Most companies sit below a structural safety threshold | The Sector Fragility |
-| Companies look stable by conventional metrics but not ECR | The Due Diligence Gap |
-| Top-rated tier is thin relative to total companies | The Concentration Risk |
-
-**Step 6 — Identify Day +8 post (fixed — Insight 3: Industry Driver Pattern):**
-Most frequent greatest strength driver across top tier → that's the Industry Driver Pattern
+| A company just below the Top-Rated threshold with one specific driver gap | Almost There |
+| One weakness driver pulling a company below threshold | The One Thing |
+| A company that was Top-Rated in a prior year and has dropped | The Fallen |
+| Multiple companies in the same sub-sector all failing to reach Top-Rated | The Sector Drag |
+| A company that looks strong by traditional metrics but fails the ECR threshold | Close But Not Rated |
+| An opportunity to explain why NTR status matters to investors and partners | The Due Diligence Gap |
 
 ---
 
