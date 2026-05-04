@@ -4,29 +4,63 @@ This file is a reference for all approved post template specifications. Load it 
 
 ---
 
-## Approved Backgrounds
-| Color | Hex | Notes |
+## Canvas
+
+- **Size:** 1200×1200px (all social posts)
+- **Margin:** 50px all sides — content and logo stay within this boundary
+- **Export:** Puppeteer via `export.mjs` at deviceScaleFactor 2 → PNG
+
+## Approved Dark Backgrounds
+
+| Hex | Name | Notes |
 |---|---|---|
-| Dark Navy | `#0a1628` | Default — most posts |
-| Dark Blue | `#00679B` | Alternate — carousel slides, NTR posts |
-| Light Grey | `#f5f5f5` | Light section in split-band layouts only |
-| Off-White | `#e8e8e8` | Light section variant |
-| Medium Grey | `#8e96a2` | Insight posts — lighter, positive tone |
+| `#003b57` | Deep Navy | Primary — most posts |
+| `#004a6e` | Navy Blue | Alternate |
+| `#005884` | Dark Blue | Alternate |
+| `#3389b1` | Medium Blue | Lighter dark BG |
+| `#34a2b3` | Blue Teal | Lighter dark BG |
+| `#2c8b9a` | Dark Teal | Alternate |
+| `#0a1628` | Dark Navy (legacy) | Still approved |
+| `#00679B` | Brand Blue (legacy) | Still approved |
 
-## Approved Split-Band Combinations
-Split-band layout = solid color top section + light bottom section, divided by a `#3DBACD` 3px rule.
+## Approved Light Backgrounds
 
-| Top (accent/header) | Bottom (content) | Use for |
+| Hex | Name | Notes |
 |---|---|---|
-| `#00679B` dark blue | `#f5f5f5` light grey | Carousel slides, NTR posts (default) |
-| `#8e96a2` mid grey | `#f5f5f5` light grey | Insight posts — lighter, neutral tone |
-
----
+| `#f5f5f5` | Light Grey | Data viz posts, light slides |
+| `#e8e8e8` | Off-White | Light section variant |
+| `#ffffff` | White | Data viz only |
 
 ## Accent Color Rule
-One accent per design. Rotate across posts:
-- `#3DBACD` — light teal (preferred on dark navy background)
-- `#00679B` — dark blue (preferred when used as decoration, not text)
+
+Accent assignment is based on background type — never mix:
+
+| Background | Accent colors |
+|---|---|
+| **Dark** (any dark BG above) | `#f5f5f5` · `#e8e8e8` |
+| **Light** (any light BG above) | `#3DBACD` · `#00679B` |
+
+One accent per design. Never use both `#3DBACD` and `#00679B` as text/UI accents in the same post.
+
+## Layout Patterns — Approved 2026
+
+Visual references in `Design References/Social Media/`.
+
+| ID | Pattern | Description |
+|---|---|---|
+| L1 | Circle Photo — Bottom Left | Dark BG; large circular B&W photo bottom-left; title large right; subtitle + body stacked right |
+| L2 | Vertical Split | Colored left panel (~55%) text; B&W photo right panel (~45%) |
+| L3 | Geometric Teal | Teal main area; dark angular geometric shapes one corner; text on teal |
+| L4 | Circle Photo — Corner | Dark BG; circular masked photo top-right; large bold title bottom-left |
+| L5 | Ring Photo | Dark BG; large ring/donut with photo inside right; text left |
+
+## Data Visualization Layout
+
+- **Background:** `#f5f5f5` or `#ffffff` only
+- **Text:** Dark navy (`#003b57`)
+- **Primary series (US):** `#00679B` bars
+- **Secondary series (EU):** `#3DBACD` bars
+- **Style:** Horizontal bars, no gridlines, percentage labels right of bar
 
 ---
 

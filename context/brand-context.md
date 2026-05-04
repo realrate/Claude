@@ -110,35 +110,87 @@ See `competitive-landscape.md` for full competitor profiles and comparison.
 | Small | 14–15px |
 
 ### LinkedIn Post Design Guidelines
-- **Dimensions:** 1080×1350px (portrait, default) or 1080×1080px (square) — use other sizes only when explicitly specified
+
+- **Dimensions:** 1200×1200px (square) — standard for all social media posts
 - **Font:** Manrope (all text elements)
-- **Typography scale:**
-  - Main heading / title: 60–75px max
-  - Subheadings / questions: 28–45px (italic where appropriate)
-  - Body text on light slides: 35px
-  - Body text on dark cover slide: 42px
-  - Footer (brand name, tagline, URL): 20–25px
-- **Approved backgrounds:**
-  - Core: Light grey `#f5f5f5`, Medium grey `#e8e8e8`, Dark blue `#00679B`, Dark navy `#0a1628`, Mid grey `#8e96a2`
-  - Additional colors from the corporate palette are permitted — not too dark, not too light
-  - Must maintain clear, strong contrast between background, text, and logo at all times
-- **Layout rules:**
-  - No eyebrow labels or mini titles above headlines — go straight into the heading
-  - On dark slides: all text must be full white (`#ffffff`)
-  - On light slides: body text must be strong dark (`#000000` or `#4A4A4A`) — never grey
-  - Cover content anchors at the top, directly below the logo — do not center
-  - Use `justify-content: space-between` so sections fill the full height
-- **Style:** Flat, minimal, data-focused — minimal gradients and subtle textures permitted; no heavy decoration or shadows
-- **Logo placement:** Any corner — choose based on content weight and white space. Place in the corner that has the most available space and least visual conflict with content. No fixed default.
-- **Logo version — by background:**
-  1. **Dark blue (`#00679B`) background** → use regular/horizontal logo (black text: `RealRate_logo_horizontal.svg`) on solid white background block (`background: #ffffff; border-radius: 10px; padding: 9px 18px`)
-  2. **Dark navy (`#0a1628`) or photo background** → use white-text logo (`RealRate_logo_light.svg`); add white background block only if logo colors are not clearly visible
-  3. **Light background** → use regular logo (black text: `RealRate_logo_horizontal.svg`), no background wrap needed
-- **No background pills on text** — never apply a colored background + padding badge/pill style to text labels. Labels, post types, and content categories must be plain text (colored text only, no background fill).
-- **Industry tag** → always white (`#ffffff`), no background behind it
-- **Emojis:** Max 2 in captions, none on images
-- **Tagline on image:** `"Powered by RealRate: Using Explainable Financial AI"` — appears on analytical post images only, never in the caption
-- **Backgrounds:** Mix primary (`#00679B` dark blue) and secondary (`#f5f5f5` light grey, `#e8e8e8` medium grey) — choose whichever looks best for the content. No single default. Alternate across posts in a cycle to create visual variety.
+- **Margin:** 50px on all sides. The logo always sits in the top-left corner at this margin.
+- **Default text color:** White (`#ffffff`) on all dark backgrounds
+
+#### Typography Scale
+
+| Element | Size | Weight |
+|---|---|---|
+| Title | 50–64px | 700–800 (bold) |
+| Subtitle | 30–53px | 400–500 |
+| Heading | 35–40px | 400–500 (regular) |
+| Subheading / Body | 25–30px | 400 (regular) |
+| Footer / Tagline | 16–20px | 400 |
+
+#### Accent Color Rules
+
+Accent colors are assigned by background type — never mix them:
+
+| Background type | Approved accent colors |
+|---|---|
+| **Light background** | `#3DBACD` (teal) · `#00679B` (dark blue) |
+| **Dark background** | `#f5f5f5` (light grey) · `#e8e8e8` (off-white) |
+
+#### Approved Dark Backgrounds
+
+| Hex | Name |
+|---|---|
+| `#003b57` | Deep Navy (primary) |
+| `#004a6e` | Navy Blue |
+| `#005884` | Dark Blue |
+| `#3389b1` | Medium Blue |
+| `#34a2b3` | Blue Teal |
+| `#2c8b9a` | Dark Teal |
+| `#0a1628` | Dark Navy (legacy, still approved) |
+| `#00679B` | Brand Blue (legacy, still approved) |
+
+#### Approved Light Backgrounds
+
+| Hex | Name |
+|---|---|
+| `#f5f5f5` | Light Grey |
+| `#e8e8e8` | Off-White |
+| `#ffffff` | White |
+
+#### Logo Rules — By Background
+
+- **On any dark background** (all hex values in the Approved Dark Backgrounds table) → use white-text logo: `RealRate_logo_light.svg`. No background wrap needed.
+- **On any light background** → use standard colored logo: `RealRate_logo_horizontal.svg`. No wrap needed.
+- Logo always top-left corner, at the 50px margin.
+
+#### Layout Patterns
+
+Five approved layout patterns. Visual references in `Design References/Social Media/`.
+
+| Pattern | Description | Best for |
+|---|---|---|
+| **Circle Photo — Bottom Left** | Dark BG; large circular B&W photo anchored bottom-left; title large right/center; subtitle + body stacked right | Cover posts, announcements |
+| **Vertical Split** | Colored left panel (~55%) with all text; B&W photo right panel (~45%) | Thought leadership, insight posts |
+| **Geometric Teal** | Teal main area; abstract angular geometric elements (dark blue) in one corner; text on teal | Brand storytelling, trend posts |
+| **Circle Photo — Corner** | Dark BG; circular masked photo clipped to top-right corner; large bold title bottom-left | Ranking posts, data announcements |
+| **Ring Photo** | Dark BG; large ring/donut shape right side with photo inside; text left | Feature posts, deep dives |
+
+#### Data Visualization Posts
+
+- **Background:** Light grey (`#f5f5f5`) or white — never dark
+- **Title/text color:** Dark navy (`#003b57`)
+- **US / primary data series:** `#00679B` (dark blue bars)
+- **Europe / secondary data series:** `#3DBACD` (teal bars)
+- **Chart style:** Horizontal bar chart; clean, no gridlines, percentage labels right-aligned
+- Visual reference: `Design References/Social Media/` — Data Viz reference
+
+#### Style Rules
+
+- Flat, minimal, data-focused — no heavy gradients, no drop shadows
+- No eyebrow labels or mini titles above headlines — go straight into the title
+- No background pills or badges on text — labels are plain colored text only
+- Industry tag / eyebrow: always white, no background box
+- Max 2 emojis in captions; none on images
+- Tagline `"Powered by RealRate: Using Explainable Financial AI"` — on analytical post images only, never in caption
 
 ### Brand Fonts
 - RealRate: Manrope

@@ -8,45 +8,68 @@ This SOP governs the creation of HTML-based visual posts for RealRate's LinkedIn
 ## General Production Rules (All Post Types)
 
 ### Canvas
-- **Size:** 1080×1080px square
+- **Size:** 1200×1200px square
+- **Margin:** 50px all sides — all content and the logo must stay within this boundary
 - **Font:** Manrope (Google Fonts) — weights 300, 400, 500, 600, 700, 800
 - **Export:** Puppeteer via `export.mjs` at deviceScaleFactor 2 → PNG
 
 ### Color System
-| Token | Hex | Use |
+
+**Dark Backgrounds**
+| Hex | Name |
+|---|---|
+| `#003b57` | Deep Navy (primary) |
+| `#004a6e` | Navy Blue |
+| `#005884` | Dark Blue |
+| `#3389b1` | Medium Blue |
+| `#34a2b3` | Blue Teal |
+| `#2c8b9a` | Dark Teal |
+| `#0a1628` | Dark Navy (legacy) |
+| `#00679B` | Brand Blue (legacy) |
+
+**Light Backgrounds**
+| Hex | Name | Use |
 |---|---|---|
-| Dark Navy | `#0a1628` | Approved background |
-| Dark Blue | `#00679B` | Approved background + decoration |
-| Light Teal | `#3DBACD` | Accent — labels, highlights, key numbers |
-| White | `#ffffff` | Primary text, logos, key values |
-| Mid Grey | `rgba(255,255,255,0.5–0.6)` | Descriptions, secondary text |
-| Muted Grey | `rgba(255,255,255,0.28–0.38)` | Labels, taglines, dimmed values |
-| Mid Grey | `#8e96a2` | Approved background — insight posts, lighter positive tone |
-| Light BG | `#f5f5f5` / `#e8e8e8` | Split-band light section |
+| `#f5f5f5` | Light Grey | Data viz posts |
+| `#e8e8e8` | Off-White | Light variant |
+| `#ffffff` | White | Data viz only |
 
-**Approved split-band combinations** (top accent + light bottom, divided by `#3DBACD` 3px rule):
-- `#00679B` + `#f5f5f5` — default (carousel, NTR posts)
-- `#8e96a2` + `#f5f5f5` — insight posts, lighter neutral tone
+**Default text color:** White (`#ffffff`) on all dark backgrounds. Dark navy (`#003b57`) on light backgrounds.
 
-### Single-Accent Rule
-Each design uses **one accent color** for text/UI elements — either `#3DBACD` or `#00679B`. Rotate between posts. Never use both as text highlights in the same design.
+### Accent Color Rule
+
+Accent assignment by background type — never mix across types in one design:
+
+| Background | Use these accent colors |
+|---|---|
+| Any **dark** background | `#f5f5f5` · `#e8e8e8` |
+| Any **light** background | `#3DBACD` · `#00679B` |
+
+One accent per design. Never use `#3DBACD` and `#00679B` both as text/UI highlights in the same post.
+
+### Logo Rule
+
+- **Dark backgrounds** → `RealRate_logo_light.svg` (white text), no wrap needed, top-left at 50px margin
+- **Light backgrounds** → `RealRate_logo_horizontal.svg` (colored), no wrap needed, top-left at 50px margin
 
 ### What Never Appears
-- Red or green — except when explicitly indicating a real financial loss (red) or gain (green), and only in the ECR/metric data itself
-- Background data number textures
+- Red or green — except when explicitly indicating a real financial loss (red) or gain (green) in ECR/metric data only
 - Hashtags anywhere on images
 - Tagline `"Powered by RealRate: Using Explainable Financial AI"` in captions — image only
 - External company logo URLs — always inline SVG or letter initials
+- Background pills or badge boxes on text labels
 
 ### Typography Scale
+
 | Element | Size | Weight |
 |---|---|---|
-| Post title (short) | 90–120px | 800 |
-| Post title (long) | 75–90px | 800 |
-| Post label / tagline | 16–19px | 600–700 |
-| Section headers | 28–44px | 700–800 |
-| Body / description | 19–24px | 400–500 |
-| Stat labels | 11–13px | 700, uppercase, letter-spaced |
+| Title | 50–64px | 700–800 (bold) |
+| Subtitle | 30–53px | 400–500 |
+| Heading | 35–40px | 400–500 (regular) |
+| Subheading / Body | 25–30px | 400 (regular) |
+| Stat values (large) | 48–64px | 800 |
+| Stat labels | 13–16px | 700, uppercase, letter-spaced |
+| Footer / Tagline | 16–20px | 400 |
 
 ---
 
