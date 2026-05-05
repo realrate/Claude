@@ -118,13 +118,18 @@ See `competitive-landscape.md` for full competitor profiles and comparison.
 
 #### Typography Scale
 
-| Element | Size | Weight |
-|---|---|---|
-| Title | 50–64px | 700–800 (bold) |
-| Subtitle | 30–53px | 400–500 |
-| Heading | 35–40px | 400–500 (regular) |
-| Subheading / Body | 25–30px | 400 (regular) |
-| Footer / Tagline | 16–20px | 400 |
+| Element | Size | Weight | Notes |
+|---|---|---|---|
+| RealRate logo | 44px height | — | White version on dark BG |
+| Industry tag | 20px | 700 | Uppercase, letter-spaced, white |
+| Post label badge | 25px | 700 | `#3DBACD` bg · `#003b57` text · `border-radius: 6px` · `align-self: flex-start` |
+| Title | 64–72px | 800 | Uppercase |
+| Subtitle | 30px | 400 | Muted white |
+| Company rank | 30px | 700 | Uppercase, muted white |
+| Body / Description | 25–30px | 400 | Muted white |
+| Stat labels | 35px | 700 | Uppercase · `white-space: nowrap` |
+| Stat values | 50–56px | 800 | White or `#f5f5f5` |
+| Tagline | 20px | 400 | Anchored `position: absolute; bottom: 50px` |
 
 #### Accent Color Rules
 

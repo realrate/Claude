@@ -79,29 +79,44 @@ One post per ranking cycle. Angle and title chosen based on what the data shows 
 ### Title Rule
 Free-form. Written based on the specific company and what the data shows. Must be professional, direct, one clear hook, specific to this company and data.
 
-### Layout — Single Post
+### Layout — Single Post (L4 approved · approved May 2026)
 
 ```
 ┌─────────────────────────────────────────┐
-│ [Logo]              [Industry Tag]       │
+│ [Logo 44px]         [Industry Tag 20px] │  ← top bar
+│                   ╭──────────────╮      │
+│ [POST LABEL BADGE] │  circular    │      │  ← teal badge · photo
+│ [TITLE 64–72px]    │  photo       │      │    clipped top-right
+│ [Subtitle 30px]    │  top-right   │      │
+│                    ╰──────────────╯      │
+│  [title section flex:1 — vertically     │
+│   centered in available space]          │
 │                                         │
-│ [RANKING INSIGHT · YEAR]                │
-│ [TITLE — free-form, 50–64px, bold]      │
-│ [Subtitle — 30px, muted]                │
+│ [Company logo in white box]             │  ← bottom section
+│ [Rank 30px · muted]                    │    margin-bottom: 70px
+│ [Description 25–30px · muted]          │
+│ ─────────────────────────────          │
+│ ECR SCORE | KEY DRIVER | INDUSTRY AVG. │  ← stat labels 35px
+│ [56px]    | [32px  +28pp] | [50px]    │
 │                                         │
-│          [spacer — flex:1]              │
-│                                         │
-│ [Company logo box + Company Name]        │
-│ [Rank + ECR — key data point]           │
-│ [Description — 25–30px, muted]          │
-│                                         │
-│ ECR SCORE | KEY DRIVER | INDUSTRY AVG.  │
-│                                         │
-│ Powered by RealRate: Using Explainable… │
+│ Powered by RealRate…  [absolute bottom] │  ← tagline 20px
 └─────────────────────────────────────────┘
 ```
 
-Two-company comparison layout available for Unknown, Top-Rated angle — ECR values as visual hero.
+**Flex structure:**
+- `body`: `display: flex; flex-direction: column; position: relative; padding: 50px`
+- `title-section`: `flex: 1; display: flex; flex-direction: column; justify-content: center`
+- `bottom-section`: `flex-shrink: 0; margin-bottom: 70px`
+- `tagline`: `position: absolute; bottom: 50px; left: 50px`
+
+**Post label badge:**
+- `background: #3DBACD; color: #003b57; border-radius: 6px; padding: 10px 22px; align-self: flex-start`
+
+**Company logo box:**
+- White rounded box — `background: #fff; border-radius: 12px; padding: 12px 22px; display: inline-flex`
+- Actual company logo image inside (height 44px, width auto)
+
+Two-company comparison layout available for Unknown, Top-Rated — ECR values as visual hero.
 
 ### Data Fields Required
 

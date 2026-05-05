@@ -57,19 +57,31 @@ One accent per design. Never use `#3DBACD` and `#00679B` both as text/UI highlig
 - Hashtags anywhere on images
 - Tagline `"Powered by RealRate: Using Explainable Financial AI"` in captions — image only
 - External company logo URLs — always inline SVG or letter initials
-- Background pills or badge boxes on text labels
 
 ### Typography Scale
 
-| Element | Size | Weight |
-|---|---|---|
-| Title | 50–64px | 700–800 (bold) |
-| Subtitle | 30–53px | 400–500 |
-| Heading | 35–40px | 400–500 (regular) |
-| Subheading / Body | 25–30px | 400 (regular) |
-| Stat values (large) | 48–64px | 800 |
-| Stat labels | 13–16px | 700, uppercase, letter-spaced |
-| Footer / Tagline | 16–20px | 400 |
+| Element | Size | Weight | Notes |
+|---|---|---|---|
+| RealRate logo | 44px height | — | White version on dark BG |
+| Industry tag | 20px | 700 | Uppercase, letter-spaced, white |
+| Post label badge | 25px | 700 | Uppercase · `#3DBACD` bg · `#003b57` text · `border-radius: 6px` · `padding: 10px 22px` · `align-self: flex-start` |
+| Title | 64–72px | 800 | Uppercase, tight letter-spacing |
+| Subtitle | 30px | 400 | Muted white `rgba(255,255,255,0.50)` |
+| Company rank | 30px | 700 | Uppercase, muted white `rgba(255,255,255,0.38)` |
+| Body / Description | 25–30px | 400 | Muted white `rgba(255,255,255,0.54)` |
+| Stat labels | 35px | 700 | Uppercase · `white-space: nowrap` · `letter-spacing: 0.5px` · muted white |
+| Stat values (ECR / Avg.) | 50–56px | 800 | White or `#f5f5f5` |
+| Stat driver name | 32px | 700 | White |
+| Stat driver gain | 28px | 600 | `#e8e8e8` |
+| Tagline | 20px | 400 | `rgba(255,255,255,0.24)` · absolutely positioned at `bottom: 50px` |
+
+### Layout Rules
+
+- **Title section:** `flex: 1; display: flex; flex-direction: column; justify-content: center;` — centers the label/title/subtitle block vertically in available space
+- **Bottom section:** `margin-bottom: 70px` — lifts the company block and stats above the tagline
+- **Tagline:** `position: absolute; bottom: 50px; left: 50px;` — always anchored to the bottom margin regardless of content above
+- **Company logo:** displayed in a white rounded box — `background: #fff; border-radius: 12px; padding: 12px 22px; display: inline-flex` — actual company logo image inside, height 44px
+- **Company rank:** plain text line directly below the company logo box, no indentation required
 
 ---
 
