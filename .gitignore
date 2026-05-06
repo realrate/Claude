@@ -1,3 +1,6 @@
-posts/*
-!posts/holger_personal/
 .DS_Store
+posts/*/node_modules/
+posts/*/*.png
+posts/*/*.psd
+posts/*/*.jpg
+posts/*/*.jpeg
