@@ -153,18 +153,18 @@ Must include: *"ECR measures balance sheet strength, not revenue performance or 
 
 ### Caption Structure — Insight 1 (approved)
 
-**Formula:** Methodology hook → Data reveal → ECR definition reminder → Key driver → Benchmark comparison → Ranking URL
+**Formula:** Methodology hook → Company + rank → Gap stat → Ranking URL
 
-**Opening hook template (Option B — methodology-first):**
-> "[What ECR measures] and [what it is not] are different things. RealRate's ECR isolates one — how structurally sound a company's finances are. In [year], that lens produced a clear result."
+**Opening hook template (approved):**
+> "Balance sheet strength and market prominence are different things. RealRate's ECR isolates how structurally sound a company's finances are. In [year], that lens produced a clear result."
 
 **Full structure:**
-1. Hook — position the methodology before the finding (2–3 sentences)
-2. Company name + rank (exact)
-3. ECR definition reminder — one line, three "Not X" statements
-4. Key driver + pp contribution
-5. Industry average ECR vs company ECR (gap in points)
-6. Ranking URL
+1. Hook — methodology positions the finding (3 sentences, no hype)
+2. "In RealRate's recent financial assessment for the [industry] ranking, [Company], [legal entity] ranks #[N]."
+3. One punchy gap line — "Sitting [X] points above the industry average."
+4. Ranking URL
+
+No ECR definition reminder. No key driver line. Keep it tight.
 
 ### File Naming
 `insight1_[companyslug].html` / `.png`
