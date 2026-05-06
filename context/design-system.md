@@ -101,6 +101,41 @@ One accent per design. Never mix across background types:
 | L4 | Circle Photo — Corner | Dark BG; circular photo clipped top-right; bold title bottom-left | Ranking posts, insight 1 |
 | L5 | Ring Photo | Dark BG; large ring right with photo inside; text left | Deep dives, feature posts |
 
+### L1 — Circle Photo, Bottom Left
+- **Background:** Deep navy (`#003b57`)
+- **Photo element:** Large circle (B&W, desaturated) anchored bottom-left — partially bleeds off canvas
+- **Logo:** White, any corner at 50px margin
+- **Title:** Large bold white, centered-right — 50–64px
+- **Subtitle / Body:** Stacked right side, white
+
+### L2 — Vertical Split
+- **Left panel (~55%):** Medium blue (`#3389b1`) — all text lives here
+- **Right panel (~45%):** B&W photo, full-height
+- **Logo:** White, any corner at 50px margin
+- **Title:** Large bold white, left-aligned — 50–64px
+- **Subtitle / Body:** Left panel, white, stacked below title
+
+### L3 — Geometric Teal
+- **Background:** Blue Teal (`#34a2b3`) main area
+- **Geometric element:** Abstract angular/faceted dark blue shapes filling one corner quadrant (top-left) — mosaic effect against teal
+- **Logo:** White, any corner at 50px margin (sits on geometric element area)
+- **Title:** Large bold white on teal area — 50–64px
+- **Subtitle / Body:** White on teal
+
+### L4 — Circle Photo, Corner
+- **Background:** Deep navy (`#003b57`)
+- **Photo element:** Circular masked photo clipped to top-right corner — only partially visible (quarter circle)
+- **Logo:** White, any corner at 50px margin
+- **Title:** Large bold white, left-aligned bottom area — 50–64px
+- **Subtitle / Body:** Below title, white, left-aligned
+
+### L5 — Ring Photo
+- **Background:** Deep navy (`#003b57`)
+- **Photo element:** Large ring/donut shape right side — photo fills the ring, dark background through the center cutout; ring takes up ~45% of width
+- **Logo:** White, any corner at 50px margin
+- **Title:** Large bold white, left side — 50–64px
+- **Subtitle / Body:** Left side, stacked below title, white
+
 ### Layout Rules (all patterns)
 - Title section: `flex: 1; display: flex; flex-direction: column; justify-content: center`
 - Bottom section: `flex-shrink: 0; margin-bottom: 70px`
@@ -111,10 +146,14 @@ One accent per design. Never mix across background types:
 
 ## Data Visualization Posts
 - **Background:** `#f5f5f5` or `#ffffff` only — never dark
+- **Logo:** Colored (`RealRate_logo_horizontal.svg`), top-left
 - **Text:** Dark navy `#003b57`
-- **Primary series:** `#00679B` bars
-- **Secondary series:** `#3DBACD` bars
-- **Style:** Horizontal bars, no gridlines, percentage labels right of bar
+- **Primary series:** `#00679B` bars (US / main dataset)
+- **Secondary series:** `#3DBACD` bars (Europe / secondary dataset)
+- **Labels:** Right-aligned percentage values, dark navy
+- **Section dividers:** Thin horizontal rules between groups where needed
+- **Source line:** Bottom-left, small, grey — when citing external data
+- **Style:** Horizontal bars, no gridlines, no background decoration
 
 ---
 
