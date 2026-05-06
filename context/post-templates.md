@@ -206,6 +206,20 @@ Where this industry sits relative to others, or what the shift signals for the n
 | Company name + ECR current + prior (%) | Company-Level option only |
 | Company rank current + prior | Company-Level option only |
 
+### Caption Structure — Insight 2 (approved)
+
+**Formula:** Pattern observation → Why the pattern matters → Commentary on what the data reveals → Ranking URL
+
+**Key rule:** The design carries the numbers. The caption adds context, commentary, and learnings — never restate figures already visible on the slides.
+
+**Full structure:**
+1. Open with the pattern, not the data point — ("Two years of stability. Then a shift.")
+2. Explain why that pattern matters more than the single number
+3. Commentary — what Top-Rated status means, what the audience should be asking, what ECR captures that other metrics miss
+4. Ranking URL
+
+No restating of ECR averages, pp changes, or Top-Rated counts from the slides.
+
 ### File Naming
 `insight2_slide[1-3]_[industryslug].html` / `.png`
 
