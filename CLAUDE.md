@@ -10,37 +10,54 @@ Social media and marketing is managed by Amneh Qaljawi.
 
 ```
 RealRate/
-├── context/
-│   ├── brand-context.md          ← company overview, tagline, pillars, design specs, colors, links
-│   ├── brand-voice.md            ← tone rules, what never to say, accuracy rules, Holger's voice
-│   ├── growth-marketing.md       ← LinkedIn strategy, content pillars, channels, what's working/not
-│   ├── product-offering.md       ← products, value proposition, pricing, social proof
-│   ├── audience.md               ← primary/secondary/potential audiences, ICPs, differentiators
-│   ├── competitive-landscape.md  ← quick reference competitor summary
-│   ├── sources.md                ← trusted URLs to browse for research and content creation
-│   └── post-templates.md         ← approved post template specs (typography, layout, data fields)
-└── SOP/
-    ├── marketing-research-strategy.md     ← market landscape, competitor analysis, research steps
-    ├── social-media-sop.md                ← content creation, calendar, LinkedIn page, design, ads, analytics
-    ├── outreach-sop.md                    ← LinkedIn outreach, email outreach (Instantly), analytics
-    ├── ranking-publication-protocol.md    ← 4-phase ranking launch process, checklists
-    └── post-design-sop.md                 ← HTML post production SOP, QA checklists, export instructions
+├── context/                      ← Stable reference data — load as needed
+│   ├── brand-core.md             ← Company identity, LinkedIn strategy, standing rules (always load)
+│   ├── brand-voice.md            ← Tone rules, what not to say, Holger's voice (always load)
+│   ├── design-system.md          ← All visual specs: colors, typography, layouts, export
+│   ├── audience.md               ← ICP profiles and differentiators
+│   ├── product-offering.md       ← Products, value prop, pricing, social proof
+│   ├── competitive-landscape.md  ← Competitor profiles and content angles
+│   └── sources.md                ← Trusted URLs for research
+│
+├── skills/                       ← Executable task workflows — load the matching skill file
+│   ├── linkedin-post.md          ← Write a LinkedIn company page post
+│   ├── holger-post.md            ← Write a Holger personal LinkedIn post
+│   ├── insight-post.md           ← Build insight posts (types 1–4): design + caption
+│   ├── deep-dive.md              ← Build a deep dive LinkedIn document
+│   ├── content-calendar.md       ← Plan a content calendar (company page or Holger)
+│   ├── outreach-campaign.md      ← Write Instantly campaigns or LinkedIn DM sequences
+│   └── market-research.md        ← Run competitor or market research
+│
+└── SOP/                          ← Multi-step process references
+    ├── ranking-publication-protocol.md  ← Full ranking launch sequence (Day 0 → Day +10)
+    ├── outreach-sop.md                  ← LinkedIn DM + Instantly detailed process
+    └── research-sop.md                  ← Market and competitor research process
 ```
 
 ---
 
-## What to Load for Each Task
+## How to Use
 
-| Task | Load These Files |
-|---|---|
-| Any RealRate task | `brand-context.md` + `brand-voice.md` (always) |
-| LinkedIn post (company page) | + `growth-marketing.md` |
-| LinkedIn post (Holger's page) | + `growth-marketing.md` + `brand-voice.md` (Holger's voice section) |
-| Content strategy / calendar | + `growth-marketing.md` + `audience.md` |
-| Outreach / email / DM | + `product-offering.md` + `audience.md` |
-| Product or sales content | + `product-offering.md` + `audience.md` |
-| Design / visual content | + `brand-context.md` (design specs section) + `post-templates.md` + `post-design-sop.md` |
-| Analytics / performance review | + `growth-marketing.md` (performance section) |
+**For any task:** Find the matching skill file in `skills/` and follow it. Each skill file lists exactly which context files to load and the steps to execute.
+
+**Context files** are the base layer — reference data that skills point to.
+**Skill files** are the execution layer — load only what the task needs.
+**SOP files** are detailed process references — consulted for complex multi-step operations.
+
+---
+
+## Quick Skill Lookup
+
+| Task | Skill file | Also load |
+|---|---|---|
+| Write a LinkedIn company post | `skills/linkedin-post.md` | — |
+| Write a Holger personal post | `skills/holger-post.md` | — |
+| Build an insight post (design + caption) | `skills/insight-post.md` | — |
+| Build a deep dive document | `skills/deep-dive.md` | — |
+| Plan a content calendar | `skills/content-calendar.md` | — |
+| Write an Instantly campaign or sequence | `skills/outreach-campaign.md` | — |
+| Run competitor or market research | `skills/market-research.md` | — |
+| Full ranking launch | `SOP/ranking-publication-protocol.md` | `skills/insight-post.md` · `skills/deep-dive.md` |
 
 ---
 
@@ -48,16 +65,16 @@ RealRate/
 
 - **Always verify ECR data** against https://www.realrate-archive.com before finalising any content
 - **Never use:** "excited to share," "game-changing," "revolutionary," "best-in-class" without data
-- **Never link** to sales pages, pricing, or the archive in public posts — always link to realrate.ai/rankings/[industry]/[year] or realrate.ai/methodology
-- **Archive is internal only** — used for data verification only, never shared publicly
+- **Never link** to sales pages, pricing, or the archive in public posts
+- **Archive is internal only** — data verification only, never shared publicly
 - **Never tag companies** in captions — always in first pinned comment
 - **No hashtags** in captions
-- **Ranking link in caption** — always end the caption with the realrate.ai/rankings/[industry]/[year] URL
-- **Never use "we"** in copy — always use "RealRate" instead
+- **Ranking link in caption** — always end with realrate.ai/rankings/[industry]/[year]
+- **Never use "we"** — always "RealRate"
 - **Company page is primary** — only produce Holger personal page content when explicitly requested
 - **No emojis on images** — max 2 in captions
-- **Tagline on image only** — `"Powered by RealRate: Using Explainable Financial AI"` appears on the image, not in the caption
-- Brand pillars are under review — do not treat as final
+- **Tagline on image only** — never in the caption
+- **Pinned comments:** Day 0 (ranking carousel) and Day +1 (seal post) only
 
 ---
 
@@ -70,11 +87,3 @@ RealRate/
 | LinkedIn Company | https://www.linkedin.com/company/realrate/ |
 | LinkedIn Holger | https://www.linkedin.com/in/dr-holger-bartel/ |
 | News | https://news.realrate.ai |
-
----
-
-## Notes
-- KPIs not yet defined — full analytics review pending
-- Audience and ICP targeting still being refined — treat `audience.md` as a working document
-- Pricing model is contact-based — no public pricing exists
-- Brand pillars may be updated — flagged in `brand-context.md`
