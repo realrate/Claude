@@ -151,6 +151,21 @@ Two-company comparison layout available for Unknown, Top-Rated — ECR values as
 ### Caption Rule — Reputable, Not Top-Rated
 Must include: *"ECR measures balance sheet strength, not revenue performance or market reputation."*
 
+### Caption Structure — Insight 1 (approved)
+
+**Formula:** Methodology hook → Data reveal → ECR definition reminder → Key driver → Benchmark comparison → Ranking URL
+
+**Opening hook template (Option B — methodology-first):**
+> "[What ECR measures] and [what it is not] are different things. RealRate's ECR isolates one — how structurally sound a company's finances are. In [year], that lens produced a clear result."
+
+**Full structure:**
+1. Hook — position the methodology before the finding (2–3 sentences)
+2. Company name + rank (exact)
+3. ECR definition reminder — one line, three "Not X" statements
+4. Key driver + pp contribution
+5. Industry average ECR vs company ECR (gap in points)
+6. Ranking URL
+
 ### File Naming
 `insight1_[companyslug].html` / `.png`
 
