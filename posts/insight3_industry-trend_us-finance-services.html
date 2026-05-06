@@ -24,20 +24,18 @@
       position: relative;
     }
 
-    /* Header */
+    /* Header — logo top-left, badge top-right (data viz spec) */
     .header {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
       flex-shrink: 0;
+      margin-bottom: 6px;
     }
 
-    .industry-tag {
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #003b57;
+    .logo-box {
+      display: inline-flex;
+      align-items: center;
     }
 
     .post-badge {
@@ -48,6 +46,18 @@
       border-radius: 6px;
       padding: 10px 22px;
       align-self: flex-start;
+    }
+
+    /* Industry tag sits below logo */
+    .industry-tag {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #003b57;
+      opacity: 0.45;
+      margin-bottom: 0;
+      flex-shrink: 0;
     }
 
     /* Main content */
@@ -101,7 +111,6 @@
       height: 52px;
       background: #e8e8e8;
       border-radius: 4px;
-      position: relative;
       margin: 0 24px 0 16px;
       overflow: hidden;
     }
@@ -154,7 +163,7 @@
       max-width: 880px;
     }
 
-    /* Bottom bar */
+    /* Bottom — tagline left, source right */
     .bottom {
       flex-shrink: 0;
       display: flex;
@@ -169,17 +178,29 @@
       opacity: 0.30;
     }
 
-    .logo-box {
-      display: inline-flex;
+    .source-line {
+      font-size: 18px;
+      font-weight: 400;
+      color: #AFAFAF;
+      text-align: right;
     }
   </style>
 </head>
 <body>
   <div class="container">
 
+    <!-- Logo top-left, badge top-right — per data viz spec -->
     <div class="header">
-      <span class="industry-tag">US Financial Services</span>
+      <div class="logo-box">
+        <img src="../context/RealRate_logo_horizontal.svg" height="44" alt="RealRate"
+          onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'font-size:28px;font-weight:800;color:#003b57;\'>RealRate</span>'" />
+      </div>
       <span class="post-badge">INDUSTRY TREND</span>
+    </div>
+
+    <!-- Industry tag below logo -->
+    <div style="margin-bottom: 0; flex-shrink: 0; padding-top: 10px;">
+      <span class="industry-tag">US Financial Services</span>
     </div>
 
     <div class="content">
@@ -217,9 +238,7 @@
 
     <div class="bottom">
       <div class="tagline">Explainable Financial AI</div>
-      <div class="logo-box">
-        <img src="../context/RealRate_logo_horizontal.svg" height="44" alt="RealRate" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'font-size:28px;font-weight:800;color:#003b57;\'>RealRate</span>'" />
-      </div>
+      <div class="source-line">Source: RealRate ECR Assessment 2026</div>
     </div>
 
   </div>
