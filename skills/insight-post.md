@@ -49,7 +49,7 @@
 1. Hook — methodology positions the finding: *"Balance sheet strength and market prominence are different things. RealRate's ECR isolates how structurally sound a company's finances are. In [year], that lens produced a clear result."*
 2. "In RealRate's recent financial assessment for the [industry] ranking, [Company] ranks #[N]."
 3. One punchy gap line — "Sitting [X] points above/below the industry average."
-4. Ranking URL
+4. `Full ranking: realrate.ai/rankings/[industry]/[year]`
 
 **Mandatory on Reputable Not Top-Rated:** *"ECR measures balance sheet strength, not revenue performance or market reputation."*
 
@@ -91,7 +91,7 @@ Design carries the numbers. Caption adds context, commentary, and learnings — 
 1. Open with the pattern, not the data point — e.g. *"Two years of stability. Then a shift."*
 2. Explain why the pattern matters more than the single number
 3. Commentary — what it means, what ECR captured, what the audience should be asking
-4. Ranking URL
+4. `Full ranking: realrate.ai/rankings/[industry]/[year]`
 
 ### QA Checklist
 - [ ] All ECR values verified

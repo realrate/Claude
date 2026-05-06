@@ -103,14 +103,14 @@ One accent per design. Never mix across background types:
 
 ### L1 — Circle Photo, Bottom Left
 - **Background:** Deep navy (`#003b57`)
-- **Photo element:** Large circle (B&W, desaturated) anchored bottom-left — partially bleeds off canvas
+- **Photo element:** Large circle anchored bottom-left — partially bleeds off canvas
 - **Logo:** White, any corner at 50px margin
 - **Title:** Large bold white, centered-right — 50–64px
 - **Subtitle / Body:** Stacked right side, white
 
 ### L2 — Vertical Split
 - **Left panel (~55%):** Medium blue (`#3389b1`) — all text lives here
-- **Right panel (~45%):** B&W photo, full-height
+- **Right panel (~45%):** Photo, full-height — original color or desaturated depending on design
 - **Logo:** White, any corner at 50px margin
 - **Title:** Large bold white, left-aligned — 50–64px
 - **Subtitle / Body:** Left panel, white, stacked below title
