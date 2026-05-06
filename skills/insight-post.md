@@ -113,7 +113,6 @@ Design carries the numbers. Caption adds context, commentary, and learnings — 
 |---|---|
 | **The Industry Blind Spot** | One weakness driver appearing across most companies — a structural drag most haven't addressed |
 | **The Market vs The Balance Sheet** | A company the market rates highly has a low ECR, or vice versa |
-| **The Industry Trend** | Industry ECR shifted over 2–3 years — getting stronger or weaker |
 | **The Methodology Moment** | What ECR measures that other ratings don't |
 | **The Investor Signal** | Is this industry financially healthy right now? ECR answers it |
 | **The Macro Lens** | Industry under pressure from a macro trend — what the balance sheets show |
