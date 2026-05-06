@@ -96,6 +96,8 @@ See `competitive-landscape.md` for full competitor profiles and comparison.
 | Light Negative | `#F08F82` |
 | Neutral | `#E8E8E8` |
 
+**Delta / Change Value Rule:** Any directional change (ECR shift, pp delta) shown on a post must use semantic color — `#C04A3A` for negative, `#419453` for positive. Never show a change value in neutral white or grey. Apply via `.change-negative` / `.change-positive` CSS classes.
+
 ### Typography
 - **Primary font:** Manrope — used across websites, dashboards, reports, presentations, and product interfaces
 - **Fallback:** Open Sans (only when Manrope cannot load technically)

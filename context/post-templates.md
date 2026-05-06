@@ -42,6 +42,24 @@ Accent assignment is based on background type — never mix:
 
 One accent per design. Never use both `#3DBACD` and `#00679B` as text/UI accents in the same post.
 
+## Delta / Change Value Color Rule
+
+Any ECR change, pp shift, or directional delta displayed on a post must use semantic color:
+
+| Direction | Color | Hex |
+|---|---|---|
+| Negative change (decline) | Strong Negative red | `#C04A3A` |
+| Positive change (growth) | Strong Positive green | `#419453` |
+
+Apply via CSS class — add `.change-negative` or `.change-positive` to the delta element. These classes must be defined in every insight post that shows a change value:
+
+```css
+.change-negative { color: #C04A3A; }
+.change-positive { color: #419453; }
+```
+
+Never use neutral/white (`#e8e8e8`, `#f5f5f5`) for a delta value — the direction must be visually clear.
+
 ## Layout Patterns — Approved 2026
 
 Visual references in `Design References/Social Media/`.
