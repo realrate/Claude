@@ -80,10 +80,10 @@ One accent per design. Never mix across background types:
 | Industry tag | 20px | 700 | Uppercase, letter-spaced, white |
 | Post label badge | 25px | 700 | `#3DBACD` bg · `#003b57` text · `border-radius: 6px` · `padding: 10px 22px` · `align-self: flex-start` |
 | Title | 64–72px | 800 | Uppercase, `letter-spacing: -2px` |
-| Subtitle | 30px | 400 | `rgba(255,255,255,0.50)` · `line-height: 1.45` |
-| Company rank | 30px | 700 | Uppercase · `rgba(255,255,255,0.38)` |
-| Body / Description | 25–30px | 400 | `rgba(255,255,255,0.54)` |
-| Stat labels | 35px | 700 | Uppercase · `white-space: nowrap` · `letter-spacing: 0.5px` · muted white |
+| Subtitle | 30px | 400 | `#ffffff` · `line-height: 1.45` |
+| Company rank | 30px | 700 | Uppercase · `#ffffff` |
+| Body / Description | 25–30px | 400 | `#ffffff` |
+| Stat labels | 35px | 700 | Uppercase · `white-space: nowrap` · `letter-spacing: 0.5px` · `#ffffff` |
 | Stat values (ECR) | 50–56px | 800 | `#f5f5f5` or white |
 | Stat driver name | 32px | 700 | White |
 | Stat driver gain | 28px | 600 | `#e8e8e8` |
