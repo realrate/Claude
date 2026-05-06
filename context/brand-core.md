@@ -64,11 +64,11 @@ PhD in statistics (Humboldt University + Stockholm School of Economics, 1999). F
 
 - **Always verify ECR data** at realrate-archive.com before finalising any content
 - **Never use:** "excited to share," "game-changing," "revolutionary," "best-in-class" without data
-- **Never link** to sales pages, pricing, or the archive in public posts — always link to realrate.ai/rankings/[industry]/[year] or realrate.ai/methodology
+- **Never link** to sales pages, pricing, or the archive in public posts — always link to https://realrate.ai/rankings/[industry_slug]/[year] or realrate.ai/methodology
 - **Archive is internal only** — data verification, never shared publicly
 - **Never tag companies** in captions — tag in first pinned comment only
 - **No hashtags** in captions
-- **Ranking link in caption** — always end with `Full ranking: realrate.ai/rankings/[industry]/[year]`
+- **Ranking link in caption** — always end with `Full ranking: https://realrate.ai/rankings/[industry_slug]/[year]`
 - **Never use "we"** — always "RealRate"
 - **Company page is primary** — only produce Holger personal page content when explicitly requested
 - **No emojis on images** — max 2 in captions

@@ -36,7 +36,7 @@
 - Never use "we" — always "RealRate"
 - Never tag companies in caption — tag in first pinned comment only
 - Pinned comment only on Day 0 (ranking carousel) and Day +1 (seal post)
-- Always end with: `Full ranking: realrate.ai/rankings/[industry]/[year]`
+- Always end with: `Full ranking: https://realrate.ai/rankings/[industry_slug]/[year]`
 - Tagline on image only — never in caption
 - Never link to sales pages, pricing, or the archive
 

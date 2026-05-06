@@ -63,7 +63,7 @@ Every piece of content follows this principle: **the story opens, the data prove
 - Never promote RealRate directly in the body of any post
 - Never tag companies in the caption — always in the first pinned comment
 - Never include the tagline in the caption — it belongs on the image only
-- Always end the caption with: `Full ranking: realrate.ai/rankings/[industry]/[year]`
+- Always end the caption with: `Full ranking: https://realrate.ai/rankings/[industry_slug]/[year]`
 
 ## Holger's Personal Voice (secondary — use only when explicitly requested)
 

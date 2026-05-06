@@ -69,7 +69,7 @@ RealRate/
 - **Archive is internal only** — data verification only, never shared publicly
 - **Never tag companies** in captions — always in first pinned comment
 - **No hashtags** in captions
-- **Ranking link in caption** — always end with realrate.ai/rankings/[industry]/[year]
+- **Ranking link in caption** — always end with `Full ranking: https://realrate.ai/rankings/[industry_slug]/[year]` (use underscores in slug, e.g. `us_finance_services`)
 - **Never use "we"** — always "RealRate"
 - **Company page is primary** — only produce Holger personal page content when explicitly requested
 - **No emojis on images** — max 2 in captions
