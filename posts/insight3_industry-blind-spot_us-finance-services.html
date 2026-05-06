@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 1200px;
+      height: 1200px;
+      font-family: 'Manrope', sans-serif;
+      background: #003b57;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Circular photo — top-right corner (L4 template) */
+    .photo-circle {
+      position: absolute;
+      width: 580px;
+      height: 580px;
+      top: -90px;
+      right: -90px;
+      border-radius: 50%;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .photo-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100%) brightness(0.55);
+    }
+
+    /* Subtle dark vignette over photo to blend into bg */
+    .photo-circle::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: radial-gradient(circle at 70% 30%, transparent 40%, rgba(0,59,87,0.55) 100%);
+    }
+
+    .container {
+      width: 1200px;
+      height: 1200px;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Header — logo top-left */
+    .header {
+      display: flex;
+      align-items: flex-start;
+      flex-shrink: 0;
+    }
+
+    /* Content fills middle */
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-bottom: 16px;
+    }
+
+    .post-badge {
+      font-size: 25px;
+      font-weight: 700;
+      background: #3DBACD;
+      color: #003b57;
+      border-radius: 6px;
+      padding: 10px 22px;
+      align-self: flex-start;
+      margin-bottom: 36px;
+    }
+
+    .title {
+      font-size: 70px;
+      font-weight: 800;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: -2px;
+      line-height: 1.0;
+      margin-bottom: 24px;
+      max-width: 720px;
+    }
+
+    .subtitle {
+      font-size: 30px;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.50);
+      line-height: 1.45;
+      max-width: 700px;
+      margin-bottom: 48px;
+    }
+
+    /* Stat row */
+    .stat-row {
+      display: flex;
+      align-items: flex-end;
+      gap: 48px;
+      margin-bottom: 0;
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .stat-label {
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: rgba(255, 255, 255, 0.38);
+      white-space: nowrap;
+    }
+
+    .stat-value {
+      font-size: 54px;
+      font-weight: 800;
+      color: #f5f5f5;
+      line-height: 1.0;
+    }
+
+    .stat-value.change-negative { color: #F08F82; }
+
+    /* Bottom */
+    .bottom {
+      flex-shrink: 0;
+      padding-top: 40px;
+    }
+
+    .tagline {
+      font-size: 20px;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.24);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Circular photo top-right — L4 template -->
+  <div class="photo-circle">
+    <img src="../Stock Images/sean-pollock-PhYq704ffdA-unsplash (1).jpg" alt="" />
+  </div>
+
+  <div class="container">
+
+    <div class="header">
+      <img src="../context/RealRate_logo_light.svg" height="44" alt="RealRate"
+        onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'font-size:28px;font-weight:800;color:#fff;\'>RealRate</span>'" />
+    </div>
+
+    <div class="content">
+      <div class="post-badge">INDUSTRY BLIND SPOT</div>
+
+      <div class="title">The Cost<br>Problem No<br>One Fixes</div>
+
+      <div class="subtitle">
+        Operating expenses are the most common structural weakness across Top Rated US Financial Services companies — even the highest-ranked firms aren't immune.
+      </div>
+
+      <div class="stat-row">
+        <div class="stat">
+          <div class="stat-label">Rank #2 — ECR Drag</div>
+          <div class="stat-value change-negative">−21pp</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Rank #4 — ECR Drag</div>
+          <div class="stat-value change-negative">−28pp</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Driver</div>
+          <div class="stat-value" style="font-size: 34px; color: rgba(255,255,255,0.65); padding-bottom: 6px;">Operating<br>Expenses</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div class="tagline">Explainable Financial AI</div>
+    </div>
+
+  </div>
+</body>
+</html>
