@@ -37,6 +37,8 @@ Example: `Visteon CORP` → `assets/logos/visteon_corp.png`
 
 **Domain hint** — add to `_DOMAIN_HINTS` in `generate_infographic.py`, then delete the bad cached file in `assets/logos/`. Use this whenever a logo is wrong or missing.
 
+**White/light logo detection** — `_logo_is_light()` automatically detects logos where ≥60% of visible pixels have brightness >200 (white-on-transparent). These are rendered on a near-black `(18, 18, 18)` background instead of the default white box, so the logo stays visible. No manual action needed — applies to any industry automatically.
+
 Current domain overrides:
 
 | Company | Domain |
@@ -44,6 +46,7 @@ Current domain overrides:
 | Bristow Group Inc | `bristowgroup.com` |
 | Allegiant Travel CO | `allegiantair.com` |
 | Strata Critical Medical Inc | `stratacritical.com` |
+| Abrdn (all ETF trusts) | `abrdn.com` |
 
 ---
 
