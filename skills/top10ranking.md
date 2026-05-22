@@ -68,7 +68,7 @@ Current domain overrides:
 - **Top 3:** Medal emoji + rank + name + ECR% + 2–3 tight sentences (strength driver, pp above market, rank trend, punchy "so what").
 - **Ranks 4–10:** `#4 Name (X%) | #5 Name (X%) | … | #10 Name (X%)`
 - **CTA:** One punchy, industry-specific question. Never reuse. No generic filler.
-- **Link:** `🔗 https://realrate.ai/rankings/[industry]/[current year]`
+- **Link:** `🔗 https://realrate.ai/rankings/us_[industry]/[current year]`
 - **Hashtags:** Exactly 8. Always: `#Finance #AI #Investing #RealRate #FinancialHealth #FinancialAnalysis` + 1 industry tag + 1 company name from top 3. Never use: `#Technology #Innovation #StockMarket #USStocks #TopRated #CloudComputing #Cybersecurity`
 
 ### Post template
@@ -99,7 +99,7 @@ Also in the top 10:
 [Fresh CTA]
 
 Full ranking + individual company reports:
-🔗 https://realrate.ai/rankings/[industry]/[current year]
+🔗 https://realrate.ai/rankings/us_[industry]/[current year]
 
 #Finance #AI #Investing #RealRate #FinancialHealth #FinancialAnalysis #[IndustryTag] #[CompanyName]
 ```
