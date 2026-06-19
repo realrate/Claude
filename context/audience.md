@@ -78,6 +78,38 @@ TOFU (rankings / reach) → MOFU (insight / analysis) → BOFU (methodology / tr
 
 ---
 
+## Target Wedge Segment *(highest-priority entry point)*
+
+The wedge segment is not an ICP — it's the *entry point* for acquisition. Start here before broadening.
+
+| Wedge | Why |
+|---|---|
+| Public companies already performing well | Top-Rated Seal is an easy yes — validates what they already know |
+| IR-sensitive firms | Financial transparency is a core business need, not a nice-to-have |
+| Companies raising capital | ECR credibility supports investor conversations directly |
+
+---
+
+## Distribution Partnerships *(channel strategy)*
+
+Build distribution-lite partnerships where partners use RealRate as a tool in their own client work.
+
+### Financial Advisors & Boutique Investment Firms
+They advise clients on capital allocation, risk exposure, and portfolio decisions.
+- **Integration model:** Use RealRate reports and ECR insights in client discussions as decision support
+- **Value to RealRate:** Credibility via advisor endorsement; reach into their client networks
+- **Value to partner:** Differentiated, explainable financial insight they can't produce themselves
+
+### Strategy & Restructuring Consultancies
+They run financial diagnostics, turnaround analysis, and due diligence engagements.
+- **Integration model:** RealRate ECR analysis becomes a standard component of financial health assessments
+- **Example positioning:** "We include RealRate ECR analysis in every financial health assessment"
+
+### Investor Networks & Small Funds
+- **Integration model:** ECR-based screening for portfolio decisions; RealRate rankings used in investment memos
+
+---
+
 ## Priority Industries *(for sales + content targeting)*
 
 1. **Life Insurance & Financial Services** — Holger's domain, Bayerische testimonial, deepest ECR data (US + Germany)

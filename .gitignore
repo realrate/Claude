@@ -4,3 +4,5 @@ posts/*/*.png
 posts/*/*.psd
 posts/*/*.jpg
 posts/*/*.jpeg
+.venv/
+**/.venv/
