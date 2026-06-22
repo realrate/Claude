@@ -2,6 +2,8 @@
 
 Generate a complete Industry Deep Dive Carousel for a given industry and year. Produces all required output files: interactive HTML, print HTML, PDF, animated GIF, and LinkedIn post.
 
+All paths are relative to the project root (the `RealRate/` folder). Run commands from that directory.
+
 ## Usage
 
 ```
@@ -14,12 +16,12 @@ Example: `/deep-dive-carousel "US Software" 2026`
 
 ## Step 0 — Read context files
 
-Before doing anything else, read all of these:
+Before doing anything else, read all of these from the project root:
 
-- `C:\Users\shaky\Downloads\RealRate claude\RealRate\Industry Deep Dive Carousel\CLAUDE.md`
-- `C:\Users\shaky\Downloads\RealRate claude\RealRate\Industry Deep Dive Carousel\deep-dive-template.md`
-- `C:\Users\shaky\Downloads\RealRate claude\RealRate\context\brand-context.md`
-- `C:\Users\shaky\Downloads\RealRate claude\RealRate\context\brand-voice.md`
+- `Industry Deep Dive Carousel/CLAUDE.md`
+- `Industry Deep Dive Carousel/deep-dive-template.md`
+- `context/brand-context.md`
+- `context/brand-voice.md`
 
 ---
 
@@ -64,7 +66,7 @@ Extract for each company in the Top 10:
 
 ## Step 4 — Choose the industry colour scheme
 
-Pick a colour palette distinct from all previously used schemes. Update `:root` CSS variables and the cover/Slide 7/Slide 10 gradients accordingly. The colour table in `CLAUDE.md` lists existing schemes — do not reuse them.
+Pick a colour palette distinct from all previously used schemes. Update `:root` CSS variables and the cover/Slide 7/Slide 10 gradients accordingly. The colour table in `Industry Deep Dive Carousel/CLAUDE.md` lists existing schemes — do not reuse them.
 
 Example palette variables to set:
 ```css
@@ -112,11 +114,11 @@ All output files go inside this subfolder. Never write files loose in the root c
 
 ## Step 7 — Generate the interactive HTML
 
-File: `[Industry Name]/[industry-slug]-[year].html`
+File: `Industry Deep Dive Carousel/[Industry Name]/[industry-slug]-[year].html`
 
 **Spec:** 540×675px interactive preview · 10 slides · slide navigation dots.
 
-Follow all design rules from `CLAUDE.md`:
+Follow all design rules from `Industry Deep Dive Carousel/CLAUDE.md`:
 
 - **Cover (Slide 1):** Two rows of 5 cards (Top 10). Rank colours: gold/silver/bronze/#4–5 blue-light/#6–10 blue-light. Stats bar: companies · avg ECR · Top-Rated count. RealRate logo in white pill top-center.
 - **Slide 2 — Industry at a Glance:** Key stats, YoY ECR change, avg ECR bar fill proportional to ECR on a 600% scale.
@@ -137,7 +139,7 @@ RealRate logo path in interactive HTML: `../../RealRate Logos/RealRate_logo_hori
 
 ## Step 8 — Generate the print HTML
 
-File: `[Industry Name]/[industry-slug]-[year]-print.html`
+File: `Industry Deep Dive Carousel/[Industry Name]/[industry-slug]-[year]-print.html`
 
 **Spec:** 1080×1350px design · zoom 1.111 → 1200×1500px output · all font sizes doubled vs. interactive.
 
@@ -152,13 +154,20 @@ body  { width: 1080px; margin: 0; zoom: 1.11111; }
 .cover-h-rule { display: none; }
 ```
 
-**All logos must be base64 data URIs in the print HTML** — never relative paths (Chrome headless runs from C:\Temp\ so relative paths produce a blank PDF). Apply base64 replacement immediately after writing the file:
+**All logos must be base64 data URIs in the print HTML** — never relative paths (Chrome headless does not share the working directory, so relative paths produce a blank PDF).
+
+Resolve the project root from the current working directory and embed logos immediately after writing the print HTML:
 
 ```powershell
-$rr = "data:image/png;base64," + [Convert]::ToBase64String([IO.File]::ReadAllBytes("C:\Users\shaky\Downloads\RealRate claude\RealRate\RealRate Logos\RealRate_logo_horizontal.png"))
-# repeat for each company SVG
+$projectRoot = (Get-Location).Path   # run from RealRate/ project root
+$rrLogoPath  = Join-Path $projectRoot "RealRate Logos\RealRate_logo_horizontal.png"
+$rr = "data:image/png;base64," + [Convert]::ToBase64String([IO.File]::ReadAllBytes($rrLogoPath))
+
+$printPath = Join-Path $projectRoot "Industry Deep Dive Carousel\[Industry Name]\[industry-slug]-[year]-print.html"
+$html = Get-Content $printPath -Raw -Encoding UTF8
 $html = $html -replace 'src="\.\.\/\.\.\/RealRate Logos\/RealRate_logo_horizontal\.png"', "src=""$rr"""
-Set-Content "[Industry Name]\[industry]-[year]-print.html" $html -Encoding UTF8
+# repeat the same pattern for each company SVG logo
+Set-Content $printPath $html -Encoding UTF8
 ```
 
 Company logo CSS: `filter: brightness(0) invert(1)` on `.co5-logo img` and `.co-rest-logo img`.
@@ -167,10 +176,13 @@ Company logo CSS: `filter: brightness(0) invert(1)` on `.co5-logo img` and `.co-
 
 ## Step 9 — Generate the PDF
 
-Copy the print HTML to `C:\Temp\` first (paths with spaces silently fail in Chrome headless):
+Copy the print HTML to a temp path with no spaces before running Chrome headless (spaces in paths silently fail):
 
 ```powershell
-Copy-Item "[Industry Name]\[industry-slug]-[year]-print.html" "C:\Temp\rr_print.html" -Force
+$printPath = Join-Path (Get-Location).Path "Industry Deep Dive Carousel\[Industry Name]\[industry-slug]-[year]-print.html"
+$pdfDest   = Join-Path (Get-Location).Path "Industry Deep Dive Carousel\[Industry Name]\[industry-slug]-[year].pdf"
+
+Copy-Item $printPath "C:\Temp\rr_print.html" -Force
 
 $chrome = "C:\Program Files\Google\Chrome\Application\chrome.exe"
 Start-Process $chrome -ArgumentList @(
@@ -183,40 +195,44 @@ Start-Process $chrome -ArgumentList @(
 Start-Sleep -Seconds 8
 
 if (Test-Path "C:\Temp\rr_out.pdf") {
-    Move-Item "C:\Temp\rr_out.pdf" "[Industry Name]\[industry-slug]-[year].pdf" -Force
-    $i = Get-Item "[Industry Name]\[industry-slug]-[year].pdf"
+    Move-Item "C:\Temp\rr_out.pdf" $pdfDest -Force
+    $i = Get-Item $pdfDest
     "PDF OK — $([math]::Round($i.Length/1KB,1)) KB"
 } else { "PDF NOT found — check print HTML logos are base64" }
 ```
+
+> Note: the Chrome path above is the standard Windows install location. Adjust if Chrome is installed elsewhere.
 
 ---
 
 ## Step 10 — Generate the animated cover GIF
 
-Update `generate_cover_gif.py` with industry-specific constants:
+Update `Industry Deep Dive Carousel/generate_cover_gif.py` with industry-specific constants:
 
 | Constant | Value |
 |---|---|
-| `OUT_PATH` | `[Industry Name]/[industry-slug]-[year]-cover.gif` |
+| `OUT_PATH` | `Industry Deep Dive Carousel/[Industry Name]/[industry-slug]-[year]-cover.gif` |
 | `TOP5` | Top-5 company names, ECR scores, rank colours |
 | `_LOGO_FILES` | PNG filenames for ranks 1–5 |
-| `_load_logo()` path | `"[Industry Name]"` directory |
+| `_load_logo()` path | `"Industry Deep Dive Carousel/[Industry Name]"` directory |
 | `make_base()` gradient | Match the industry colour palette from Step 4 |
 | `make_base()` stats | Companies count · avg ECR · Top-Rated count |
 | `make_base()` title | `"[INDUSTRY NAME]"` (all caps) |
 
-Then run:
+Then run from the project root:
 ```powershell
-python "C:\Users\shaky\Downloads\RealRate claude\RealRate\Industry Deep Dive Carousel\generate_cover_gif.py"
+python "Industry Deep Dive Carousel/generate_cover_gif.py"
 ```
 
 Expected output: 1080×~924px · 25 frames · ~250–320 KB · reveals #5→#1.
+
+> Requires Pillow: `pip install pillow`
 
 ---
 
 ## Step 11 — Write the LinkedIn post
 
-File: `[Industry Name]/linkedin-post.txt`
+File: `Industry Deep Dive Carousel/[Industry Name]/linkedin-post.txt`
 
 Use this caption structure:
 
