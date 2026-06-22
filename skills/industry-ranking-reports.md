@@ -1,315 +1,468 @@
-# RealRate Ranking Report Generator
+# /industry-ranking-reports — RealRate Ranking Report Toolkit
 
-## Project Overview
-This project generates illustrated, journalistic rating articles for various industries using RealRate data from https://www.realrate-archive.com/
+All-in-one toolkit for RealRate ranking reports. Supports three sub-commands:
 
-## Project Layout
+**Usage:** `/industry-ranking-reports <sub-command> [args]`
 
-```
-Ranking Reports claude/               ← project root
-├── rr_shared.py                      ← shared utilities (colours, charts, DOCX, PIL)
-├── convert_svgs.py                   ← batch SVG→PNG for all industries
-├── CLAUDE.md
-├── RealRate Logos/
-└── report (2026)/                    ← all output; one folder per industry
-    ├── US Food/
-    │   ├── generate_report.py        ← run this to regenerate the report
-    │   └── charts/
-    ├── US Air/
-    │   ├── generate_report.py
-    │   └── charts/
-    └── US {Industry}/                ← same structure for every industry
-        ├── generate_report.py
-        └── charts/
-```
+---
 
-Each `generate_report.py` uses `sys.path.insert` to find `rr_shared.py` at the project root.
-Run from **any directory**: `python "report (2026)/US Brokers/generate_report.py"`
+## Sub-commands
 
-### Path bootstrap for every new industry script
+### `new <dir-slug> <archive-slug> <display-name>`
+Scaffold a new industry report directory and `generate_report.py`.
+
+**Example:** `/industry-ranking-reports new "US Motors" us_motors "U.S. Motor Industry"`
+
+**Steps:**
+1. Fetch `https://www.realrate-archive.com/<archive-slug>/2025/website-ranking.json` to get the top-3 companies (name, ECR, company_id).
+2. Determine the cover design for this industry from CLAUDE.md's "Per-industry variation" table. If not yet listed, use the next rotation entry from the "Company 3 graph rotation" list.
+3. Write `report (2026)/<dir-slug>/generate_report.py` using the template below. Fill every `<PLACEHOLDER>` with real values from step 1–2.
+4. Print a summary: top-3 companies with ECR and IDs, cover design applied, and the exact command to run the script.
+5. Remind the user to fill in EFFECTS, FINANCIALS, HIST for earlier years, and article body text before running.
+
+**Cover design rules (always enforce):**
+- Never reuse the same background gradient or overlay as an existing industry — check CLAUDE.md's Per-industry variation table first.
+- "Rankings YEAR" text must always be `C_WHITE` in dark mode — never teal.
+- Download logos before calling `create_featured_images()` using `download_logos(IDS, "<archive-slug>", CHART_DIR)`.
+
+**Template:**
 
 ```python
-import os, sys
+"""
+RealRate Ranking Report Generator — <DISPLAY_NAME> 2026
+Marketing year 2026 / Balance sheet year 2025
 
-# Script lives in report (2026)/{Industry Name}/ — project root is 3 levels up
+Outputs:
+  report (2026)/<DIR_SLUG>/
+    <SAFE_NAME>_Rankings_2026.docx
+    <SAFE_NAME>_Rankings_2026.pdf
+    featured_image_dark.png
+    featured_image_light.png
+    website_title.txt
+    linkedin_post.txt
+    titles.md
+"""
+
+import math
+import os
+import random
+import sys
+from PIL import Image, ImageDraw
+
+# Script lives in report (2026)/<DIR_SLUG>/ — project root is 3 levels up
 _ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 if _ROOT not in sys.path:
     sys.path.insert(0, _ROOT)
 
-from rr_shared import ...
+from docx import Document
+from docx.shared import Pt, RGBColor, Inches
+from docx.enum.text import WD_ALIGN_PARAGRAPH
 
+from rr_shared import (
+    LIGHT_BLUE, DARK_BLUE, GREY, C_TEAL, C_WHITE, GOLD, SILVER, BRONZE,
+    apply_style, save_chart,
+    chart_top_n, chart_ecr_history, chart_effects, chart_market_stats,
+    convert_svgs_to_png, download_svg, download_logos,
+    add_heading, add_body, add_interpretation,
+    add_caption, add_png, add_svg, add_divider, set_doc_margins,
+    generate_pdf, save_text_files,
+    pil_fnt, pil_paste, pil_rr_rect, pil_dtxt, pil_initials_badge,
+)
+
+# ── Paths ──────────────────────────────────────────────────────────────────────
 ROOT         = _ROOT
 REPORT_DIR   = os.path.join(ROOT, "report (2026)")
-INDUSTRY_DIR = os.path.dirname(os.path.abspath(__file__))   # this script's own folder
+INDUSTRY_DIR = os.path.dirname(os.path.abspath(__file__))
 CHART_DIR    = os.path.join(INDUSTRY_DIR, "charts")
 LOGOS_DIR    = os.path.join(ROOT, "RealRate Logos")
 os.makedirs(CHART_DIR, exist_ok=True)
+
+# ── Archive ────────────────────────────────────────────────────────────────────
+BASE_URL = "https://www.realrate-archive.com/<ARCHIVE_SLUG>/2025"
+IDS = {
+    "<CO1_NAME>": "<CO1_ID>",
+    "<CO2_NAME>": "<CO2_ID>",
+    "<CO3_NAME>": "<CO3_ID>",
+}
+
+# ══════════════════════════════════════════════════════════════════════════════
+# DATA — balance sheet year 2025 / marketing year 2026
+# Source: https://www.realrate-archive.com/<ARCHIVE_SLUG>/2025/website-ranking.json
+#         https://www.realrate-archive.com/<ARCHIVE_SLUG>/qa/
+# ══════════════════════════════════════════════════════════════════════════════
+RANKING_2026 = [
+    {"rank": 1, "name": "<CO1_NAME>", "ecr": <CO1_ECR>},
+    {"rank": 2, "name": "<CO2_NAME>", "ecr": <CO2_ECR>},
+    {"rank": 3, "name": "<CO3_NAME>", "ecr": <CO3_ECR>},
+    # TODO: add more notable companies from the JSON
+]
+MARKET_AVG = <MARKET_AVG>  # TODO: compute from JSON ecr values
+
+HIST = {
+    # TODO: populate from earlier JSON years
+    2026: (<CO1_ECR>, <CO2_ECR>, <CO3_ECR>, <MARKET_AVG>),
+}
+
+EFFECTS = {
+    # TODO: populate from shrinked_graph_json / table_records in JSON
+    "<CO1_NAME>": {},
+    "<CO2_NAME>": {},
+    "<CO3_NAME>": {},
+}
+ECR_ABOVE = {
+    "<CO1_NAME>": <CO1_ECR> - <MARKET_AVG>,
+    "<CO2_NAME>": <CO2_ECR> - <MARKET_AVG>,
+    "<CO3_NAME>": <CO3_ECR> - <MARKET_AVG>,
+}
+
+FINANCIALS = {
+    # TODO: populate from output_variables in JSON
+}
+
+ECR_HIST_SERIES = [
+    (0, "<CO1_NAME>", LIGHT_BLUE, "-",  "o"),
+    (1, "<CO2_NAME>", DARK_BLUE,  "-",  "s"),
+    (2, "<CO3_NAME>", "#555555",  "-",  "^"),
+    (3, "Market Average", GREY,   "--", "none"),
+]
+
+MKT_YEARS = [2024, 2025, 2026]
+MKT_AVGS  = [<MARKET_AVG>, <MARKET_AVG>, <MARKET_AVG>]  # TODO: fill historical avgs
+
+FEAT_IMP = {}  # TODO: populate from feature_importance JSON or SVG
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# FEATURED IMAGE — <DISPLAY_NAME> design (1080×1080)
+# TODO: implement industry-specific background, overlay, and motif
+# per the cover design rules in CLAUDE.md
+# ══════════════════════════════════════════════════════════════════════════════
+def create_featured_images():
+    W, H = 1080, 1080
+    co_logos = download_logos(IDS, "<ARCHIVE_SLUG>", CHART_DIR)
+
+    def make(dark):
+        cv = Image.new("RGBA", (W, H))
+        dr = ImageDraw.Draw(cv)
+
+        if dark:
+            for y in range(H):
+                t = y / H
+                dr.line([(0, y), (W, y)], fill=(
+                    int(10 + 5 * t), int(8 + 5 * t), int(28 + 10 * t)))
+            txt      = C_WHITE
+            name_col = C_WHITE
+            card_bg  = (12, 10, 35, 225)
+            card_brd = C_TEAL
+            foot_bg  = (3, 2, 10)
+            rr_file  = "RealRate_logo_horizontal_white.png"
+        else:
+            for y in range(H):
+                t = y / H
+                dr.line([(0, y), (W, y)],
+                        fill=(int(245 - 20 * t), int(246 - 14 * t), int(255 - 15 * t)))
+            txt      = (10, 8, 45)
+            name_col = (10, 8, 45)
+            card_bg  = (255, 255, 255, 255)
+            card_brd = C_TEAL
+            foot_bg  = (0, 103, 155)
+            rr_file  = "RealRate_logo_horizontal.png"
+
+        dr.rectangle([0, 0, W, 10], fill=C_TEAL)
+
+        lbw, lbh = 300, 72
+        lbx = (W - lbw) // 2
+        lby = 24
+        if not dark:
+            pil_rr_rect(dr, [lbx - 18, lby - 10, lbx + lbw + 18, lby + lbh + 10],
+                        r=14, fill=(255, 255, 255, 210))
+        pil_paste(cv, os.path.join(LOGOS_DIR, rr_file), lbx, lby, lbw, lbh)
+        dr = ImageDraw.Draw(cv)
+
+        pil_dtxt(dr, (W // 2, 200), "<DISPLAY_NAME>", txt, pil_fnt("bold", 70))
+        pil_dtxt(dr, (W // 2, 295), "Rankings 2026",
+                 C_WHITE if dark else (0, 103, 155), pil_fnt("bold", 62))
+        pil_dtxt(dr, (W // 2, 370), "Most Financially Resilient Companies",
+                 txt, pil_fnt("italic", 28))
+        dr.rectangle([90, 408, W - 90, 413], fill=C_TEAL)
+
+        CW, CH = 240, 240
+        GAP    = 40
+        x0     = (W - 3 * CW - 2 * GAP) // 2
+        y0     = 436
+        for i, (co, medal) in enumerate(zip(IDS.keys(), [GOLD, SILVER, BRONZE])):
+            cx   = x0 + i * (CW + GAP)
+            card = Image.new("RGBA", (CW, CH), (0, 0, 0, 0))
+            cd   = ImageDraw.Draw(card)
+            pil_rr_rect(cd, [0, 0, CW, CH], r=22, fill=card_bg)
+            pil_rr_rect(cd, [0, 0, CW, CH], r=22, fill=None,
+                        outline=(*card_brd, 200), lw=3)
+
+            lp = co_logos.get(co)
+            logo_shown = False
+            if lp and os.path.exists(lp):
+                try:
+                    logo = Image.open(lp).convert("RGBA")
+                    logo.thumbnail((CW - 36, CH - 36), Image.LANCZOS)
+                    if dark:
+                        pad = 8
+                        lx  = (CW - logo.width) // 2
+                        ly  = (CH - logo.height) // 2
+                        pil_rr_rect(cd, [lx - pad, ly - pad,
+                                         lx + logo.width + pad, ly + logo.height + pad],
+                                    r=10, fill=(255, 255, 255, 230))
+                    card.paste(logo, ((CW - logo.width) // 2, (CH - logo.height) // 2), logo)
+                    logo_shown = True
+                except Exception as e:
+                    print(f"  logo paste error {co}: {e}")
+
+            if not logo_shown:
+                initials = "".join(w[0] for w in co.split() if w[0].isupper())[:3]
+                pil_initials_badge(cd, CW // 2, CH // 2, 72, initials, pil_fnt)
+
+            cv.paste(card, (cx, y0), card)
+
+            mr  = 26
+            mx2 = cx + CW - mr - 4
+            my2 = y0 + mr + 4
+            ov  = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+            od  = ImageDraw.Draw(ov)
+            od.ellipse([mx2 - mr - 4, my2 - mr - 4, mx2 + mr + 4, my2 + mr + 4],
+                       fill=(255, 255, 255, 180))
+            od.ellipse([mx2 - mr, my2 - mr, mx2 + mr, my2 + mr], fill=(*medal, 255))
+            pil_dtxt(od, (mx2, my2), str(i + 1), C_WHITE, pil_fnt("bold", 28))
+            cv = Image.alpha_composite(cv, ov)
+            dr = ImageDraw.Draw(cv)
+
+            pil_dtxt(dr, (cx + CW // 2, y0 + CH + 22), co,
+                     name_col, pil_fnt("bold", 18))
+            pil_dtxt(dr, (cx + CW // 2, y0 + CH + 46),
+                     f"ECR {RANKING_2026[i]['ecr']}%",
+                     C_TEAL if dark else (0, 103, 155), pil_fnt("bold", 16))
+
+        info_y = y0 + CH + 72
+        dr.line([(90, info_y), (W - 90, info_y)], fill=C_TEAL, width=1)
+        pil_dtxt(dr, (W // 2, info_y + 26),
+                 "Annual Rankings  ·  Balance Sheet Year 2025",
+                 txt, pil_fnt("reg", 17))
+
+        fy = H - 148
+        dr.rectangle([0, fy, W, H], fill=foot_bg)
+        dr.rectangle([0, fy, W, fy + 6], fill=C_TEAL)
+        pil_dtxt(dr, (W // 2, fy + 76),
+                 "RealRate  —  Explainable Financial AI", C_WHITE, pil_fnt("bold", 26))
+
+        bw = 7
+        for rect in [(0, 0, W, bw), (0, H - bw, W, H), (0, 0, bw, H), (W - bw, 0, W, H)]:
+            dr.rectangle(rect, fill=C_WHITE)
+        return cv
+
+    paths = []
+    for dark, suffix in [(True, "dark"), (False, "light")]:
+        img  = make(dark)
+        path = os.path.join(INDUSTRY_DIR, f"featured_image_{suffix}.png")
+        img.convert("RGB").save(path)
+        print(f"  Featured image ({suffix}): {os.path.basename(path)}")
+        paths.append(path)
+    return paths[0], paths[1]
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# BUILD CHARTS
+# ══════════════════════════════════════════════════════════════════════════════
+print("Building charts…")
+p_top = chart_top_n(
+    RANKING_2026, MARKET_AVG,
+    "<DISPLAY_NAME> 2026 — Selected Rankings by ECR",
+    CHART_DIR, "top_ranking.png", top3=3,
+)
+p_hist = chart_ecr_history(
+    HIST, ECR_HIST_SERIES,
+    "ECR Evolution — Top-3 Companies, Marketing Years 2024–2026",
+    CHART_DIR,
+)
+p_mkt = chart_market_stats(
+    MKT_YEARS, MKT_AVGS,
+    "<DISPLAY_NAME> — Market Average ECR by Year",
+    CHART_DIR,
+)
+eff_charts = {co: chart_effects(co, EFFECTS[co], ECR_ABOVE[co], CHART_DIR) for co in IDS}
+
+# ══════════════════════════════════════════════════════════════════════════════
+# DOWNLOAD LOGOS + FEATURED IMAGES
+# ══════════════════════════════════════════════════════════════════════════════
+print("\nDownloading company logos…")
+download_logos(IDS, "<ARCHIVE_SLUG>", CHART_DIR)
+p_feat_dark, p_feat_light = create_featured_images()
+
+# ══════════════════════════════════════════════════════════════════════════════
+# DOWNLOAD SVGs
+# Graph assignment (per CLAUDE.md rotation):
+#   Co1 → Causal ECR graph (IME_{cid}.svg)
+#   Co2 → Strengths & Weaknesses over time ({cid}_strength_weakness.svg)
+#   Co3 → <GRAPH3_TYPE> (per rotation in CLAUDE.md)
+# Industry: feature_importance.svg, regression_2025.svg
+# ══════════════════════════════════════════════════════════════════════════════
+print("\nDownloading SVGs…")
+causal_svg, sw_svg, co3_svg = {}, {}, {}
+for co, cid in IDS.items():
+    causal_svg[co] = download_svg(f"{BASE_URL}/graphs/IME_{cid}.svg",
+                                  f"causal_{cid}.svg", CHART_DIR)
+    sw_svg[co]     = download_svg(
+        f"{BASE_URL}/plot_over_time/{cid}_strength_weakness.svg",
+        f"sw_{cid}.svg", CHART_DIR)
+    co3_svg[co]    = download_svg(
+        f"{BASE_URL}/backtesting_correlation/regression_{cid}.svg",
+        f"reg_{cid}.svg", CHART_DIR)
+
+feat_imp_svg = download_svg(
+    f"{BASE_URL}/feature_importance/feature_importance.svg",
+    "feat_importance.svg", CHART_DIR)
+reg_ind_svg  = download_svg(
+    f"{BASE_URL}/backtesting_correlation/regression_2025.svg",
+    "reg_industry.svg", CHART_DIR)
+
+print("\nConverting SVGs to PNG…")
+causal  = convert_svgs_to_png(causal_svg)
+sw_plot = convert_svgs_to_png(sw_svg)
+co3     = convert_svgs_to_png(co3_svg)
+misc    = convert_svgs_to_png({"feat_imp": feat_imp_svg, "reg_ind": reg_ind_svg})
+feat_imp_png = misc["feat_imp"]
+reg_ind_png  = misc["reg_ind"]
+
+# ══════════════════════════════════════════════════════════════════════════════
+# BUILD DOCX
+# ══════════════════════════════════════════════════════════════════════════════
+print("\nBuilding DOCX…")
+doc = Document()
+set_doc_margins(doc)
+
+if p_feat_dark and os.path.exists(p_feat_dark):
+    p = doc.add_paragraph()
+    p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    p.add_run().add_picture(p_feat_dark, width=Inches(6.2))
+    doc.add_paragraph()
+
+ARTICLE_TITLE = "<DISPLAY_NAME> Rankings 2026: TODO"
+SUBTITLE      = "TODO subtitle"
+
+tp = doc.add_paragraph()
+tp.alignment = WD_ALIGN_PARAGRAPH.CENTER
+tr = tp.add_run(ARTICLE_TITLE)
+tr.font.size = Pt(21); tr.bold = True
+tr.font.color.rgb = RGBColor(0x01, 0x67, 0x9b)
+
+sp = doc.add_paragraph()
+sp.alignment = WD_ALIGN_PARAGRAPH.CENTER
+sr = sp.add_run(SUBTITLE)
+sr.font.size = Pt(13); sr.italic = True
+sr.font.color.rgb = RGBColor(0x3e, 0xba, 0xcd)
+
+add_divider(doc)
+doc.add_paragraph()
+
+add_heading(doc, "Introduction", 1)
+add_body(doc, "TODO: write introduction paragraph.")
+
+add_heading(doc, "2026 Rankings at a Glance", 1)
+add_body(doc, "TODO: write rankings overview.")
+add_png(doc, p_top, "Figure 1 — <DISPLAY_NAME> 2026: Selected rankings by ECR. Source: RealRate Archive.")
+
+# TODO: add company profiles, industry analysis, market stats, notable movers, takeaway
+
+# ══════════════════════════════════════════════════════════════════════════════
+# SAVE DOCX
+# ══════════════════════════════════════════════════════════════════════════════
+docx_path = os.path.join(INDUSTRY_DIR, "<SAFE_NAME>_Rankings_2026.docx")
+doc.save(docx_path)
+print(f"\nDOCX saved: {docx_path}")
+
+WEBSITE_TITLE       = "<DISPLAY_NAME> Rankings 2026: TODO"
+WEBSITE_META_TITLE  = "<DISPLAY_NAME> Rankings 2026 | RealRate ECR Analysis"
+WEBSITE_META_DESC   = "TODO meta description."
+WEBSITE_DECK        = "TODO deck."
+WEBSITE_HIGHLIGHTED = "TODO highlighted paragraph."
+LINKEDIN_POST       = "TODO LinkedIn post."
+TITLES_MD = f"""# Title & Copy Variants — <DISPLAY_NAME> Rankings 2026\n\n## DOCX / PDF\n**Title:** {ARTICLE_TITLE}\n**Subtitle:** {SUBTITLE}\n"""
+
+save_text_files(
+    INDUSTRY_DIR,
+    title=WEBSITE_TITLE, meta_title=WEBSITE_META_TITLE,
+    meta_desc=WEBSITE_META_DESC, deck=WEBSITE_DECK,
+    highlighted_desc=WEBSITE_HIGHLIGHTED, url_slug="/<ARCHIVE_SLUG>-rankings-2026",
+    linkedin_post=LINKEDIN_POST, titles_md=TITLES_MD,
+)
+
+print("\nGenerating PDF…")
+generate_pdf(docx_path, os.path.join(INDUSTRY_DIR, "<SAFE_NAME>_Rankings_2026.pdf"))
+print("\nDone. Output folder:", INDUSTRY_DIR)
 ```
 
-## How to Use
-Run Claude Code in this directory and specify:
-- `[ADD_INDUSTRY]` — the industry subdirectory slug (e.g., `motors`, `computers`, `software`, `food`, `petroleum`, `advertising`)
-- `[ADD COUNTRY AND INDUSTRY]` — plain-English name for the intro paragraph (e.g., "US Motor Industry")
+---
 
-Claude will auto-resolve:
-- `CURRENT_YEAR` → the current calendar year (today's date is available in context)
-- `PREVIOUS_YEAR` → CURRENT_YEAR − 1 (balance sheet year used in the archive URLs)
+### `run <industry-folder>`
+Run the `generate_report.py` for an existing industry.
 
-## Article Generation Prompt
+**Example:** `/industry-ranking-reports run "US Brokers"`
 
-You are an experienced rating journalist, creating a [CURRENT_YEAR] rating article. You are being provided with the RealRate rating results on [CURRENT_YEAR] for the marketing year [CURRENT_YEAR].
-
-**Background:**
-
-Note that we use the "marketing year" ([CURRENT_YEAR]), while in our technical base data in https://realrate-archive.com/, we use the "balance sheet year" ([PREVIOUS_YEAR]). The reason is that the delay in publishing the annual reports is based on the balance sheet years. They are related like this: marketing year = balance sheet year + 1.
-
-Never use any other websites, e.g., realrate.ai and other. Only fetch this website to get data: https://www.realrate-archive.com/
-
-The ECR (Economic Capital Ratio) is the "final" variable in which we are interested. All "effects" are measured with respect to that final variable. The ECR is the economic value of the company divided by the sum of its assets in order to make big and small companies comparable.
+**Steps:**
+1. Resolve the script path: `report (2026)/<industry-folder>/generate_report.py`. If it doesn't exist, list the available folders under `report (2026)/` and ask the user to pick one. Also accept a partial/case-insensitive match (e.g. `brokers` → `US Brokers`).
+2. Run: `python "report (2026)/<industry-folder>/generate_report.py"`
+3. On success: list the output files created (DOCX, PDF, featured images).
+4. On failure: show the full traceback and diagnose the cause. If `ModuleNotFoundError: rr_shared`, check that the script is exactly 3 directory levels deep from the project root (`report (2026)/<Industry>/generate_report.py`).
 
 ---
 
-### Data Sources
+### `fetch <archive-slug> [year]`
+Fetch and summarize ranking data from the RealRate archive.
 
-**Technical base data with sub-links:**
+**Example:** `/industry-ranking-reports fetch us_food` or `/industry-ranking-reports fetch us_air 2024`
 
-General archive: https://realrate-archive.com/
+**Steps:**
+1. Fetch `https://www.realrate-archive.com/<archive-slug>/<year>/website-ranking.json` (default year: `2025`).
+2. Display:
+   - **Top 10** — rank, name, ECR (`val`), company_id, rank change
+   - **Market stats** — average, std dev, min, max ECR across all companies
+   - **Notable movers** — companies that shifted ±5 positions or more
+3. For top-3 companies, show `company_details` summary and available graph URLs.
+4. Cross-check top-3 names and ECR values against `https://www.realrate-archive.com/<archive-slug>/qa/`. Report any discrepancies.
+5. If no year was specified, also probe `2024` and `2023` to report which years have data.
 
-For this report, limit yourself to the following directory and its subdirectories:
-`https://www.realrate-archive.com/[ADD_INDUSTRY]/`
+**Output format:**
+```
+── <archive-slug> / Balance Sheet Year <year> ──────────────
 
-**Subdirectory in HTML format:**
-`https://www.realrate-archive.com/[ADD_INDUSTRY]/qa/`
-Since this is in HTML, you will struggle to interpret the table correctly. Therefore, in case of any inconsistencies, use the following JSON data and not this HTML data.
+Top 10:
+  #1  <name>  ECR <val>%  (id: <company_id>)  change: <rank_change>
+  ...
 
-**Subdirectory in JSON format** (balance sheet year [PREVIOUS_YEAR]):
-`https://www.realrate-archive.com/[ADD_INDUSTRY]/[PREVIOUS_YEAR]/website-ranking.json`
-Within that file, there is details about companies in `company_details` and the single companies can be differentiated by `company_id` or by `name`.
+Market stats:
+  Average ECR:  <avg>%   Std dev: <std>%   Min / Max: <min>% / <max>%
 
-**Subdirectories in JSON format for earlier years** (replace YYYY with the corresponding balance sheet year):
-`https://www.realrate-archive.com/[ADD_INDUSTRY]/YYYY/website-ranking.json`
+Notable movers (±5 positions):
+  <name>  <old_rank> → <new_rank>
 
-There are also other industries available via INDUSTRY, but ignore those:
-`https://www.realrate-archive.com/INDUSTRY/YYYY/website-ranking.json`
+Top-3 details:
+  [1] <name>
+      <company_details summary>
+      Graphs: causal=<url>  sw=<url>  fd=<url>  reg=<url>
 
-> When it comes to ECR and ranking position, only use numbers from https://realrate-archive.com/  
-> Data from blog posts or press releases will be outdated since we are updating our rating model and recomputing the past.
+HTML cross-check: ✓ consistent  /  ✗ discrepancy: <details>
 
-Whenever using data from the HTML directory, first double-check your numbers by cross-checking with the JSON directories.
+Available years: 2025 ✓  2024 ✓  2023 ✗
+```
 
----
-
-### Main Tasks
-
-**1. HTML Ranking Extraction**
-From `https://www.realrate-archive.com/[ADD_INDUSTRY]/qa/`:
-- Extract the ranking "Ranks across the years" with company names, ranking positions, ECR values ("val"), and rank changes.
-- Create an accurate graph for the first three companies, with names, ECR, and rank.
-- Report if you were able to cross-check these HTML data with the JSON data.
-
-**2. JSON Top-3 Graph**
-From `https://www.realrate-archive.com/[ADD_INDUSTRY]/[PREVIOUS_YEAR]/website-ranking.json`:
-- Output a graph with the top 3 companies for the most recent year, including name, ECR, and rank.
-- Confirm that the data displayed is from the JSON source only.
-- Compare information from Task 1 and Task 2 and check if they are consistent.
-
-**3. Multi-Year Evolution**
-- Gather data for all available years.
-- For the top 3 companies, show their evolution over time with respect to rank and ECR.
-
-**4. Company Details**
-- Extract [PREVIOUS_YEAR] `company_details` in the JSON.
-- Check the important information for the top 3 companies and add a short description.
-
-**5. Causal Graphs**
-- From the JSON, extract and open [PREVIOUS_YEAR] `graph_url` for the top 3 companies.
-- Interpret the graphs semantically; if not readable, get from: `https://www.realrate-archive.com/[ADD_INDUSTRY]/[PREVIOUS_YEAR]/graphs/`
-- If that doesn't work, extract `report_url` in JSON and interpret the graph image attached to it.
-- Add a description.
-
-> **ECR causality note:** Economic Capital is positively influenced by equity and profits. Equity = assets − liabilities. Profit = income − costs. Therefore: higher assets → positive; higher liabilities → negative; higher income → positive; higher costs → negative.
-
-**6. Company-Specific Plots**
-From the JSON file, for the top 3 companies:
-- Extract [PREVIOUS_YEAR] `feature_distribution_plot`, `main_keyfigs_over_time_plot`, and `regression_plot`.
-- Interpret these graphs semantically, insert them, and add a short description below each.
-
-**7. Industry-Level Graphs**
-Extract and open [PREVIOUS_YEAR] `feature_distribution`, `feature_importance`, and `backtesting_correlation` from:
-`https://realrate-archive.com/[ADD_INDUSTRY]/[PREVIOUS_YEAR]/`
-- For the overall companies, interpret these graphs semantically and add a short description below.
-
-**8. Strengths & Weaknesses**
-- Characterize the top 3 companies by strengths and weaknesses.
-- Extract `report_url` and `report_text` from the JSON, explain it.
-- Extract `strength_weakness_over_time_plot` from the JSON; interpret and add a description.
-- Extract `table_records`, `input_variables`, and `output_variables` from the JSON and interpret them briefly.
-
-**9. Notable Movers**
-- Identify notable companies moving up or down significantly.
-
-**10. Market Statistics**
-- Prepare statistics for the total market: average ECR, standard deviation of ECR, average change of ECR, etc.
-
-**11. Balance Sheet & P&L Characterization**
-- Characterize the top 3 companies in terms of balance sheet (assets and liabilities) and profit & loss (revenues, costs, net income).
-- See `input_variables` and `output_variables` (in million dollars) in the JSON directory.
-
-**12. Effects Characterization**
-- Characterize the top 3 companies in terms of their "effects."
-- An effect is the amount by which the variable increases (positive) or decreases (negative) the final ECR by deviating from the industry average.
-- See variables in `shrinked_graph_json` and `table_records` (in ECR percentage points) in the JSON directory.
-
-**13. SVG Graph Interpretation**
-- Read and extract all AI Prompts from: https://github.com/realrate/AI-Prompts/wiki/Graph-Interpretation-and-Prompts
-- Interpret the uploaded SVG graphs, convert to PNG format, and embed/attach them in the DOCX file.
-- Add a short description for the top 3 companies and the overall industry.
-
-**Graph interpretation guidelines:**
-
-Examine each SVG graph and provide:
-- Its type and a one-sentence guide on how to read it.
-- Key trends, patterns, comparisons, or outliers.
-- A concise analysis of what the data shows or implies.
-
-Specific instructions per graph type:
-
-- **Feature Distribution (bar chart):** Identify features on the X-axis and their frequencies/counts on the Y-axis. Highlight the most and least common features, note outliers, and summarize what the distribution indicates about feature prevalence.
-- **Feature Importance Graph:** Identify features on X-axis and importance scores on Y-axis. Highlight the most and least important features, note notable differences or patterns, and analyze which features most influence the model.
-- **Regression / Backtesting Correlation (scatter/line plot):** Identify variables on X- and Y-axes. Describe trends, patterns, or outliers; note the strength and direction of correlations; summarize what the plot indicates about the relationship between variables.
-
-> **Distinguishing industry vs. company-specific graphics:**
-> - Feature distribution plot: industry-specific = no black arrow; company-specific = black arrow pointing to the specific company's effect.
-> - Correlation plot: industry-specific = no red dot; company-specific = red dot highlighting the company's position.
-> - Feature importance graph: only available as industry-specific.
-
-**14. Causal Graph Interpretation**
-
-You are given a causal graph of a company's ECR, which measures financial strength compared to the market average. Interpret and summarize the graph for non-technical people. Do not just list strengths and weaknesses — write a verbose text.
-
-Structure:
-- **About the company:** Short intro in plain words.
-- **Financial Strength (ECR):** State how far above/below average.
-- **Strengths:** List the biggest positive factors; explain how they flow into stronger ECR.
-- **Weaknesses:** List the biggest negative factors; explain their impact.
-- **Manager's Takeaway:** One-paragraph summary in plain business language.
-
-Example paragraph:
-> The relative strengths and weaknesses of [company] are analyzed with respect to the market average, including all of its competitors. We analyzed all variables having an effect on the Economic Capital Ratio. The greatest strength of [company] compared to the market average is the variable [strength], increasing the Economic Capital Ratio by xx% points. The greatest weakness of [company] is the variable [weakness], reducing the Economic Capital Ratio by xx% points. In total, the company's Economic Capital Ratio is xx% points above the market average.
-
-**Causal graph special rules (for correct interpretation — do not narrate these rules in the article):**
-- This graph is for a single company.
-- It is about ECR (Economic Capital Ratio), representing financial strength.
-- Nodes represent important financial variables.
-- Node numbers do NOT represent absolute values — they represent **effects** (how this node changes ECR by being above or below the industry average).
-- Do not talk about increase/decrease of variables, but instead that a variable is **better or worse than the benchmark average**.
-- The last node, Economic Capital Ratio, shows by how much percentage points the ECR of this company is above or below the market average.
-- Edges show causal relationships.
-- Red or green paths show the causal chains leading to high or low financial strength.
+**Notes:**
+- Only fetch from `https://www.realrate-archive.com/` — no other websites.
+- ECR values in the JSON are stored under the `val` key per company entry.
+- If the JSON returns 404, report it and suggest checking the slug spelling.
 
 ---
 
-### Final Article
+## Quick reference
 
-Based on these data and preparations, write an interesting, illustrated, and visually appealing article on that industry. Follow these instructions:
-
-- The article should cover the marketing year [CURRENT_YEAR], but just call it simply [CURRENT_YEAR].
-- The output MUST contain relevant graphs.
-- Focus on all the main tasks above.
-- Also write descriptions of why these companies did well.
-- The output format should be figures with descriptions. Confirm that figures have been directly included and attached.
-- Gather all updated data from the HTML and JSON sources as outlined.
-- Write a 50-word paragraph on the [ADD COUNTRY AND INDUSTRY] with the latest revenue figures. Include this paragraph in the appropriate place.
-- **Limit the report to 1600 words.**
-- Write in an experienced journalistic style, not too technical, targeting a general public audience.
-- Write in US English.
-- Please create the best title and subtitle.
-- After completion, remove all citations, website sources, and links in the DOCX file.
-- Send a downloadable DOCX file.
-
-**Corporate color scheme for all graphs:**
-- Background: white
-- Grid lines: black
-- RealRate light blue: `#3DBACD`
-- RealRate dark blue: `#00679B`
-- RealRate black: `#000000`
-- RealRate grey: `#AFAFAF`
-- Semantic positive: `#5BB37F`
-- Semantic negative: `#C04A3A`
-
-**Embed and insert all uploaded graphs in the DOCX.**
-
-Do not ask any follow-up questions; fulfill the task as best as possible.
-
----
-
-## generate_report.py — Featured Image Design (1080×1080)
-
-The script produces two variants (`featured_image_dark.png`, `featured_image_light.png`) via PIL/Pillow.
-
-### Layout (top → bottom)
-| Zone | Y range | Content |
-|------|---------|---------|
-| Accent stripe | 0–10 | Solid `#3DBACD` |
-| Logo | 22–98 | RealRate logo **centered** |
-| Titles | 170–430 | Industry name · "Rankings YEAR" · subtitle · divider |
-| Company cards | 444–680 | 3 × white rounded-rect with logo + gold/silver/bronze medal |
-| Info strip | ~752 | Thin line + "Annual Rankings · N Companies · Balance Sheet Year YYYY" |
-| Footer | H-152 → H | Dark background + teal top bar + bold tagline |
-| Border | all edges | 7 px white frame |
-
-### Logo treatment
-- **Dark version:** `RealRate_logo_horizontal_white.png` pasted directly on background (no card)
-- **Light version:** `RealRate_logo_horizontal.png` on a subtle semi-transparent white rounded card
-
-### Background
-- **Dark:** Multi-stop vertical gradient (deep navy → mid navy → very deep navy) + fine diagonal lines at α=7 + teal angular accent polygon bottom-right + counter-accent bottom-left
-- **Light:** Near-white to very light steel-blue gradient + fine diagonal lines at α=5 + soft teal accent polygon
-
-### Footer text
-`RealRate  —  Explainable Financial AI` (bold, 26 pt, white)
-
-### Company graph assignment
-See [Cover Design Rules → Graph assignment per company](#cover-design-rules-apply-to-every-generate_report_industrypy) below for the full assignment table and Company 3 rotation.
-
-> Note: `{cid}_main_keyfigs.svg` returns 404 on the current archive — use the assignment table instead.
-
----
-
-## Cover Design Rules (apply to every generate_report_{industry}.py)
-
-### Text contrast rule
-- **"Rankings YEAR" text must always be `C_WHITE` in dark mode** — never use the accent/teal color (`C_TEAL`) as the text color, because if a pill or background uses the same teal fill it becomes invisible.
-- Do not add a teal-filled pill behind "Rankings YEAR" in dark mode. Either use no pill, or use a dark semi-transparent overlay so white text remains readable.
-
-### Per-industry variation (required — never reuse across industries)
-Each `generate_report_{industry}.py` must define its own unique cover via a `make(dark)` function with:
-- Different background gradient colors
-- Different geometric overlay (diagonal lines vs orthogonal grid vs other pattern)
-- Different industry-specific motif element
-- Different accent polygon placement
-
-| Industry | Dark background | Light background | Overlay | Motif |
-|----------|----------------|-----------------|---------|-------|
-| Food (`generate_report.py`) | Deep navy (`#04111E` → `#091F35` → `#020B15`) | Near-white steel-blue | Fine diagonal lines α=7 | Right-heavy accent polygons |
-| Finance Services (`generate_report_finance_services.py`) | Deep teal-black (`#04161C` → `#062630` → `#030E12`) | Mint-green | Orthogonal grid 72px + rising stock ticker line | Left vertical accent bars |
-| Air (`generate_report_air.py`) | Midnight blue-indigo (`#07091E` → `#0B1034` → `#040612`) | Sky blue (`#EDF6FF` → `#DCF0FF` → `#C8E8FF`) | Radar arcs from bottom-left corner + ascending contrail arc | Top-left + bottom-right corner accents |
-| Brokers (`generate_report_brokers.py`) | Deep slate-indigo (`#0A0A1C` → `#100D2C` → `#05040E`) | Silver-pearl (`#F5F6FF` → `#E4E8FF`) | Candlestick bars (trading chart pattern) | Top-right + bottom-left corner accents + ascending trend line |
-| Motors (`generate_report.py` in US Motors/) | Deep carbon-red (`#13080C` → `#1C0E12` → `#080509`) | Warm off-white (`#F5F0EC` → `#ECE6E0`) | Horizontal speed/motion lines + double racing stripe near bottom | Top-left + bottom-right corner accents |
-
-### Company logos on cover cards (always required)
-- Download logos BEFORE calling `create_featured_images()` so they appear on the cover.
-- URL pattern: `https://www.realrate-archive.com/{industry}/logos/{cid}_256x256.png` (try `_256x256.png` first, then plain `.png`)
-- If logo unavailable: initials badge fallback — teal circle, 3-letter initials, white bold text.
-- In dark mode cards: add a white semi-transparent rounded backing behind the logo so it's visible against dark card backgrounds.
-
-### Graph assignment per company (rotate per industry — never repeat)
-| Company | Graph 1 | Graph 2 |
-|---------|---------|---------|
-| #1 | Causal ECR graph (`IME_{cid}.svg`) | ECR Drivers bar chart |
-| #2 | Strengths & Weaknesses over time (`{cid}_strength_weakness.svg`) | ECR Drivers bar chart |
-| #3 | **Varies by industry** (see below) | ECR Drivers bar chart |
-
-**Company 3 graph rotation (alternates by industry creation order):**
-- Odd-order industries (Food, Air, Motors…): Backtesting correlation scatter (`regression_{cid}.svg`, red dot = company)
-- Even-order industries (Finance Services, Brokers…): Feature distribution plot (`feature_distribution_{cid}.svg`, black arrow = company)
+| Sub-command | Args | Purpose |
+|-------------|------|---------|
+| `new` | `<dir-slug> <archive-slug> <display-name>` | Scaffold a new industry report |
+| `run` | `<industry-folder>` | Run an existing report generator |
+| `fetch` | `<archive-slug> [year]` | Fetch & summarize archive data |
