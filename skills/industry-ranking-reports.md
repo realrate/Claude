@@ -1,6 +1,6 @@
 # /industry-ranking-reports — RealRate Ranking Report Toolkit
 
-All-in-one toolkit for RealRate ranking reports. Supports three sub-commands:
+All-in-one toolkit for RealRate ranking reports. Supports four sub-commands:
 
 **Usage:** `/industry-ranking-reports <sub-command> [args]`
 
@@ -8,8 +8,96 @@ All-in-one toolkit for RealRate ranking reports. Supports three sub-commands:
 
 ## Sub-commands
 
+### `generate <dir-slug> <archive-slug> <display-name>`
+**Full end-to-end report generation in one command.** Fetches all data, writes the complete 1600-word article, fills every data field (HIST, EFFECTS, FINANCIALS, titles, LinkedIn post), writes `generate_report.py` with no TODOs, and runs it immediately.
+
+**Example:** `/industry-ranking-reports generate "US Pharma" us_pharma "U.S. Pharmaceutical Industry"`
+
+**Steps — execute ALL before writing a single line of code:**
+
+#### Phase 1 — Fetch all data (run these fetches in parallel where possible)
+
+1. **Current year JSON** — `https://www.realrate-archive.com/<archive-slug>/2025/website-ranking.json`
+   - Extract: every company with rank, name, ECR (`val`), company_id, rank_change
+   - Extract market_avg field
+   - For the **top-3 companies**, extract full `company_details`:
+     - `report_text` — summary of greatest strength and weakness (in ECR pp)
+     - `table_records` — all variables with their ECR effects (pp) → this becomes `EFFECTS`
+     - `shrinked_graph_json` — variable effects for the causal graph interpretation
+     - `input_variables` and `output_variables` — balance sheet / P&L figures in millions → this becomes `FINANCIALS`
+     - `graph_url`, `report_url`, `feature_distribution_plot`, `main_keyfigs_over_time_plot`, `regression_plot`, `strength_weakness_over_time_plot`
+
+2. **Historical JSONs** — fetch in parallel:
+   - `https://www.realrate-archive.com/<archive-slug>/2024/website-ranking.json`
+   - `https://www.realrate-archive.com/<archive-slug>/2023/website-ranking.json`
+   - For each year: find ECR (`val`) and market_avg for each of the 3 top companies (by company_id). If a company is absent that year, record `None`.
+
+3. **QA page** — `https://www.realrate-archive.com/<archive-slug>/qa/`
+   - Extract the full multi-year ranking table: all companies, all years, ranks, and ECR values.
+   - Identify notable movers (companies that shifted ±5 positions between 2025 and 2024).
+   - Cross-check top-3 names and ECR against the 2025 JSON. Report any discrepancy.
+
+#### Phase 2 — Interpret SVG graphs (required for article text)
+
+Download and interpret (do not skip):
+- Causal ECR graphs: `https://www.realrate-archive.com/<archive-slug>/2025/graphs/IME_{cid}.svg` for each top-3 company
+- Feature importance: `https://www.realrate-archive.com/<archive-slug>/2025/feature_importance/feature_importance.svg`
+- Backtesting correlation: `https://www.realrate-archive.com/<archive-slug>/2025/backtesting_correlation/regression_2025.svg`
+
+Use the graph interpretation guidelines from CLAUDE.md to write a 2–4 sentence description for each graph that will go directly into the article.
+
+#### Phase 3 — Write the complete article (1600 words, journalistic style)
+
+Write all sections now, before touching the script. Use real numbers from the fetched data everywhere — no placeholder text. Sections:
+
+1. **Introduction** (~60 words) — industry overview with latest total revenue or market size figure; set the context for the 2026 rankings.
+2. **2026 Rankings at a Glance** (~80 words) — name the top 3, their ECRs, how far above market average.
+3. **ECR Evolution Over Time** (~80 words) — describe multi-year trends for the top 3 using HIST data.
+4. **Company Profile #1** (~200 words) — about the company, its ECR, causal graph interpretation (strengths/weaknesses by name with exact pp figures from `table_records`), financial highlights from `output_variables`.
+5. **Company Profile #2** (~200 words) — same structure.
+6. **Company Profile #3** (~200 words) — same structure.
+7. **Industry-Level Analysis** (~120 words) — interpret feature_importance.svg and regression_2025.svg with real observations.
+8. **Market Statistics** (~80 words) — market avg ECR, std dev, min/max, trend over years.
+9. **Notable Movers** (~80 words) — name movers, direction, and why.
+10. **Takeaway** (~100 words) — closing paragraph on industry outlook.
+
+Also write:
+- **Article title** — compelling, specific (e.g. "U.S. Real Estate Rankings 2026: AEI Funds Dominate as Real Estate Rebounds")
+- **Subtitle** — one punchy line
+- **Website meta title** (≤60 chars) and **meta description** (150–160 chars)
+- **Deck** — 1–2 sentence website intro
+- **LinkedIn post** — 150 words, engaging, with 3–5 hashtags
+
+#### Phase 4 — Write and run the script
+
+1. **Determine cover design** — check CLAUDE.md's Per-industry variation table. If not listed, choose the next unique design: never reuse an existing gradient/overlay. Add the new entry to the table in CLAUDE.md after writing the script.
+2. **Determine Company 3 graph** — from CLAUDE.md's rotation (odd = backtesting regression, even = feature distribution).
+3. **Write `report (2026)/<dir-slug>/generate_report.py`** using the template from the `new` command, but with ALL fields filled in:
+   - `RANKING_2026` — all top companies (minimum top 5 if available, top 3 at minimum)
+   - `MARKET_AVG` — from JSON
+   - `HIST` — all available years (skip a year only if the company truly has no data)
+   - `EFFECTS` — complete dict from `table_records` for each company (all variables, not just top 2)
+   - `ECR_ABOVE` — computed from ECR − MARKET_AVG
+   - `FINANCIALS` — from `output_variables`
+   - `MKT_YEARS` / `MKT_AVGS` — historical market averages from each year's JSON
+   - All `add_body(doc, "...")` calls — filled with the real article text from Phase 3
+   - `ARTICLE_TITLE`, `SUBTITLE` — from Phase 3
+   - `WEBSITE_TITLE`, `WEBSITE_META_TITLE`, `WEBSITE_META_DESC`, `WEBSITE_DECK`, `WEBSITE_HIGHLIGHTED`, `LINKEDIN_POST` — from Phase 3
+   - Industry-specific cover design implemented in `create_featured_images()`
+   - **Zero `TODO:` strings** in the final script
+4. **Run the script** immediately: `python "report (2026)/<dir-slug>/generate_report.py"`
+5. On success: list output files. On failure: diagnose and fix before reporting done.
+6. **Update CLAUDE.md** — add the new industry to the Per-industry variation table with its gradient colors, overlay, and motif.
+
+**Cover design rules (always enforce):**
+- Never reuse the same background gradient or overlay as an existing industry — check CLAUDE.md's Per-industry variation table first.
+- "Rankings YEAR" text must always be `C_WHITE` in dark mode — never teal.
+- Download logos before calling `create_featured_images()` using `download_logos(IDS, "<archive-slug>", CHART_DIR)`.
+
+---
+
 ### `new <dir-slug> <archive-slug> <display-name>`
-Scaffold a new industry report directory and `generate_report.py`.
+Scaffold a new industry report directory and `generate_report.py` (with TODOs — use `generate` instead for a complete report).
 
 **Example:** `/industry-ranking-reports new "US Motors" us_motors "U.S. Motor Industry"`
 
@@ -463,6 +551,7 @@ Available years: 2025 ✓  2024 ✓  2023 ✗
 
 | Sub-command | Args | Purpose |
 |-------------|------|---------|
-| `new` | `<dir-slug> <archive-slug> <display-name>` | Scaffold a new industry report |
+| `generate` | `<dir-slug> <archive-slug> <display-name>` | **Full end-to-end**: fetch all data, write complete article, run script |
+| `new` | `<dir-slug> <archive-slug> <display-name>` | Scaffold only (script with TODOs) |
 | `run` | `<industry-folder>` | Run an existing report generator |
 | `fetch` | `<archive-slug> [year]` | Fetch & summarize archive data |
