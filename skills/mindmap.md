@@ -23,21 +23,42 @@ The user invoked this command with: $ARGUMENTS
 | `nvidia` | Nvidia Corp. | US Semiconductors | 351% | #8/44 |
 | `tesla` | Tesla Inc. | US Motor | 135% | #9/38 |
 | `apple` | Apple Inc. | US Computers | 430% | #1/17 |
+| `harley` | Harley Davidson INC | US Motor | 147% | #5/38 |
 
 Use `all` to run every company in sequence.
 
 ## Instructions
 
 1. Parse $ARGUMENTS. Lowercase and trim each token.
-2. If no argument is given, list the supported companies and stop.
+2. If no argument is given, list the supported companies above and stop.
 3. If the argument is `all`, expand to the full company list above.
 4. For each company in the list:
-   - If not in the supported list, warn the user and skip.
-   - Otherwise run via Bash:
+   - Run via Bash:
      ```
      python gen_mindmap.py <company>
      ```
-5. After all runs, report which succeeded and which (if any) failed.
+   - `gen_mindmap.py` is the source of truth for supported companies. If it exits with an error, report the error message to the user and continue to the next company.
+   - On success, report the output path printed by the script (e.g. `Done (1920×1080): <path>`).
+5. After all runs, print a summary:
+   - ✓ succeeded: list company names
+   - ✗ failed: list company names with their error
+
+## Output locations
+
+Each company writes to its own subfolder inside the project directory:
+
+| Company | Subfolder |
+|---|---|
+| trilinc | *(root — no subfolder)* |
+| strata | `Strata Critical Medical/` |
+| hp | `HP Inc/` |
+| angi | `Angi Inc/` |
+| nvidia | `Nvidia Corp/` |
+| tesla | `Tesla Inc/` |
+| apple | `Apple Inc/` |
+| harley | `Harley Davidson INC/` |
+
+Files per company: `<company>-mindmap.png` (1920×1080) · `<company>-linkedin-post.txt`
 
 ## Automation scripts (run outside Claude)
 
