@@ -2,7 +2,7 @@
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 Set-Location $ScriptDir
 
-$COMPANIES = @("trilinc", "strata", "hp", "angi", "nvidia", "tesla", "apple")
+$COMPANIES = @("trilinc", "strata", "hp", "angi", "nvidia", "tesla", "apple", "harley")
 
 if ($args.Count -eq 0) {
     Write-Host "Usage: .\run_mindmaps.ps1 <company> [company2 ...] | .\run_mindmaps.ps1 all"

@@ -7,6 +7,7 @@ Usage:
   python gen_mindmap.py hp           # HP Inc.
   python gen_mindmap.py angi         # Angi Inc.
   python gen_mindmap.py nvidia       # Nvidia Corp.
+  python gen_mindmap.py harley       # Harley Davidson INC
 """
 import sys, math, base64, re, requests, urllib3, time, os
 from pathlib import Path
@@ -17,8 +18,8 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # ── Company selection ──────────────────────────────────────────────────────────
 COMPANY = sys.argv[1].lower() if len(sys.argv) > 1 else "trilinc"
-if COMPANY not in ("trilinc", "strata", "hp", "angi", "nvidia", "tesla", "apple"):
-    print(f"Unknown company '{COMPANY}'. Use: trilinc, strata, hp, angi, nvidia, tesla, apple"); sys.exit(1)
+if COMPANY not in ("trilinc", "strata", "hp", "angi", "nvidia", "tesla", "apple", "harley"):
+    print(f"Unknown company '{COMPANY}'. Use: trilinc, strata, hp, angi, nvidia, tesla, apple, harley"); sys.exit(1)
 
 # ── Constants ──────────────────────────────────────────────────────────────────
 W, H = 1920, 1080
@@ -27,12 +28,11 @@ BG = "#050B18"; GREY="#AFAFAF"; WH="#FFFFFF"
 AMBER="#F59E0B"; CYAN="#3DBACD"; LIME="#86EF60"; SKY="#60A5FA"
 EMER="#34D399"; PINK="#F472B6"; PURP="#A78BFA"; ORAN="#FB923C"
 TBLUE="#2563EB"; TAQUA="#0891B2"
-ACCENT = (EMER if COMPANY == "trilinc" else
-          SKY  if COMPANY in ("strata", "tesla") else
-          PINK if COMPANY == "angi"    else
-          LIME if COMPANY == "nvidia"  else
-          ORAN if COMPANY == "apple"   else
-          CYAN)
+_ACCENT_BY_COMPANY = {
+    "trilinc": EMER, "strata": SKY, "tesla": SKY, "angi": PINK,
+    "nvidia": LIME, "harley": AMBER, "apple": ORAN,
+}
+ACCENT = _ACCENT_BY_COMPANY.get(COMPANY, CYAN)
 
 CACHE_DIR = Path(__file__).parent / "img_cache"
 CACHE_DIR.mkdir(exist_ok=True)
@@ -63,12 +63,23 @@ def verify_ranking_url(industry_slug, fallback_year):
     print(f"  Ranking URL (fallback): {fallback}")
     return fallback
 
+def raster_mime(d):
+    if d[:5] == 'iVBOR': return 'image/png'
+    if d[:5] == 'UklGR': return 'image/webp'
+    if d[:4] == '/9j/':  return 'image/jpeg'
+    return None
+
+def is_raster_b64(d):
+    return raster_mime(d) is not None
+
+def cache_path(url, suffix=".cache"):
+    return CACHE_DIR / (base64.urlsafe_b64encode(url.encode()).decode()[:80] + suffix)
+
 def fetch_b64(url):
-    key = base64.urlsafe_b64encode(url.encode()).decode()[:80] + ".cache"
-    cf  = CACHE_DIR / key
+    cf = cache_path(url)
     if cf.exists():
         d = cf.read_text()
-        if d[:5] in ('iVBOR','UklGR') or d[:4] == '/9j/':
+        if is_raster_b64(d):
             return d
         print(f"  Cache invalid, re-fetching {url[-50:]}")
         cf.unlink()
@@ -76,7 +87,7 @@ def fetch_b64(url):
     r = requests.get(url, timeout=30, headers=HDRS, verify=False)
     r.raise_for_status()
     d = base64.b64encode(r.content).decode()
-    if not (d[:5] in ('iVBOR','UklGR') or d[:4] == '/9j/'):
+    if not is_raster_b64(d):
         raise ValueError(f"Not a raster image: {url[-40:]}")
     cf.write_text(d)
     return d
@@ -122,6 +133,7 @@ _ranking_cfg = {
     "nvidia":  ("us_semiconductors",   "2026"),
     "tesla":   ("us_motor",            "2026"),
     "apple":   ("us_computers",        "2025"),
+    "harley":  ("us_motor",            "2026"),
 }
 RANKING_URL = verify_ranking_url(*_ranking_cfg[COMPANY])
 
@@ -174,23 +186,23 @@ elif COMPANY == "tesla":
     B1_D    = try_wiki(["Elon Musk","Tesla Motors"], "Elon Musk")
     B2_D    = try_wiki(["Tesla Inc.","Tesla Gigafactory Shanghai","Tesla Model Y"], "Tesla Overview")
     B6_D    = try_wiki(["Tesla Cybertruck","Tesla Model Y","Tesla Model 3"], "Tesla Car")
-    LOGO_D  = try_fetch([
-        "https://www.tesla.com/apple-touch-icon.png",
-        "https://digitalassets.tesla.com/tesla-contents/image/upload/Logomark_Red_RGB.png",
-        "https://logo.clearbit.com/tesla.com",
-    ], "Tesla logo PNG")
-    if not LOGO_D:
-        svg_local = Path(__file__).parent / "Tesla Inc" / "tesla_t_logo.svg"
-        svg_url   = "https://upload.wikimedia.org/wikipedia/commons/b/bd/Tesla_Motors.svg"
-        svg_key   = base64.urlsafe_b64encode(svg_url.encode()).decode()[:80] + ".svgcache"
-        svg_cf    = CACHE_DIR / svg_key
-        try:
-            if svg_local.exists():
-                LOGO_SVG_D = base64.b64encode(svg_local.read_bytes()).decode()
-                print("  Tesla SVG logo OK (local)")
-            elif svg_cf.exists():
-                LOGO_SVG_D = svg_cf.read_text(); print("  Tesla SVG logo OK (cached)")
-            else:
+    LOGO_D  = None
+    svg_local = Path(__file__).parent / "Tesla Inc" / "tesla_t_logo.svg"
+    svg_url   = "https://upload.wikimedia.org/wikipedia/commons/b/bd/Tesla_Motors.svg"
+    svg_cf    = cache_path(svg_url, ".svgcache")
+    if svg_local.exists():
+        LOGO_SVG_D = base64.b64encode(svg_local.read_bytes()).decode()
+        print("  Tesla SVG logo OK (local)")
+    elif svg_cf.exists():
+        LOGO_SVG_D = svg_cf.read_text(); print("  Tesla SVG logo OK (cached)")
+    else:
+        LOGO_D = try_fetch([
+            "https://www.tesla.com/apple-touch-icon.png",
+            "https://digitalassets.tesla.com/tesla-contents/image/upload/Logomark_Red_RGB.png",
+            "https://logo.clearbit.com/tesla.com",
+        ], "Tesla logo PNG")
+        if not LOGO_D:
+            try:
                 time.sleep(1.2)
                 r = requests.get(svg_url, timeout=30, headers=HDRS, verify=False)
                 r.raise_for_status()
@@ -201,8 +213,8 @@ elif COMPANY == "tesla":
                     print("  Tesla SVG logo OK")
                 else:
                     print("  Tesla SVG logo: unexpected content")
-        except Exception as e:
-            print(f"  Tesla SVG logo fail: {e}")
+            except Exception as e:
+                print(f"  Tesla SVG logo fail: {e}")
 
 elif COMPANY == "apple":
     B1_D   = try_wiki(["Tim Cook","Apple Inc."], "Tim Cook")
@@ -211,6 +223,12 @@ elif COMPANY == "apple":
     LOGO_D = try_fetch([
         "https://www.realrate-archive.com/us_computers/logos/0000320193_256x256.png",
     ], "Apple logo")
+
+elif COMPANY == "harley":
+    B1_D   = try_wiki(["Jochen Zeitz","Harley-Davidson"], "Jochen Zeitz / Harley")
+    B2_D   = try_wiki(["Harley-Davidson","Milwaukee Wisconsin"], "Harley Overview")
+    B6_D   = try_wiki(["Harley-Davidson motorcycle","Softail","Harley-Davidson"], "Harley Motorcycle")
+    LOGO_D = try_fetch(["https://www.realrate-archive.com/us_motor/logos/0000793952_256x256.png"], "Harley logo")
 
 # ── SVG icon builders ──────────────────────────────────────────────────────────
 def svg_globe(cx, cy, col):
@@ -315,6 +333,16 @@ def svg_bolt(cx, cy, col):
         f'fill="{col}" opacity=".88"/>'
     )
 
+def svg_motorcycle(cx, cy, col):
+    return (
+        f'<circle cx="{cx-10}" cy="{cy+8}" r="6" fill="none" stroke="{col}" stroke-width="2" opacity=".9"/>'
+        f'<circle cx="{cx+10}" cy="{cy+8}" r="6" fill="none" stroke="{col}" stroke-width="2" opacity=".9"/>'
+        f'<path d="M{cx-16},{cy+6} L{cx-4},{cy-8} L{cx+4},{cy-8} L{cx+10},{cy+2}" fill="none" stroke="{col}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".88"/>'
+        f'<path d="M{cx+4},{cy-8} L{cx+16},{cy-10}" fill="none" stroke="{col}" stroke-width="2" stroke-linecap="round" opacity=".75"/>'
+        f'<path d="M{cx-6},{cy-8} L{cx-2},{cy-14} L{cx+2},{cy-14}" fill="none" stroke="{col}" stroke-width="1.5" stroke-linecap="round" opacity=".7"/>'
+        f'<line x1="{cx-10}" y1="{cy+2}" x2="{cx+10}" y2="{cy+2}" stroke="{col}" stroke-width="1.2" stroke-opacity=".4"/>'
+    )
+
 # ── Reusable SVG component builders ───────────────────────────────────────────
 def ecr_gauge(cx, cy, ecr_val, ecr_max, status, col=None):
     arc_r = 36
@@ -347,6 +375,18 @@ def pie_svg(cx, cy, r, segments, center_label, fsize=13):
     svg += f'<circle cx="{cx}" cy="{cy}" r="16" fill="url(#gEmr)"/>'
     svg += f'<text x="{cx}" y="{cy+5}" font-family="{F}" font-size="{fsize}" fill="{EMER}" text-anchor="middle" font-weight="700">{center_label}</text>'
     return svg
+
+def ecr_drivers_svg(cx, cy, plus_label, minus_label, ecr_pct, status, col=None):
+    c = col or EMER
+    return (
+        f'<text x="{cx}" y="{cy-22}" font-family="{F}" font-size="12" font-weight="700" fill="{c}" text-anchor="middle" opacity=".95" letter-spacing="1">ECR DRIVERS</text>'
+        f'<rect x="{cx-32}" y="{cy-9}" width="24" height="10" rx="2" fill="{LIME}" opacity=".78"/>'
+        f'<text x="{cx-20}" y="{cy}" font-family="{F}" font-size="12" font-weight="800" fill="#050B18" text-anchor="middle">{plus_label}</text>'
+        f'<rect x="{cx+8}" y="{cy-9}" width="24" height="10" rx="2" fill="#EF4444" opacity=".72"/>'
+        f'<text x="{cx+20}" y="{cy}" font-family="{F}" font-size="12" font-weight="800" fill="{WH}" text-anchor="middle">{minus_label}</text>'
+        f'<text x="{cx}" y="{cy+18}" font-family="{F}" font-size="22" font-weight="800" fill="{WH}" text-anchor="middle">{ecr_pct}</text>'
+        f'<text x="{cx}" y="{cy+32}" font-family="{F}" font-size="12" font-weight="700" fill="{c}" text-anchor="middle" opacity=".88">{status}</text>'
+    )
 
 # ── Shared helpers ─────────────────────────────────────────────────────────────
 def cedge(cx,cy,r,tx,ty):
@@ -418,7 +458,7 @@ def build():
     D3_CX,D3_CY,D3_R = 220,  623, 44
     D4_CX,D4_CY,D4_R = 1170, 185, 44
 
-    a(f'<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 {W} {H}" preserveAspectRatio="none">')
+    a(f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" preserveAspectRatio="none">')
     a('<defs>')
     a(f'''
   <radialGradient id="bg"  cx="50%" cy="45%" r="60%"><stop offset="0%" stop-color="#0D1F3E"/><stop offset="100%" stop-color="{BG}"/></radialGradient>
@@ -507,6 +547,13 @@ def build():
         a(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="10" fill="white" opacity=".97"/>')
         a(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="10" fill="none" stroke="{c}" stroke-width=".5" stroke-opacity="{op}"/>')
 
+    def hub_logo_png(x, y, data, size=64, box=72):
+        white_box(x, y, box, box, op=.3)
+        if data:
+            pad = (box - size) // 2
+            a(f'<image href="data:{raster_mime(data)};base64,{data}" x="{x+pad}" y="{y+pad}" width="{size}" height="{size}" preserveAspectRatio="xMidYMid meet"/>')
+        return bool(data)
+
     def draw_circle(cx, cy, r, col, grad, label, *,
                     img=None, clip_id=None, svg_icon=None, inner_svg=None, fallback="?"):
         a(f'<circle cx="{cx}" cy="{cy}" r="{r+16}" fill="{col}" opacity=".05" filter="url(#halo2)"/>')
@@ -517,8 +564,7 @@ def build():
             a(inner_svg)
         else:
             if img:
-                mime = 'image/png' if img.startswith('iVBOR') else 'image/webp' if img.startswith('UklGR') else 'image/jpeg'
-                a(f'<image href="data:{mime};base64,{img}" x="{cx-r}" y="{cy-r}" width="{r*2}" height="{r*2}" clip-path="url(#{clip_id})" preserveAspectRatio="xMidYMid slice"/>')
+                a(f'<image href="data:{raster_mime(img)};base64,{img}" x="{cx-r}" y="{cy-r}" width="{r*2}" height="{r*2}" clip-path="url(#{clip_id})" preserveAspectRatio="xMidYMid slice"/>')
             elif svg_icon:
                 a(svg_icon)
             else:
@@ -698,16 +744,8 @@ def build():
         snode(1560,440, 350,86,SKY,"gSky","Net Income: +$41.3M","First profitable year in company history","trending")
 
         # B5 — ECR ANALYSIS
-        ecr_drivers_svg = (
-            f'<text x="{B5_CX}" y="{B5_CY-22}" font-family="{F}" font-size="12" font-weight="700" fill="{EMER}" text-anchor="middle" opacity=".95" letter-spacing="1">ECR DRIVERS</text>'
-            f'<rect x="{B5_CX-32}" y="{B5_CY-9}" width="24" height="10" rx="2" fill="{LIME}" opacity=".78"/>'
-            f'<text x="{B5_CX-20}" y="{B5_CY}" font-family="{F}" font-size="12" font-weight="800" fill="#050B18" text-anchor="middle">+46pp</text>'
-            f'<rect x="{B5_CX+8}" y="{B5_CY-9}" width="24" height="10" rx="2" fill="#EF4444" opacity=".72"/>'
-            f'<text x="{B5_CX+20}" y="{B5_CY}" font-family="{F}" font-size="12" font-weight="800" fill="{WH}" text-anchor="middle">–81pp</text>'
-            f'<text x="{B5_CX}" y="{B5_CY+18}" font-family="{F}" font-size="22" font-weight="800" fill="{WH}" text-anchor="middle">123%</text>'
-            f'<text x="{B5_CX}" y="{B5_CY+32}" font-family="{F}" font-size="12" font-weight="700" fill="{EMER}" text-anchor="middle" opacity=".88">TOP-RATED</text>'
-        )
-        draw_circle(B5_CX,B5_CY,B5_R, EMER,"gEmr","ECR ANALYSIS", inner_svg=ecr_drivers_svg)
+        draw_circle(B5_CX,B5_CY,B5_R, EMER,"gEmr","ECR ANALYSIS",
+            inner_svg=ecr_drivers_svg(B5_CX,B5_CY,"+46pp","–81pp","123%","TOP-RATED"))
         snode(1462,620, 440,86,EMER,"gEmr","Greatest Strength: Operating Expenses","+46pp contribution to ECR","chart")
         snode(1462,716, 440,86,EMER,"gEmr","Greatest Weakness: Other Expenses","–81pp drag on ECR","trending")
         snode(1462,812, 440,86,EMER,"gEmr","ECR: 123%  ·  54pp above industry avg","Market average: 69%","star")
@@ -1045,6 +1083,68 @@ def build():
 
         ECR_VAL, RANK_VAL, STATUS_VAL = "430%", "#1 / 17", "Top-Rated"
 
+    elif COMPANY == "harley":
+
+        # B1 — JOCHEN ZEITZ / CEO
+        draw_circle(B1_CX,B1_CY,B1_R, AMBER,"gAmb","Jochen Zeitz  ·  CEO",
+            img=B1_D, clip_id="b1Clip", svg_icon=svg_motorcycle(B1_CX,B1_CY,AMBER))
+        snode(15,104, 420,86,AMBER,"gAmb","President &amp; CEO since February 2020","Architect of Hardwire 5-year strategy 2021–2025","star")
+        snode(15,240, 420,86,AMBER,"gAmb","Former CEO of Puma AG  ·  Sustainability champion","Led HD&apos;s pivot to premium focus &amp; profitability","chart")
+        snode(15,436, 420,86,AMBER,"gAmb","LiveWire EV spin-off 2022  ·  NYSE: LVWR","Selective market expansion  ·  Global brand depth","trending")
+
+        # B2 — COMPANY OVERVIEW
+        draw_circle(B2_CX,B2_CY,B2_R, CYAN,"gCyn","COMPANY OVERVIEW",
+            img=B2_D, clip_id="b2Clip", fallback="HD")
+        snode(460,14, 410,86,CYAN,"gCyn","Founded: 1903  ·  Milwaukee, Wisconsin","NYSE: HOG  ·  One of the world&apos;s oldest motorcycle brands","clock")
+        snode(1010,14, 430,86,CYAN,"gCyn","~5,900 employees worldwide","HQ: 3700 W Juneau Ave  ·  Milwaukee, WI 53208","building")
+
+        # B3 — INDUSTRY POSITION
+        draw_circle(B3_CX,B3_CY,B3_R, LIME,"gLme","INDUSTRY POSITION",
+            inner_svg=ecr_gauge(B3_CX,B3_CY,147,200,"TOP-RATED"))
+        snode(1474,  8, 430,86,LIME,"gLme","ECR: 147%  ·  Top-Rated  ·  RealRate","#5 of 38 US Motor companies","star")
+        snode(1474,104, 430,86,LIME,"gLme","45pp above industry avg (102%)","Top-Rated in US Motor 2026","chart")
+
+        # B4 — FINANCIAL HEALTH
+        draw_circle(B4_CX,B4_CY,B4_R, SKY,"gSky","FINANCIAL HEALTH",
+            inner_svg=balance_sheet_svg(B4_CX,B4_CY,"$12.1B"))
+        snode(1560,248, 350,86,SKY,"gSky","Revenue: $5.84B  ·  Net Income: $695M","Total Assets: $12.1B","dollar")
+        snode(1560,344, 350,86,SKY,"gSky","Stockholders&apos; Equity: $3.25B","Liabilities: ~$8.85B","chart")
+        snode(1560,440, 350,86,SKY,"gSky","ECR Strength: Stockholders&apos; Equity +30pp","ECR Weakness: Current Liabilities –18pp","trending")
+
+        # B5 — ECR ANALYSIS
+        draw_circle(B5_CX,B5_CY,B5_R, EMER,"gEmr","ECR ANALYSIS",
+            inner_svg=ecr_drivers_svg(B5_CX,B5_CY,"+30pp","–18pp","147%","TOP-RATED"))
+        snode(1462,620, 440,86,EMER,"gEmr","Greatest Strength: Stockholders&apos; Equity","+30pp contribution to ECR","chart")
+        snode(1462,716, 440,86,EMER,"gEmr","Greatest Weakness: Liabilities, Current","–18pp drag on ECR","trending")
+        snode(1462,812, 440,86,EMER,"gEmr","ECR: 147%  ·  45pp above industry avg","Market average: 102%  ·  #5 of 38 US Motor","star")
+
+        # B6 — HARDWIRE STRATEGY / HIGHLIGHTS
+        draw_circle(B6_CX,B6_CY,B6_R, ORAN,"gOrn","HARDWIRE STRATEGY",
+            img=B6_D, clip_id="b6Clip", svg_icon=svg_motorcycle(B6_CX,B6_CY,ORAN))
+        snode(530,940, 380,86,ORAN,"gOrn","Revenue: $5.84B  ·  Net Income: $695M","Premium motorcycle focus  ·  Selective market expansion","dollar")
+        snode(920,940, 380,86,ORAN,"gOrn","HD Financial Services (HDFS)","Retail loans  ·  Wholesale financing  ·  Insurance","chart")
+        snode(1310,940,380,86,ORAN,"gOrn","LiveWire (NYSE: LVWR)  ·  EV expansion","S2 Del Mar  ·  S2 Mulholland  ·  Electric future","trending")
+
+        # B7 — COMPANY HISTORY
+        draw_circle(B7_CX,B7_CY,B7_R, PURP,"gMH","Company History",
+            svg_icon=svg_growth(B7_CX,B7_CY,PURP))
+        snode(15,725, 400,86,PURP,"gPrp","1903: Founded  ·  Milwaukee, Wisconsin","William Harley &amp; Arthur Davidson  ·  Backyard workshop","clock")
+        snode(15,821, 400,86,PURP,"gPrp","1969: AMF acquisition  ·  1981: Management buyout","120+ years of American motorcycle heritage","trending")
+        snode(15,917, 400,86,PURP,"gPrp","2026: ECR 147%  ·  #5 US Motor  ·  RealRate","Hardwire strategy  ·  Premium focus  ·  EV expansion","star")
+
+        # DECORATIVE
+        draw_circle(D1_CX,D1_CY,D1_R, ORAN,"gOrn","Heritage",
+            img=B6_D, clip_id="d1Clip", svg_icon=svg_motorcycle(D1_CX,D1_CY,ORAN))
+        draw_circle(D2_CX,D2_CY,D2_R, CYAN,"gCyn","HDFS",
+            svg_icon=svg_handshake(D2_CX,D2_CY,CYAN))
+        draw_circle(D3_CX,D3_CY,D3_R, LIME,"gLme","ECR Trend",
+            svg_icon=svg_trend(D3_CX,D3_CY,LIME,"→ 147%"))
+        draw_circle(D4_CX,D4_CY,D4_R, SKY,"gSky","$5.84B", fallback=" ")
+        t(D4_CX, D4_CY-6,  "$5.84B", 20, WH,  "middle", "800")
+        t(D4_CX, D4_CY+12, "Revenue", 14, SKY, "middle", "700")
+
+        ECR_VAL, RANK_VAL, STATUS_VAL = "147%", "#5 / 38", "Top-Rated"
+
     # ══════════════════════════════════════════════════════════════════════════
     # CENTER HUB
     # ══════════════════════════════════════════════════════════════════════════
@@ -1096,11 +1196,7 @@ def build():
         t(HCX, HY+184, "TRLC  ·  Est. 2008  ·  Delaware, USA", 18, GREY, "middle", "500", sp=".3")
 
     elif COMPANY == "strata":
-        white_box(lg_bx, lg_by, lg_bw, lg_bh, op=.3)
-        if LOGO_D:
-            mime_s = 'image/png' if LOGO_D.startswith('iVBOR') else 'image/jpeg'
-            a(f'<image href="data:{mime_s};base64,{LOGO_D}" x="{lg_bx+4}" y="{lg_by+4}" width="64" height="64" preserveAspectRatio="xMidYMid meet"/>')
-        else:
+        if not hub_logo_png(lg_bx, lg_by, LOGO_D):
             a(f'<svg x="{lg_bx+4}" y="{lg_by+4}" width="64" height="64" viewBox="0 0 40 40">'
               f'<ellipse cx="18" cy="22" rx="12" ry="7" fill="none" stroke="{ACCENT}" stroke-width="2"/>'
               f'<line x1="4" y1="14" x2="34" y2="14" stroke="{ACCENT}" stroke-width="2.5" stroke-linecap="round"/>'
@@ -1118,11 +1214,7 @@ def build():
         t(HCX, HY+184, "CIK: 0001779128  ·  OTC-listed  ·  Delaware, USA", 18, GREY, "middle", "500", sp=".3")
 
     elif COMPANY == "hp":
-        white_box(lg_bx, lg_by, lg_bw, lg_bh, op=.3)
-        if LOGO_D:
-            mime_l = 'image/png' if LOGO_D.startswith('iVBOR') else 'image/jpeg'
-            a(f'<image href="data:{mime_l};base64,{LOGO_D}" x="{lg_bx+4}" y="{lg_by+4}" width="64" height="64" preserveAspectRatio="xMidYMid meet"/>')
-        else:
+        if not hub_logo_png(lg_bx, lg_by, LOGO_D):
             a(f'<svg x="{lg_bx+4}" y="{lg_by+4}" width="64" height="64" viewBox="0 0 40 40">'
               f'<rect x="4" y="6" width="32" height="21" rx="2" fill="none" stroke="{ACCENT}" stroke-width="2" opacity=".9"/>'
               f'<rect x="8" y="10" width="24" height="14" rx="1" fill="{ACCENT}" opacity=".12"/>'
@@ -1139,20 +1231,13 @@ def build():
         t(HCX, HY+184, "ANGI  ·  NASDAQ  ·  Est. 1995  ·  Denver, CO", 18, GREY, "middle", "500", sp=".3")
 
     elif COMPANY == "nvidia":
-        white_box(lg_bx, lg_by, lg_bw, lg_bh, op=.3)
-        if LOGO_D:
-            mime_l = 'image/png' if LOGO_D.startswith('iVBOR') else 'image/jpeg'
-            a(f'<image href="data:{mime_l};base64,{LOGO_D}" x="{lg_bx+4}" y="{lg_by+4}" width="64" height="64" preserveAspectRatio="xMidYMid meet"/>')
+        hub_logo_png(lg_bx, lg_by, LOGO_D)
         t(HCX, HY+170, "Nvidia Corp.", 38, WH, "middle", "800")
         t(HCX, HY+170, "AI Computing  ·  GPU Architecture  ·  Data Center", 17, GREY, "middle", "500", op=.88, sp=".4")
         t(HCX, HY+184, "NVDA  ·  Est. 1993  ·  Santa Clara, California", 18, GREY, "middle", "500", sp=".3")
 
     elif COMPANY == "apple":
-        white_box(lg_bx, lg_by, lg_bw, lg_bh, op=.3)
-        if LOGO_D:
-            mime_l = 'image/png' if LOGO_D.startswith('iVBOR') else 'image/jpeg'
-            a(f'<image href="data:{mime_l};base64,{LOGO_D}" x="{lg_bx+4}" y="{lg_by+4}" width="64" height="64" preserveAspectRatio="xMidYMid meet"/>')
-        else:
+        if not hub_logo_png(lg_bx, lg_by, LOGO_D):
             a(f'<svg x="{lg_bx+4}" y="{lg_by+4}" width="64" height="64" viewBox="0 0 40 40">'
               f'<path d="M20,7 C23,7 26,9 27,12 C30,10 34,11 34,16 C34,24 28,33 23,35 C21.5,35.5 18.5,35.5 17,35 C12,33 6,24 6,16 C6,11 10,10 13,12 C14,9 17,7 20,7Z" fill="none" stroke="{ACCENT}" stroke-width="2" opacity=".9"/>'
               f'<path d="M20,5 C22,5 22.5,7 22,7" fill="none" stroke="{ACCENT}" stroke-width="1.5" stroke-linecap="round" opacity=".75"/>'
@@ -1172,13 +1257,22 @@ def build():
             _svg = _svg.replace('viewBox="0 0 278.67201 360.43799"', 'viewBox="0 15 278.67201 237"')
             _svg_enc = base64.b64encode(_svg.encode('utf-8')).decode()
             a(f'<image href="data:image/svg+xml;base64,{_svg_enc}" x="{tl_bx+8}" y="{tl_by+8}" width="56" height="48" preserveAspectRatio="xMidYMid meet"/>')
-        elif LOGO_D and (LOGO_D[:5] in ('iVBOR','UklGR') or LOGO_D[:4] == '/9j/'):
-            mime_l = 'image/png' if LOGO_D.startswith('iVBOR') else 'image/jpeg'
-            a(f'<image href="data:{mime_l};base64,{LOGO_D}" x="{tl_bx+4}" y="{tl_by+4}" width="64" height="64" preserveAspectRatio="xMidYMid meet"/>')
+        elif LOGO_D:
+            a(f'<image href="data:{raster_mime(LOGO_D)};base64,{LOGO_D}" x="{tl_bx+4}" y="{tl_by+4}" width="64" height="64" preserveAspectRatio="xMidYMid meet"/>')
         _nx = (tl_bx + lg_bw + 12 + HCX + 155) // 2   # center of right zone ≈ 984
         t(_nx, tl_cy + 14, "Tesla Inc.", 40, WH, "middle", "800")
         t(HCX, HY+170, "Electric Vehicles  ·  Energy Storage  ·  AI Robotics", 17, GREY, "middle", "500", op=.88, sp=".4")
         t(HCX, HY+184, "TSLA  ·  NASDAQ  ·  Est. 2003  ·  Austin, Texas", 18, GREY, "middle", "500", sp=".3")
+
+    elif COMPANY == "harley":
+        if not hub_logo_png(lg_bx, lg_by, LOGO_D):
+            a(f'<svg x="{lg_bx+4}" y="{lg_by+4}" width="64" height="64" viewBox="0 0 40 40">'
+              f'<path d="M20,4 L34,12 L34,28 L20,36 L6,28 L6,12 Z" fill="none" stroke="{ACCENT}" stroke-width="2" opacity=".9"/>'
+              f'<text x="20" y="26" font-family="Arial" font-size="9" font-weight="800" fill="{ACCENT}" text-anchor="middle" opacity=".9">H-D</text>'
+              f'</svg>')
+        t(HCX, HY+170, "Harley Davidson INC", 34, WH, "middle", "800")
+        t(HCX, HY+170, "Motorcycles  ·  Financial Services  ·  LiveWire EV", 17, GREY, "middle", "500", op=.88, sp=".4")
+        t(HCX, HY+184, "HOG  ·  NYSE  ·  Est. 1903  ·  Milwaukee, Wisconsin", 18, GREY, "middle", "500", sp=".3")
 
     a(f'<line x1="{HCX-155}" y1="{HY+156}" x2="{HCX+155}" y2="{HY+156}" stroke="{ACCENT}" stroke-width=".5" stroke-opacity=".22"/>')
     a(f'<line x1="{HCX-155}" y1="{HY+192}" x2="{HCX+155}" y2="{HY+192}" stroke="{ACCENT}" stroke-width=".5" stroke-opacity=".22"/>')
@@ -1216,22 +1310,20 @@ _subdirs = {
     "nvidia":  "Nvidia Corp",
     "tesla":   "Tesla Inc",
     "apple":   "Apple Inc",
+    "harley":  "Harley Davidson INC",
 }
 _subdir = _subdirs[COMPANY]
 OUT_DIR = HERE / _subdir if _subdir else HERE
 if _subdir:
     OUT_DIR.mkdir(exist_ok=True)
 OUT       = str(OUT_DIR / f"{COMPANY}-mindmap.png")
-OUT_LI    = str(OUT_DIR / f"{COMPANY}-mindmap-linkedin.png")
 POST_PATH = str(OUT_DIR / f"{COMPANY}-linkedin-post.txt")
-
-LI_W, LI_H = 1920, 1080
 
 # ── Render ─────────────────────────────────────────────────────────────────────
 print("Rendering…")
 with sync_playwright() as pw:
     br = pw.chromium.launch()
-    pg = br.new_page(viewport={"width": LI_W, "height": LI_H}, device_scale_factor=2)
+    pg = br.new_page(viewport={"width": W, "height": H}, device_scale_factor=2)
     pg.set_content(html, timeout=60000)
     try:
         pg.wait_for_load_state("networkidle", timeout=45000)
@@ -1239,10 +1331,10 @@ with sync_playwright() as pw:
         pass
     pg.wait_for_timeout(2500)
     HI_OUT = OUT.replace(".png", "_2x.png")
-    pg.screenshot(path=HI_OUT, clip={"x": 0, "y": 0, "width": LI_W, "height": LI_H})
+    pg.screenshot(path=HI_OUT, clip={"x": 0, "y": 0, "width": W, "height": H})
     br.close()
 
-img_out = _PIL.open(HI_OUT).resize((LI_W, LI_H), _PIL.LANCZOS)
+img_out = _PIL.open(HI_OUT).resize((W, H), _PIL.LANCZOS)
 img_out.save(OUT, "PNG", optimize=True)
 os.remove(HI_OUT)
 print(f"Done (1920×1080): {OUT}")
@@ -1473,6 +1565,47 @@ Powered by RealRate: Using Explainable Financial AI
 Full US Advertising ranking: {RANKING_URL}
 
 #RealRate #HomeServices #AngiInc #FinancialHealth #Marketplace"""
+
+elif COMPANY == "harley":
+    CAPTION = f"""\
+Harley Davidson INC ranks #5 in US Motor. ECR: 147%.
+
+45 percentage points above the industry average of 102%. Top-Rated by RealRate's independent, explainable financial AI.
+
+THE COMPANY
+Iconic American motorcycle brand · Milwaukee, Wisconsin
+Founded 1903 · NYSE: HOG · ~5,900 employees worldwide
+Brands: Harley-Davidson · LiveWire · Harley-Davidson Financial Services (HDFS)
+
+LEADERSHIP
+Jochen Zeitz — President & Chief Executive Officer
+Former CEO of Puma AG · Architect of the "Hardwire" 2021–2025 strategic plan
+Focus on premium motorcycles, selective market expansion, and EV platform development
+
+FINANCIAL HEALTH
+Revenue: $5.84B · Net Income: $695M
+Total Assets: $12.1B · Stockholders' Equity: $3.25B · Liabilities: ~$8.85B
+
+ECR DRIVERS
+Greatest Strength: Stockholders' Equity — +30pp contribution to ECR
+Greatest Weakness: Liabilities, Current — –18pp drag on ECR
+
+BUSINESS
+Motorcycles & Related Products: Touring, Softail, Sportster, Adventure, Electric
+Financial Services (HDFS): Retail loans, wholesale financing, insurance, licensing
+LiveWire (NYSE: LVWR): Dedicated EV motorcycle brand, spun off 2022
+
+HISTORY
+1903: William Harley & Arthur Davidson build first motorcycle in Milwaukee backyard
+1969: AMF acquisition | 1981: Management buyout — independence restored
+2021: Hardwire strategy launched | 2022: LiveWire EV brand spun off
+2026: ECR 147% · #5 US Motor · Top-Rated · RealRate
+
+Powered by RealRate: Using Explainable Financial AI
+
+Full US Motor ranking: {RANKING_URL}
+
+#RealRate #HarleyDavidson #Motorcycles #FinancialHealth #EV"""
 
 elif COMPANY == "apple":
     CAPTION = f"""\

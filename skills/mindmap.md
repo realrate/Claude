@@ -60,6 +60,20 @@ Each company writes to its own subfolder inside the project directory:
 
 Files per company: `<company>-mindmap.png` (1920×1080) · `<company>-linkedin-post.txt`
 
+## First-run dependencies
+
+The generator needs the packages in `requirements.txt` (repo root) and a
+one-time Playwright browser install. If a run fails with a missing package or
+missing browser error, tell the user to run:
+
+```
+pip install -r requirements.txt
+playwright install chromium
+```
+
+and then retry — do not silently install dependencies without asking first.
+Fall back to `python3`/`pip3` if `python`/`pip` don't resolve on this machine.
+
 ## Automation scripts (run outside Claude)
 
 - PowerShell: `.\run_mindmaps.ps1 apple nvidia` or `.\run_mindmaps.ps1 all`
