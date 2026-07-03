@@ -2,7 +2,11 @@
 
 Generate a complete Industry Deep Dive Carousel for a given industry and year. Produces all required output files: interactive HTML, print HTML, PDF, animated GIF, and LinkedIn post.
 
-All paths are relative to the project root (the `RealRate/` folder). Run commands from that directory.
+This skill is self-contained — everything needed to run it lives in this repo. All paths below are relative to the repo root. Run commands from that directory.
+
+**Bundled assets this skill depends on (already in this repo — do not skip or recreate):**
+- `RealRate Logos/RealRate_logo_horizontal.png` — used in every HTML export and the cover GIF
+- `Industry Deep Dive Carousel/generate_cover_gif.py` — master GIF template (Step 10)
 
 ## Usage
 
@@ -16,12 +20,12 @@ Example: `/deep-dive-carousel "US Software" 2026`
 
 ## Step 0 — Read context files
 
-Before doing anything else, read all of these from the project root:
+Before doing anything else, read:
 
-- `Industry Deep Dive Carousel/CLAUDE.md`
-- `Industry Deep Dive Carousel/deep-dive-template.md`
-- `context/brand-context.md`
+- `context/brand-core.md`
 - `context/brand-voice.md`
+
+All industry-carousel design rules (colours, logo handling, cover-slide sizing, ECR math, output checklist) are inlined in the steps below — there is no separate CLAUDE.md to fetch for this skill.
 
 ---
 
@@ -66,7 +70,7 @@ Extract for each company in the Top 10:
 
 ## Step 4 — Choose the industry colour scheme
 
-Pick a colour palette distinct from all previously used schemes. Update `:root` CSS variables and the cover/Slide 7/Slide 10 gradients accordingly. The colour table in `Industry Deep Dive Carousel/CLAUDE.md` lists existing schemes — do not reuse them.
+Pick a colour palette distinct from all previously used schemes. Update `:root` CSS variables and the cover/Slide 7/Slide 10 gradients accordingly. Check the `:root` variables in each existing `Industry Deep Dive Carousel/*/[industry]-*.html` file in this repo before choosing — never reuse a palette already in use.
 
 Example palette variables to set:
 ```css
@@ -118,11 +122,11 @@ File: `Industry Deep Dive Carousel/[Industry Name]/[industry-slug]-[year].html`
 
 **Spec:** 540×675px interactive preview · 10 slides · slide navigation dots.
 
-Follow all design rules from `Industry Deep Dive Carousel/CLAUDE.md`:
+Slide-by-slide design rules:
 
 - **Cover (Slide 1):** Two rows of 5 cards (Top 10). Rank colours: gold/silver/bronze/#4–5 blue-light/#6–10 blue-light. Stats bar: companies · avg ECR · Top-Rated count. RealRate logo in white pill top-center.
 - **Slide 2 — Industry at a Glance:** Key stats, YoY ECR change, avg ECR bar fill proportional to ECR on a 600% scale.
-- **Slide 3 — All Top-Rated:** Rows #1–#5 with driver chip; rows #6+ without. Compress rows if 9+ companies (`gap: 5px`, `padding: 8px 12px`).
+- **Slide 3 — All Top-Rated:** Rows #1–#5 with driver chip; rows #6+ without. Compress rows if 9+ companies (`gap: 5px`, `padding: 8px 12px` interactive; `gap: 10px`, `padding: 16px 28px` print).
 - **Slide 4 — Biggest Mover:** Rank before/after, ECR, key driver with point contribution.
 - **Slide 5 — The Surprise:** Company, rank, ECR, market assumption vs. data reality, structural explanation.
 - **Slide 6 — Warning Signal:** Aggregate only — no company names. Red accent treatment.
@@ -133,7 +137,32 @@ Follow all design rules from `Industry Deep Dive Carousel/CLAUDE.md`:
 
 Font: Manrope throughout. No emojis on any slide. Footer on every slide except Slide 9 (use `realrate.ai/methodology` instead).
 
-RealRate logo path in interactive HTML: `../../RealRate Logos/RealRate_logo_horizontal.png`
+RealRate logo path in interactive HTML: `../../RealRate Logos/RealRate_logo_horizontal.png` (resolves to the bundled `RealRate Logos/` folder at the repo root).
+
+### Cover slide font & size reference
+
+Both rows (Top 10) use identical card structure: rank · logo · name · ECR% · Top-Rated badge. `min-height` on the name element keeps ECR% and the badge pinned at the same row position whether the company name wraps to 1 or 2 lines:
+
+```css
+/* Interactive */
+.co5-name, .co-rest-name { min-height: 17px; display: flex; align-items: center; justify-content: center; }
+/* Print */
+.co5-name, .co-rest-name { min-height: 48px; display: flex; align-items: center; justify-content: center; }
+```
+
+| Element | Interactive (540px) | Print (1080px design) |
+|---|---|---|
+| Report label | 10px | 24px |
+| Industry name | 40px | 88px |
+| Year | 16px | 36px |
+| Rank label | 10px | 20px |
+| Logo area height | 32px | 68px |
+| Logo max-height | 28px | 58px |
+| Logo max-width | 88px | 176px |
+| Company name | 7px · min-height 17px | 20px · min-height 48px |
+| ECR score | 12px | 32px |
+| Top-Rated badge | 6px | 12px |
+| Stats number | 32px | 68px |
 
 ---
 
@@ -159,7 +188,7 @@ body  { width: 1080px; margin: 0; zoom: 1.11111; }
 Resolve the project root from the current working directory and embed logos immediately after writing the print HTML:
 
 ```powershell
-$projectRoot = (Get-Location).Path   # run from RealRate/ project root
+$projectRoot = (Get-Location).Path   # run from the repo root
 $rrLogoPath  = Join-Path $projectRoot "RealRate Logos\RealRate_logo_horizontal.png"
 $rr = "data:image/png;base64," + [Convert]::ToBase64String([IO.File]::ReadAllBytes($rrLogoPath))
 
@@ -207,7 +236,7 @@ if (Test-Path "C:\Temp\rr_out.pdf") {
 
 ## Step 10 — Generate the animated cover GIF
 
-Update `Industry Deep Dive Carousel/generate_cover_gif.py` with industry-specific constants:
+This skill bundles `Industry Deep Dive Carousel/generate_cover_gif.py` as a reusable template — every constant marked `# EDIT` inside it defaults to a placeholder. Edit it in place for this industry, run it, then leave it edited (the next industry run edits it again):
 
 | Constant | Value |
 |---|---|
