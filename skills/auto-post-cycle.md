@@ -211,3 +211,4 @@ These rules apply to ALL generated captions and images:
 - Ranking URL goes at the end of every caption
 - The archive is internal only — never link directly to it
 - Font minimum 18pt body, 46pt+ headlines (mobile readability)
+- No emojis on images

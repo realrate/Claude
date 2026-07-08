@@ -61,6 +61,7 @@ RealRate/
 | Plan a content calendar | `skills/content-calendar.md` | — |
 | Write an Instantly campaign or sequence | `skills/outreach-campaign.md` | — |
 | Run competitor or market research | `skills/market-research.md` | — |
+| Generate Top 10 ranking infographic | `skills/top10ranking.md` | — |
 | Generate full bizdev cycle + upload | `skills/auto-post-cycle.md` | All skills + context (auto-loaded) |
 | Full ranking launch | `SOP/ranking-publication-protocol.md` | `skills/insight-post.md` · `skills/deep-dive.md` |
 
