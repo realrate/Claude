@@ -3,12 +3,15 @@
 Usage:
     python scripts/pull_seal_posts.py --industry us_air --output-dir output/us_air/2026
 
-Authenticates with a Google service account and downloads matching files
-from the shared seal posts Drive folder.
+Authenticates with a Google service account and downloads matching
+seal post images + captions from the shared Drive folder.
 
 Environment:
     GOOGLE_SERVICE_ACCOUNT_KEY — path to service account JSON key file,
                                   or the raw JSON content itself
+
+Dependencies:
+    pip install google-auth google-api-python-client
 """
 import argparse
 import io
