@@ -26,12 +26,16 @@ RealRate/
 │   ├── deep-dive.md              ← Build a deep dive LinkedIn document
 │   ├── content-calendar.md       ← Plan a content calendar (company page or Holger)
 │   ├── outreach-campaign.md      ← Write Instantly campaigns or LinkedIn DM sequences
-│   └── market-research.md        ← Run competitor or market research
+│   ├── market-research.md        ← Run competitor or market research
+│   └── auto-post-cycle.md        ← Generate full bizdev cycle (all 8 post types) + upload to dashboard
 │
 └── SOP/                          ← Multi-step process references
     ├── ranking-publication-protocol.md  ← Full ranking launch sequence (Day 0 → Day +10)
     ├── outreach-sop.md                  ← LinkedIn DM + Instantly detailed process
     └── research-sop.md                  ← Market and competitor research process
+│
+├── scripts/                      ← Automation scripts
+│   └── pull_seal_posts.py        ← Download seal post images + captions from Google Drive
 ```
 
 ---
@@ -57,6 +61,7 @@ RealRate/
 | Plan a content calendar | `skills/content-calendar.md` | — |
 | Write an Instantly campaign or sequence | `skills/outreach-campaign.md` | — |
 | Run competitor or market research | `skills/market-research.md` | — |
+| Generate full bizdev cycle + upload | `skills/auto-post-cycle.md` | All skills + context (auto-loaded) |
 | Full ranking launch | `SOP/ranking-publication-protocol.md` | `skills/insight-post.md` · `skills/deep-dive.md` |
 
 ---
