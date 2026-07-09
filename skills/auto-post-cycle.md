@@ -100,7 +100,7 @@ For each task, load the relevant skill file and follow its exact instructions. D
 3. If Drive download fails (no `GOOGLE_SERVICE_ACCOUNT_KEY`), skip seal posts and report the error.
 
 ### Task: `insight1`
-1. Read `skills/insight-post.md` (Insight 1 section) + all context files
+1. Read `skills/finalinsightpost.md` (Insight 1 section) + all context files
 2. Select an angle from the Insight 1 angle bank: **Reputable NTR**, **Unknown TR**, or **The Surprise**
 3. Pick a company that fits the angle. Verify its ECR data at `realrate-archive.com/{archive_slug}/{bsy}/`
 4. Build HTML using the L4 layout from `design-system.md`
@@ -109,7 +109,7 @@ For each task, load the relevant skill file and follow its exact instructions. D
 7. Write caption per the approved Insight 1 structure → save to `{output_dir}/insight1_caption.txt`
 
 ### Task: `insight2`
-1. Read `skills/insight-post.md` (Insight 2 section) + all context files
+1. Read `skills/finalinsightpost.md` (Insight 2 section) + all context files
 2. Choose: **Industry-Wide** or **Company-Level YoY Shift** based on the data (compare current vs prior year)
 3. Build up to 3 HTML slides using the L2 layout
 4. Save as `{output_dir}/insight2_slide1_{slug}.html`, `insight2_slide2_{slug}.html`, etc.
@@ -117,7 +117,7 @@ For each task, load the relevant skill file and follow its exact instructions. D
 6. Write one caption for all slides → save to `{output_dir}/insight2_caption.txt`
 
 ### Task: `insight3`
-1. Read `skills/insight-post.md` (Insight 3 section) + all context files
+1. Read `skills/finalinsightpost.md` (Insight 3 section) + all context files
 2. Select a **rotating angle** from the bank: Industry Blind Spot, Market vs Balance Sheet, Industry Trend, Methodology Moment, Investor Signal, Macro Lens
 3. **Exclude** angles used in the last 2 cycles (from Step 3 angle history)
 4. Build HTML (L4 layout), export PNG
@@ -125,7 +125,7 @@ For each task, load the relevant skill file and follow its exact instructions. D
 6. Write caption → save to `{output_dir}/insight3_caption.txt`
 
 ### Task: `insight4`
-1. Read `skills/insight-post.md` (Insight 4 section) + all context files
+1. Read `skills/finalinsightpost.md` (Insight 4 section) + all context files
 2. Select a **rotating NTR angle** from the bank: Almost There, The One Thing, The Fallen, Sector Drag, Close But Not Rated, Due Diligence Gap
 3. **Exclude** angles used in the last 2 cycles (from Step 3 angle history)
 4. Build HTML, export PNG
@@ -133,7 +133,7 @@ For each task, load the relevant skill file and follow its exact instructions. D
 6. Write caption with mandatory ECR disclaimer → save to `{output_dir}/insight4_caption.txt`
 
 ### Task: `deepdive`
-1. Read `skills/deep-dive.md` + all context files
+1. Read `skills/deep-dive-carousel.md` + all context files
 2. Build 8–10 slide PDF: cover → snapshot → top tier → biggest mover → surprise → warning → separators → implications → methodology → CTA
 3. Save to `{output_dir}/deepdive.pdf`
 4. Write caption → save to `{output_dir}/deepdive_caption.txt`
