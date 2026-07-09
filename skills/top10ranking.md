@@ -1,18 +1,37 @@
-# RealRate Top 10 Infographic Generator
-
-Generates a **1200 × 1500 px portrait LinkedIn infographic** from live data at `realrate-archive.com`, plus a matching LinkedIn caption `.txt`.
-
-Script: `generate_infographic.py`
-
+---
+description: Generate a RealRate "Top 10" ranking LinkedIn post for an industry — a 1200x1500 infographic PNG plus a matching LinkedIn caption .txt, pulled live from realrate-archive.com. Use whenever asked to create/generate a top 10 ranking, industry ranking post, or LinkedIn infographic for an industry (e.g. "make the top 10 software ranking post", "generate this year's motor industry ranking", "do the air rankings"), even if only the industry is named.
+argument-hint: [industry_slug]
 ---
 
-## Quick start
+# RealRate Top 10 Ranking Generator
+
+Generates a 1200x1500 px portrait LinkedIn infographic plus a matching LinkedIn caption for a
+RealRate industry "Top 10" ranking, using live data fetched from realrate-archive.com.
+
+This skill requires the `generate_infographic.py` script and `requirements.txt` from the
+**Top 10 ranking** project repo to be present in the project you invoke it from. It is not
+self-contained inside this skills library — copy or check out the Top 10 ranking project
+alongside it, then run commands from that project's root (`${CLAUDE_PROJECT_DIR}`).
+
+## Setup (first run only)
 
 ```bash
-python generate_infographic.py <industry_slug>
+pip install -r "${CLAUDE_PROJECT_DIR}/requirements.txt"
 ```
 
-Output: `output/<slug>_<year>.png` and `output/linkedin_<slug>_<year>.txt`
+## Generate a ranking
+
+```bash
+python "${CLAUDE_PROJECT_DIR}/generate_infographic.py" <industry_slug>
+```
+
+This produces both output files together — never generate just the PNG or just the caption:
+
+- `${CLAUDE_PROJECT_DIR}/output/<slug>_<year>.png` — the infographic
+- `${CLAUDE_PROJECT_DIR}/output/linkedin_<slug>_<year>.txt` — the matching LinkedIn caption
+
+If `$ARGUMENTS` names an industry (e.g. "motor", "software", "air"), map it to the closest slug
+below and run the command. If it's ambiguous, ask which slug before running.
 
 ## Available slugs
 
@@ -21,140 +40,18 @@ Output: `output/<slug>_<year>.png` and `output/linkedin_<slug>_<year>.txt`
 `realestate` · `hotels` · `consulting` · `data_processing` · `brokers` · `savings` ·
 `life` · `non_life` · `pharma` · `chemicals` · `state_banks` · `medicinal_products` · `recreation`
 
-## Dependencies
+## Behavior notes
 
-```bash
-pip install -r requirements.txt
-```
+- Data source is archive-first: the script fetches live from realrate-archive.com. Cards show
+  ECR%, a ★ TOP RATED badge where applicable, and trend arrows.
+- Ranking links in the caption always use the `us_` prefix: `https://realrate.ai/rankings/us_<industry>/<year>`.
+- Every industry gets a unique blue-tone accent and themed background pattern — accent colors
+  must stay in the blue family even when the pattern differs per industry.
+- Title, filename, and ranking URL use the current calendar year; the archive fetch itself uses
+  the latest year available in the archive listing.
+- Full design spec and field reference: see `top10ranking.md` at the root of the Top 10 ranking
+  project repo.
 
-Key: `Pillow>=10.0.0`, `pandas>=2.0.0`, `openpyxl>=3.1.0`, `xlrd>=2.0.1`, `requests>=2.31.0`
+## After generating
 
----
-
-## Infographic design
-
-### Canvas
-- **Size**: 1200 × 1500 px (portrait, LinkedIn-optimised)
-- **Layout**: 2-column × 5-row ranking cards, header, footer
-
-### Per-industry color rebrand
-Every industry gets a distinct background, accent color, card gradient, and bold background pattern. The accent (`I_NEON`) drives all colored elements: borders, glow, icon, subtitle, ECR values, badges, footer.
-
-| Industry | Accent | Background | Pattern |
-|---|---|---|---|
-| Motor | Racing blue `(30,160,255)` | Carbon black-blue | Speed streaks, speedometer arc |
-| Air | Sky blue `(55,210,255)` | Midnight sky | Contrails, horizon arcs, compass rose |
-| Software | Matrix green `(0,255,120)` | Dark matrix | Network graph, code rain |
-| Computers | Electric indigo `(80,160,255)` | Dark indigo | PCB traces, chip diagram |
-| Finance | Gold `(240,168,32)` | Dark amber | Candlestick charts, trend lines |
-| Health/Pharma | Medical teal `(0,230,185)` | Dark teal | ECG line, molecular lattice |
-| Energy/Petrol | Flame orange `(255,120,0)` | Oil black | Radial streaks, lightning bolt |
-| Food | Leaf green `(95,220,45)` | Dark forest | Organic waves, honeycomb |
-
-Background patterns use **bold alpha** (~3× original) so they're clearly visible.
-
-### Header
-- Left: RealRate logo with neon glow halo
-- Center: Title (extrabold white) + subtitle (`I_NEON` accent)
-- Right: Industry icon (142 px, `I_NEON` accent, with glow halo)
-  - **Motor icon**: F1 steering wheel — double ring, thick spokes, grip notches, filled hub
-
-### Ranking cards
-- **Top 3**: deep industry-colored gradient + neon accent border + left glow bar
-- **Top-rated rank 4+**: dark glassmorphism + multi-layer neon glow border
-- **Standard**: dark glassmorphism + dim border
-- Each card: rank badge (accent fill), company name, `ECR X%` (bright label + white value), trend arrow ↑↓–, `★ TOP RATED` pill when applicable
-
-### Color variables in `generate()`
-| Variable | Purpose |
-|---|---|
-| `I_NEON` | Primary accent — borders, icon, subtitle, all glow elements |
-| `I_NEON_BRIGHT` | Icon & subtitle bright rendering (= `I_NEON`) |
-| `I_NEON_HI` | ECR % value (`I_NEON + 85` per channel) |
-| `I_MUTED` | ECR label `(210,225,238,240)` — neutral bright white |
-| `I_ACCENT` | Rank badge fill, TOP RATED pill gradient |
-| `I_DIM` | Standard card border |
-| `I_DARK` | Badge outline / pill gradient end |
-
----
-
-## LinkedIn caption (auto-generated)
-
-Written to `output/linkedin_<slug>_<year>.txt` alongside every PNG.
-
-### Format
-```
-🏆 TOP 10 US [INDUSTRY] COMPANIES [YEAR]
-RealRate Financial Strength Rankings using Artificial Intelligence
-
-[2-sentence industry hook]
-
-At RealRate, our explainable AI framework quantifies financial resilience through ECR...
-
-Market average ECR: X%
-
-🥇 #1 Company — ECR: X%  TOP RATED
-[2-sentence description: ECR vs average + trend]
-
-🥈 #2 Company — ECR: X%  TOP RATED
-[2-sentence description]
-
-🥉 #3 Company — ECR: X%  TOP RATED
-[2-sentence description]
-
-#4 Company — ECR: X%  TOP RATED
-[1-sentence description: ECR vs average only]
-
-Also in the ranking:
-#N Company (X%) | ...
-
-[Engagement question]
-
-Full ranking + individual company reports:
-🔗 https://realrate.ai/rankings/us_[industry]/[year]
-
-#Finance #AI #Investing #RealRate ... [industry hashtags]
-```
-
-### Description rules
-- **Top 3 (rank 1–3)**: 2 sentences — ECR position vs sector average + trend
-- **Top-rated rank 4+**: 1 sentence — ECR position only
-- **Non-top-rated**: no description, listed under "Also in the ranking"
-- No `★` icon in caption labels (only on the infographic badge)
-
-### Year logic
-- **Title + filename + URL**: `datetime.date.today().year` (current calendar year)
-- **Archive fetch**: uses latest year from the archive directory listing
-
----
-
-## Logo fixes
-
-**Manual override** — drop a PNG at `assets/logos/<company_name_lowercase_underscores>.png`
-Example: `Visteon CORP` → `assets/logos/visteon_corp.png`
-
-**Domain hint** — add to `_DOMAIN_HINTS` in `generate_infographic.py`, then delete the cached file in `assets/logos/`.
-
-**White/light logo detection** — `_logo_is_light()` auto-detects logos where ≥60% of visible pixels have brightness >200 and renders them on a near-black `(18,18,18)` box instead of white.
-
-Current domain overrides:
-
-| Company | Domain |
-|---------|--------|
-| Bristow Group Inc | `bristowgroup.com` |
-| Allegiant Travel CO | `allegiantair.com` |
-| Strata Critical Medical Inc | `stratacritical.com` |
-| Abrdn (all ETF trusts) | `abrdn.com` |
-
----
-
-## JSON field reference
-
-| Field | Meaning |
-|-------|---------|
-| `name` | Company name |
-| `rank` | Integer rank |
-| `value` | ECR as decimal (e.g. `1.88` = 188%) |
-| `trend` | Rank change (positive = rising) |
-| `top_rated` | Boolean — show TOP RATED badge if true |
-| `logo_url_256x256` | Direct archive logo URL (tried first in logo pipeline) |
+Report the output file paths and confirm both the PNG and the caption .txt were created.
