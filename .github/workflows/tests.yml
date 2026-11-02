@@ -1,0 +1,36 @@
+name: tests
+
+# Minimal CI gate for Dependabot auto-merge (same pattern as ERSTE / XAI-Portfolio).
+# There is no test suite here: the check installs the locked dependencies of
+# /posts and imports the runtime library, and syntax-checks the export script.
+# A dependency bump that fails to resolve, install, or import turns this check
+# red and blocks auto-merge; without any check the org-injected Dependabot
+# Auto-Merge workflow holds every PR ("no CI checks registered within 300s").
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: posts
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: "22"
+
+      - name: Install dependencies (locked)
+        run: npm ci
+        env:
+          PUPPETEER_SKIP_DOWNLOAD: "true"
+
+      - name: Import smoke test
+        run: |
+          node --check export.mjs
+          node -e "import('puppeteer').then(m => { if (!m.default) process.exit(1); console.log('puppeteer ok'); })"
